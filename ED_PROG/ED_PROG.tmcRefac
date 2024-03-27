@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Refactors>
+  <Renames>
+    <RenamedType>
+      <Type guid="fe91578f-e7b9-4e8e-a60b-a630302703f0">MANUAL_MODE_1</Type>
+      <From>manual_mode_1</From>
+      <To>maint_mode</To>
+    </RenamedType>
+  </Renames>
+</Refactors>

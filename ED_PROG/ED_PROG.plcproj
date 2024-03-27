@@ -71,6 +71,12 @@
     <Compile Include="POUs\general.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\manual_mode.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\maint_mode.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\motor_starter_control.TcPOU">
       <SubType>Code</SubType>
     </Compile>

@@ -9,9 +9,9 @@
 			</Tasks>
 		</System>
 		<Plc>
-			<Project GUID="{A69D7AB4-53AC-40E7-8E11-A7DF25BBEC0A}" Name="Template" PrjFilePath="Template\Template.plcproj" TmcFilePath="Template\Template.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+			<Project GUID="{A69D7AB4-53AC-40E7-8E11-A7DF25BBEC0A}" Name="ED_PROG" PrjFilePath="ED_PROG\ED_PROG.plcproj" TmcFilePath="ED_PROG\ED_PROG.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
 				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{F7281400-6A69-C328-07B2-9F4EC42E716E}">
-					<Name>Template Instance</Name>
+					<Name>ED_PROG Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
 						<Name>PlcTask Inputs</Name>

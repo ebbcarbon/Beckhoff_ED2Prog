@@ -7,62 +7,63 @@ VAR
 	auto_redox_doser_enable: BOOL;
 	
 	tmr_auto_pumps: TON;
-	auto_pump_1_request: BOOL;
-	auto_pump_3_request: BOOL;
-	auto_pump_4_request: BOOL;
-	auto_pump_2_request: BOOL;
+	auto_u_3112_request: BOOL;
+	auto_u_3312_request: BOOL;
+	auto_u_3405_request: BOOL;
+	auto_u_3212_request: BOOL;
 	tmr_auto_pump_delay: TON;
-	pump_1_running: BOOL;
-	pump_1_speed_ref: INT;
-	pump_1_sp: REAL;
+	u_3112_running: BOOL;
+	u_3112_speed_ref: INT;
+	u_3112_sp: REAL;
 	salt_pressure_actual: REAL;
-	auto_pump_1_ready: BOOL;
-	pump_2_running: BOOL;
-	auto_pump_2_ready: BOOL;
-	auto_pump_3_ready: BOOL;
-	pump_3_running: BOOL;
-	pump_4_running: BOOL;
-	auto_pump_4_ready: BOOL;
+	auto_u_3112_ready: BOOL;
+	u_3212_running: BOOL;
+	auto_u_3212_ready: BOOL;
+	auto_u_3312_ready: BOOL;
+	u_3312_running: BOOL;
+	u_3405_running: BOOL;
+	auto_u_3405_ready: BOOL;
 	auto_stack_power_enable: BOOL;
 	ed_routine_cip: BOOL;
 	
-		valve_1_open_request: BOOL;
-	valve_2_open_request: BOOL;
-	valve_3_open_request: BOOL;
-	valve_1_open_feedback: BOOL;
-	valve_2_open_feedback: BOOL;
-	valve_3_open_feedback: BOOL;
+		nv_3110_open_request: BOOL;
+	nv_3210_open_request: BOOL;
+	nv_3310_open_request: BOOL;
+	nv_3110_open_feedback: BOOL;
+	nv_3210_open_feedback: BOOL;
+	nv_3310_open_feedback: BOOL;
 	cip_redox_doser_enable: BOOL;
-	valve_10_open_request: BOOL;
-	valve_4_open_request: BOOL;
-	valve_5_open_request: BOOL;
-	valve_6_open_request: BOOL;
-	valve_10_open_feedback: BOOL;
-	valve_4_open_feedback: BOOL;
-	valve_5_open_feedback: BOOL;
-	valve_6_open_feedback: BOOL;
+	nv_3372_open_request: BOOL;
+	nv_3135_open_request: BOOL;
+	nv_3235_open_request: BOOL;
+	nv_3335_open_request: BOOL;
+	nv_3372_open_feedback: BOOL;
+	nv_3135_open_feedback: BOOL;
+	nv_3235_open_feedback: BOOL;
+	nv_3335_open_feedback: BOOL;
 	tmr_cip_pump_delay: TON;
-	auto_pump_8_request: BOOL;
-	pump_8_running: BOOL;
-	pump_8_sp: REAL;
+	auto_u_3370_request: BOOL;
+	u_3370_running: BOOL;
+	u_3370_sp: REAL;
 	tmr_cip_pump_start_delay: TON;
 	tmr_cip_run: TON;
 	cip_tmr_preset: TIME;
 	
-	pump_8_actual: INT; // What would this be???
+	u_3370_actual: INT; // What would this be???
 	ft_3122_tot: INT;
 	ft_3222_tot: INT;
 	ft_3322_tot: INT;
 	cip_flush_tot: INT;
 	cip_flush_sp: INT;
-	cip_pump_8_request: BOOL;
+	cip_u_3370_request: BOOL;
 	cip_complete: BOOL;
 	cip_stop_request: BOOL;
-	valve_10_cip_request: BOOL;
-	valve_4_cip_request: BOOL;
-	valve_5_cip_request: BOOL;
-	valve_6_cip_request: BOOL;
+	nv_3372_cip_request: BOOL;
+	nv_3135_cip_request: BOOL;
+	nv_3235_cip_request: BOOL;
+	nv_3335_cip_request: BOOL;
 	redox_doser_cip_enable: BOOL;
+	u_3370_cip_request: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -87,7 +88,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"valve_10_cip_request"</v>
+                            <v n="Operand">"nv_3372_cip_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -103,7 +104,7 @@ END_VAR
                             <v n="Id">470L</v>
                           </o>
                           <o>
-                            <v n="Operand">"valve_4_cip_request"</v>
+                            <v n="Operand">"nv_3135_cip_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -119,7 +120,7 @@ END_VAR
                             <v n="Id">471L</v>
                           </o>
                           <o>
-                            <v n="Operand">"valve_5_cip_request"</v>
+                            <v n="Operand">"nv_3235_cip_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -135,7 +136,7 @@ END_VAR
                             <v n="Id">500L</v>
                           </o>
                           <o>
-                            <v n="Operand">"valve_6_cip_request"</v>
+                            <v n="Operand">"nv_3335_cip_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -303,7 +304,7 @@ END_VAR
                             </o>
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"valve_10_open_feedback"</v>
+                                <v n="Operand">"nv_3372_open_feedback"</v>
                                 <v n="Type">"BOOL"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -322,7 +323,7 @@ END_VAR
                             </o>
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"valve_4_open_feedback"</v>
+                                <v n="Operand">"nv_3135_open_feedback"</v>
                                 <v n="Type">"BOOL"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -341,7 +342,7 @@ END_VAR
                             </o>
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"valve_5_open_feedback"</v>
+                                <v n="Operand">"nv_3235_open_feedback"</v>
                                 <v n="Type">"BOOL"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -360,7 +361,7 @@ END_VAR
                             </o>
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"valve_6_open_feedback"</v>
+                                <v n="Operand">"nv_3335_open_feedback"</v>
                                 <v n="Type">"BOOL"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -460,7 +461,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"cip_pump_8_request"</v>
+                            <v n="Operand">"u_3370_cip_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -760,7 +761,7 @@ END_VAR
                                 <l2 n="InputItems" cet="BoxTreeOperand">
                                   <o>
                                     <o n="Operand" t="Operand">
-                                      <v n="Operand">"pump_8_running"</v>
+                                      <v n="Operand">"u_3370_running"</v>
                                       <v n="Type">"BOOL"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
@@ -779,7 +780,7 @@ END_VAR
                                   </o>
                                   <o>
                                     <o n="Operand" t="Operand">
-                                      <v n="Operand">"pump_8_sp * 0.9"</v>
+                                      <v n="Operand">"u_3370_sp * 0.9"</v>
                                       <v n="Type">"REAL"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
@@ -798,7 +799,7 @@ END_VAR
                                   </o>
                                   <o>
                                     <o n="Operand" t="Operand">
-                                      <v n="Operand">"pump_8_actual"</v>
+                                      <v n="Operand">"u_3370_actual"</v>
                                       <v n="Type">"INT"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
@@ -817,7 +818,7 @@ END_VAR
                                   </o>
                                   <o>
                                     <o n="Operand" t="Operand">
-                                      <v n="Operand">"pump_8_sp * 1.1"</v>
+                                      <v n="Operand">"u_3370_sp * 1.1"</v>
                                       <v n="Type">"REAL"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>

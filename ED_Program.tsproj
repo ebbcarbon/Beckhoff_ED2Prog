@@ -10,20 +10,20 @@
 		</System>
 		<Plc>
 			<Project GUID="{A69D7AB4-53AC-40E7-8E11-A7DF25BBEC0A}" Name="ED_PROG" PrjFilePath="ED_PROG\ED_PROG.plcproj" TmcFilePath="ED_PROG\ED_PROG.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{F7281400-6A69-C328-07B2-9F4EC42E716E}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{B74C7A89-E010-A88E-4F4C-10C021ECED60}">
 					<Name>ED_PROG Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
 						<Name>PlcTask Inputs</Name>
 						<Var>
-							<Name>io_mapping.u_3112_run_feedback</Name>
-							<Comment><![CDATA[Example motor vfd run feedback, mapped to a physical input]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>io_mapping.cpt_3144_raw_input</Name>
 							<Comment><![CDATA[Example Analog input raw input, mapped to a physical input]]></Comment>
 							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.u_3112_run_feedback</Name>
+							<Comment><![CDATA[Example motor vfd run feedback, mapped to a physical input]]></Comment>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>io_mapping.u_3160_run_feedback</Name>
@@ -31,14 +31,14 @@
 							<Type>BOOL</Type>
 						</Var>
 						<Var>
-							<Name>io_mapping.nv_3372_open_feedback</Name>
-							<Comment><![CDATA[Example digital valve open feedback]]></Comment>
-							<Type>BOOL</Type>
-						</Var>
-						<Var>
 							<Name>io_mapping.av_3148_position_feedback_raw_input</Name>
 							<Comment><![CDATA[Example analog valve position feedback raw input]]></Comment>
 							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.nv_3372_open_feedback</Name>
+							<Comment><![CDATA[Example digital valve open feedback]]></Comment>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>io_mapping.nv_3372_closed_feedback</Name>
@@ -49,14 +49,14 @@
 					<Vars VarGrpType="2" AreaNo="1">
 						<Name>PlcTask Outputs</Name>
 						<Var>
-							<Name>io_mapping.u_3112_speed_command_io</Name>
-							<Comment><![CDATA[Example motor vfd speed command scaled output, mappped to a physical output]]></Comment>
-							<Type>INT</Type>
-						</Var>
-						<Var>
 							<Name>io_mapping.u_3112_run_command_io</Name>
 							<Comment><![CDATA[Example motor vfd run feedback, mapped to a physical output]]></Comment>
 							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.u_3112_speed_command_io</Name>
+							<Comment><![CDATA[Example motor vfd speed command scaled output, mappped to a physical output]]></Comment>
+							<Type>INT</Type>
 						</Var>
 						<Var>
 							<Name>io_mapping.av_3148_position_command_io</Name>

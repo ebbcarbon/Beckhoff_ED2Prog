@@ -6,56 +6,56 @@ VAR
 	ed_routine_stopping_auto: BOOL;
 	stack_power_enabled: BOOL;
 	RECTIFIER_OUTPUT_OFF: BOOL;// ADD LOGIC FOR MONITORING RECTIFIER OUTPUT - USE CT? VERIFY PS DOES NOT MOVE CURRENT WHEN POWERED OFF
-	pump_1_stop_request: BOOL;
-	pump_2_stop_request: BOOL;
-	pump_3_stop_request: BOOL;
-	pump_4_stop_request: BOOL;
-	pump_5_stop_request: BOOL
+	u_3112_stop_request: BOOL;
+	u_3212_stop_request: BOOL;
+	u_3312_stop_request: BOOL;
+	u_3405_stop_request: BOOL;
+	u_3160_stop_request: BOOL
 ;
-	pump_6_stop_request: BOOL;
-	pump_7_stop_request: BOOL;
-	pump_8_stop_request: BOOL;
-	pump_1_run_feedback: BOOL;
-	pump_2_run_feedback: BOOL;
-	pump_3_run_feedback: BOOL;
-	pump_4_run_feedback: BOOL;
-	pump_5_run_feedback: BOOL;
-	pump_6_run_feedback: BOOL;
-	pump_7_run_feedback: BOOL;
-	pump_8_run_feedback: BOOL;
+	u_3260_stop_request: BOOL;
+	u_3360_stop_request: BOOL;
+	u_3370_stop_request: BOOL;
+	u_3112_run_feedback: BOOL;
+	u_3212_run_feedback: BOOL;
+	u_3312_run_feedback: BOOL;
+	u_3405_run_feedback: BOOL;
+	u_3160_run_feedback: BOOL;
+	u_3260_run_feedback: BOOL;
+	u_3360_run_feedback: BOOL;
+	u_3370_run_feedback: BOOL;
 	
-	valve_1_stop_request:BOOL;
-	valve_8_stop_request: BOOL;
-	valve_7_stop_request: BOOL;
-	valve_6_stop_request: BOOL;
-	valve_5_stop_request: BOOL;
-	valve_4_stop_request: BOOL;
-	valve_3_stop_request: BOOL;
-	valve_2_stop_request: BOOL;
+	nv_3110_stop_request:BOOL;
+	av_3248_stop_request: BOOL;
+	av_3148_stop_request: BOOL;
+	nv_3335_stop_request: BOOL;
+	nv_3235_stop_request: BOOL;
+	nv_3135_stop_request: BOOL;
+	nv_3310_stop_request: BOOL;
+	nv_3210_stop_request: BOOL;
 	ed_routine_stop_mode: BOOL;
 	redox_doser_stop_request: BOOL;
-	valve_6_position_request: INT;
-	valve_7_position_request: INT;
-	valve_8_position_request: INT;
+	nv_3335_position_request: INT;
+	av_3148_position_request: INT;
+	av_3248_position_request: INT;
 	ed_pumps_stopped: BOOL;
-	valve_1_closed_feedback: BOOL;
-	valve_2_closed_feedback: BOOL;
-	valve_3_closed_feedback: BOOL;
-	valve_4_closed_feedback: BOOL;
-	valve_5_closed_feedback: BOOL;
-	valve_6_position_feedback: INT;
-	valve_6_recycle_position: BOOL;
-	valve_7_position_feedback: INT;
-	valve_7_recycle_position: BOOL;
-	valve_8_recycle_position: BOOL;
+	nv_3110_closed_feedback: BOOL;
+	nv_3210_closed_feedback: BOOL;
+	nv_3310_closed_feedback: BOOL;
+	nv_3135_closed_feedback: BOOL;
+	nv_3235_closed_feedback: BOOL;
+	nv_3335_position_feedback: INT;
+	nv_3335_recycle_position: BOOL;
+	av_3148_position_feedback: INT;
+	av_3148_recycle_position: BOOL;
+	av_3248_recycle_position: BOOL;
 	ed_valves_stopped: BOOL;
 	ed_stopped: BOOL;
-	valve_9_position_request: INT;
-	valve_10_stop_request: BOOL;
-	valve_9_position_feedback: INT;
-	valve_9_recycle_position: BOOL;
-	valve_6_closed_feedback: BOOL;
-	valve_10_closed_feedback: BOOL;
+	av_3348_position_request: INT;
+	nv_3372_stop_request: BOOL;
+	av_3348_position_feedback: INT;
+	av_3348_recycle_position: BOOL;
+	nv_3335_closed_feedback: BOOL;
+	nv_3372_closed_feedback: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -141,7 +141,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"pump_1_stop_request"</v>
+                            <v n="Operand">"u_3112_stop_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -157,7 +157,7 @@ END_VAR
                             <v n="Id">19L</v>
                           </o>
                           <o>
-                            <v n="Operand">"pump_2_stop_request"</v>
+                            <v n="Operand">"u_3212_stop_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -173,7 +173,7 @@ END_VAR
                             <v n="Id">27L</v>
                           </o>
                           <o>
-                            <v n="Operand">"pump_3_stop_request"</v>
+                            <v n="Operand">"u_3312_stop_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -189,7 +189,7 @@ END_VAR
                             <v n="Id">29L</v>
                           </o>
                           <o>
-                            <v n="Operand">"pump_4_stop_request"</v>
+                            <v n="Operand">"u_3405_stop_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -205,7 +205,7 @@ END_VAR
                             <v n="Id">33L</v>
                           </o>
                           <o>
-                            <v n="Operand">"pump_5_stop_request"</v>
+                            <v n="Operand">"u_3160_stop_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -221,7 +221,7 @@ END_VAR
                             <v n="Id">32L</v>
                           </o>
                           <o>
-                            <v n="Operand">"pump_6_stop_request"</v>
+                            <v n="Operand">"u_3260_stop_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -237,7 +237,7 @@ END_VAR
                             <v n="Id">31L</v>
                           </o>
                           <o>
-                            <v n="Operand">"pump_7_stop_request"</v>
+                            <v n="Operand">"u_3360_stop_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -253,7 +253,7 @@ END_VAR
                             <v n="Id">30L</v>
                           </o>
                           <o>
-                            <v n="Operand">"pump_8_stop_request"</v>
+                            <v n="Operand">"u_3370_stop_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -394,7 +394,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"valve_1_stop_request"</v>
+                            <v n="Operand">"nv_3110_stop_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -410,7 +410,7 @@ END_VAR
                             <v n="Id">176L</v>
                           </o>
                           <o>
-                            <v n="Operand">"valve_2_stop_request"</v>
+                            <v n="Operand">"nv_3210_stop_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -426,7 +426,7 @@ END_VAR
                             <v n="Id">177L</v>
                           </o>
                           <o>
-                            <v n="Operand">"valve_3_stop_request"</v>
+                            <v n="Operand">"nv_3310_stop_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -442,7 +442,7 @@ END_VAR
                             <v n="Id">178L</v>
                           </o>
                           <o>
-                            <v n="Operand">"valve_4_stop_request"</v>
+                            <v n="Operand">"nv_3135_stop_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -458,7 +458,7 @@ END_VAR
                             <v n="Id">179L</v>
                           </o>
                           <o>
-                            <v n="Operand">"valve_5_stop_request"</v>
+                            <v n="Operand">"nv_3235_stop_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -474,7 +474,7 @@ END_VAR
                             <v n="Id">270L</v>
                           </o>
                           <o>
-                            <v n="Operand">"valve_6_stop_request"</v>
+                            <v n="Operand">"nv_3335_stop_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -490,7 +490,7 @@ END_VAR
                             <v n="Id">271L</v>
                           </o>
                           <o>
-                            <v n="Operand">"valve_10_stop_request"</v>
+                            <v n="Operand">"nv_3372_stop_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -550,7 +550,7 @@ END_VAR
                           <l2 n="OutputItems" cet="Operand">
                             <n />
                             <o>
-                              <v n="Operand">"valve_9_position_request"</v>
+                              <v n="Operand">"av_3348_position_request"</v>
                               <v n="Type">"INT"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -596,7 +596,7 @@ END_VAR
                               <l2 n="OutputItems" cet="Operand">
                                 <n />
                                 <o>
-                                  <v n="Operand">"valve_8_position_request"</v>
+                                  <v n="Operand">"av_3248_position_request"</v>
                                   <v n="Type">"INT"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -642,7 +642,7 @@ END_VAR
                                   <l2 n="OutputItems" cet="Operand">
                                     <n />
                                     <o>
-                                      <v n="Operand">"valve_7_position_request"</v>
+                                      <v n="Operand">"av_3148_position_request"</v>
                                       <v n="Type">"INT"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
@@ -715,7 +715,7 @@ END_VAR
                                       </o>
                                       <o>
                                         <o n="Operand" t="Operand">
-                                          <v n="Operand">"pump_1_run_feedback"</v>
+                                          <v n="Operand">"u_3112_run_feedback"</v>
                                           <v n="Type">"BOOL"</v>
                                           <v n="Comment">""</v>
                                           <v n="SymbolComment">""</v>
@@ -734,7 +734,7 @@ END_VAR
                                       </o>
                                       <o>
                                         <o n="Operand" t="Operand">
-                                          <v n="Operand">"pump_2_run_feedback"</v>
+                                          <v n="Operand">"u_3212_run_feedback"</v>
                                           <v n="Type">"BOOL"</v>
                                           <v n="Comment">""</v>
                                           <v n="SymbolComment">""</v>
@@ -753,7 +753,7 @@ END_VAR
                                       </o>
                                       <o>
                                         <o n="Operand" t="Operand">
-                                          <v n="Operand">"pump_3_run_feedback"</v>
+                                          <v n="Operand">"u_3312_run_feedback"</v>
                                           <v n="Type">"BOOL"</v>
                                           <v n="Comment">""</v>
                                           <v n="SymbolComment">""</v>
@@ -772,7 +772,7 @@ END_VAR
                                       </o>
                                       <o>
                                         <o n="Operand" t="Operand">
-                                          <v n="Operand">"pump_4_run_feedback"</v>
+                                          <v n="Operand">"u_3405_run_feedback"</v>
                                           <v n="Type">"BOOL"</v>
                                           <v n="Comment">""</v>
                                           <v n="SymbolComment">""</v>
@@ -791,7 +791,7 @@ END_VAR
                                       </o>
                                       <o>
                                         <o n="Operand" t="Operand">
-                                          <v n="Operand">"pump_5_run_feedback"</v>
+                                          <v n="Operand">"u_3160_run_feedback"</v>
                                           <v n="Type">"BOOL"</v>
                                           <v n="Comment">""</v>
                                           <v n="SymbolComment">""</v>
@@ -810,7 +810,7 @@ END_VAR
                                       </o>
                                       <o>
                                         <o n="Operand" t="Operand">
-                                          <v n="Operand">"pump_6_run_feedback"</v>
+                                          <v n="Operand">"u_3260_run_feedback"</v>
                                           <v n="Type">"BOOL"</v>
                                           <v n="Comment">""</v>
                                           <v n="SymbolComment">""</v>
@@ -829,7 +829,7 @@ END_VAR
                                       </o>
                                       <o>
                                         <o n="Operand" t="Operand">
-                                          <v n="Operand">"pump_7_run_feedback"</v>
+                                          <v n="Operand">"u_3360_run_feedback"</v>
                                           <v n="Type">"BOOL"</v>
                                           <v n="Comment">""</v>
                                           <v n="SymbolComment">""</v>
@@ -848,7 +848,7 @@ END_VAR
                                       </o>
                                       <o>
                                         <o n="Operand" t="Operand">
-                                          <v n="Operand">"pump_8_run_feedback"</v>
+                                          <v n="Operand">"u_3370_run_feedback"</v>
                                           <v n="Type">"BOOL"</v>
                                           <v n="Comment">""</v>
                                           <v n="SymbolComment">""</v>
@@ -1058,7 +1058,7 @@ END_VAR
                         <l2 n="OutputItems" cet="Operand">
                           <n />
                           <o>
-                            <v n="Operand">"valve_9_recycle_position"</v>
+                            <v n="Operand">"av_3348_recycle_position"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1104,7 +1104,7 @@ END_VAR
                             <l2 n="OutputItems" cet="Operand">
                               <n />
                               <o>
-                                <v n="Operand">"valve_8_recycle_position"</v>
+                                <v n="Operand">"av_3248_recycle_position"</v>
                                 <v n="Type">"BOOL"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -1150,7 +1150,7 @@ END_VAR
                                 <l2 n="OutputItems" cet="Operand">
                                   <n />
                                   <o>
-                                    <v n="Operand">"valve_7_recycle_position"</v>
+                                    <v n="Operand">"av_3148_recycle_position"</v>
                                     <v n="Type">"BOOL"</v>
                                     <v n="Comment">""</v>
                                     <v n="SymbolComment">""</v>
@@ -1214,7 +1214,7 @@ END_VAR
                                 </o>
                                 <o>
                                   <o n="Operand" t="Operand">
-                                    <v n="Operand">"valve_7_position_feedback"</v>
+                                    <v n="Operand">"av_3148_position_feedback"</v>
                                     <v n="Type">"INT"</v>
                                     <v n="Comment">""</v>
                                     <v n="SymbolComment">""</v>
@@ -1279,7 +1279,7 @@ END_VAR
                             </o>
                             <o t="BoxTreeOperand">
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"valve_6_position_feedback"</v>
+                                <v n="Operand">"nv_3335_position_feedback"</v>
                                 <v n="Type">"INT"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -1344,7 +1344,7 @@ END_VAR
                         </o>
                         <o t="BoxTreeOperand">
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"valve_9_position_feedback"</v>
+                            <v n="Operand">"av_3348_position_feedback"</v>
                             <v n="Type">"INT"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1477,7 +1477,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"valve_1_closed_feedback"</v>
+                              <v n="Operand">"nv_3110_closed_feedback"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1496,7 +1496,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"valve_2_closed_feedback"</v>
+                              <v n="Operand">"nv_3210_closed_feedback"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1515,7 +1515,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"valve_3_closed_feedback"</v>
+                              <v n="Operand">"nv_3310_closed_feedback"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1534,7 +1534,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"valve_4_closed_feedback"</v>
+                              <v n="Operand">"nv_3135_closed_feedback"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1553,7 +1553,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"valve_5_closed_feedback"</v>
+                              <v n="Operand">"nv_3235_closed_feedback"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1572,7 +1572,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"valve_6_closed_feedback"</v>
+                              <v n="Operand">"nv_3335_closed_feedback"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1591,7 +1591,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"valve_10_closed_feedback"</v>
+                              <v n="Operand">"nv_3372_closed_feedback"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1610,7 +1610,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"valve_7_recycle_position"</v>
+                              <v n="Operand">"av_3148_recycle_position"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1629,7 +1629,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"valve_8_recycle_position"</v>
+                              <v n="Operand">"av_3248_recycle_position"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1648,7 +1648,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"valve_9_recycle_position"</v>
+                              <v n="Operand">"av_3348_recycle_position"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>

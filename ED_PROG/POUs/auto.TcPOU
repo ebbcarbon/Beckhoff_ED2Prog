@@ -4,36 +4,36 @@
     <Declaration><![CDATA[PROGRAM auto
 VAR
 	ed_routine_auto: BOOL;
-	auto_redox_doser_enable: BOOL;
+	redox_doser_auto_enable: BOOL;
 	
 	tmr_auto_pumps: TON;
-	auto_pump_1_request: BOOL;
-	auto_pump_3_request: BOOL;
-	auto_pump_4_request: BOOL;
-	auto_pump_2_request: BOOL;
+	u_3112_auto_request: BOOL;
+	u_3312_auto_request: BOOL;
+	u_3405_auto_request: BOOL;
+	u_3212_auto_request: BOOL;
 	tmr_auto_pump_delay: TON;
-	pump_1_running: BOOL;
-	pump_1_speed_ref: INT;
-	pump_1_sp: REAL;
+	u_3112_running: BOOL;
+	u_3112_speed_ref: INT;
+	u_3112_sp: REAL;
 	salt_pressure_actual: REAL;
-	auto_pump_1_ready: BOOL;
-	pump_2_running: BOOL;
-	auto_pump_2_ready: BOOL;
-	auto_pump_3_ready: BOOL;
-	pump_3_running: BOOL;
-	pump_4_running: BOOL;
-	auto_pump_4_ready: BOOL;
-	auto_stack_power_enable: BOOL;
-	valve_1_open_request: BOOL;
-	valve_2_open_request: BOOL;
-	valve_3_open_request: BOOL;
-	valve_1_open_feedback: BOOL;
-	valve_2_open_feedback: BOOL;
-	valve_3_open_feedback: BOOL;
-	valve_1_auto_request: BOOL;
-	valve_2_auto_request: BOOL;
-	valve_3_auto_request: BOOL;
-	redox_doser_auto_enable: BOOL;
+	u_3112_ready: BOOL;
+	u_3212_running: BOOL;
+	u_3212_ready: BOOL;
+	u_3312_ready: BOOL;
+	u_3312_running: BOOL;
+	u_3405_running: BOOL;
+	u_3405_ready: BOOL;
+	stack_power_enable: BOOL;
+	nv_3110_open_request: BOOL;
+	nv_3210_open_request: BOOL;
+	nv_3310_open_request: BOOL;
+	nv_3110_open_feedback: BOOL;
+	nv_3210_open_feedback: BOOL;
+	nv_3310_open_feedback: BOOL;
+	nv_3110_auto_request: BOOL;
+	nv_3210_auto_request: BOOL;
+	nv_3310_auto_request: BOOL;
+
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -58,7 +58,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"valve_1_auto_request"</v>
+                            <v n="Operand">"nv_3110_auto_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -74,7 +74,7 @@ END_VAR
                             <v n="Id">443L</v>
                           </o>
                           <o>
-                            <v n="Operand">"valve_2_auto_request"</v>
+                            <v n="Operand">"nv_3210_auto_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -90,7 +90,7 @@ END_VAR
                             <v n="Id">444L</v>
                           </o>
                           <o>
-                            <v n="Operand">"valve_3_auto_request"</v>
+                            <v n="Operand">"nv_3310_auto_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -258,7 +258,7 @@ END_VAR
                             </o>
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"valve_1_open_feedback"</v>
+                                <v n="Operand">"nv_3110_open_feedback"</v>
                                 <v n="Type">"BOOL"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -277,7 +277,7 @@ END_VAR
                             </o>
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"valve_2_open_feedback"</v>
+                                <v n="Operand">"nv_3210_open_feedback"</v>
                                 <v n="Type">"BOOL"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -296,7 +296,7 @@ END_VAR
                             </o>
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"valve_3_open_feedback"</v>
+                                <v n="Operand">"nv_3310_open_feedback"</v>
                                 <v n="Type">"BOOL"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -396,7 +396,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"auto_pump_1_request"</v>
+                            <v n="Operand">"u_3112_auto_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -412,7 +412,7 @@ END_VAR
                             <v n="Id">75L</v>
                           </o>
                           <o>
-                            <v n="Operand">"auto_pump_2_request"</v>
+                            <v n="Operand">"u_3212_auto_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -428,7 +428,7 @@ END_VAR
                             <v n="Id">68L</v>
                           </o>
                           <o>
-                            <v n="Operand">"auto_pump_3_request"</v>
+                            <v n="Operand">"u_3312_auto_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -444,7 +444,7 @@ END_VAR
                             <v n="Id">69L</v>
                           </o>
                           <o>
-                            <v n="Operand">"auto_pump_4_request"</v>
+                            <v n="Operand">"u_3405_auto_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -582,7 +582,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"auto_pump_1_ready"</v>
+                            <v n="Operand">"u_3112_ready"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -652,7 +652,7 @@ END_VAR
                         <l2 n="InputItems" cet="BoxTreeOperand">
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"pump_1_running"</v>
+                              <v n="Operand">"u_3112_running"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -671,7 +671,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"pump_1_sp * 0.9"</v>
+                              <v n="Operand">"u_3112_sp * 0.9"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -709,7 +709,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"pump_1_sp * 1.1"</v>
+                              <v n="Operand">"u_3112_sp * 1.1"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -773,7 +773,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"auto_pump_2_ready"</v>
+                            <v n="Operand">"u_3212_ready"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -843,7 +843,7 @@ END_VAR
                         <l2 n="InputItems" cet="BoxTreeOperand">
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"pump_2_running"</v>
+                              <v n="Operand">"u_3212_running"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -862,7 +862,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"pump_2_sp * 0.9"</v>
+                              <v n="Operand">"u_3212_sp * 0.9"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -900,7 +900,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"pump_2_sp * 1.1"</v>
+                              <v n="Operand">"u_3212_sp * 1.1"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -964,7 +964,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"auto_pump_3_ready"</v>
+                            <v n="Operand">"u_3312_ready"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1034,7 +1034,7 @@ END_VAR
                         <l2 n="InputItems" cet="BoxTreeOperand">
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"pump_3_running"</v>
+                              <v n="Operand">"u_3312_running"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1053,7 +1053,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"pump_1_sp * 0.9"</v>
+                              <v n="Operand">"u_3112_sp * 0.9"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1091,7 +1091,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"pump_1_sp * 1.1"</v>
+                              <v n="Operand">"u_3112_sp * 1.1"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1155,7 +1155,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"auto_pump_4_ready"</v>
+                            <v n="Operand">"u_3405_ready"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1225,7 +1225,7 @@ END_VAR
                         <l2 n="InputItems" cet="BoxTreeOperand">
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"pump_4_running"</v>
+                              <v n="Operand">"u_3405_running"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1244,7 +1244,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"pump_1_sp * 0.9"</v>
+                              <v n="Operand">"u_3112_sp * 0.9"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1282,7 +1282,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"pump_1_sp * 1.1"</v>
+                              <v n="Operand">"u_3112_sp * 1.1"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1417,7 +1417,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"auto_pump_1_ready"</v>
+                              <v n="Operand">"u_3112_ready"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1436,7 +1436,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"auto_pump_2_ready"</v>
+                              <v n="Operand">"u_3212_ready"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1455,7 +1455,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"auto_pump_3_ready"</v>
+                              <v n="Operand">"u_3312_ready"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1474,7 +1474,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"auto_pump_4_ready"</v>
+                              <v n="Operand">"u_3405_ready"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
