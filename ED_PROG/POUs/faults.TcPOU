@@ -5,12 +5,23 @@
 VAR PERSISTENT
 	//Discrete alarm example.  Replace with your own alarms
 	u_3112_fail_to_start : alarm;
+	u_3212_fail_to_start : alarm;
+	u_3312_fail_to_start : alarm;
+	u_3160_fail_to_start : alarm;
+	u_3260_fail_to_start : alarm;
+	u_3360_fail_to_start : alarm;
+	u_3370_fail_to_start : alarm;
+	u_3405_fail_to_start : alarm;
 	// Discrete Alarm Example
 	u_3112_fail_to_stop: Alarm;
-	//Discrete alarm example.  Replace with your own alarms
-	u_3160_fail_to_start : alarm;
-	//Discrete alarm example.  Replace with your own alarms
-	u_3160_fail_to_stop : alarm;
+	u_3212_fail_to_stop: Alarm;
+	u_3312_fail_to_stop: Alarm;
+	u_3160_fail_to_stop: Alarm;
+	u_3260_fail_to_stop: Alarm;
+	u_3360_fail_to_stop: Alarm;
+	u_3370_fail_to_stop: Alarm;
+	u_3405_fail_to_stop: Alarm;
+
 	// Example analog valve position fail alarm
 	av_3148_position_fail: Alarm;
 	// Example digital valve fail to open alarm

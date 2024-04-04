@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
-  <POU Name="pump_control" Id="{3b5ad67c-a464-4c74-9317-fc4708b2e954}" SpecialFunc="None">
-    <Declaration><![CDATA[PROGRAM pump_control
+  <POU Name="pump_manager" Id="{3b5ad67c-a464-4c74-9317-fc4708b2e954}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM pump_manager
 VAR
 	//Repeat for each pump?
 	u_3112_enable: BOOL;

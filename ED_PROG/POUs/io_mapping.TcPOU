@@ -8,28 +8,67 @@ VAR PERSISTENT
     //Example Analog input raw input, mapped to a physical input
     cpt_3144_raw_input AT %I* : INT;
 	
-	//Example motor vfd run feedback, mapped to a physical input
+	//Motor vfd run feedback, mapped to a physical input
 	u_3112_run_feedback AT %I* : BOOL;
-	
-	//Example motor vfd speed command function block
-	u_3112_speed_command : analog_scaling;
-	//Example motor vfd speed command scaled output, mappped to a physical output
-	u_3112_speed_command_io AT %Q* : INT;
-	
-	//Example motor vfd run feedback, mapped to a physical output
-	u_3112_run_command_io AT %Q* : BOOL;
-	
-	//Example motor vfd speed feedback
-	u_3112_speed_feedback : analog_scaling;
-	
-	//Example motor vfd speed feedback raw input
-	u_3112_speed_feedback_raw_input : INT;
-	
-	//Example motor starter run feedback, mapped to a physical input
+	u_3212_run_feedback AT %I* : BOOL;
+	u_3312_run_feedback AT %I* : BOOL;
 	u_3160_run_feedback AT %I* : BOOL;
+	u_3260_run_feedback AT %I* : BOOL;
+	u_3360_run_feedback AT %I* : BOOL;
+	u_3370_run_feedback AT %I* : BOOL;
+	u_3405_run_feedback AT %I* : BOOL;
 	
-	//Example motor starter run command, mapped to a physical output
-	u_3160_run_command_io : BOOL;
+	//Motor vfd speed command function block
+	u_3112_speed_command : analog_scaling;
+	u_3212_speed_command : analog_scaling;
+	u_3312_speed_command : analog_scaling;
+	u_3160_speed_command : analog_scaling;
+	u_3260_speed_command : analog_scaling;
+	u_3360_speed_command : analog_scaling;
+	u_3370_speed_command : analog_scaling;
+	u_3405_speed_command : analog_scaling;
+	
+	//Motor vfd speed command scaled output, mappped to a physical output
+	u_3112_speed_command_io AT %Q* : INT;
+	u_3212_speed_command_io AT %Q* : INT;
+	u_3312_speed_command_io AT %Q* : INT;
+	u_3160_speed_command_io AT %Q* : INT;
+	u_3260_speed_command_io AT %Q* : INT;
+	u_3360_speed_command_io AT %Q* : INT;
+	u_3370_speed_command_io AT %Q* : INT;
+	u_3405_speed_command_io AT %Q* : INT;
+	
+	//Motor vfd run feedback, mapped to a physical output
+	u_3112_run_command_io AT %Q* : BOOL;
+	u_3212_run_command_io AT %Q* : BOOL;
+	u_3312_run_command_io AT %Q* : BOOL;
+	u_3160_run_command_io AT %Q* : BOOL;
+	u_3260_run_command_io AT %Q* : BOOL;
+	u_3360_run_command_io AT %Q* : BOOL;
+	u_3370_run_command_io AT %Q* : BOOL;
+	u_3405_run_command_io AT %Q* : BOOL;
+	
+	//Motor vfd speed feedback
+	u_3112_speed_feedback : analog_scaling;
+	u_3212_speed_feedback : analog_scaling;
+	u_3312_speed_feedback : analog_scaling;
+	u_3160_speed_feedback : analog_scaling;
+	u_3260_speed_feedback : analog_scaling;
+	u_3360_speed_feedback : analog_scaling;
+	u_3370_speed_feedback : analog_scaling;
+	u_3405_speed_feedback : analog_scaling;
+	
+	//Motor vfd speed feedback raw input
+	u_3112_speed_feedback_raw_input : INT;
+	u_3212_speed_feedback_raw_input : INT;
+	u_3312_speed_feedback_raw_input : INT;
+	u_3160_speed_feedback_raw_input : INT;
+	u_3260_speed_feedback_raw_input : INT;
+	u_3360_speed_feedback_raw_input : INT;
+	u_3370_speed_feedback_raw_input : INT;
+	u_3405_speed_feedback_raw_input : INT;
+	
+
 	
 	//Example analog valve position feedback
 	av_3148_position_feedback : analog_scaling;
@@ -62,6 +101,7 @@ cpt_3144.raw_min:=opc.popa_0081_cpt_3144_raw_min;
 //Map the analog scaling function block raw input to the physical raw input variable
 cpt_3144.raw_input := cpt_3144_raw_input;
 
+//--------------------------------------------------------------------------------------------------------------
 //Instantiate Example analog output function block
 u_3112_speed_command();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
@@ -71,7 +111,7 @@ u_3112_speed_command.filter_factor:=opc.popa_0081_u_3112_speed_command_filter_fa
 u_3112_speed_command.raw_max:=opc.popa_0081_u_3112_speed_command_raw_max;
 u_3112_speed_command.raw_min:=opc.popa_0081_u_3112_speed_command_raw_min;
 //Map output from motor control pou to scaling block
-u_3112_speed_command.raw_input:=motor_vfd_control.u_3112.speed_command;
+u_3112_speed_command.raw_input:=motor_vfd_control_st.u_3112.speed_command;
 //Map the analog scaling function block raw input to the physical raw output variable
 u_3112_speed_command_io := REAL_TO_INT(u_3112_speed_command.scaled_value);
 
@@ -85,6 +125,182 @@ u_3112_speed_feedback.raw_max:=opc.popa_0081_u_3112_speed_feedback_raw_max;
 u_3112_speed_feedback.raw_min:=opc.popa_0081_u_3112_speed_feedback_raw_min;
 //Map the analog scaling function block raw input to the physical raw input variable
 u_3112_speed_feedback.raw_input := u_3112_speed_feedback_raw_input;
+
+//--------------------------------------------------------------------------------------------------------------
+//Instantiate Example analog output function block
+u_3212_speed_command();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3212_speed_command.eu_max:=opc.popa_0081_u_3212_speed_command_eu_max;
+u_3212_speed_command.eu_min:=opc.popa_0081_u_3212_speed_command_eu_min;
+u_3212_speed_command.filter_factor:=opc.popa_0081_u_3212_speed_command_filter_factor;
+u_3212_speed_command.raw_max:=opc.popa_0081_u_3212_speed_command_raw_max;
+u_3212_speed_command.raw_min:=opc.popa_0081_u_3212_speed_command_raw_min;
+//Map output from motor control pou to scaling block
+u_3212_speed_command.raw_input:=motor_vfd_control_st.u_3212.speed_command;
+//Map the analog scaling function block raw input to the physical raw output variable
+u_3212_speed_command_io := REAL_TO_INT(u_3212_speed_command.scaled_value);
+
+//Instantiate Example analog input function block
+u_3212_speed_feedback();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3212_speed_feedback.eu_max:=opc.popa_0081_u_3212_speed_feedback_eu_max;
+u_3212_speed_feedback.eu_min:=opc.popa_0081_u_3212_speed_feedback_eu_min;
+u_3212_speed_feedback.filter_factor:=opc.popa_0081_u_3212_speed_feedback_filter_factor;
+u_3212_speed_feedback.raw_max:=opc.popa_0081_u_3212_speed_feedback_raw_max;
+u_3212_speed_feedback.raw_min:=opc.popa_0081_u_3212_speed_feedback_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+u_3212_speed_feedback.raw_input := u_3212_speed_feedback_raw_input;
+
+//--------------------------------------------------------------------------------------------------------------
+//Instantiate Example analog output function block
+u_3312_speed_command();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3312_speed_command.eu_max:=opc.popa_0081_u_3312_speed_command_eu_max;
+u_3312_speed_command.eu_min:=opc.popa_0081_u_3312_speed_command_eu_min;
+u_3312_speed_command.filter_factor:=opc.popa_0081_u_3312_speed_command_filter_factor;
+u_3312_speed_command.raw_max:=opc.popa_0081_u_3312_speed_command_raw_max;
+u_3312_speed_command.raw_min:=opc.popa_0081_u_3312_speed_command_raw_min;
+//Map output from motor control pou to scaling block
+u_3312_speed_command.raw_input:=motor_vfd_control_st.u_3312.speed_command;
+//Map the analog scaling function block raw input to the physical raw output variable
+u_3312_speed_command_io := REAL_TO_INT(u_3312_speed_command.scaled_value);
+
+//Instantiate Example analog input function block
+u_3312_speed_feedback();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3312_speed_feedback.eu_max:=opc.popa_0081_u_3312_speed_feedback_eu_max;
+u_3312_speed_feedback.eu_min:=opc.popa_0081_u_3312_speed_feedback_eu_min;
+u_3312_speed_feedback.filter_factor:=opc.popa_0081_u_3312_speed_feedback_filter_factor;
+u_3312_speed_feedback.raw_max:=opc.popa_0081_u_3312_speed_feedback_raw_max;
+u_3312_speed_feedback.raw_min:=opc.popa_0081_u_3312_speed_feedback_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+u_3312_speed_feedback.raw_input := u_3312_speed_feedback_raw_input;
+
+//--------------------------------------------------------------------------------------------------------------
+//Instantiate Example analog output function block
+u_3160_speed_command();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3160_speed_command.eu_max:=opc.popa_0081_u_3160_speed_command_eu_max;
+u_3160_speed_command.eu_min:=opc.popa_0081_u_3160_speed_command_eu_min;
+u_3160_speed_command.filter_factor:=opc.popa_0081_u_3160_speed_command_filter_factor;
+u_3160_speed_command.raw_max:=opc.popa_0081_u_3160_speed_command_raw_max;
+u_3160_speed_command.raw_min:=opc.popa_0081_u_3160_speed_command_raw_min;
+//Map output from motor control pou to scaling block
+u_3160_speed_command.raw_input:=motor_vfd_control_st.u_3160.speed_command;
+//Map the analog scaling function block raw input to the physical raw output variable
+u_3160_speed_command_io := REAL_TO_INT(u_3160_speed_command.scaled_value);
+
+//Instantiate Example analog input function block
+u_3160_speed_feedback();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3160_speed_feedback.eu_max:=opc.popa_0081_u_3160_speed_feedback_eu_max;
+u_3160_speed_feedback.eu_min:=opc.popa_0081_u_3160_speed_feedback_eu_min;
+u_3160_speed_feedback.filter_factor:=opc.popa_0081_u_3160_speed_feedback_filter_factor;
+u_3160_speed_feedback.raw_max:=opc.popa_0081_u_3160_speed_feedback_raw_max;
+u_3160_speed_feedback.raw_min:=opc.popa_0081_u_3160_speed_feedback_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+u_3160_speed_feedback.raw_input := u_3160_speed_feedback_raw_input;
+
+//--------------------------------------------------------------------------------------------------------------
+//Instantiate Example analog output function block
+u_3260_speed_command();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3260_speed_command.eu_max:=opc.popa_0081_u_3260_speed_command_eu_max;
+u_3260_speed_command.eu_min:=opc.popa_0081_u_3260_speed_command_eu_min;
+u_3260_speed_command.filter_factor:=opc.popa_0081_u_3260_speed_command_filter_factor;
+u_3260_speed_command.raw_max:=opc.popa_0081_u_3260_speed_command_raw_max;
+u_3260_speed_command.raw_min:=opc.popa_0081_u_3260_speed_command_raw_min;
+//Map output from motor control pou to scaling block
+u_3260_speed_command.raw_input:=motor_vfd_control_st.u_3260.speed_command;
+//Map the analog scaling function block raw input to the physical raw output variable
+u_3260_speed_command_io := REAL_TO_INT(u_3260_speed_command.scaled_value);
+
+//Instantiate Example analog input function block
+u_3260_speed_feedback();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3260_speed_feedback.eu_max:=opc.popa_0081_u_3260_speed_feedback_eu_max;
+u_3260_speed_feedback.eu_min:=opc.popa_0081_u_3260_speed_feedback_eu_min;
+u_3260_speed_feedback.filter_factor:=opc.popa_0081_u_3260_speed_feedback_filter_factor;
+u_3260_speed_feedback.raw_max:=opc.popa_0081_u_3260_speed_feedback_raw_max;
+u_3260_speed_feedback.raw_min:=opc.popa_0081_u_3260_speed_feedback_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+u_3260_speed_feedback.raw_input := u_3260_speed_feedback_raw_input;
+
+//--------------------------------------------------------------------------------------------------------------
+//Instantiate Example analog output function block
+u_3360_speed_command();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3360_speed_command.eu_max:=opc.popa_0081_u_3360_speed_command_eu_max;
+u_3360_speed_command.eu_min:=opc.popa_0081_u_3360_speed_command_eu_min;
+u_3360_speed_command.filter_factor:=opc.popa_0081_u_3360_speed_command_filter_factor;
+u_3360_speed_command.raw_max:=opc.popa_0081_u_3360_speed_command_raw_max;
+u_3360_speed_command.raw_min:=opc.popa_0081_u_3360_speed_command_raw_min;
+//Map output from motor control pou to scaling block
+u_3360_speed_command.raw_input:=motor_vfd_control_st.u_3360.speed_command;
+//Map the analog scaling function block raw input to the physical raw output variable
+u_3360_speed_command_io := REAL_TO_INT(u_3360_speed_command.scaled_value);
+
+//Instantiate Example analog input function block
+u_3360_speed_feedback();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3360_speed_feedback.eu_max:=opc.popa_0081_u_3360_speed_feedback_eu_max;
+u_3360_speed_feedback.eu_min:=opc.popa_0081_u_3360_speed_feedback_eu_min;
+u_3360_speed_feedback.filter_factor:=opc.popa_0081_u_3360_speed_feedback_filter_factor;
+u_3360_speed_feedback.raw_max:=opc.popa_0081_u_3360_speed_feedback_raw_max;
+u_3360_speed_feedback.raw_min:=opc.popa_0081_u_3360_speed_feedback_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+u_3360_speed_feedback.raw_input := u_3360_speed_feedback_raw_input;
+
+//--------------------------------------------------------------------------------------------------------------
+//Instantiate Example analog output function block
+u_3370_speed_command();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3370_speed_command.eu_max:=opc.popa_0081_u_3370_speed_command_eu_max;
+u_3370_speed_command.eu_min:=opc.popa_0081_u_3370_speed_command_eu_min;
+u_3370_speed_command.filter_factor:=opc.popa_0081_u_3370_speed_command_filter_factor;
+u_3370_speed_command.raw_max:=opc.popa_0081_u_3370_speed_command_raw_max;
+u_3370_speed_command.raw_min:=opc.popa_0081_u_3370_speed_command_raw_min;
+//Map output from motor control pou to scaling block
+u_3370_speed_command.raw_input:=motor_vfd_control_st.u_3370.speed_command;
+//Map the analog scaling function block raw input to the physical raw output variable
+u_3370_speed_command_io := REAL_TO_INT(u_3370_speed_command.scaled_value);
+
+//Instantiate Example analog input function block
+u_3370_speed_feedback();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3370_speed_feedback.eu_max:=opc.popa_0081_u_3370_speed_feedback_eu_max;
+u_3370_speed_feedback.eu_min:=opc.popa_0081_u_3370_speed_feedback_eu_min;
+u_3370_speed_feedback.filter_factor:=opc.popa_0081_u_3370_speed_feedback_filter_factor;
+u_3370_speed_feedback.raw_max:=opc.popa_0081_u_3370_speed_feedback_raw_max;
+u_3370_speed_feedback.raw_min:=opc.popa_0081_u_3370_speed_feedback_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+u_3370_speed_feedback.raw_input := u_3370_speed_feedback_raw_input;
+
+//--------------------------------------------------------------------------------------------------------------
+//Instantiate Example analog output function block
+u_3405_speed_command();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3405_speed_command.eu_max:=opc.popa_0081_u_3405_speed_command_eu_max;
+u_3405_speed_command.eu_min:=opc.popa_0081_u_3405_speed_command_eu_min;
+u_3405_speed_command.filter_factor:=opc.popa_0081_u_3405_speed_command_filter_factor;
+u_3405_speed_command.raw_max:=opc.popa_0081_u_3405_speed_command_raw_max;
+u_3405_speed_command.raw_min:=opc.popa_0081_u_3405_speed_command_raw_min;
+//Map output from motor control pou to scaling block
+u_3405_speed_command.raw_input:=motor_vfd_control_st.u_3405.speed_command;
+//Map the analog scaling function block raw input to the physical raw output variable
+u_3405_speed_command_io := REAL_TO_INT(u_3405_speed_command.scaled_value);
+
+//Instantiate Example analog input function block
+u_3405_speed_feedback();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3405_speed_feedback.eu_max:=opc.popa_0081_u_3405_speed_feedback_eu_max;
+u_3405_speed_feedback.eu_min:=opc.popa_0081_u_3405_speed_feedback_eu_min;
+u_3405_speed_feedback.filter_factor:=opc.popa_0081_u_3405_speed_feedback_filter_factor;
+u_3405_speed_feedback.raw_max:=opc.popa_0081_u_3405_speed_feedback_raw_max;
+u_3405_speed_feedback.raw_min:=opc.popa_0081_u_3405_speed_feedback_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+u_3405_speed_feedback.raw_input := u_3405_speed_feedback_raw_input;
+
 
 //Instantiate Example analog input function block
 av_3148_position_feedback();
@@ -111,7 +327,14 @@ av_3148_position_command.raw_input:=valve_analog_control.av_3148.Position_Comman
 av_3148_position_command_io := REAL_TO_INT(av_3148_position_command.scaled_value);
 
 //Map the motor run command to the command output
-u_3112_run_command_io:=motor_vfd_control.u_3112.run_command;
+u_3112_run_command_io:=motor_vfd_control_st.u_3112.run_command;
+u_3212_run_command_io:=motor_vfd_control_st.u_3212.run_command;
+u_3312_run_command_io:=motor_vfd_control_st.u_3312.run_command;
+u_3160_run_command_io:=motor_vfd_control_st.u_3160.run_command;
+u_3260_run_command_io:=motor_vfd_control_st.u_3260.run_command;
+u_3360_run_command_io:=motor_vfd_control_st.u_3360.run_command;
+u_3370_run_command_io:=motor_vfd_control_st.u_3370.run_command;
+u_3405_run_command_io:=motor_vfd_control_st.u_3405.run_command;
 
 //Map the motor run command to the command output
 u_3160_run_command_io:=motor_starter_control.u_3160.run_command;
