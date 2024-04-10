@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<VarLinks>
+	<OwnerA Name="InputDst" Prefix="TIPC^ED_PROG^ED_PROG Instance" Type="1">
+		<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)">
+			<Link VarA="io_mapping.u_3112_fault_feedback" GrpA="PlcTask Inputs" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3112_run_feedback" GrpA="PlcTask Inputs" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3160_fault_feedback" GrpA="PlcTask Inputs" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3160_run_feedback" GrpA="PlcTask Inputs" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3212_fault_feedback" GrpA="PlcTask Inputs" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3212_run_feedback" GrpA="PlcTask Inputs" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3260_fault_feedback" GrpA="PlcTask Inputs" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3260_run_feedback" GrpA="PlcTask Inputs" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3312_fault_feedback" GrpA="PlcTask Inputs" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3312_run_feedback" GrpA="PlcTask Inputs" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3360_fault_feedback" GrpA="PlcTask Inputs" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3360_run_feedback" GrpA="PlcTask Inputs" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3370_fault_feedback" GrpA="PlcTask Inputs" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3370_run_feedback" GrpA="PlcTask Inputs" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3405_fault_feedback" GrpA="PlcTask Inputs" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3405_run_feedback" GrpA="PlcTask Inputs" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+		</OwnerB>
+	</OwnerA>
+	<OwnerA Name="OutputSrc" Prefix="TIPC^ED_PROG^ED_PROG Instance" Type="2">
+		<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)">
+			<Link VarA="io_mapping.u_3112_speed_command_io" GrpA="PlcTask Outputs" TypeA="INT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AO Output Channel 1^Analog output" AutoLink="true"/>
+			<Link VarA="io_mapping.u_3160_speed_command_io" GrpA="PlcTask Outputs" TypeA="INT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AO Output Channel 1^Analog output" AutoLink="true"/>
+			<Link VarA="io_mapping.u_3212_speed_command_io" GrpA="PlcTask Outputs" TypeA="INT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AO Output Channel 1^Analog output" AutoLink="true"/>
+			<Link VarA="io_mapping.u_3260_speed_command_io" GrpA="PlcTask Outputs" TypeA="INT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AO Output Channel 1^Analog output" AutoLink="true"/>
+			<Link VarA="io_mapping.u_3312_speed_command_io" GrpA="PlcTask Outputs" TypeA="INT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AO Output Channel 1^Analog output" AutoLink="true"/>
+			<Link VarA="io_mapping.u_3360_speed_command_io" GrpA="PlcTask Outputs" TypeA="INT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AO Output Channel 1^Analog output" AutoLink="true"/>
+			<Link VarA="io_mapping.u_3370_speed_command_io" GrpA="PlcTask Outputs" TypeA="INT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AO Output Channel 1^Analog output" AutoLink="true"/>
+			<Link VarA="io_mapping.u_3405_speed_command_io" GrpA="PlcTask Outputs" TypeA="INT" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000006}" VarB="AO Output Channel 1^Analog output" AutoLink="true"/>
+		</OwnerB>
+		<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)">
+			<Link VarA="io_mapping.u_3112_fault_reset_io" GrpA="PlcTask Outputs" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3112_run_command_io" GrpA="PlcTask Outputs" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3160_fault_reset_io" GrpA="PlcTask Outputs" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3160_run_command_io" GrpA="PlcTask Outputs" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3212_fault_reset_io" GrpA="PlcTask Outputs" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3212_run_command_io" GrpA="PlcTask Outputs" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3260_fault_reset_io" GrpA="PlcTask Outputs" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3260_run_command_io" GrpA="PlcTask Outputs" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3312_fault_reset_io" GrpA="PlcTask Outputs" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3312_run_command_io" GrpA="PlcTask Outputs" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3360_fault_reset_io" GrpA="PlcTask Outputs" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3360_run_command_io" GrpA="PlcTask Outputs" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3370_fault_reset_io" GrpA="PlcTask Outputs" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3370_run_command_io" GrpA="PlcTask Outputs" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3405_fault_reset_io" GrpA="PlcTask Outputs" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+			<Link VarA="io_mapping.u_3405_run_command_io" GrpA="PlcTask Outputs" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+		</OwnerB>
+	</OwnerA>
+</VarLinks>
