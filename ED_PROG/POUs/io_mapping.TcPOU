@@ -12,7 +12,7 @@ VAR PERSISTENT
 //---Field Equipment:Pumps----------------------------------------------------------------------------------------------------------
 	
 	//Motor vfd run feedback, mapped to a physical input
-	////{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
+	//{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
 	u_3112_run_feedback AT %I* : BOOL;
 	////{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
 	u_3212_run_feedback AT %I* : BOOL;
@@ -113,12 +113,19 @@ VAR PERSISTENT
 	u_3405_fault_reset_io AT %Q* : BOOL;
 	
 	//Motor vfd speed feedback
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 1^Value'}
 	u_3112_speed_feedback : analog_scaling;
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 5^Value'}
 	u_3212_speed_feedback : analog_scaling;
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 2^Value'}
 	u_3312_speed_feedback : analog_scaling;
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 6^Value'}
 	u_3160_speed_feedback : analog_scaling;
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 3^Value'}
 	u_3260_speed_feedback : analog_scaling;
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 7^Value'}
 	u_3360_speed_feedback : analog_scaling;
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 4^Value'}
 	u_3370_speed_feedback : analog_scaling;
 	u_3405_speed_feedback : analog_scaling;
 	
