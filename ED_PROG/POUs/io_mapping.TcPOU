@@ -12,39 +12,39 @@ VAR PERSISTENT
 //---Field Equipment:Pumps----------------------------------------------------------------------------------------------------------
 	
 	//Motor vfd run feedback, mapped to a physical input
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
+	////{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
 	u_3112_run_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
+	////{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
 	u_3212_run_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
+	////{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
 	u_3312_run_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
+	////{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
 	u_3160_run_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
+	////{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
 	u_3260_run_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
+	////{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
 	u_3360_run_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
 	u_3370_run_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
 	u_3405_run_feedback AT %I* : BOOL;
 	
 	//Motor Fault feed
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
 	u_3112_fault_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
 	u_3212_fault_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
 	u_3312_fault_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
 	u_3160_fault_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
 	u_3260_fault_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
 	u_3360_fault_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
 	u_3370_fault_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
 	u_3405_fault_feedback AT %I* : BOOL;
 	
 	
@@ -59,57 +59,57 @@ VAR PERSISTENT
 	u_3405_speed_command : analog_scaling;
 	
 	//Motor vfd speed command scaled output, mappped to a physical output
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 1^Analog output'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 1^Analog output'}
 	u_3112_speed_command_io AT %Q* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 1^Analog output'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 1^Analog output'}
 	u_3212_speed_command_io AT %Q* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 1^Analog output'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 1^Analog output'}
 	u_3312_speed_command_io AT %Q* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 1^Analog output'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 1^Analog output'}
 	u_3160_speed_command_io AT %Q* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 1^Analog output'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 1^Analog output'}
 	u_3260_speed_command_io AT %Q* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 1^Analog output'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 1^Analog output'}
 	u_3360_speed_command_io AT %Q* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 1^Analog output'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 1^Analog output'}
 	u_3370_speed_command_io AT %Q* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 1^Analog output'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 1^Analog output'}
 	u_3405_speed_command_io AT %Q* : INT;
 	
 	//Motor vfd run feedback, mapped to a physical output
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
+	//{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
 	u_3112_run_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
+	//{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
 	u_3212_run_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
+	//{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
 	u_3312_run_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}	
+	//{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}	
 	u_3160_run_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
+	//{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
 	u_3260_run_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
+	//{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
 	u_3360_run_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
+	//{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
 	u_3370_run_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
+	//{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
 	u_3405_run_command_io AT %Q* : BOOL;
 	
 	//Motor Fault Reset
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
+	//{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
 	u_3112_fault_reset_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
+	//{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
 	u_3212_fault_reset_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
+	//{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
 	u_3312_fault_reset_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
+	//{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
 	u_3160_fault_reset_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
+	//{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
 	u_3260_fault_reset_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
+	//{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
 	u_3360_fault_reset_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
+	//{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
 	u_3370_fault_reset_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
+	//{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
 	u_3405_fault_reset_io AT %Q* : BOOL;
 	
 	//Motor vfd speed feedback
@@ -123,21 +123,21 @@ VAR PERSISTENT
 	u_3405_speed_feedback : analog_scaling;
 	
 	//Motor vfd speed feedback raw input
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 1^Value'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 1^Value'}
 	u_3112_speed_feedback_raw_input : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 1^Value'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 1^Value'}
 	u_3212_speed_feedback_raw_input : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 1^Value'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 1^Value'}
 	u_3312_speed_feedback_raw_input : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 1^Value'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 1^Value'}
 	u_3160_speed_feedback_raw_input : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 1^Value'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 1^Value'}
 	u_3260_speed_feedback_raw_input : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 1^Value'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 1^Value'}
 	u_3360_speed_feedback_raw_input : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 1^Value'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 1^Value'}
 	u_3370_speed_feedback_raw_input : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 1^Value'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 1^Value'}
 	u_3405_speed_feedback_raw_input : INT;
 	
 //--Field Equipent: Valves---------------------------------------------------------------------------------------------------------------
@@ -168,6 +168,7 @@ VAR PERSISTENT
 	nv_3235_open_feedback AT %I* : BOOL;
 	nv_3335_open_feedback AT %I* : BOOL;
 	nv_3372_open_feedback AT %I* : BOOL;
+	nv_3162_open_feedback AT %I* : BOOL;
 	
 	//Example digital valve closed feedback
 	nv_3110_closed_feedback AT %I* : BOOL;
@@ -177,15 +178,25 @@ VAR PERSISTENT
 	nv_3235_closed_feedback AT %I* : BOOL;
 	nv_3335_closed_feedback AT %I* : BOOL;
 	nv_3372_closed_feedback AT %I* : BOOL;
+	nv_3162_closed_feedback AT %I* : BOOL;
 	
 	//Example digital valve open command
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 21 (EL1859)^Channel 11^Output'}
 	nv_3110_open_command_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 21 (EL1859)^Channel 10^Output'}
 	nv_3210_open_command_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 21 (EL1859)^Channel 13^Output'}
 	nv_3310_open_command_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 21 (EL1859)^Channel 12^Output'}
 	nv_3135_open_command_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 21 (EL1859)^Channel 14^Output'}
 	nv_3235_open_command_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 21 (EL1859)^Channel 15^Output'}
 	nv_3335_open_command_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 21 (EL1859)^Channel 16^Output'}
 	nv_3372_open_command_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 21 (EL1859)^Channel 9^Output'}
+	nv_3162_open_command_io AT %Q* : BOOL;
 	
 	
 END_VAR]]></Declaration>
