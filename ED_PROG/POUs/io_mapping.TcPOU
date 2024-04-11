@@ -5,19 +5,47 @@
 VAR PERSISTENT
 //---Field Instrumentation-----------------------------------------------------------------------------------------------
     //Analog input function block
-    cpt_3144 : analog_scaling;
-	cpt_3144 : analog_scaling;
-	cpt_3144 : analog_scaling;
-	cpt_3144 : analog_scaling;
-	cpt_3144 : analog_scaling;
-	cpt_3144 : analog_scaling;
-	cpt_3144 : analog_scaling;
-	cpt_3144 : analog_scaling;
-	cpt_3144 : analog_scaling;
-	cpt_3144 : analog_scaling;
+    pt_3119 : analog_scaling;
+	pt_3219 : analog_scaling;
+	pt_3319 : analog_scaling;
+	pt_3141 : analog_scaling;
+	pt_3241 : analog_scaling;
+	pt_3341 : analog_scaling;
+	tt_3118 : analog_scaling;
+	tt_3218 : analog_scaling;
+	tt_3318 : analog_scaling;
+	tt_3140 : analog_scaling;
+	tt_3240 : analog_scaling;
+	tt_3340 : analog_scaling;
+
     //Analog input raw input, mapped to a physical input
     cpt_3144_raw_input AT %I* : INT;
-
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 14 (EL3058)^AI Standard Channel 1^Value'}
+	pt_3119_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 14 (EL3058)^AI Standard Channel 2^Value'}
+	pt_3219_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 14 (EL3058)^AI Standard Channel 3^Value'}
+	pt_3319_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 14 (EL3058)^AI Standard Channel 4^Value'}
+	pt_3141_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 14 (EL3058)^AI Standard Channel 5^Value'}
+	pt_3241_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 14 (EL3058)^AI Standard Channel 6^Value'}
+	pt_3341_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 14 (EL3058)^AI Standard Channel 7^Value'}
+	tt_3118_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 14 (EL3058)^AI Standard Channel 8^Value'}
+	tt_3218_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 15 (EL3058)^AI Standard Channel 1^Value'}
+	tt_3318_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 15 (EL3058)^AI Standard Channel 2^Value'}
+	tt_3140_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 15 (EL3058)^AI Standard Channel 3^Value'}
+	tt_3240_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 15 (EL3058)^AI Standard Channel 4^Value'}
+	tt_3340_raw_input AT %I* : INT;
+	
+	
 //---Field Equipment:Pumps----------------------------------------------------------------------------------------------------------
 	
 	//Motor vfd run feedback, mapped to a physical input
