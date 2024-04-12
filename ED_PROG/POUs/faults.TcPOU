@@ -3,6 +3,9 @@
   <POU Name="faults" Id="{676b0c44-de53-481b-87a6-7f945cc11bcf}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM faults
 VAR PERSISTENT
+
+//---Equipment Failure Faults----------------------------------------------------------------------------------------------
+
 	//Discrete alarm example.  Replace with your own alarms
 	u_3112_fail_to_start : alarm;
 	u_3212_fail_to_start : alarm;
@@ -28,14 +31,20 @@ VAR PERSISTENT
 	nv_3372_fail_to_open: Alarm;
 	// Example digital valve fail to close alarm
 	nv_3372_fail_to_close: Alarm;
-	// Example analog alarm low low
+	
+//---System threshold alarms------------------------------------------------------------------------------------------------
+
+	// Analog alarm low low
 	cpt_3144_low_low: Alarm;
-	// Example analog alarm low
+	// Analog alarm low
 	cpt_3144_low: Alarm;
-	// Example analog alarm high
+	// Analog alarm high
 	cpt_3144_high: Alarm;
-	// Example analog alarm high high
+	// Analog alarm high high
 	cpt_3144_high_high: Alarm;
+
+
+
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[//Instantiate the alarm block, and map the inputs from the OPC GVL

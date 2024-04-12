@@ -5,6 +5,7 @@
 VAR PERSISTENT
 //---Field Instrumentation-----------------------------------------------------------------------------------------------
     //Analog input function block
+	cpt_3144: analog_scaling;
     pt_3119 : analog_scaling;
 	pt_3219 : analog_scaling;
 	pt_3319 : analog_scaling;
@@ -63,7 +64,7 @@ VAR PERSISTENT
 	u_3360_run_feedback AT %I* : BOOL;
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL1859)^Channel 6^Input'}
 	u_3370_run_feedback AT %I* : BOOL;
-	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL1859)^Channel 1^Input'}
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 21 (EK1100)^Term 24 (EL1859)^Channel 2^Input'}
 	u_3405_run_feedback AT %I* : BOOL;
 	
 	//Motor Fault feedback
@@ -81,7 +82,7 @@ VAR PERSISTENT
 	u_3360_fault_feedback AT %I* : BOOL;
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL1859)^Channel 5^Input'}
 	u_3370_fault_feedback AT %I* : BOOL;
-	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 1^Input'}
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 21 (EK1100)^Term 24 (EL1859)^Channel 1^Input'}
 	u_3405_fault_feedback AT %I* : BOOL;
 	
 	
@@ -110,7 +111,7 @@ VAR PERSISTENT
 	u_3360_speed_command_io AT %Q* : INT;
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EL4124)^AO Output Channel 5^Analog output'}
 	u_3370_speed_command_io AT %Q* : INT;
-	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 1^Analog output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 21 (EK1100)^Term 23 (EL4124)^AO Output Channel 1^Analog output'}
 	u_3405_speed_command_io AT %Q* : INT;
 	
 	//Motor vfd run command, mapped to a physical output
@@ -128,7 +129,7 @@ VAR PERSISTENT
 	u_3360_run_command_io AT %Q* : BOOL;
 	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL1859)^Channel 13^Output'}
 	u_3370_run_command_io AT %Q* : BOOL;
-	//{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
+	{attribute 'TcLinkTo' :=  'TIID^Device 4 (EtherCAT)^Term 21 (EK1100)^Term 24 (EL1859)^Channel 9^Output'}
 	u_3405_run_command_io AT %Q* : BOOL;
 	
 	//Motor Fault Reset
@@ -146,7 +147,7 @@ VAR PERSISTENT
 	u_3360_fault_reset_io AT %Q* : BOOL;
 	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL1859)^Channel 14^Output'}
 	u_3370_fault_reset_io AT %Q* : BOOL;
-	//{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
+	{attribute 'TcLinkTo' :=  'TIID^Device 4 (EtherCAT)^Term 21 (EK1100)^Term 24 (EL1859)^Channel 10^Output'}
 	u_3405_fault_reset_io AT %Q* : BOOL;
 	
 	//Motor vfd speed feedback
@@ -174,7 +175,7 @@ VAR PERSISTENT
 	u_3360_speed_feedback_raw_input : INT;
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 7^Value'}
 	u_3370_speed_feedback_raw_input : INT;
-	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 1^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 21 (EK1100)^Term 22 (EL3058)^AI Standard Channel 1^Value'}
 	u_3405_speed_feedback_raw_input : INT;
 	
 //--Field Equipent: Valves---------------------------------------------------------------------------------------------------------------
@@ -238,7 +239,7 @@ VAR PERSISTENT
 	
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[//Instantiate Example analog input function block
+      <ST><![CDATA[//Instantiate analog input function block
 cpt_3144();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
 cpt_3144.eu_max:=opc.popa_0081_cpt_3144_eu_max;
