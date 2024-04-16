@@ -3,7 +3,7 @@
   <POU Name="motor_vfd_control_st" Id="{a46dfc99-89d7-4ba2-a2c1-28118d28ec13}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM motor_vfd_control_st
 VAR PERSISTENT
-	//Example motor starter block.  
+	//Motor starter block.  
 	u_3112 : motor_vfd;
 	u_3212 : motor_vfd;
 	u_3312 : motor_vfd;
@@ -12,6 +12,16 @@ VAR PERSISTENT
 	u_3360 : motor_vfd;
 	u_3370 : motor_vfd;
 	u_3405 : motor_vfd;
+	
+	//Motor starter block.  
+	u_3112_pid : FB_BasicPID;
+	u_3212_pid : FB_BasicPID;
+	u_3312_pid : FB_BasicPID;
+	u_3160_pid : FB_BasicPID;
+	u_3260_pid : FB_BasicPID;
+	u_3360_pid : FB_BasicPID;
+	u_3370_pid : FB_BasicPID;
+	u_3405_pid : FB_BasicPID;
 END_VAR
 
 VAR
@@ -24,6 +34,23 @@ u_3112.run_feedback:=io_mapping.u_3112_run_feedback;
 u_3112.runtime_maint_reset:=opc.popa_0081_u_3112_runtime_maint_reset;
 u_3112.run_request:=pump_manager.u_3112_enable;
 u_3112.daily_reset:=general.daily_reset;
+
+//Instantiate u_3112_PID function block, and map inputs
+u_3112_pid();
+u_3112_pid.fActualValue := io_mapping.u_3112_speed_feedback.scaled_value;
+u_3112_pid.fCtrlCycleTime := 1; 
+u_3112_pid.fKp            := 1; 
+u_3112_pid.fTn            := 1; 
+u_3112_pid.fTv            := 1; 
+u_3112_pid.fTd            := 1; 
+
+//PID logic. Basic PID, if pump enable is false, set setpoint to 0.
+IF pump_manager.u_3112_enable = TRUE THEN
+	u_3112_pid.fSetpointValue := pump_manager.u_3112_speed_request;
+	ELSE
+		u_3112_pid.fSetpointValue := 0;
+END_IF
+
 
 //Generic pump fault collector.  If any pump U_3112 related faults are true, set the function block fault status to true
 IF faults.u_3112_fail_to_start.active=TRUE OR faults.u_3112_fail_to_stop.active=TRUE THEN
@@ -45,9 +72,25 @@ u_3212.runtime_maint_reset:=opc.popa_0081_u_3212_runtime_maint_reset;
 u_3212.run_request:=pump_manager.u_3212_enable;
 u_3212.daily_reset:=general.daily_reset;
 
+//Instantiate u_3212_PID function block, and map inputs
+u_3212_pid();
+u_3212_pid.fActualValue := io_mapping.u_3212_speed_feedback.scaled_value;
+u_3212_pid.fCtrlCycleTime := 1; 
+u_3212_pid.fKp            := 1; 
+u_3212_pid.fTn            := 1; 
+u_3212_pid.fTv            := 1; 
+u_3212_pid.fTd            := 1; 
+
+//PID logic. Basic PID, if pump enable is false, set setpoint to 0.
+IF pump_manager.u_3212_enable = TRUE THEN
+	u_3212_pid.fSetpointValue := pump_manager.u_3212_speed_request;
+	ELSE
+		u_3212_pid.fSetpointValue := 0;
+END_IF
+
 //Generic pump fault collector.  If any pump u_3212 related faults are true, set the function block fault status to true
 IF faults.u_3212_fail_to_start.active=TRUE OR faults.u_3212_fail_to_stop.active=TRUE THEN
-	u_3112.fault:=TRUE;
+	u_3212.fault:=TRUE;
 	ELSE
 		u_3212.fault:=FALSE;
 	END_IF
@@ -64,6 +107,23 @@ u_3312.run_feedback:=io_mapping.u_3312_run_feedback;
 u_3312.runtime_maint_reset:=opc.popa_0081_u_3312_runtime_maint_reset;
 u_3312.run_request:=pump_manager.u_3312_enable;
 u_3312.daily_reset:=general.daily_reset;
+
+//Instantiate u_3312_PID function block, and map inputs
+u_3312_pid();
+u_3312_pid.fActualValue := io_mapping.u_3312_speed_feedback.scaled_value;
+u_3312_pid.fCtrlCycleTime := 1; 
+u_3312_pid.fKp            := 1; 
+u_3312_pid.fTn            := 1; 
+u_3312_pid.fTv            := 1; 
+u_3312_pid.fTd            := 1; 
+
+//PID logic. Basic PID, if pump enable is false, set setpoint to 0.
+IF pump_manager.u_3312_enable = TRUE THEN
+	u_3312_pid.fSetpointValue := pump_manager.u_3312_speed_request;
+	ELSE
+		u_3312_pid.fSetpointValue := 0;
+END_IF
+
 
 //Generic pump fault collector.  If any pump u_3312 related faults are true, set the function block fault status to true
 IF faults.u_3312_fail_to_start.active=TRUE OR faults.u_3312_fail_to_stop.active=TRUE THEN
@@ -85,6 +145,23 @@ u_3160.runtime_maint_reset:=opc.popa_0081_u_3160_runtime_maint_reset;
 u_3160.run_request:=pump_manager.u_3160_enable;
 u_3160.daily_reset:=general.daily_reset;
 
+//Instantiate u_3160_PID function block, and map inputs
+u_3160_pid();
+u_3160_pid.fActualValue := io_mapping.u_3160_speed_feedback.scaled_value;
+u_3160_pid.fCtrlCycleTime := 1; 
+u_3160_pid.fKp            := 1; 
+u_3160_pid.fTn            := 1; 
+u_3160_pid.fTv            := 1; 
+u_3160_pid.fTd            := 1; 
+
+//PID logic. Basic PID, if pump enable is false, set setpoint to 0.
+IF pump_manager.u_3160_enable = TRUE THEN
+	u_3160_pid.fSetpointValue := pump_manager.u_3160_speed_request;
+	ELSE
+		u_3160_pid.fSetpointValue := 0;
+END_IF
+
+
 //Generic pump fault collector.  If any pump u_3160 related faults are true, set the function block fault status to true
 IF faults.u_3160_fail_to_start.active=TRUE OR faults.u_3160_fail_to_stop.active=TRUE THEN
 	u_3160.fault:=TRUE;
@@ -104,6 +181,23 @@ u_3260.run_feedback:=io_mapping.u_3260_run_feedback;
 u_3260.runtime_maint_reset:=opc.popa_0081_u_3260_runtime_maint_reset;
 u_3260.run_request:=pump_manager.u_3260_enable;
 u_3260.daily_reset:=general.daily_reset;
+
+//Instantiate u_3260_PID function block, and map inputs
+u_3260_pid();
+u_3260_pid.fActualValue := io_mapping.u_3260_speed_feedback.scaled_value;
+u_3260_pid.fCtrlCycleTime := 1; 
+u_3260_pid.fKp            := 1; 
+u_3260_pid.fTn            := 1; 
+u_3260_pid.fTv            := 1; 
+u_3260_pid.fTd            := 1; 
+
+//PID logic. Basic PID, if pump enable is false, set setpoint to 0.
+IF pump_manager.u_3260_enable = TRUE THEN
+	u_3260_pid.fSetpointValue := pump_manager.u_3260_speed_request;
+	ELSE
+		u_3260_pid.fSetpointValue := 0;
+END_IF
+
 
 //Generic pump fault collector.  If any pump u_3260 related faults are true, set the function block fault status to true
 IF faults.u_3260_fail_to_start.active=TRUE OR faults.u_3260_fail_to_stop.active=TRUE THEN
@@ -125,6 +219,24 @@ u_3360.runtime_maint_reset:=opc.popa_0081_u_3360_runtime_maint_reset;
 u_3360.run_request:=pump_manager.u_3360_enable;
 u_3360.daily_reset:=general.daily_reset;
 
+//Instantiate u_3360_PID function block, and map inputs
+u_3360_pid();
+u_3360_pid.fActualValue := io_mapping.u_3360_speed_feedback.scaled_value;
+u_3360_pid.fCtrlCycleTime := 1; 
+u_3360_pid.fKp            := 1; 
+u_3360_pid.fTn            := 1; 
+u_3360_pid.fTv            := 1; 
+u_3360_pid.fTd            := 1; 
+
+//PID logic. Basic PID, if pump enable is false, set setpoint to 0.
+IF pump_manager.u_3360_enable = TRUE THEN
+	u_3360_pid.fSetpointValue := pump_manager.u_3360_speed_request;
+	ELSE
+		u_3360_pid.fSetpointValue := 0;
+END_IF
+
+
+
 //Generic pump fault collector.  If any pump u_3360 related faults are true, set the function block fault status to true
 IF faults.u_3360_fail_to_start.active=TRUE OR faults.u_3360_fail_to_stop.active=TRUE THEN
 	u_3360.fault:=TRUE;
@@ -145,6 +257,23 @@ u_3370.runtime_maint_reset:=opc.popa_0081_u_3370_runtime_maint_reset;
 u_3370.run_request:=pump_manager.u_3370_enable;
 u_3370.daily_reset:=general.daily_reset;
 
+//Instantiate u_3370_PID function block, and map inputs
+u_3370_pid();
+u_3370_pid.fActualValue := io_mapping.u_3370_speed_feedback.scaled_value;
+u_3370_pid.fCtrlCycleTime := 1; 
+u_3370_pid.fKp            := 1; 
+u_3370_pid.fTn            := 1; 
+u_3370_pid.fTv            := 1; 
+u_3370_pid.fTd            := 1; 
+
+//PID logic. Basic PID, if pump enable is false, set setpoint to 0.
+IF pump_manager.u_3370_enable = TRUE THEN
+	u_3370_pid.fSetpointValue := pump_manager.u_3370_speed_request;
+	ELSE
+		u_3370_pid.fSetpointValue := 0;
+END_IF
+
+
 //Generic pump fault collector.  If any pump u_3370 related faults are true, set the function block fault status to true
 IF faults.u_3370_fail_to_start.active=TRUE OR faults.u_3370_fail_to_stop.active=TRUE THEN
 	u_3370.fault:=TRUE;
@@ -164,6 +293,23 @@ u_3405.run_feedback:=io_mapping.u_3405_run_feedback;
 u_3405.runtime_maint_reset:=opc.popa_0081_u_3405_runtime_maint_reset;
 u_3405.run_request:=pump_manager.u_3405_enable;
 u_3405.daily_reset:=general.daily_reset;
+
+//Instantiate u_3405_PID function block, and map inputs
+u_3405_pid();
+u_3405_pid.fActualValue := io_mapping.u_3405_speed_feedback.scaled_value;
+u_3405_pid.fCtrlCycleTime := 1; 
+u_3405_pid.fKp            := 1; 
+u_3405_pid.fTn            := 1; 
+u_3405_pid.fTv            := 1; 
+u_3405_pid.fTd            := 1; 
+
+//PID logic. Basic PID, if pump enable is false, set setpoint to 0.
+IF pump_manager.u_3405_enable = TRUE THEN
+	u_3405_pid.fSetpointValue := pump_manager.u_3405_speed_request;
+	ELSE
+		u_3405_pid.fSetpointValue := 0;
+END_IF
+
 
 //Generic pump fault collector.  If any pump u_3405 related faults are true, set the function block fault status to true
 IF faults.u_3405_fail_to_start.active=TRUE OR faults.u_3405_fail_to_stop.active=TRUE THEN

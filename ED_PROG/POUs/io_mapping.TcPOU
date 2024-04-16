@@ -260,7 +260,7 @@ u_3112_speed_command.filter_factor:=opc.popa_0081_u_3112_speed_command_filter_fa
 u_3112_speed_command.raw_max:=opc.popa_0081_u_3112_speed_command_raw_max;
 u_3112_speed_command.raw_min:=opc.popa_0081_u_3112_speed_command_raw_min;
 //Map output from motor control pou to scaling block
-u_3112_speed_command.raw_input:=motor_vfd_control_st.u_3112.speed_command;
+u_3112_speed_command.raw_input:=motor_vfd_control_st.u_3112_pid.fCtrlOutput;
 //Map the analog scaling function block raw input to the physical raw output variable
 u_3112_speed_command_io := REAL_TO_INT(u_3112_speed_command.scaled_value);
 
@@ -289,7 +289,7 @@ u_3212_speed_command.filter_factor:=opc.popa_0081_u_3212_speed_command_filter_fa
 u_3212_speed_command.raw_max:=opc.popa_0081_u_3212_speed_command_raw_max;
 u_3212_speed_command.raw_min:=opc.popa_0081_u_3212_speed_command_raw_min;
 //Map output from motor control pou to scaling block
-u_3212_speed_command.raw_input:=motor_vfd_control_st.u_3212.speed_command;
+u_3212_speed_command.raw_input:=motor_vfd_control_st.u_3212_pid.fCtrlOutput;
 //Map the analog scaling function block raw input to the physical raw output variable
 u_3212_speed_command_io := REAL_TO_INT(u_3212_speed_command.scaled_value);
 
@@ -314,7 +314,7 @@ u_3312_speed_command.filter_factor:=opc.popa_0081_u_3312_speed_command_filter_fa
 u_3312_speed_command.raw_max:=opc.popa_0081_u_3312_speed_command_raw_max;
 u_3312_speed_command.raw_min:=opc.popa_0081_u_3312_speed_command_raw_min;
 //Map output from motor control pou to scaling block
-u_3312_speed_command.raw_input:=motor_vfd_control_st.u_3312.speed_command;
+u_3312_speed_command.raw_input:=motor_vfd_control_st.u_3312_pid.fCtrlOutput;
 //Map the analog scaling function block raw input to the physical raw output variable
 u_3312_speed_command_io := REAL_TO_INT(u_3312_speed_command.scaled_value);
 
@@ -339,7 +339,7 @@ u_3160_speed_command.filter_factor:=opc.popa_0081_u_3160_speed_command_filter_fa
 u_3160_speed_command.raw_max:=opc.popa_0081_u_3160_speed_command_raw_max;
 u_3160_speed_command.raw_min:=opc.popa_0081_u_3160_speed_command_raw_min;
 //Map output from motor control pou to scaling block
-u_3160_speed_command.raw_input:=motor_vfd_control_st.u_3160.speed_command;
+u_3160_speed_command.raw_input:=motor_vfd_control_st.u_3160_pid.fCtrlOutput;
 //Map the analog scaling function block raw input to the physical raw output variable
 u_3160_speed_command_io := REAL_TO_INT(u_3160_speed_command.scaled_value);
 
@@ -364,7 +364,7 @@ u_3260_speed_command.filter_factor:=opc.popa_0081_u_3260_speed_command_filter_fa
 u_3260_speed_command.raw_max:=opc.popa_0081_u_3260_speed_command_raw_max;
 u_3260_speed_command.raw_min:=opc.popa_0081_u_3260_speed_command_raw_min;
 //Map output from motor control pou to scaling block
-u_3260_speed_command.raw_input:=motor_vfd_control_st.u_3260.speed_command;
+u_3260_speed_command.raw_input:=motor_vfd_control_st.u_3260_pid.fCtrlOutput;
 //Map the analog scaling function block raw input to the physical raw output variable
 u_3260_speed_command_io := REAL_TO_INT(u_3260_speed_command.scaled_value);
 
@@ -389,7 +389,7 @@ u_3360_speed_command.filter_factor:=opc.popa_0081_u_3360_speed_command_filter_fa
 u_3360_speed_command.raw_max:=opc.popa_0081_u_3360_speed_command_raw_max;
 u_3360_speed_command.raw_min:=opc.popa_0081_u_3360_speed_command_raw_min;
 //Map output from motor control pou to scaling block
-u_3360_speed_command.raw_input:=motor_vfd_control_st.u_3360.speed_command;
+u_3360_speed_command.raw_input:=motor_vfd_control_st.u_3360_pid.fCtrlOutput;
 //Map the analog scaling function block raw input to the physical raw output variable
 u_3360_speed_command_io := REAL_TO_INT(u_3360_speed_command.scaled_value);
 
@@ -414,7 +414,7 @@ u_3370_speed_command.filter_factor:=opc.popa_0081_u_3370_speed_command_filter_fa
 u_3370_speed_command.raw_max:=opc.popa_0081_u_3370_speed_command_raw_max;
 u_3370_speed_command.raw_min:=opc.popa_0081_u_3370_speed_command_raw_min;
 //Map output from motor control pou to scaling block
-u_3370_speed_command.raw_input:=motor_vfd_control_st.u_3370.speed_command;
+u_3370_speed_command.raw_input:=motor_vfd_control_st.u_3370_pid.fCtrlOutput;
 //Map the analog scaling function block raw input to the physical raw output variable
 u_3370_speed_command_io := REAL_TO_INT(u_3370_speed_command.scaled_value);
 
@@ -439,7 +439,7 @@ u_3405_speed_command.filter_factor:=opc.popa_0081_u_3405_speed_command_filter_fa
 u_3405_speed_command.raw_max:=opc.popa_0081_u_3405_speed_command_raw_max;
 u_3405_speed_command.raw_min:=opc.popa_0081_u_3405_speed_command_raw_min;
 //Map output from motor control pou to scaling block
-u_3405_speed_command.raw_input:=motor_vfd_control_st.u_3405.speed_command;
+u_3405_speed_command.raw_input:=motor_vfd_control_st.u_3405_pid.fCtrlOutput;
 //Map the analog scaling function block raw input to the physical raw output variable
 u_3405_speed_command_io := REAL_TO_INT(u_3405_speed_command.scaled_value);
 
