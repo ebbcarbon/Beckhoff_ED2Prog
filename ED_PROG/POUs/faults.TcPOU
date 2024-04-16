@@ -35,13 +35,191 @@ VAR PERSISTENT
 //---System threshold alarms------------------------------------------------------------------------------------------------
 
 	// Analog alarm low low
+	cct_3120_low_low: Alarm;
+	cct_3142_low_low: Alarm;
+	cct_3220_low_low: Alarm;
+	cct_3242_low_low: Alarm;
+	cct_3320_low_low: Alarm;
+	cct_3342_low_low: Alarm;
+	cct_3413_low_low: Alarm;
+	cgt_3910_low_low: Alarm;
 	cpt_3144_low_low: Alarm;
+	cpt_3158_low_low: Alarm;
+	cpt_3407_low_low: Alarm;
+	et_3711_low_low: Alarm;
+	ft_3122_low_low: Alarm;
+	ft_3222_low_low: Alarm;
+	ft_3322_low_low: Alarm;
+	it_3702_low_low: Alarm;
+	lit_3905_low_low: Alarm;
+	lit_3906_low_low: Alarm;
+	lit_3907_low_low: Alarm;
+	lit_3908_low_low: Alarm;
+	lit_3915_low_low: Alarm;
+	lt_3102_low_low: Alarm;
+	lt_3153_low_low: Alarm;
+	lt_3202_low_low: Alarm;
+	lt_3253_low_low: Alarm;
+	lt_3302_low_low: Alarm;
+	lt_3353_low_low: Alarm;
+	lt_3402_low_low: Alarm;
+	pt_3119_low_low: Alarm;
+	pt_3141_low_low: Alarm;
+	pt_3219_low_low: Alarm;
+	pt_3241_low_low: Alarm;
+	pt_3319_low_low: Alarm;
+	pt_3341_low_low: Alarm;
+	pt_3414_low_low: Alarm;
+	pt_3428_low_low: Alarm;
+	tt_3118_low_low: Alarm;
+	tt_3140_low_low: Alarm;
+	tt_3218_low_low: Alarm;
+	tt_3240_low_low: Alarm;
+	tt_3318_low_low: Alarm;
+	tt_3340_low_low: Alarm;
+	tt_3432_low_low: Alarm;
+	tt_3601_low_low: Alarm;
+
+
 	// Analog alarm low
+	cct_3120_low: Alarm;
+	cct_3142_low: Alarm;
+	cct_3220_low: Alarm;
+	cct_3242_low: Alarm;
+	cct_3320_low: Alarm;
+	cct_3342_low: Alarm;
+	cct_3413_low: Alarm;
+	cgt_3910_low: Alarm;
 	cpt_3144_low: Alarm;
+	cpt_3158_low: Alarm;
+	cpt_3407_low: Alarm;
+	et_3711_low: Alarm;
+	ft_3122_low: Alarm;
+	ft_3222_low: Alarm;
+	ft_3322_low: Alarm;
+	it_3702_low: Alarm;
+	lit_3905_low: Alarm;
+	lit_3906_low: Alarm;
+	lit_3907_low: Alarm;
+	lit_3908_low: Alarm;
+	lit_3915_low: Alarm;
+	lt_3102_low: Alarm;
+	lt_3153_low: Alarm;
+	lt_3202_low: Alarm;
+	lt_3253_low: Alarm;
+	lt_3302_low: Alarm;
+	lt_3353_low: Alarm;
+	lt_3402_low: Alarm;
+	pt_3119_low: Alarm;
+	pt_3141_low: Alarm;
+	pt_3219_low: Alarm;
+	pt_3241_low: Alarm;
+	pt_3319_low: Alarm;
+	pt_3341_low: Alarm;
+	pt_3414_low: Alarm;
+	pt_3428_low: Alarm;
+	tt_3118_low: Alarm;
+	tt_3140_low: Alarm;
+	tt_3218_low: Alarm;
+	tt_3240_low: Alarm;
+	tt_3318_low: Alarm;
+	tt_3340_low: Alarm;
+	tt_3432_low: Alarm;
+	tt_3601_low: Alarm;
+
+
 	// Analog alarm high
+		cct_3120_high: Alarm;
+	cct_3142_high: Alarm;
+	cct_3220_high: Alarm;
+	cct_3242_high: Alarm;
+	cct_3320_high: Alarm;
+	cct_3342_high: Alarm;
+	cct_3413_high: Alarm;
+	cgt_3910_high: Alarm;
 	cpt_3144_high: Alarm;
+	cpt_3158_high: Alarm;
+	cpt_3407_high: Alarm;
+	et_3711_high: Alarm;
+	ft_3122_high: Alarm;
+	ft_3222_high: Alarm;
+	ft_3322_high: Alarm;
+	it_3702_high: Alarm;
+	lit_3905_high: Alarm;
+	lit_3906_high: Alarm;
+	lit_3907_high: Alarm;
+	lit_3908_high: Alarm;
+	lit_3915_high: Alarm;
+	lt_3102_high: Alarm;
+	lt_3153_high: Alarm;
+	lt_3202_high: Alarm;
+	lt_3253_high: Alarm;
+	lt_3302_high: Alarm;
+	lt_3353_high: Alarm;
+	lt_3402_high: Alarm;
+	pt_3119_high: Alarm;
+	pt_3141_high: Alarm;
+	pt_3219_high: Alarm;
+	pt_3241_high: Alarm;
+	pt_3319_high: Alarm;
+	pt_3341_high: Alarm;
+	pt_3414_high: Alarm;
+	pt_3428_high: Alarm;
+	tt_3118_high: Alarm;
+	tt_3140_high: Alarm;
+	tt_3218_high: Alarm;
+	tt_3240_high: Alarm;
+	tt_3318_high: Alarm;
+	tt_3340_high: Alarm;
+	tt_3432_high: Alarm;
+	tt_3601_high: Alarm;
+
+
 	// Analog alarm high high
+		cct_3120_high_high: Alarm;
+	cct_3142_high_high: Alarm;
+	cct_3220_high_high: Alarm;
+	cct_3242_high_high: Alarm;
+	cct_3320_high_high: Alarm;
+	cct_3342_high_high: Alarm;
+	cct_3413_high_high: Alarm;
+	cgt_3910_high_high: Alarm;
 	cpt_3144_high_high: Alarm;
+	cpt_3158_high_high: Alarm;
+	cpt_3407_high_high: Alarm;
+	et_3711_high_high: Alarm;
+	ft_3122_high_high: Alarm;
+	ft_3222_high_high: Alarm;
+	ft_3322_high_high: Alarm;
+	it_3702_high_high: Alarm;
+	lit_3905_high_high: Alarm;
+	lit_3906_high_high: Alarm;
+	lit_3907_high_high: Alarm;
+	lit_3908_high_high: Alarm;
+	lit_3915_high_high: Alarm;
+	lt_3102_high_high: Alarm;
+	lt_3153_high_high: Alarm;
+	lt_3202_high_high: Alarm;
+	lt_3253_high_high: Alarm;
+	lt_3302_high_high: Alarm;
+	lt_3353_high_high: Alarm;
+	lt_3402_high_high: Alarm;
+	pt_3119_high_high: Alarm;
+	pt_3141_high_high: Alarm;
+	pt_3219_high_high: Alarm;
+	pt_3241_high_high: Alarm;
+	pt_3319_high_high: Alarm;
+	pt_3341_high_high: Alarm;
+	pt_3414_high_high: Alarm;
+	pt_3428_high_high: Alarm;
+	tt_3118_high_high: Alarm;
+	tt_3140_high_high: Alarm;
+	tt_3218_high_high: Alarm;
+	tt_3240_high_high: Alarm;
+	tt_3318_high_high: Alarm;
+	tt_3340_high_high: Alarm;
+	tt_3432_high_high: Alarm;
+	tt_3601_high_high: Alarm;
 
 
 
@@ -151,66 +329,10 @@ IF valve_digital_control.nv_3372.open_command=FALSE AND valve_digital_control.nv
 	ELSE
 		nv_3372_fail_to_close.trigger:=FALSE;
 	END_IF	
-	
-//Instantiate the alarm block, and map the inputs from the OPC GVL
-cpt_3144_low_low();
-cpt_3144_low_low.alm_ack:=opc.popa_0081_alarm_ack;
-cpt_3144_low_low.reset:=opc.popa_0081_alarm_reset;
-cpt_3144_low_low.priority:=opc.popa_0081_cpt_3144_low_low_priority;
-cpt_3144_low_low.delay_setpoint:=opc.popa_0081_cpt_3144_low_low_delay_setpoint;
-cpt_3144_low_low.enable:=opc.popa_0081_cpt_3144_low_low_enable;
 
-//Place your alarm trigger logic here.  
-IF io_mapping.cpt_3144.scaled_value<opc.popa_0081_cpt_3144_low_low_setpoint THEN
-	cpt_3144_low_low.trigger:=TRUE;
-	ELSE
-		cpt_3144_low_low.trigger:=FALSE;
-	END_IF	
 	
-//Instantiate the alarm block, and map the inputs from the OPC GVL
-cpt_3144_low();
-cpt_3144_low.alm_ack:=opc.popa_0081_alarm_ack;
-cpt_3144_low.reset:=opc.popa_0081_alarm_reset;
-cpt_3144_low.priority:=opc.popa_0081_cpt_3144_low_priority;
-cpt_3144_low.delay_setpoint:=opc.popa_0081_cpt_3144_low_delay_setpoint;
-cpt_3144_low.enable:=opc.popa_0081_cpt_3144_low_enable;
+//---System threshold alarms---------------------------------------------------------------------------------------------------
 
-//Place your alarm trigger logic here.  
-IF io_mapping.cpt_3144.scaled_value<opc.popa_0081_cpt_3144_low_setpoint THEN
-	cpt_3144_low.trigger:=TRUE;
-	ELSE
-		cpt_3144_low.trigger:=FALSE;
-	END_IF
-	
-//Instantiate the alarm block, and map the inputs from the OPC GVL
-cpt_3144_high();
-cpt_3144_high.alm_ack:=opc.popa_0081_alarm_ack;
-cpt_3144_high.reset:=opc.popa_0081_alarm_reset;
-cpt_3144_high.priority:=opc.popa_0081_cpt_3144_high_priority;
-cpt_3144_high.delay_setpoint:=opc.popa_0081_cpt_3144_high_delay_setpoint;
-cpt_3144_high.enable:=opc.popa_0081_cpt_3144_high_enable;
-
-//Place your alarm trigger logic here.  
-IF io_mapping.cpt_3144.scaled_value<opc.popa_0081_cpt_3144_high_setpoint THEN
-	cpt_3144_high.trigger:=TRUE;
-	ELSE
-		cpt_3144_high.trigger:=FALSE;
-	END_IF
-	
-//Instantiate the alarm block, and map the inputs from the OPC GVL
-cpt_3144_high_high();
-cpt_3144_high_high.alm_ack:=opc.popa_0081_alarm_ack;
-cpt_3144_high_high.reset:=opc.popa_0081_alarm_reset;
-cpt_3144_high_high.priority:=opc.popa_0081_cpt_3144_high_high_priority;
-cpt_3144_high_high.delay_setpoint:=opc.popa_0081_cpt_3144_high_high_delay_setpoint;
-cpt_3144_high_high.enable:=opc.popa_0081_cpt_3144_high_high_enable;
-
-//Place your alarm trigger logic here.  
-IF io_mapping.cpt_3144.scaled_value<opc.popa_0081_cpt_3144_high_high_setpoint THEN
-	cpt_3144_high_high.trigger:=TRUE;
-	ELSE
-		cpt_3144_high_high.trigger:=FALSE;
-	END_IF
 	
 	]]></ST>
     </Implementation>

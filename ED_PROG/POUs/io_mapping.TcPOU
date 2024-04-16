@@ -239,7 +239,9 @@ VAR PERSISTENT
 	
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[//Instantiate analog input function block
+      <ST><![CDATA[//---Field Instrumentation
+
+//Instantiate analog input function block
 cpt_3144();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
 cpt_3144.eu_max:=opc.popa_0081_cpt_3144_eu_max;
@@ -250,8 +252,151 @@ cpt_3144.raw_min:=opc.popa_0081_cpt_3144_raw_min;
 //Map the analog scaling function block raw input to the physical raw input variable
 cpt_3144.raw_input := cpt_3144_raw_input;
 
-//--------------------------------------------------------------------------------------------------------------
-//Instantiate Example analog output function block
+//Instantiate analog input function block
+pt_3119();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+pt_3119.eu_max:=opc.popa_0081_pt_3119_eu_max;
+pt_3119.eu_min:=opc.popa_0081_pt_3119_eu_min;
+pt_3119.filter_factor:=opc.popa_0081_pt_3119_filter_factor;
+pt_3119.raw_max:=opc.popa_0081_pt_3119_raw_max;
+pt_3119.raw_min:=opc.popa_0081_pt_3119_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+pt_3119.raw_input := pt_3119_raw_input;
+
+//Instantiate analog input function block
+pt_3219();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+pt_3219.eu_max:=opc.popa_0081_pt_3219_eu_max;
+pt_3219.eu_min:=opc.popa_0081_pt_3219_eu_min;
+pt_3219.filter_factor:=opc.popa_0081_pt_3219_filter_factor;
+pt_3219.raw_max:=opc.popa_0081_pt_3219_raw_max;
+pt_3219.raw_min:=opc.popa_0081_pt_3219_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+pt_3219.raw_input := pt_3219_raw_input;
+
+//Instantiate analog input function block
+pt_3319();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+pt_3319.eu_max:=opc.popa_0081_pt_3319_eu_max;
+pt_3319.eu_min:=opc.popa_0081_pt_3319_eu_min;
+pt_3319.filter_factor:=opc.popa_0081_pt_3319_filter_factor;
+pt_3319.raw_max:=opc.popa_0081_pt_3319_raw_max;
+pt_3319.raw_min:=opc.popa_0081_pt_3319_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+pt_3319.raw_input := pt_3319_raw_input;
+
+//Instantiate analog input function block
+pt_3141();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+pt_3141.eu_max:=opc.popa_0081_pt_3141_eu_max;
+pt_3141.eu_min:=opc.popa_0081_pt_3141_eu_min;
+pt_3141.filter_factor:=opc.popa_0081_pt_3141_filter_factor;
+pt_3141.raw_max:=opc.popa_0081_pt_3141_raw_max;
+pt_3141.raw_min:=opc.popa_0081_pt_3141_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+pt_3141.raw_input := pt_3141_raw_input;
+
+//Instantiate analog input function block
+pt_3241();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+pt_3241.eu_max:=opc.popa_0081_pt_3241_eu_max;
+pt_3241.eu_min:=opc.popa_0081_pt_3241_eu_min;
+pt_3241.filter_factor:=opc.popa_0081_pt_3241_filter_factor;
+pt_3241.raw_max:=opc.popa_0081_pt_3241_raw_max;
+pt_3241.raw_min:=opc.popa_0081_pt_3241_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+pt_3241.raw_input := pt_3241_raw_input;
+
+//Instantiate analog input function block
+pt_3341();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+pt_3341.eu_max:=opc.popa_0081_pt_3341_eu_max;
+pt_3341.eu_min:=opc.popa_0081_pt_3341_eu_min;
+pt_3341.filter_factor:=opc.popa_0081_pt_3341_filter_factor;
+pt_3341.raw_max:=opc.popa_0081_pt_3341_raw_max;
+pt_3341.raw_min:=opc.popa_0081_pt_3341_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+pt_3341.raw_input := pt_3341_raw_input;
+
+//Instantiate analog input function block
+tt_3118();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+tt_3118.eu_max:=opc.popa_0081_tt_3118_eu_max;
+tt_3118.eu_min:=opc.popa_0081_tt_3118_eu_min;
+tt_3118.filter_factor:=opc.popa_0081_tt_3118_filter_factor;
+tt_3118.raw_max:=opc.popa_0081_tt_3118_raw_max;
+tt_3118.raw_min:=opc.popa_0081_tt_3118_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+tt_3118.raw_input := tt_3118_raw_input;
+
+//Instantiate analog input function block
+tt_3218();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+tt_3218.eu_max:=opc.popa_0081_tt_3218_eu_max;
+tt_3218.eu_min:=opc.popa_0081_tt_3218_eu_min;
+tt_3218.filter_factor:=opc.popa_0081_tt_3218_filter_factor;
+tt_3218.raw_max:=opc.popa_0081_tt_3218_raw_max;
+tt_3218.raw_min:=opc.popa_0081_tt_3218_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+tt_3218.raw_input := tt_3218_raw_input;
+
+//Instantiate analog input function block
+tt_3318();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+tt_3318.eu_max:=opc.popa_0081_tt_3318_eu_max;
+tt_3318.eu_min:=opc.popa_0081_tt_3318_eu_min;
+tt_3318.filter_factor:=opc.popa_0081_tt_3318_filter_factor;
+tt_3318.raw_max:=opc.popa_0081_tt_3318_raw_max;
+tt_3318.raw_min:=opc.popa_0081_tt_3318_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+tt_3318.raw_input := tt_3318_raw_input;
+
+//Instantiate analog input function block
+tt_3140();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+tt_3140.eu_max:=opc.popa_0081_tt_3140_eu_max;
+tt_3140.eu_min:=opc.popa_0081_tt_3140_eu_min;
+tt_3140.filter_factor:=opc.popa_0081_tt_3140_filter_factor;
+tt_3140.raw_max:=opc.popa_0081_tt_3140_raw_max;
+tt_3140.raw_min:=opc.popa_0081_tt_3140_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+tt_3140.raw_input := tt_3140_raw_input;
+
+//Instantiate analog input function block
+tt_3240();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+tt_3240.eu_max:=opc.popa_0081_tt_3240_eu_max;
+tt_3240.eu_min:=opc.popa_0081_tt_3240_eu_min;
+tt_3240.filter_factor:=opc.popa_0081_tt_3240_filter_factor;
+tt_3240.raw_max:=opc.popa_0081_tt_3240_raw_max;
+tt_3240.raw_min:=opc.popa_0081_tt_3240_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+tt_3240.raw_input := tt_3240_raw_input;
+
+//Instantiate analog input function block
+tt_3340();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+tt_3340.eu_max:=opc.popa_0081_tt_3340_eu_max;
+tt_3340.eu_min:=opc.popa_0081_tt_3340_eu_min;
+tt_3340.filter_factor:=opc.popa_0081_tt_3340_filter_factor;
+tt_3340.raw_max:=opc.popa_0081_tt_3340_raw_max;
+tt_3340.raw_min:=opc.popa_0081_tt_3340_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+tt_3340.raw_input := tt_3340_raw_input;
+
+//---Pumps---------------------------------------------------------------------------------------------------------------------------------
+
+//Map the motor run command to the command output
+u_3112_run_command_io:=motor_vfd_control_st.u_3112.run_command;
+u_3212_run_command_io:=motor_vfd_control_st.u_3212.run_command;
+u_3312_run_command_io:=motor_vfd_control_st.u_3312.run_command;
+u_3160_run_command_io:=motor_vfd_control_st.u_3160.run_command;
+u_3260_run_command_io:=motor_vfd_control_st.u_3260.run_command;
+u_3360_run_command_io:=motor_vfd_control_st.u_3360.run_command;
+u_3370_run_command_io:=motor_vfd_control_st.u_3370.run_command;
+u_3405_run_command_io:=motor_vfd_control_st.u_3405.run_command;
+
+//Instantiate u_3112 Speed command analog output function block
 u_3112_speed_command();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
 u_3112_speed_command.eu_max:=opc.popa_0081_u_3112_speed_command_eu_max;
@@ -264,7 +409,7 @@ u_3112_speed_command.raw_input:=motor_vfd_control_st.u_3112_pid.fCtrlOutput;
 //Map the analog scaling function block raw input to the physical raw output variable
 u_3112_speed_command_io := REAL_TO_INT(u_3112_speed_command.scaled_value);
 
-//Instantiate Example analog input function block
+//Instantiate u_3112 speed feedback analog input function block
 u_3112_speed_feedback();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
 u_3112_speed_feedback.eu_max:=opc.popa_0081_u_3112_speed_feedback_eu_max;
@@ -455,6 +600,8 @@ u_3405_speed_feedback.raw_min:=opc.popa_0081_u_3405_speed_feedback_raw_min;
 u_3405_speed_feedback.raw_input := u_3405_speed_feedback_raw_input;
 
 
+//---Valves----------------------------------------------------------------------------------------------------------------------------------------------
+
 //Instantiate Example analog input function block
 av_3148_position_feedback();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
@@ -479,18 +626,8 @@ av_3148_position_command.raw_input:=valve_analog_control.av_3148.Position_Comman
 //Map the analog scaling function block raw input to the physical raw output variable
 av_3148_position_command_io := REAL_TO_INT(av_3148_position_command.scaled_value);
 
-//Map the motor run command to the command output
-u_3112_run_command_io:=motor_vfd_control_st.u_3112.run_command;
-u_3212_run_command_io:=motor_vfd_control_st.u_3212.run_command;
-u_3312_run_command_io:=motor_vfd_control_st.u_3312.run_command;
-u_3160_run_command_io:=motor_vfd_control_st.u_3160.run_command;
-u_3260_run_command_io:=motor_vfd_control_st.u_3260.run_command;
-u_3360_run_command_io:=motor_vfd_control_st.u_3360.run_command;
-u_3370_run_command_io:=motor_vfd_control_st.u_3370.run_command;
-u_3405_run_command_io:=motor_vfd_control_st.u_3405.run_command;
 
-//Map the motor run command to the command output
-u_3160_run_command_io:=motor_starter_control.u_3160.run_command;
+
 
 //Map the digital valve open command to the command output
 nv_3372_open_command_io:=valve_digital_control.nv_3372.open_command;

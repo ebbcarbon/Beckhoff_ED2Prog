@@ -1,13 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <GVL Name="opc" Id="{674fd3be-a48d-4a85-a2e2-bd0824412020}">
-    <Declaration><![CDATA[//{attribute 'qualified_only'}
+    <Declaration><![CDATA[{attribute 'qualified_only'}
 {attribute 'global_init_slot' := '50500'}
 VAR_GLOBAL PERSISTENT
 	//These tags are created here because you cannot write directly to local scoped tags(cpt_3144) from outside the POU
 	//They are created here then mapped to the local variables in the POU
 	//All tags in this GVL MUST have the {attribute 'OPC.UA.DA' :='1'} string above them in order to be exposed to OPC
 	//Tags that are ONLY being read from the HMI have their values set in the opc_mapping program
+	
+		//------------------------------------------------------------------------------------------------------------------
+
+	
+	
+	//System date time year
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_system_date_time_year : INT;
+	//System date time month
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_system_date_time_month : INT;
+	//System date time day
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_system_date_time_day : INT;
+	//System date time hour
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_system_date_time_hour : INT;
+	//System date time minute
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_system_date_time_minute : INT;
+	//System date time second
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_system_date_time_second : INT;
+	//Hour setpoint for daily reset triggers
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_daily_reset_hour_setpoint : INT;
+	//Minute setpoint for daily reset triggers
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_daily_reset_minute_setpoint : INT;
+	//Alarm acknowledge, acks all alarms, clears lower priority level alarms
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_alarm_ack : BOOL;
+	//Alarm reset, clears higher priority alarms
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_alarm_reset : BOOL;
+	
+	
 	//------------------------------------------------------------------------------------------------------------------
 	//Alarm Priority setpoint
 	{attribute 'OPC.UA.DA' :='1'}
@@ -48,7 +85,8 @@ VAR_GLOBAL PERSISTENT
 	//Alarm enable
 	{attribute 'OPC.UA.DA' :='1'}
 	popa_0081_nv_3372_fail_to_close_enable: BOOL;
-	
+
+//---Pumps-------------------------------------------------------------------------------------------------------------------------------------
 	//------------------------------------------------------------------------------------------------------------------
 	//Alarm Priority setpoint
 	{attribute 'OPC.UA.DA' :='1'}
@@ -264,42 +302,7 @@ VAR_GLOBAL PERSISTENT
 	//Alarm enable
 	{attribute 'OPC.UA.DA' :='1'}
 	popa_0081_u_3405_fail_to_stop_enable: BOOL;
-	//------------------------------------------------------------------------------------------------------------------
 
-	
-	
-	//System date time year
-	{attribute 'OPC.UA.DA' :='1'}
-	popa_0081_system_date_time_year : INT;
-	//System date time month
-	{attribute 'OPC.UA.DA' :='1'}
-	popa_0081_system_date_time_month : INT;
-	//System date time day
-	{attribute 'OPC.UA.DA' :='1'}
-	popa_0081_system_date_time_day : INT;
-	//System date time hour
-	{attribute 'OPC.UA.DA' :='1'}
-	popa_0081_system_date_time_hour : INT;
-	//System date time minute
-	{attribute 'OPC.UA.DA' :='1'}
-	popa_0081_system_date_time_minute : INT;
-	//System date time second
-	{attribute 'OPC.UA.DA' :='1'}
-	popa_0081_system_date_time_second : INT;
-	//Hour setpoint for daily reset triggers
-	{attribute 'OPC.UA.DA' :='1'}
-	popa_0081_daily_reset_hour_setpoint : INT;
-	//Minute setpoint for daily reset triggers
-	{attribute 'OPC.UA.DA' :='1'}
-	popa_0081_daily_reset_minute_setpoint : INT;
-	//Alarm acknowledge, acks all alarms, clears lower priority level alarms
-	{attribute 'OPC.UA.DA' :='1'}
-	popa_0081_alarm_ack : BOOL;
-	//Alarm reset, clears higher priority alarms
-	{attribute 'OPC.UA.DA' :='1'}
-	popa_0081_alarm_reset : BOOL;
-	
-	
 	
 	//---------------------------------------------------------------------------------------------------------
 	//Raw Min value for analog input
@@ -620,6 +623,8 @@ VAR_GLOBAL PERSISTENT
 	{attribute 'OPC.UA.DA' :='1'}
 	popa_0081_u_3405_speed_feedback_scaled_value : REAL;
 	
+//---Valves----------------------------------------------------------------------------------------------------------------------------------------
+
 	//Raw Min value for analog input
 	{attribute 'OPC.UA.DA' :='1'}
 	popa_0081_av_3148_position_feedback_raw_min : REAL :=0;
