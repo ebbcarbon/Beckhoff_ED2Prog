@@ -297,7 +297,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"ed_routine_auto"</v>
+                                              <v n="Operand">"general.ed_routine_auto"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -316,7 +316,7 @@ END_VAR
                                           </o>
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"nv_3110_auto_request"</v>
+                                              <v n="Operand">"auto.nv_3110_auto_request"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -380,7 +380,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"ed_routine_cip"</v>
+                                              <v n="Operand">"general.ed_routine_cip"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -889,7 +889,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"ed_routine_auto"</v>
+                                              <v n="Operand">"general.ed_routine_auto"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -908,7 +908,7 @@ END_VAR
                                           </o>
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"nv_3210_auto_request"</v>
+                                              <v n="Operand">"auto.nv_3210_auto_request"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -972,7 +972,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"ed_routine_cip"</v>
+                                              <v n="Operand">"general.ed_routine_cip"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -1481,7 +1481,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"ed_routine_auto"</v>
+                                              <v n="Operand">"general.ed_routine_auto"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -1500,7 +1500,7 @@ END_VAR
                                           </o>
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"nv_3310_auto_request"</v>
+                                              <v n="Operand">"auto.nv_3310_auto_request"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -1564,7 +1564,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"ed_routine_cip"</v>
+                                              <v n="Operand">"general.ed_routine_cip"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -2073,7 +2073,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"ed_routine_auto"</v>
+                                              <v n="Operand">"general.ed_routine_auto"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -2092,7 +2092,7 @@ END_VAR
                                           </o>
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"nv_3135_auto_request"</v>
+                                              <v n="Operand">"auto.nv_3135_auto_request"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -2156,7 +2156,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"ed_routine_cip"</v>
+                                              <v n="Operand">"general.ed_routine_cip"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -2665,7 +2665,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"ed_routine_auto"</v>
+                                              <v n="Operand">"general.ed_routine_auto"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -2684,7 +2684,7 @@ END_VAR
                                           </o>
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"nv_3235_auto_request"</v>
+                                              <v n="Operand">"auto.nv_3235_auto_request"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -2748,7 +2748,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"ed_routine_cip"</v>
+                                              <v n="Operand">"general.ed_routine_cip"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -3257,7 +3257,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"ed_routine_auto"</v>
+                                              <v n="Operand">"general.ed_routine_auto"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -3276,7 +3276,7 @@ END_VAR
                                           </o>
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"nv_3335_auto_request"</v>
+                                              <v n="Operand">"auto.nv_3335_auto_request"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -3340,7 +3340,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"ed_routine_cip"</v>
+                                              <v n="Operand">"general.ed_routine_cip"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -3849,7 +3849,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"ed_routine_auto"</v>
+                                              <v n="Operand">"general.ed_routine_auto"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -3868,7 +3868,7 @@ END_VAR
                                           </o>
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"nv_3372_auto_request"</v>
+                                              <v n="Operand">"auto.nv_3372_auto_request"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -3932,7 +3932,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"ed_routine_cip"</v>
+                                              <v n="Operand">"general.ed_routine_cip"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -4441,7 +4441,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"ed_routine_auto"</v>
+                                              <v n="Operand">"general.ed_routine_auto"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -4460,7 +4460,7 @@ END_VAR
                                           </o>
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"nv_3162_auto_request"</v>
+                                              <v n="Operand">"auto.nv_3162_auto_request"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -4524,7 +4524,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"ed_routine_cip"</v>
+                                              <v n="Operand">"general.ed_routine_cip"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -5148,7 +5148,7 @@ END_VAR
                                                     <l2 n="InputItems" cet="BoxTreeOperand">
                                                       <o>
                                                         <o n="Operand" t="Operand">
-                                                          <v n="Operand">"ed_routine_auto"</v>
+                                                          <v n="Operand">"general.ed_routine_auto"</v>
                                                           <v n="Type">"BOOL"</v>
                                                           <v n="Comment">""</v>
                                                           <v n="SymbolComment">""</v>
@@ -5323,7 +5323,7 @@ END_VAR
                                                     <l2 n="InputItems" cet="BoxTreeOperand">
                                                       <o>
                                                         <o n="Operand" t="Operand">
-                                                          <v n="Operand">"ed_routine_cip"</v>
+                                                          <v n="Operand">"general.ed_routine_cip"</v>
                                                           <v n="Type">"BOOL"</v>
                                                           <v n="Comment">""</v>
                                                           <v n="SymbolComment">""</v>
@@ -5499,7 +5499,7 @@ END_VAR
                                                     <l2 n="InputItems" cet="BoxTreeOperand">
                                                       <o>
                                                         <o n="Operand" t="Operand">
-                                                          <v n="Operand">"ed_routine_cip"</v>
+                                                          <v n="Operand">"general.ed_routine_cip"</v>
                                                           <v n="Type">"BOOL"</v>
                                                           <v n="Comment">""</v>
                                                           <v n="SymbolComment">""</v>
@@ -5518,7 +5518,7 @@ END_VAR
                                                       </o>
                                                       <o>
                                                         <o n="Operand" t="Operand">
-                                                          <v n="Operand">"ed_routine_auto"</v>
+                                                          <v n="Operand">"general.ed_routine_auto"</v>
                                                           <v n="Type">"BOOL"</v>
                                                           <v n="Comment">""</v>
                                                           <v n="SymbolComment">""</v>
@@ -6364,7 +6364,7 @@ END_VAR
                                                     <l2 n="InputItems" cet="BoxTreeOperand">
                                                       <o>
                                                         <o n="Operand" t="Operand">
-                                                          <v n="Operand">"ed_routine_auto"</v>
+                                                          <v n="Operand">"general.ed_routine_auto"</v>
                                                           <v n="Type">"BOOL"</v>
                                                           <v n="Comment">""</v>
                                                           <v n="SymbolComment">""</v>
@@ -6539,7 +6539,7 @@ END_VAR
                                                     <l2 n="InputItems" cet="BoxTreeOperand">
                                                       <o>
                                                         <o n="Operand" t="Operand">
-                                                          <v n="Operand">"ed_routine_cip"</v>
+                                                          <v n="Operand">"general.ed_routine_cip"</v>
                                                           <v n="Type">"BOOL"</v>
                                                           <v n="Comment">""</v>
                                                           <v n="SymbolComment">""</v>
@@ -6715,7 +6715,7 @@ END_VAR
                                                     <l2 n="InputItems" cet="BoxTreeOperand">
                                                       <o>
                                                         <o n="Operand" t="Operand">
-                                                          <v n="Operand">"ed_routine_cip"</v>
+                                                          <v n="Operand">"general.ed_routine_cip"</v>
                                                           <v n="Type">"BOOL"</v>
                                                           <v n="Comment">""</v>
                                                           <v n="SymbolComment">""</v>
@@ -6734,7 +6734,7 @@ END_VAR
                                                       </o>
                                                       <o>
                                                         <o n="Operand" t="Operand">
-                                                          <v n="Operand">"ed_routine_auto"</v>
+                                                          <v n="Operand">"general.ed_routine_auto"</v>
                                                           <v n="Type">"BOOL"</v>
                                                           <v n="Comment">""</v>
                                                           <v n="SymbolComment">""</v>
@@ -7580,7 +7580,7 @@ END_VAR
                                                     <l2 n="InputItems" cet="BoxTreeOperand">
                                                       <o>
                                                         <o n="Operand" t="Operand">
-                                                          <v n="Operand">"ed_routine_auto"</v>
+                                                          <v n="Operand">"general.ed_routine_auto"</v>
                                                           <v n="Type">"BOOL"</v>
                                                           <v n="Comment">""</v>
                                                           <v n="SymbolComment">""</v>
@@ -7755,7 +7755,7 @@ END_VAR
                                                     <l2 n="InputItems" cet="BoxTreeOperand">
                                                       <o>
                                                         <o n="Operand" t="Operand">
-                                                          <v n="Operand">"ed_routine_cip"</v>
+                                                          <v n="Operand">"general.ed_routine_cip"</v>
                                                           <v n="Type">"BOOL"</v>
                                                           <v n="Comment">""</v>
                                                           <v n="SymbolComment">""</v>
@@ -7931,7 +7931,7 @@ END_VAR
                                                     <l2 n="InputItems" cet="BoxTreeOperand">
                                                       <o>
                                                         <o n="Operand" t="Operand">
-                                                          <v n="Operand">"ed_routine_cip"</v>
+                                                          <v n="Operand">"general.ed_routine_cip"</v>
                                                           <v n="Type">"BOOL"</v>
                                                           <v n="Comment">""</v>
                                                           <v n="SymbolComment">""</v>
@@ -7950,7 +7950,7 @@ END_VAR
                                                       </o>
                                                       <o>
                                                         <o n="Operand" t="Operand">
-                                                          <v n="Operand">"ed_routine_auto"</v>
+                                                          <v n="Operand">"general.ed_routine_auto"</v>
                                                           <v n="Type">"BOOL"</v>
                                                           <v n="Comment">""</v>
                                                           <v n="SymbolComment">""</v>

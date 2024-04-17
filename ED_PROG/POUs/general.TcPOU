@@ -15,10 +15,10 @@ VAR PERSISTENT
 	alarm_ack_unlatch_sp : TIME :=T#3s;
 	
 	//PLC States - move as needed
-	ed_routine_manual : BOOL;
-	ed_routine_maint : BOOL;
 	ed_routine_auto : BOOL;
 	ed_routine_cip : BOOL;
+	ed_routine_manual : BOOL;
+	ed_routine_maint : BOOL;
 	
 	
 END_VAR
