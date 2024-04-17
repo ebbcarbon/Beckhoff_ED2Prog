@@ -56,6 +56,7 @@ VAR
 	av_3348_recycle_position: BOOL;
 	nv_3335_closed_feedback: BOOL;
 	nv_3372_closed_feedback: BOOL;
+	nv_3162_stop_request: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -491,6 +492,22 @@ END_VAR
                           </o>
                           <o>
                             <v n="Operand">"nv_3372_stop_request"</v>
+                            <v n="Type">"BOOL"</v>
+                            <v n="Comment">""</v>
+                            <v n="SymbolComment">""</v>
+                            <v n="Address">""</v>
+                            <o n="Flags" t="Flags">
+                              <v n="Flags">0</v>
+                              <v n="Fixed">true</v>
+                              <v n="Extensible">false</v>
+                            </o>
+                            <v n="LValue">true</v>
+                            <v n="Boolean">true</v>
+                            <v n="IsInstance">false</v>
+                            <v n="Id">358L</v>
+                          </o>
+                          <o>
+                            <v n="Operand">"nv_3162_stop_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>

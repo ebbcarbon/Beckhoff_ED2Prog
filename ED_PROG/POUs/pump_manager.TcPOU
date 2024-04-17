@@ -99,7 +99,7 @@ VAR
 	gen_alm_active: BOOL;
 	ed_routine_auto: BOOL;
 	ed_routine_cip: BOOL;
-	ed_routine_manual: BOOL;
+	//ed_routine_manual: BOOL;
 	ed_routine_maint: BOOL;
 	
 	u_3370_enable: BOOL;
@@ -715,7 +715,7 @@ END_VAR
                                             <l2 n="InputItems" cet="BoxTreeOperand">
                                               <o>
                                                 <o n="Operand" t="Operand">
-                                                  <v n="Operand">"ed_routine_manual"</v>
+                                                  <v n="Operand">"general.ed_routine_manual"</v>
                                                   <v n="Type">"BOOL"</v>
                                                   <v n="Comment">""</v>
                                                   <v n="SymbolComment">""</v>
@@ -1692,7 +1692,7 @@ END_VAR
                                             <l2 n="InputItems" cet="BoxTreeOperand">
                                               <o>
                                                 <o n="Operand" t="Operand">
-                                                  <v n="Operand">"ed_routine_manual"</v>
+                                                  <v n="Operand">"general.ed_routine_manual"</v>
                                                   <v n="Type">"BOOL"</v>
                                                   <v n="Comment">""</v>
                                                   <v n="SymbolComment">""</v>
@@ -2669,7 +2669,7 @@ END_VAR
                                             <l2 n="InputItems" cet="BoxTreeOperand">
                                               <o>
                                                 <o n="Operand" t="Operand">
-                                                  <v n="Operand">"ed_routine_manual"</v>
+                                                  <v n="Operand">"general.ed_routine_manual"</v>
                                                   <v n="Type">"BOOL"</v>
                                                   <v n="Comment">""</v>
                                                   <v n="SymbolComment">""</v>
@@ -3646,7 +3646,7 @@ END_VAR
                                             <l2 n="InputItems" cet="BoxTreeOperand">
                                               <o>
                                                 <o n="Operand" t="Operand">
-                                                  <v n="Operand">"ed_routine_manual"</v>
+                                                  <v n="Operand">"general.ed_routine_manual"</v>
                                                   <v n="Type">"BOOL"</v>
                                                   <v n="Comment">""</v>
                                                   <v n="SymbolComment">""</v>
@@ -4228,7 +4228,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"ed_routine_manual"</v>
+                                              <v n="Operand">"general.ed_routine_manual"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -4793,7 +4793,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"ed_routine_manual"</v>
+                                              <v n="Operand">"general.ed_routine_manual"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -5358,7 +5358,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"ed_routine_manual"</v>
+                                              <v n="Operand">"general.ed_routine_manual"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -6318,7 +6318,7 @@ END_VAR
                                             <l2 n="InputItems" cet="BoxTreeOperand">
                                               <o>
                                                 <o n="Operand" t="Operand">
-                                                  <v n="Operand">"ed_routine_manual"</v>
+                                                  <v n="Operand">"general.ed_routine_manual"</v>
                                                   <v n="Type">"BOOL"</v>
                                                   <v n="Comment">""</v>
                                                   <v n="SymbolComment">""</v>

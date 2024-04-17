@@ -3,23 +3,188 @@
   <POU Name="valve_digital_control_st" Id="{8f0a8d66-a59e-41d2-8b25-85917edd7a47}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM valve_digital_control_st
 VAR PERSISTENT
-	// Example digital valve
+	//Digital valve
+	nv_3110: valve_digital;
+	nv_3210: valve_digital;
+	nv_3310: valve_digital;
+	nv_3135: valve_digital;
+	nv_3235: valve_digital;
+	nv_3335: valve_digital;
 	nv_3372: valve_digital;
+	nv_3162: valve_digital;
+	
+	// Analog Valve Function Block
+	av_3148: valve_analog;
+	av_3248: valve_analog;
+	av_3348: valve_analog;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[//Instantiate motor vfd function block, and map inputs
+      <ST><![CDATA[//Instantiate nv_3110 valve function block, and map inputs
+nv_3110();
+nv_3110.open_feedback:=io_mapping.nv_3110_open_feedback;
+nv_3110.closed_feedback:=io_mapping.nv_3110_closed_feedback;
+nv_3110.open_request:=valve_manager.nv_3110_open_request;
+
+//Generic valve fault collector.  If any pump related faults are true, set the function block fault status to true
+(*  
+IF faults.nv_3110_fail_to_close.active=TRUE OR faults.nv_3110_fail_to_open.active=TRUE THEN
+	nv_3372.fault:=TRUE;
+	ELSE
+		nv_3372.fault:=FALSE;
+	END_IF
+*)
+
+//Instantiate nv_3210 valve function block, and map inputs
+nv_3210();
+nv_3210.open_feedback:=io_mapping.nv_3210_open_feedback;
+nv_3210.closed_feedback:=io_mapping.nv_3210_closed_feedback;
+nv_3210.open_request:=valve_manager.nv_3210_open_request;
+
+//Generic valve fault collector.  If any pump related faults are true, set the function block fault status to true
+(*  
+IF faults.nv_3210_fail_to_close.active=TRUE OR faults.nv_3210_fail_to_open.active=TRUE THEN
+	nv_3372.fault:=TRUE;
+	ELSE
+		nv_3372.fault:=FALSE;
+	END_IF
+*)
+
+//Instantiate nv_3310 valve function block, and map inputs
+nv_3310();
+nv_3310.open_feedback:=io_mapping.nv_3310_open_feedback;
+nv_3310.closed_feedback:=io_mapping.nv_3310_closed_feedback;
+nv_3310.open_request:=valve_manager.nv_3310_open_request;
+
+//Generic valve fault collector.  If any pump related faults are true, set the function block fault status to true
+(*  
+IF faults.nv_3310_fail_to_close.active=TRUE OR faults.nv_3310_fail_to_open.active=TRUE THEN
+	nv_3372.fault:=TRUE;
+	ELSE
+		nv_3372.fault:=FALSE;
+	END_IF
+*)
+
+//Instantiate nv_3135 valve function block, and map inputs
+nv_3135();
+nv_3135.open_feedback:=io_mapping.nv_3135_open_feedback;
+nv_3135.closed_feedback:=io_mapping.nv_3135_closed_feedback;
+nv_3135.open_request:=valve_manager.nv_3135_open_request;
+
+//Generic valve fault collector.  If any pump related faults are true, set the function block fault status to true
+(*  
+IF faults.nv_3135_fail_to_close.active=TRUE OR faults.nv_3135_fail_to_open.active=TRUE THEN
+	nv_3372.fault:=TRUE;
+	ELSE
+		nv_3372.fault:=FALSE;
+	END_IF
+*)
+
+//Instantiate nv_3235 valve function block, and map inputs
+nv_3235();
+nv_3235.open_feedback:=io_mapping.nv_3235_open_feedback;
+nv_3235.closed_feedback:=io_mapping.nv_3235_closed_feedback;
+nv_3235.open_request:=valve_manager.nv_3235_open_request;
+
+//Generic valve fault collector.  If any pump related faults are true, set the function block fault status to true
+(*  
+IF faults.nv_3235_fail_to_close.active=TRUE OR faults.nv_3235_fail_to_open.active=TRUE THEN
+	nv_3372.fault:=TRUE;
+	ELSE
+		nv_3372.fault:=FALSE;
+	END_IF
+*)
+
+//Instantiate nv_3335 valve function block, and map inputs
+nv_3335();
+nv_3335.open_feedback:=io_mapping.nv_3335_open_feedback;
+nv_3335.closed_feedback:=io_mapping.nv_3335_closed_feedback;
+nv_3335.open_request:=valve_manager.nv_3335_open_request;
+
+//Generic valve fault collector.  If any pump related faults are true, set the function block fault status to true
+(*  
+IF faults.nv_3335_fail_to_close.active=TRUE OR faults.nv_3335_fail_to_open.active=TRUE THEN
+	nv_3372.fault:=TRUE;
+	ELSE
+		nv_3372.fault:=FALSE;
+	END_IF
+*)
+
+//Instantiate nv_3372 valve function block, and map inputs
 nv_3372();
 nv_3372.open_feedback:=io_mapping.nv_3372_open_feedback;
 nv_3372.closed_feedback:=io_mapping.nv_3372_closed_feedback;
-nv_3372.open_request:=example_loop_control.nv_3372_open_request;
+nv_3372.open_request:=valve_manager.nv_3372_open_request;
 
 //Generic valve fault collector.  If any pump related faults are true, set the function block fault status to true
+(*  
 IF faults.nv_3372_fail_to_close.active=TRUE OR faults.nv_3372_fail_to_open.active=TRUE THEN
 	nv_3372.fault:=TRUE;
 	ELSE
 		nv_3372.fault:=FALSE;
-	END_IF]]></ST>
+	END_IF
+*)
+
+//Instantiate nv_3162 valve function block, and map inputs
+nv_3162();
+nv_3162.open_feedback:=io_mapping.nv_3162_open_feedback;
+nv_3162.closed_feedback:=io_mapping.nv_3162_closed_feedback;
+nv_3162.open_request:=valve_manager.nv_3162_open_request;
+
+//Generic valve fault collector.  If any pump related faults are true, set the function block fault status to true
+(*  
+IF faults.nv_3162_fail_to_close.active=TRUE OR faults.nv_3162_fail_to_open.active=TRUE THEN
+	nv_3162.fault:=TRUE;
+	ELSE
+		nv_3162.fault:=FALSE;
+	END_IF
+*)
+	
+	
+//Instantiate valve av_3148 analog function block, and map inputs
+av_3148();
+av_3148.position_feedback:=io_mapping.av_3148_position_feedback.scaled_value;
+av_3148.position_request:=valve_manager.av_3148_position_request;
+av_3148.position_deadband_sp:=opc.popa_0081_av_3148_position_deadband_sp;
+av_3148.position_faulted:=opc.popa_0081_av_3148_position_faulted;
+
+//Generic valve fault collector.  If any valve related faults are true, set the function block fault status to true
+(*IF faults.av_3148_position_fail.active=TRUE THEN
+	av_3148.fault:=TRUE;
+	ELSE
+		av_3148.fault:=FALSE;
+	END_IF
+*)
+
+//Instantiate valve av_3248 analog function block, and map inputs
+av_3248();
+av_3248.position_feedback:=io_mapping.av_3248_position_feedback.scaled_value;
+av_3248.position_request:=valve_manager.av_3248_position_request;
+//av_3248.position_deadband_sp:=opc.popa_0081_av_3248_position_deadband_sp;
+//av_3248.position_faulted:=opc.popa_0081_av_3248_position_faulted;
+
+//Generic valve fault collector.  If any valve related faults are true, set the function block fault status to true
+(*IF faults.av_3248_position_fail.active=TRUE THEN
+	av_3248.fault:=TRUE;
+	ELSE
+		av_3248.fault:=FALSE;
+	END_IF
+*)
+
+//Instantiate valve av_3348 analog function block, and map inputs
+av_3348();
+av_3348.position_feedback:=io_mapping.av_3348_position_feedback.scaled_value;
+av_3348.position_request:=valve_manager.av_3348_position_request;
+//av_3348.position_deadband_sp:=opc.popa_0081_av_3348_position_deadband_sp;
+//av_3348.position_faulted:=opc.popa_0081_av_3348_position_faulted;
+
+//Generic valve fault collector.  If any valve related faults are true, set the function block fault status to true
+(*IF faults.av_3348_position_fail.active=TRUE THEN
+	av_3348.fault:=TRUE;
+	ELSE
+		av_3348.fault:=FALSE;
+	END_IF
+*)]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

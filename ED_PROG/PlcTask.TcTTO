@@ -23,12 +23,6 @@
       <Name>io_mapping</Name>
     </PouCall>
     <PouCall>
-      <Name>motor_starter_control</Name>
-    </PouCall>
-    <PouCall>
-      <Name>motor_vfd_control</Name>
-    </PouCall>
-    <PouCall>
       <Name>opc_control</Name>
     </PouCall>
     <PouCall>
@@ -38,10 +32,25 @@
       <Name>state_transition</Name>
     </PouCall>
     <PouCall>
-      <Name>valve_analog_control</Name>
+      <Name>manual_mode</Name>
     </PouCall>
     <PouCall>
-      <Name>valve_digital_control</Name>
+      <Name>valve_manager</Name>
+    </PouCall>
+    <PouCall>
+      <Name>stopping_mode</Name>
+    </PouCall>
+    <PouCall>
+      <Name>pump_manager</Name>
+    </PouCall>
+    <PouCall>
+      <Name>valve_digital_control_st</Name>
+    </PouCall>
+    <PouCall>
+      <Name>motor_vfd_control_st</Name>
+    </PouCall>
+    <PouCall>
+      <Name>maint_mode</Name>
     </PouCall>
     <TaskFBGuid>{b444c442-1e08-4dc9-9582-92f769dd2481}</TaskFBGuid>
     <Fb_init>{577a81fe-f5e0-461c-b354-40a78c1bce7d}</Fb_init>
