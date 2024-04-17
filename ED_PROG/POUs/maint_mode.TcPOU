@@ -77,8 +77,8 @@ VAR
 	u_3370_hmi_start_request: BOOL;
 	u_3370_maint_request: BOOL;
 	u_3370_hmi_stop_request: BOOL;
-	u_3370_hmi_speed_request: INT;
-	u_3370_maint_speed_request: INT;
+	u_3370_hmi_speed_request: REAL;
+	u_3370_maint_speed_request: REAL;
 	nv_3162_hmi_open_request: BOOL;
 	nv_3162_maint_request: BOOL;
 	nv_3162_hmi_close_request: BOOL;
@@ -223,7 +223,7 @@ END_VAR
                               </o>
                               <o>
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"u_3112_hmi_start_request"</v>
+                                  <v n="Operand">"opc.popa_0081_u_3112_hmi_start_request"</v>
                                   <v n="Type">"BOOL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -259,7 +259,7 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"u_3112_hmi_speed_request"</v>
+                              <v n="Operand">"opc.popa_0081_u_3112_hmi_speed_request"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -440,7 +440,7 @@ END_VAR
                               </o>
                               <o>
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"u_3212_hmi_start_request"</v>
+                                  <v n="Operand">"opc.popa_0081_u_3112_hmi_start_request"</v>
                                   <v n="Type">"BOOL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -476,7 +476,7 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"u_3212_hmi_speed_request"</v>
+                              <v n="Operand">"opc.popa_0081_u_3112_hmi_speed_request"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -657,7 +657,7 @@ END_VAR
                               </o>
                               <o>
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"u_3312_hmi_start_request"</v>
+                                  <v n="Operand">"opc.popa_0081_u_3112_hmi_start_request"</v>
                                   <v n="Type">"BOOL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -693,7 +693,7 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"u_3312_hmi_speed_request"</v>
+                              <v n="Operand">"opc.popa_0081_u_3112_hmi_speed_request"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -874,7 +874,7 @@ END_VAR
                               </o>
                               <o>
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"u_3405_hmi_start_request"</v>
+                                  <v n="Operand">"opc.popa_0081_u_3112_hmi_start_request"</v>
                                   <v n="Type">"BOOL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -910,7 +910,7 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"u_3405_hmi_speed_request"</v>
+                              <v n="Operand">"opc.popa_0081_u_3112_hmi_speed_request"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1091,7 +1091,7 @@ END_VAR
                               </o>
                               <o>
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"u_3160_hmi_start_request"</v>
+                                  <v n="Operand">"opc.popa_0081_u_3112_hmi_start_request"</v>
                                   <v n="Type">"BOOL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -1127,7 +1127,7 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"u_3160_hmi_speed_request"</v>
+                              <v n="Operand">"opc.popa_0081_u_3112_hmi_speed_request"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1308,7 +1308,7 @@ END_VAR
                               </o>
                               <o>
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"u_3260_hmi_start_request"</v>
+                                  <v n="Operand">"opc.popa_0081_u_3112_hmi_start_request"</v>
                                   <v n="Type">"BOOL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -1344,7 +1344,7 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"u_3260_hmi_speed_request"</v>
+                              <v n="Operand">"opc.popa_0081_u_3112_hmi_speed_request"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1525,7 +1525,7 @@ END_VAR
                               </o>
                               <o>
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"u_3360_hmi_start_request"</v>
+                                  <v n="Operand">"opc.popa_0081_u_3112_hmi_start_request"</v>
                                   <v n="Type">"BOOL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -1561,7 +1561,7 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"u_3360_hmi_speed_request"</v>
+                              <v n="Operand">"opc.popa_0081_u_3112_hmi_speed_request"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1742,7 +1742,7 @@ END_VAR
                               </o>
                               <o>
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"u_3370_hmi_start_request"</v>
+                                  <v n="Operand">"opc.popa_0081_u_3112_hmi_start_request"</v>
                                   <v n="Type">"BOOL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -1778,8 +1778,8 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"u_3370_hmi_speed_request"</v>
-                              <v n="Type">"INT"</v>
+                              <v n="Operand">"opc.popa_0081_u_3112_hmi_speed_request"</v>
+                              <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
                               <v n="Address">""</v>

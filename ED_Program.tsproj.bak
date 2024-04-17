@@ -115,7 +115,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{A69D7AB4-53AC-40E7-8E11-A7DF25BBEC0A}" Name="ED_PROG" PrjFilePath="ED_PROG\ED_PROG.plcproj" TmcFilePath="ED_PROG\ED_PROG.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" CopyTmcToTarget="true" CopyTpyToTarget="false" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="ED_PROG\ED_PROG.tmc" TmcHash="{9537086F-F018-66FD-EDDD-EF13542ED4CD}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="ED_PROG\ED_PROG.tmc" TmcHash="{0B08D312-026B-2FC3-FC7D-181FF8C3AA46}">
 					<Name>ED_PROG Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
@@ -318,6 +318,39 @@ Motor vfd run feedback, mapped to a physical input]]></Comment>
 						<Var>
 							<Name>io_mapping.nv_3162_closed_feedback</Name>
 							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.u_3112_speed_feedback_raw_input</Name>
+							<Comment><![CDATA[Motor vfd speed feedback raw input]]></Comment>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.u_3212_speed_feedback_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.u_3312_speed_feedback_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.u_3160_speed_feedback_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.u_3260_speed_feedback_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.u_3360_speed_feedback_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.u_3370_speed_feedback_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.u_3405_speed_feedback_raw_input</Name>
+							<Type>INT</Type>
 						</Var>
 					</Vars>
 					<Vars VarGrpType="2" AreaNo="1">
@@ -4995,6 +5028,15 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030010"/>
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500830000403}" Id="#x02030020"/>
 		<OwnerA Name="TIPC^ED_PROG^ED_PROG Instance">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)">
+				<Link VarA="PlcTask Inputs^io_mapping.u_3112_speed_feedback_raw_input" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3160_speed_feedback_raw_input" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3212_speed_feedback_raw_input" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3260_speed_feedback_raw_input" VarB="AI Standard Channel 5^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3312_speed_feedback_raw_input" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3360_speed_feedback_raw_input" VarB="AI Standard Channel 6^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3370_speed_feedback_raw_input" VarB="AI Standard Channel 7^Value" AutoLink="true"/>
+			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)">
 				<Link VarA="PlcTask Outputs^io_mapping.u_3112_speed_command_io" VarB="AO Output Channel 1^Analog output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^io_mapping.u_3212_speed_command_io" VarB="AO Output Channel 3^Analog output" AutoLink="true"/>
@@ -5060,6 +5102,9 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Outputs^io_mapping.nv_3310_open_command_io" VarB="Channel 13^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^io_mapping.nv_3335_open_command_io" VarB="Channel 15^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^io_mapping.nv_3372_open_command_io" VarB="Channel 16^Output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 4 (EtherCAT)^Term 25 (EK1100)^Term 26 (EL3058)">
+				<Link VarA="PlcTask Inputs^io_mapping.u_3405_speed_feedback_raw_input" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 4 (EtherCAT)^Term 25 (EK1100)^Term 27 (EL4124)">
 				<Link VarA="PlcTask Outputs^io_mapping.u_3405_speed_command_io" VarB="AO Output Channel 1^Analog output" AutoLink="true"/>
