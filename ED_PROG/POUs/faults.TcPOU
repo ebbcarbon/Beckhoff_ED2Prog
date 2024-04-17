@@ -234,12 +234,12 @@ u_3160_fail_to_start.delay_setpoint:=opc.popa_0081_u_3160_fail_to_start_delay_se
 u_3160_fail_to_start.enable:=opc.popa_0081_u_3160_fail_to_start_enable;
 
 //Place your alarm trigger logic here.  
-IF motor_starter_control.u_3160.run_command=TRUE AND motor_starter_control.u_3160.run_feedback=FALSE THEN
+(*IF motor_starter_control.u_3160.run_command=TRUE AND motor_starter_control.u_3160.run_feedback=FALSE THEN
 	u_3160_fail_to_start.trigger:=TRUE;
 	ELSE
 		u_3160_fail_to_start.trigger:=False;
 	END_IF
-	
+	*)
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 u_3160_fail_to_stop();
 u_3160_fail_to_stop.alm_ack:=opc.popa_0081_alarm_ack;
@@ -249,12 +249,12 @@ u_3160_fail_to_stop.delay_setpoint:=opc.popa_0081_u_3160_fail_to_stop_delay_setp
 u_3160_fail_to_stop.enable:=opc.popa_0081_u_3160_fail_to_stop_enable;
 
 //Place your alarm trigger logic here.  
-IF motor_starter_control.u_3160.run_command=FALSE AND motor_starter_control.u_3160.run_feedback=TRUE THEN
+(*IF motor_starter_control.u_3160.run_command=FALSE AND motor_starter_control.u_3160.run_feedback=TRUE THEN
 	u_3160_fail_to_stop.trigger:=TRUE;
 	ELSE
 		u_3160_fail_to_stop.trigger:=FALSE;
 	END_IF
-	
+	*)
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 u_3112_fail_to_start();
 u_3112_fail_to_start.alm_ack:=opc.popa_0081_alarm_ack;
@@ -264,12 +264,12 @@ u_3112_fail_to_start.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_se
 u_3112_fail_to_start.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
 
 //Place your alarm trigger logic here.  
-IF motor_vfd_control.u_3112.run_command=TRUE AND motor_vfd_control.u_3112.run_feedback=FALSE THEN
+(*IF motor_vfd_control.u_3112.run_command=TRUE AND motor_vfd_control.u_3112.run_feedback=FALSE THEN
 	u_3112_fail_to_start.trigger:=TRUE;
 	ELSE
 		u_3112_fail_to_start.trigger:=FALSE;
 	END_IF
-	
+*)	
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 u_3112_fail_to_stop();
 u_3112_fail_to_stop.alm_ack:=opc.popa_0081_alarm_ack;
@@ -279,12 +279,12 @@ u_3112_fail_to_stop.delay_setpoint:=opc.popa_0081_u_3112_fail_to_stop_delay_setp
 u_3112_fail_to_stop.enable:=opc.popa_0081_u_3112_fail_to_stop_enable;
 
 //Place your alarm trigger logic here.  
-IF motor_vfd_control.u_3112.run_command=FALSE AND motor_vfd_control.u_3112.run_feedback=TRUE THEN
+(*IF motor_vfd_control.u_3112.run_command=FALSE AND motor_vfd_control.u_3112.run_feedback=TRUE THEN
 	u_3112_fail_to_stop.trigger:=TRUE;
 	ELSE
 		u_3112_fail_to_stop.trigger:=FALSE;
 	END_IF
-	
+	*)
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 av_3148_position_fail();
 av_3148_position_fail.alm_ack:=opc.popa_0081_alarm_ack;
@@ -294,7 +294,7 @@ av_3148_position_fail.delay_setpoint:=opc.popa_0081_av_3148_position_fail_delay_
 av_3148_position_fail.enable:=opc.popa_0081_av_3148_position_fail_enable;
 
 //Place your alarm trigger logic here.  
-IF io_mapping.av_3148_position_feedback.scaled_value>valve_analog_control.av_3148.position_deadband_high OR io_mapping.av_3148_position_feedback.scaled_value<valve_analog_control.av_3148.position_deadband_low THEN
+IF io_mapping.av_3148_position_feedback.scaled_value>valve_analog_control_st.av_3148.position_deadband_high OR io_mapping.av_3148_position_feedback.scaled_value<valve_analog_control_st.av_3148.position_deadband_low THEN
 	av_3148_position_fail.trigger:=TRUE;
 	ELSE
 		av_3148_position_fail.trigger:=FALSE;
@@ -309,7 +309,7 @@ nv_3372_fail_to_open.delay_setpoint:=opc.popa_0081_nv_3372_fail_to_open_delay_se
 nv_3372_fail_to_open.enable:=opc.popa_0081_nv_3372_fail_to_open_enable;
 
 //Place your alarm trigger logic here.  
-IF valve_digital_control.nv_3372.open_command=TRUE AND valve_digital_control.nv_3372.open_feedback=FALSE THEN
+IF valve_digital_control_st.nv_3372.open_command=TRUE AND valve_digital_control_st.nv_3372.open_feedback=FALSE THEN
 	nv_3372_fail_to_open.trigger:=TRUE;
 	ELSE
 		nv_3372_fail_to_open.trigger:=FALSE;
@@ -324,7 +324,7 @@ nv_3372_fail_to_close.delay_setpoint:=opc.popa_0081_nv_3372_fail_to_close_delay_
 nv_3372_fail_to_close.enable:=opc.popa_0081_nv_3372_fail_to_close_enable;
 
 //Place your alarm trigger logic here.  
-IF valve_digital_control.nv_3372.open_command=FALSE AND valve_digital_control.nv_3372.open_feedback=TRUE THEN
+IF valve_digital_control_st.nv_3372.open_command=FALSE AND valve_digital_control_st.nv_3372.open_feedback=TRUE THEN
 	nv_3372_fail_to_close.trigger:=TRUE;
 	ELSE
 		nv_3372_fail_to_close.trigger:=FALSE;

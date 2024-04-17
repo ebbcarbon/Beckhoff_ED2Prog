@@ -77,13 +77,7 @@
     <Compile Include="POUs\maint_mode.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\motor_starter_control.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="POUs\motor_starter_control_st.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\motor_vfd_control.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\motor_vfd_control_st.TcPOU">
@@ -104,16 +98,10 @@
     <Compile Include="POUs\stopping_mode.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\valve_analog_control.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="POUs\valve_analog_control_st.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\valve_manager.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="POUs\valve_digital_control.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\valve_digital_control_st.TcPOU">

@@ -128,6 +128,7 @@ opc.popa_0081_u_3405_status:=motor_vfd_control_st.u_3405.status;
 
 opc.popa_0081_av_3148_position_feedback_scaled_value:=io_mapping.av_3148_position_feedback.scaled_value;
 opc.popa_0081_av_3148_position_command_scaled_value:=io_mapping.av_3148_position_command.scaled_value;
+(*
 opc.popa_0081_u_3160_run_request:=motor_starter_control.u_3160.run_request;
 opc.popa_0081_u_3160_runtime_today:=motor_starter_control.u_3160.runtime_today;
 opc.popa_0081_u_3160_runtime_total:=motor_starter_control.u_3160.runtime_total;
@@ -137,8 +138,9 @@ opc.popa_0081_u_3160_status:=motor_starter_control.u_3160.status;
 opc.popa_0081_av_3148_position_feedback:=valve_analog_control.av_3148.position_feedback;
 opc.popa_0081_av_3148_position_request:=valve_analog_control.av_3148.position_request;
 opc.popa_0081_av_3148_status:=valve_analog_control.av_3148.status;
-opc.popa_0081_nv_3372_open_request:=valve_digital_control.nv_3372.open_request;
-opc.popa_0081_nv_3372_status:=valve_digital_control.nv_3372.status;]]></ST>
+*)
+opc.popa_0081_nv_3372_open_request:=valve_digital_control_st.nv_3372.open_request;
+opc.popa_0081_nv_3372_status:=valve_digital_control_st.nv_3372.status;]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
