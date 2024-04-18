@@ -414,7 +414,6 @@ END_IF
 
 //Map the analog scaling function block raw input to the physical raw output variable
 u_3112_speed_command_io := REAL_TO_INT(u_3112_speed_command.scaled_value);
-u_3112_run_command_io := motor_vfd_control_st.u_3112.run_request;
 
 //Instantiate u_3112 speed feedback analog input function block
 u_3112_speed_feedback();
@@ -450,7 +449,6 @@ END_IF
 
 //Map the analog scaling function block raw input to the physical raw output variable
 u_3212_speed_command_io := REAL_TO_INT(u_3212_speed_command.scaled_value);
-u_3212_run_command_io := motor_vfd_control_st.u_3212.run_request;
 
 //Instantiate Example analog input function block
 u_3212_speed_feedback();
@@ -482,7 +480,6 @@ END_IF
 
 //Map the analog scaling function block raw input to the physical raw output variable
 u_3312_speed_command_io := REAL_TO_INT(u_3312_speed_command.scaled_value);
-u_3312_run_command_io := motor_vfd_control_st.u_3312.run_request;
 
 //Instantiate Example analog input function block
 u_3312_speed_feedback();
@@ -514,7 +511,6 @@ END_IF
 
 //Map the analog scaling function block raw input to the physical raw output variable
 u_3160_speed_command_io := REAL_TO_INT(u_3160_speed_command.scaled_value);
-u_3160_run_command_io := motor_vfd_control_st.u_3160.run_request;
 
 //Instantiate Example analog input function block
 u_3160_speed_feedback();
@@ -546,7 +542,6 @@ END_IF
 
 //Map the analog scaling function block raw input to the physical raw output variable
 u_3260_speed_command_io := REAL_TO_INT(u_3260_speed_command.scaled_value);
-u_3260_run_command_io := motor_vfd_control_st.u_3260.run_request;
 
 //Instantiate Example analog input function block
 u_3260_speed_feedback();
@@ -578,7 +573,6 @@ END_IF
 
 //Map the analog scaling function block raw input to the physical raw output variable
 u_3360_speed_command_io := REAL_TO_INT(u_3360_speed_command.scaled_value);
-u_3360_run_command_io := motor_vfd_control_st.u_3360.run_request;
 
 //Instantiate Example analog input function block
 u_3360_speed_feedback();
@@ -610,7 +604,6 @@ END_IF
 
 //Map the analog scaling function block raw input to the physical raw output variable
 u_3370_speed_command_io := REAL_TO_INT(u_3370_speed_command.scaled_value);
-u_3370_run_command_io := motor_vfd_control_st.u_3370.run_request;
 
 //Instantiate Example analog input function block
 u_3370_speed_feedback();
@@ -642,8 +635,6 @@ END_IF
 
 //Map the analog scaling function block raw input to the physical raw output variable
 u_3405_speed_command_io := REAL_TO_INT(u_3405_speed_command.scaled_value);
-u_3405_run_command_io := motor_vfd_control_st.u_3405.run_request;
-
 
 //Instantiate Example analog input function block
 u_3405_speed_feedback();
