@@ -3,27 +3,27 @@
   <POU Name="cip" Id="{229a4917-364b-4aed-993d-1b6b88976092}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM cip
 VAR
-	ed_routine_starting_auto: BOOL;
-	auto_redox_doser_enable: BOOL;
+	ed_routine_starting_idle: BOOL;
+	idle_redox_doser_enable: BOOL;
 	
-	tmr_auto_pumps: TON;
-	auto_u_3112_request: BOOL;
-	auto_u_3312_request: BOOL;
-	auto_u_3405_request: BOOL;
-	auto_u_3212_request: BOOL;
-	tmr_auto_pump_delay: TON;
+	tmr_idle_pumps: TON;
+	idle_u_3112_request: BOOL;
+	idle_u_3312_request: BOOL;
+	idle_u_3405_request: BOOL;
+	idle_u_3212_request: BOOL;
+	tmr_idle_pump_delay: TON;
 	u_3112_running: BOOL;
 	u_3112_speed_ref: INT;
 	u_3112_sp: REAL;
 	salt_pressure_actual: REAL;
-	auto_u_3112_ready: BOOL;
+	idle_u_3112_ready: BOOL;
 	u_3212_running: BOOL;
-	auto_u_3212_ready: BOOL;
-	auto_u_3312_ready: BOOL;
+	idle_u_3212_ready: BOOL;
+	idle_u_3312_ready: BOOL;
 	u_3312_running: BOOL;
 	u_3405_running: BOOL;
-	auto_u_3405_ready: BOOL;
-	auto_stack_power_enable: BOOL;
+	idle_u_3405_ready: BOOL;
+	idle_stack_power_enable: BOOL;
 	ed_routine_cip: BOOL;
 	
 		nv_3110_open_request: BOOL;
@@ -42,7 +42,7 @@ VAR
 	nv_3235_open_feedback: BOOL;
 	nv_3335_open_feedback: BOOL;
 	tmr_cip_pump_delay: TON;
-	auto_u_3370_request: BOOL;
+	idle_u_3370_request: BOOL;
 	u_3370_running: BOOL;
 	u_3370_sp: REAL;
 	tmr_cip_pump_start_delay: TON;

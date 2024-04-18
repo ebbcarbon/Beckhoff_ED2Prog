@@ -3,7 +3,7 @@
   <POU Name="stopping_mode" Id="{65ab387d-14b6-4597-8712-6f6f31d5a03f}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM stopping_mode
 VAR
-	ed_routine_stopping_auto: BOOL;
+	ed_routine_stopping_idle: BOOL;
 	stack_power_enabled: BOOL;
 	RECTIFIER_OUTPUT_OFF: BOOL;// ADD LOGIC FOR MONITORING RECTIFIER OUTPUT - USE CT? VERIFY PS DOES NOT MOVE CURRENT WHEN POWERED OFF
 	u_3112_stop_request: BOOL;

@@ -5,91 +5,91 @@
 VAR
 	//Repeat for each pump?
 	u_3112_enable: BOOL;
-	u_3112_auto_request: BOOL;
+	u_3112_idle_request: BOOL;
 	u_3112_cip_request: BOOL;
 	u_3112_manual_request: BOOL;
 	u_3112_stop_request: BOOL;
 	u_3112_intlk: BOOL;
 	u_3112_maint_request: BOOL;
-	u_3112_auto_speed_request: REAL;
+	u_3112_idle_speed_request: REAL;
 	u_3112_speed_request: REAL;
 	u_3112_cip_speed_request: REAL;
 	u_3112_manual_speed_request: REAL;
 	u_3112_maint_speed_request: REAL;
 	
 	u_3212_enable: BOOL;
-	u_3212_auto_request: BOOL;
+	u_3212_idle_request: BOOL;
 	u_3212_cip_request: BOOL;
 	u_3212_manual_request: BOOL;
 	u_3212_stop_request: BOOL;
 	u_3212_intlk: BOOL;
 	u_3212_maint_request: BOOL;
-	u_3212_auto_speed_request: REAL;
+	u_3212_idle_speed_request: REAL;
 	u_3212_speed_request: REAL;
 	u_3212_cip_speed_request: REAL;
 	u_3212_manual_speed_request: REAL;
 	u_3212_maint_speed_request: REAL;
 	
 	u_3312_enable: BOOL;
-	u_3312_auto_request: BOOL;
+	u_3312_idle_request: BOOL;
 	u_3312_cip_request: BOOL;
 	u_3312_manual_request: BOOL;
 	u_3312_stop_request: BOOL;
 	u_3312_intlk: BOOL;
 	u_3312_maint_request: BOOL;
-	u_3312_auto_speed_request: REAL;
+	u_3312_idle_speed_request: REAL;
 	u_3312_speed_request: REAL;
 	u_3312_cip_speed_request: REAL;
 	u_3312_manual_speed_request: REAL;
 	u_3312_maint_speed_request: REAL;
 	
 	u_3405_enable: BOOL;
-	u_3405_auto_request: BOOL;
+	u_3405_idle_request: BOOL;
 	u_3405_cip_request: BOOL;
 	u_3405_manual_request: BOOL;
 	u_3405_stop_request: BOOL;
 	u_3405_intlk: BOOL;
 	u_3405_maint_request: BOOL;
-	u_3405_auto_speed_request: REAL;
+	u_3405_idle_speed_request: REAL;
 	u_3405_speed_request: REAL;
 	u_3405_cip_speed_request: REAL;
 	u_3405_manual_speed_request: REAL;
 	u_3405_maint_speed_request: REAL;
 	
 	u_3160_enable: BOOL;
-	u_3160_auto_request: BOOL;
+	u_3160_idle_request: BOOL;
 	u_3160_cip_request: BOOL;
 	u_3160_manual_request: BOOL;
 	u_3160_stop_request: BOOL;
 	u_3160_intlk: BOOL;
 	u_3160_maint_request: BOOL;
-	u_3160_auto_speed_request: REAL;
+	u_3160_idle_speed_request: REAL;
 	u_3160_speed_request: REAL;
 	u_3160_cip_speed_request: REAL;
 	u_3160_manual_speed_request: REAL;
 	u_3160_maint_speed_request: REAL;
 	
 	u_3260_enable: BOOL;
-	u_3260_auto_request: BOOL;
+	u_3260_idle_request: BOOL;
 	u_3260_cip_request: BOOL;
 	u_3260_manual_request: BOOL;
 	u_3260_stop_request: BOOL;
 	u_3260_intlk: BOOL;
 	u_3260_maint_request: BOOL;
-	u_3260_auto_speed_request: REAL;
+	u_3260_idle_speed_request: REAL;
 	u_3260_speed_request: REAL;
 	u_3260_cip_speed_request: REAL;
 	u_3260_manual_speed_request: REAL;
 	u_3260_maint_speed_request: REAL;
 	
 	u_3360_enable: BOOL;
-	u_3360_auto_request: BOOL;
+	u_3360_idle_request: BOOL;
 	u_3360_cip_request: BOOL;
 	u_3360_manual_request: BOOL;
 	u_3360_stop_request: BOOL;
 	u_3360_intlk: BOOL;
 	u_3360_maint_request: BOOL;
-	u_3360_auto_speed_request: REAL;
+	u_3360_idle_speed_request: REAL;
 	u_3360_speed_request: REAL;
 	u_3360_cip_speed_request: REAL;
 	u_3360_manual_speed_request: REAL;
@@ -97,19 +97,19 @@ VAR
 	
 	
 	gen_alm_active: BOOL;
-	ed_routine_auto: BOOL;
+	ed_routine_idle: BOOL;
 	ed_routine_cip: BOOL;
 	//ed_routine_manual: BOOL;
 	ed_routine_maint: BOOL;
 	
 	u_3370_enable: BOOL;
-	u_3370_auto_request: BOOL;
+	u_3370_idle_request: BOOL;
 	u_3370_cip_request: BOOL;
 	u_3370_manual_request: BOOL;
 	u_3370_stop_request: BOOL;
 	u_3370_intlk: BOOL;
 	u_3370_maint_request: BOOL;
-	u_3370_auto_speed_request: REAL;
+	u_3370_idle_speed_request: REAL;
 	u_3370_speed_request: REAL;
 	u_3370_cip_speed_request: REAL;
 	u_3370_manual_speed_request: REAL;
@@ -358,7 +358,7 @@ END_VAR
                                                 <l2 n="InputItems" cet="BoxTreeOperand">
                                                   <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"ed_routine_auto"</v>
+                                                      <v n="Operand">"general.ed_routine_idle"</v>
                                                       <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
@@ -377,7 +377,7 @@ END_VAR
                                                   </o>
                                                   <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"auto.u_3112_auto_request"</v>
+                                                      <v n="Operand">"idle.u_3112_idle_request"</v>
                                                       <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
@@ -460,7 +460,7 @@ END_VAR
                                                   </o>
                                                   <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"ed_routine_auto"</v>
+                                                      <v n="Operand">"general.ed_routine_idle"</v>
                                                       <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
@@ -1059,7 +1059,7 @@ END_VAR
                                                 <l2 n="InputItems" cet="BoxTreeOperand">
                                                   <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"ed_routine_auto"</v>
+                                                      <v n="Operand">"general.ed_routine_idle"</v>
                                                       <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
@@ -1078,7 +1078,7 @@ END_VAR
                                                   </o>
                                                   <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"auto.u_3212_auto_request"</v>
+                                                      <v n="Operand">"idle.u_3212_idle_request"</v>
                                                       <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
@@ -1161,7 +1161,7 @@ END_VAR
                                                   </o>
                                                   <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"ed_routine_auto"</v>
+                                                      <v n="Operand">"general.ed_routine_idle"</v>
                                                       <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
@@ -1760,7 +1760,7 @@ END_VAR
                                                 <l2 n="InputItems" cet="BoxTreeOperand">
                                                   <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"ed_routine_auto"</v>
+                                                      <v n="Operand">"general.ed_routine_idle"</v>
                                                       <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
@@ -1779,7 +1779,7 @@ END_VAR
                                                   </o>
                                                   <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"auto.u_3312_auto_request"</v>
+                                                      <v n="Operand">"idle.u_3312_idle_request"</v>
                                                       <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
@@ -1862,7 +1862,7 @@ END_VAR
                                                   </o>
                                                   <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"ed_routine_auto"</v>
+                                                      <v n="Operand">"general.ed_routine_idle"</v>
                                                       <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
@@ -2461,7 +2461,7 @@ END_VAR
                                                 <l2 n="InputItems" cet="BoxTreeOperand">
                                                   <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"ed_routine_auto"</v>
+                                                      <v n="Operand">"general.ed_routine_idle"</v>
                                                       <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
@@ -2480,7 +2480,7 @@ END_VAR
                                                   </o>
                                                   <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"auto.u_3405_auto_request"</v>
+                                                      <v n="Operand">"idle.u_3405_idle_request"</v>
                                                       <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
@@ -2563,7 +2563,7 @@ END_VAR
                                                   </o>
                                                   <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"ed_routine_auto"</v>
+                                                      <v n="Operand">"general.ed_routine_idle"</v>
                                                       <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
@@ -2752,7 +2752,7 @@ END_VAR
                                   </o>
                                   <o t="BoxTreeOperand">
                                     <o n="Operand" t="Operand">
-                                      <v n="Operand">"u_3405_intlk"</v>
+                                      <v n="Operand">"interlocks.u_3405_intlk"</v>
                                       <v n="Type">"BOOL"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
@@ -3069,7 +3069,7 @@ END_VAR
                                   </o>
                                   <o>
                                     <o n="Operand" t="Operand">
-                                      <v n="Operand">"u_3160_manual_request"</v>
+                                      <v n="Operand">"manual_mode.u_3160_manual_request"</v>
                                       <v n="Type">"BOOL"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
@@ -3171,7 +3171,7 @@ END_VAR
                                   </o>
                                   <o>
                                     <o n="Operand" t="Operand">
-                                      <v n="Operand">"u_3160_maint_request"</v>
+                                      <v n="Operand">"maint_mode.u_3160_maint_request"</v>
                                       <v n="Type">"BOOL"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
@@ -3224,7 +3224,7 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"u_3160_stop_request"</v>
+                              <v n="Operand">"stopping_mode.u_3160_stop_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -3405,7 +3405,7 @@ END_VAR
                                   </o>
                                   <o>
                                     <o n="Operand" t="Operand">
-                                      <v n="Operand">"u_3260_manual_request"</v>
+                                      <v n="Operand">"manual_mode.u_3260_manual_request"</v>
                                       <v n="Type">"BOOL"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
@@ -3507,7 +3507,7 @@ END_VAR
                                   </o>
                                   <o>
                                     <o n="Operand" t="Operand">
-                                      <v n="Operand">"u_3260_maint_request"</v>
+                                      <v n="Operand">"maint_mode.u_3260_maint_request"</v>
                                       <v n="Type">"BOOL"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
@@ -3560,7 +3560,7 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"u_3260_stop_request"</v>
+                              <v n="Operand">"stopping_mode.u_3260_stop_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -3741,7 +3741,7 @@ END_VAR
                                   </o>
                                   <o>
                                     <o n="Operand" t="Operand">
-                                      <v n="Operand">"u_3360_manual_request"</v>
+                                      <v n="Operand">"manual_mode.u_3360_manual_request"</v>
                                       <v n="Type">"BOOL"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
@@ -3843,7 +3843,7 @@ END_VAR
                                   </o>
                                   <o>
                                     <o n="Operand" t="Operand">
-                                      <v n="Operand">"u_3360_maint_request"</v>
+                                      <v n="Operand">"maint_mode.u_3360_maint_request"</v>
                                       <v n="Type">"BOOL"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
@@ -3896,7 +3896,7 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"u_3360_stop_request"</v>
+                              <v n="Operand">"stopping_mode.u_3360_stop_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -4170,7 +4170,7 @@ END_VAR
                                                 <l2 n="InputItems" cet="BoxTreeOperand">
                                                   <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"ed_routine_cip"</v>
+                                                      <v n="Operand">"general.ed_routine_cip"</v>
                                                       <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
@@ -4272,7 +4272,7 @@ END_VAR
                                                   </o>
                                                   <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"ed_routine_cip"</v>
+                                                      <v n="Operand">"general.ed_routine_cip"</v>
                                                       <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>

@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
-  <POU Name="auto" Id="{3d08b1fd-a23f-437d-8121-cefd84a9c392}" SpecialFunc="None">
-    <Declaration><![CDATA[PROGRAM auto
+  <POU Name="idle" Id="{3d08b1fd-a23f-437d-8121-cefd84a9c392}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM idle
 VAR
-	ed_routine_auto: BOOL;
-	redox_doser_auto_enable: BOOL;
+	ed_routine_idle: BOOL;
+	redox_doser_idle_enable: BOOL;
 	
-	tmr_auto_pumps: TON;
-	u_3112_auto_request: BOOL;
-	u_3312_auto_request: BOOL;
-	u_3405_auto_request: BOOL;
-	u_3212_auto_request: BOOL;
-	tmr_auto_pump_delay: TON;
+	tmr_idle_pumps: TON;
+	u_3112_idle_request: BOOL;
+	u_3312_idle_request: BOOL;
+	u_3405_idle_request: BOOL;
+	u_3212_idle_request: BOOL;
+	tmr_idle_pump_delay: TON;
 	u_3112_running: BOOL;
 	u_3112_speed_ref: INT;
 	u_3112_sp: REAL;
@@ -30,17 +30,21 @@ VAR
 	nv_3110_open_feedback: BOOL;
 	nv_3210_open_feedback: BOOL;
 	nv_3310_open_feedback: BOOL;
-	nv_3110_auto_request: BOOL;
-	nv_3210_auto_request: BOOL;
-	nv_3310_auto_request: BOOL;
-	nv_3135_auto_request: BOOL;
-	nv_3235_auto_request: BOOL;
-	nv_3335_auto_request: BOOL;
-	nv_3372_auto_request: BOOL;
-	nv_3162_auto_request: BOOL;
+	nv_3110_idle_request: BOOL;
+	nv_3210_idle_request: BOOL;
+	nv_3310_idle_request: BOOL;
+	nv_3135_idle_request: BOOL;
+	nv_3235_idle_request: BOOL;
+	nv_3335_idle_request: BOOL;
+	nv_3372_idle_request: BOOL;
+	nv_3162_idle_request: BOOL;
 
-	auto_stack_power_enable: BOOL;
-	AUTO_TEMP_BIT: BOOL;
+	idle_stack_power_enable: BOOL;
+	idle_TEMP_BIT: BOOL;
+	tmr_idle_valye_delay: TON;
+	tmr_idle_valve_delay: TON;
+	tmr_idle_valve_delay_et: TIME;
+	tmr_idle_valve_delay_q: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -65,7 +69,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"nv_3110_auto_request"</v>
+                            <v n="Operand">"nv_3110_idle_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -81,7 +85,7 @@ END_VAR
                             <v n="Id">443L</v>
                           </o>
                           <o>
-                            <v n="Operand">"nv_3210_auto_request"</v>
+                            <v n="Operand">"nv_3210_idle_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -97,7 +101,7 @@ END_VAR
                             <v n="Id">444L</v>
                           </o>
                           <o>
-                            <v n="Operand">"nv_3310_auto_request"</v>
+                            <v n="Operand">"nv_3310_idle_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -113,7 +117,7 @@ END_VAR
                             <v n="Id">445L</v>
                           </o>
                           <o>
-                            <v n="Operand">"redox_doser_auto_enable"</v>
+                            <v n="Operand">"redox_doser_idle_enable"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -137,7 +141,7 @@ END_VAR
                       </o>
                       <o n="RValue" t="BoxTreeOperand">
                         <o n="Operand" t="Operand">
-                          <v n="Operand">"general.ed_routine_auto"</v>
+                          <v n="Operand">"general.ed_routine_idle"</v>
                           <v n="Type">"BOOL"</v>
                           <v n="Comment">""</v>
                           <v n="SymbolComment">""</v>
@@ -174,7 +178,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"AUTO_TEMP_BIT"</v>
+                            <v n="Operand">"tmr_idle_valve_delay_q"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -197,10 +201,10 @@ END_VAR
                         <v n="Extensible">false</v>
                       </o>
                       <o n="RValue" t="BoxTreeBox">
-                        <v n="BoxType">"AND"</v>
+                        <v n="BoxType">"TON"</v>
                         <o n="Instance" t="Operand">
-                          <n n="Operand" />
-                          <v n="Type">""</v>
+                          <v n="Operand">"tmr_idle_valve_delay"</v>
+                          <v n="Type">"TON"</v>
                           <v n="Comment">""</v>
                           <v n="SymbolComment">""</v>
                           <v n="Address">""</v>
@@ -212,10 +216,28 @@ END_VAR
                           <v n="LValue">false</v>
                           <v n="Boolean">false</v>
                           <v n="IsInstance">true</v>
-                          <v n="Id">37L</v>
+                          <v n="Id">530L</v>
                         </o>
                         <o n="OutputItems" t="OutputItemList">
-                          <l2 n="OutputItems" />
+                          <l2 n="OutputItems" cet="Operand">
+                            <n />
+                            <o>
+                              <v n="Operand">"tmr_idle_valve_delay_et"</v>
+                              <v n="Type">"TIME"</v>
+                              <v n="Comment">""</v>
+                              <v n="SymbolComment">""</v>
+                              <v n="Address">""</v>
+                              <o n="Flags" t="Flags">
+                                <v n="Flags">0</v>
+                                <v n="Fixed">false</v>
+                                <v n="Extensible">false</v>
+                              </o>
+                              <v n="LValue">true</v>
+                              <v n="Boolean">false</v>
+                              <v n="IsInstance">false</v>
+                              <v n="Id">532L</v>
+                            </o>
+                          </l2>
                         </o>
                         <o n="Flags" t="Flags">
                           <v n="Flags">0</v>
@@ -223,99 +245,175 @@ END_VAR
                           <v n="Extensible">false</v>
                         </o>
                         <n n="InputFlags" />
-                        <l2 n="InputItems" cet="BoxTreeOperand">
-                          <o>
-                            <o n="Operand" t="Operand">
-                              <v n="Operand">"general.ed_routine_auto"</v>
-                              <v n="Type">"BOOL"</v>
+                        <l2 n="InputItems">
+                          <o t="BoxTreeBox">
+                            <v n="BoxType">"AND"</v>
+                            <o n="Instance" t="Operand">
+                              <n n="Operand" />
+                              <v n="Type">""</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
                               <v n="Address">""</v>
                               <o n="Flags" t="Flags">
                                 <v n="Flags">0</v>
-                                <v n="Fixed">true</v>
+                                <v n="Fixed">false</v>
                                 <v n="Extensible">false</v>
                               </o>
                               <v n="LValue">false</v>
-                              <v n="Boolean">true</v>
-                              <v n="IsInstance">false</v>
-                              <v n="Id">33L</v>
+                              <v n="Boolean">false</v>
+                              <v n="IsInstance">true</v>
+                              <v n="Id">37L</v>
                             </o>
-                            <v n="Id">32L</v>
+                            <o n="OutputItems" t="OutputItemList">
+                              <l2 n="OutputItems" />
+                            </o>
+                            <o n="Flags" t="Flags">
+                              <v n="Flags">0</v>
+                              <v n="Fixed">false</v>
+                              <v n="Extensible">false</v>
+                            </o>
+                            <n n="InputFlags" />
+                            <l2 n="InputItems" cet="BoxTreeOperand">
+                              <o>
+                                <o n="Operand" t="Operand">
+                                  <v n="Operand">"general.ed_routine_idle"</v>
+                                  <v n="Type">"BOOL"</v>
+                                  <v n="Comment">""</v>
+                                  <v n="SymbolComment">""</v>
+                                  <v n="Address">""</v>
+                                  <o n="Flags" t="Flags">
+                                    <v n="Flags">0</v>
+                                    <v n="Fixed">true</v>
+                                    <v n="Extensible">false</v>
+                                  </o>
+                                  <v n="LValue">false</v>
+                                  <v n="Boolean">true</v>
+                                  <v n="IsInstance">false</v>
+                                  <v n="Id">33L</v>
+                                </o>
+                                <v n="Id">32L</v>
+                              </o>
+                              <o>
+                                <o n="Operand" t="Operand">
+                                  <v n="Operand">"nv_3110_open_feedback"</v>
+                                  <v n="Type">"BOOL"</v>
+                                  <v n="Comment">""</v>
+                                  <v n="SymbolComment">""</v>
+                                  <v n="Address">""</v>
+                                  <o n="Flags" t="Flags">
+                                    <v n="Flags">0</v>
+                                    <v n="Fixed">true</v>
+                                    <v n="Extensible">false</v>
+                                  </o>
+                                  <v n="LValue">false</v>
+                                  <v n="Boolean">true</v>
+                                  <v n="IsInstance">false</v>
+                                  <v n="Id">452L</v>
+                                </o>
+                                <v n="Id">451L</v>
+                              </o>
+                              <o>
+                                <o n="Operand" t="Operand">
+                                  <v n="Operand">"nv_3210_open_feedback"</v>
+                                  <v n="Type">"BOOL"</v>
+                                  <v n="Comment">""</v>
+                                  <v n="SymbolComment">""</v>
+                                  <v n="Address">""</v>
+                                  <o n="Flags" t="Flags">
+                                    <v n="Flags">0</v>
+                                    <v n="Fixed">true</v>
+                                    <v n="Extensible">false</v>
+                                  </o>
+                                  <v n="LValue">false</v>
+                                  <v n="Boolean">true</v>
+                                  <v n="IsInstance">false</v>
+                                  <v n="Id">450L</v>
+                                </o>
+                                <v n="Id">449L</v>
+                              </o>
+                              <o>
+                                <o n="Operand" t="Operand">
+                                  <v n="Operand">"nv_3310_open_feedback"</v>
+                                  <v n="Type">"BOOL"</v>
+                                  <v n="Comment">""</v>
+                                  <v n="SymbolComment">""</v>
+                                  <v n="Address">""</v>
+                                  <o n="Flags" t="Flags">
+                                    <v n="Flags">0</v>
+                                    <v n="Fixed">true</v>
+                                    <v n="Extensible">false</v>
+                                  </o>
+                                  <v n="LValue">false</v>
+                                  <v n="Boolean">true</v>
+                                  <v n="IsInstance">false</v>
+                                  <v n="Id">40L</v>
+                                </o>
+                                <v n="Id">39L</v>
+                              </o>
+                            </l2>
+                            <o n="InputParam" t="ParamList">
+                              <l2 n="Names" />
+                              <l2 n="Types" />
+                            </o>
+                            <o n="OutputParam" t="ParamList">
+                              <l2 n="Names" />
+                              <l2 n="Types" />
+                            </o>
+                            <v n="CallType" t="Operator">And</v>
+                            <n n="EN" />
+                            <n n="ENO" />
+                            <n n="STSnippet" />
+                            <v n="ContainsExtensibleInputs">false</v>
+                            <v n="ProvidesSTSnippet">false</v>
+                            <v n="Id">38L</v>
                           </o>
-                          <o>
+                          <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"nv_3110_open_feedback"</v>
-                              <v n="Type">"BOOL"</v>
+                              <v n="Operand">"tmr_idle_valve_delay.PT"</v>
+                              <v n="Type">"TIME"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
                               <v n="Address">""</v>
                               <o n="Flags" t="Flags">
                                 <v n="Flags">0</v>
-                                <v n="Fixed">true</v>
+                                <v n="Fixed">false</v>
                                 <v n="Extensible">false</v>
                               </o>
                               <v n="LValue">false</v>
-                              <v n="Boolean">true</v>
+                              <v n="Boolean">false</v>
                               <v n="IsInstance">false</v>
-                              <v n="Id">452L</v>
+                              <v n="Id">534L</v>
                             </o>
-                            <v n="Id">451L</v>
-                          </o>
-                          <o>
-                            <o n="Operand" t="Operand">
-                              <v n="Operand">"nv_3210_open_feedback"</v>
-                              <v n="Type">"BOOL"</v>
-                              <v n="Comment">""</v>
-                              <v n="SymbolComment">""</v>
-                              <v n="Address">""</v>
-                              <o n="Flags" t="Flags">
-                                <v n="Flags">0</v>
-                                <v n="Fixed">true</v>
-                                <v n="Extensible">false</v>
-                              </o>
-                              <v n="LValue">false</v>
-                              <v n="Boolean">true</v>
-                              <v n="IsInstance">false</v>
-                              <v n="Id">450L</v>
-                            </o>
-                            <v n="Id">449L</v>
-                          </o>
-                          <o>
-                            <o n="Operand" t="Operand">
-                              <v n="Operand">"nv_3310_open_feedback"</v>
-                              <v n="Type">"BOOL"</v>
-                              <v n="Comment">""</v>
-                              <v n="SymbolComment">""</v>
-                              <v n="Address">""</v>
-                              <o n="Flags" t="Flags">
-                                <v n="Flags">0</v>
-                                <v n="Fixed">true</v>
-                                <v n="Extensible">false</v>
-                              </o>
-                              <v n="LValue">false</v>
-                              <v n="Boolean">true</v>
-                              <v n="IsInstance">false</v>
-                              <v n="Id">40L</v>
-                            </o>
-                            <v n="Id">39L</v>
+                            <v n="Id">533L</v>
                           </o>
                         </l2>
                         <o n="InputParam" t="ParamList">
-                          <l2 n="Names" />
-                          <l2 n="Types" />
+                          <l2 n="Names" cet="String">
+                            <v>IN</v>
+                            <v>PT</v>
+                          </l2>
+                          <l2 n="Types" cet="String">
+                            <v>BOOL</v>
+                            <v>TIME</v>
+                          </l2>
                         </o>
                         <o n="OutputParam" t="ParamList">
-                          <l2 n="Names" />
-                          <l2 n="Types" />
+                          <l2 n="Names" cet="String">
+                            <v>Q</v>
+                            <v>ET</v>
+                          </l2>
+                          <l2 n="Types" cet="String">
+                            <v>BOOL</v>
+                            <v>TIME</v>
+                          </l2>
                         </o>
-                        <v n="CallType" t="Operator">And</v>
-                        <n n="EN" />
-                        <n n="ENO" />
+                        <v n="CallType" t="Operator">FunctionBlock</v>
+                        <v n="EN">false</v>
+                        <v n="ENO">false</v>
                         <n n="STSnippet" />
                         <v n="ContainsExtensibleInputs">false</v>
                         <v n="ProvidesSTSnippet">false</v>
-                        <v n="Id">38L</v>
+                        <v n="Id">531L</v>
                       </o>
                       <v n="Id">488L</v>
                     </o>
@@ -337,7 +435,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"u_3112_auto_request"</v>
+                            <v n="Operand">"u_3112_idle_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -353,7 +451,7 @@ END_VAR
                             <v n="Id">75L</v>
                           </o>
                           <o>
-                            <v n="Operand">"u_3212_auto_request"</v>
+                            <v n="Operand">"u_3212_idle_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -369,7 +467,7 @@ END_VAR
                             <v n="Id">68L</v>
                           </o>
                           <o>
-                            <v n="Operand">"u_3312_auto_request"</v>
+                            <v n="Operand">"u_3312_idle_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -385,7 +483,7 @@ END_VAR
                             <v n="Id">69L</v>
                           </o>
                           <o>
-                            <v n="Operand">"u_3405_auto_request"</v>
+                            <v n="Operand">"u_3405_idle_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -437,7 +535,7 @@ END_VAR
                         <l2 n="InputItems" cet="BoxTreeOperand">
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"general.ed_routine_auto"</v>
+                              <v n="Operand">"general.ed_routine_idle"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -456,7 +554,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"tmr_auto_pump_delay.Q"</v>
+                              <v n="Operand">"tmr_idle_valve_delay.Q"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -547,7 +645,7 @@ END_VAR
                       </o>
                       <o n="RValue" t="BoxTreeOperand">
                         <o n="Operand" t="Operand">
-                          <v n="Operand">"u_3112_running"</v>
+                          <v n="Operand">"io_mapping.u_3112_run_feedback"</v>
                           <v n="Type">"BOOL"</v>
                           <v n="Comment">""</v>
                           <v n="SymbolComment">""</v>
@@ -608,7 +706,7 @@ END_VAR
                       </o>
                       <o n="RValue" t="BoxTreeOperand">
                         <o n="Operand" t="Operand">
-                          <v n="Operand">"u_3212_running"</v>
+                          <v n="Operand">"io_mapping.u_3212_run_feedback"</v>
                           <v n="Type">"BOOL"</v>
                           <v n="Comment">""</v>
                           <v n="SymbolComment">""</v>
@@ -669,7 +767,7 @@ END_VAR
                       </o>
                       <o n="RValue" t="BoxTreeOperand">
                         <o n="Operand" t="Operand">
-                          <v n="Operand">"u_3312_running"</v>
+                          <v n="Operand">"io_mapping.u_3312_run_feedback"</v>
                           <v n="Type">"BOOL"</v>
                           <v n="Comment">""</v>
                           <v n="SymbolComment">""</v>
@@ -730,7 +828,7 @@ END_VAR
                       </o>
                       <o n="RValue" t="BoxTreeOperand">
                         <o n="Operand" t="Operand">
-                          <v n="Operand">"u_3405_running"</v>
+                          <v n="Operand">"io_mapping.u_3405_run_feedback"</v>
                           <v n="Type">"BOOL"</v>
                           <v n="Comment">""</v>
                           <v n="SymbolComment">""</v>
@@ -767,7 +865,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"auto_stack_power_enable"</v>
+                            <v n="Operand">"idle_stack_power_enable"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -819,7 +917,7 @@ END_VAR
                         <l2 n="InputItems" cet="BoxTreeOperand">
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"general.ed_routine_auto"</v>
+                              <v n="Operand">"general.ed_routine_idle"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>

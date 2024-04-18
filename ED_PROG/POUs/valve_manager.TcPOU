@@ -5,17 +5,17 @@
 VAR
 	//Repeat for each valve?
 	u_3112_open_request: BOOL;
-	u_3112_auto_request: BOOL;
+	u_3112_idle_request: BOOL;
 	u_3112_cip_request: BOOL;
 	u_3112_manual_request: BOOL;
 	u_3112_stop_request: BOOL;
 	u_3112_intlk: BOOL;
 	gen_alm_active: BOOL;
-	ed_routine_auto: BOOL;
+	ed_routine_idle: BOOL;
 	ed_routine_cip: BOOL;
 	ed_routine_manual: BOOL;
 	ed_routine_maint: BOOL;
-	nv_3110_auto_request: BOOL;
+	nv_3110_idle_request: BOOL;
 	nv_3110_cip_request: BOOL;
 	nv_3110_manual_request: BOOL;
 	nv_3110_intlk: BOOL;
@@ -27,52 +27,52 @@ VAR
 	nv_3235_open_request: BOOL;
 	nv_3335_open_request: BOOL;
 	nv_3372_open_request: BOOL;
-	nv_3210_auto_request: BOOL;
+	nv_3210_idle_request: BOOL;
 	nv_3210_cip_request: BOOL;
 	nv_3210_manual_request: BOOL;
 	nv_3210_stop_request: BOOL;
 	nv_3210_intlk: BOOL;
 	
-	nv_3310_auto_request: BOOL;
+	nv_3310_idle_request: BOOL;
 	nv_3310_cip_request: BOOL;
 	nv_3310_manual_request: BOOL;
 	nv_3310_stop_request: BOOL;
 	nv_3310_intlk: BOOL;
 	
-	nv_3135_auto_request: BOOL;
+	nv_3135_idle_request: BOOL;
 	nv_3135_cip_request: BOOL;
 	nv_3135_manual_request: BOOL;
 	nv_3135_stop_request: BOOL;
 	nv_3135_intlk: BOOL;
 	
-	nv_3235_auto_request: BOOL;
+	nv_3235_idle_request: BOOL;
 	nv_3235_cip_request: BOOL;
 	nv_3235_manual_request: BOOL;
 	nv_3235_stop_request: BOOL;
 	nv_3235_intlk: BOOL;
 	
-	nv_3335_auto_request: BOOL;
+	nv_3335_idle_request: BOOL;
 	nv_3335_cip_request: BOOL;
 	nv_3335_manual_request: BOOL;
 	nv_3335_stop_request: BOOL;
 	nv_3335_intlk: BOOL;
 	
-	nv_3372_auto_request: BOOL;
+	nv_3372_idle_request: BOOL;
 	nv_3372_cip_request: BOOL;
 	nv_3372_manual_request: BOOL;
 	nv_3372_stop_request: BOOL;
 	nv_3372_intlk: BOOL;
 	
-	nv_3162_auto_request: BOOL;
+	nv_3162_idle_request: BOOL;
 	nv_3162_cip_request: BOOL;
 	nv_3162_manual_request: BOOL;
 	nv_3162_stop_request: BOOL;
 	nv_3162_intlk: BOOL;
 	nv_3162_open_request: BOOL;
 	
-	av_3148_auto_request: BOOL;
+	av_3148_idle_request: BOOL;
 	av_3148_cip_request: BOOL;
-	av_3148_auto_position_request: REAL;
+	av_3148_idle_position_request: REAL;
 	av_3148_position_request: REAL;
 	av_3148_cip_position_request: REAL;
 	av_3148_manual_position_request: REAL;
@@ -83,9 +83,9 @@ VAR
 	av_3148_stop_request: BOOL;
 	av_3148_open_request: BOOL;
 	
-	av_3248_auto_request: BOOL;
+	av_3248_idle_request: BOOL;
 	av_3248_cip_request: BOOL;
-	av_3248_auto_position_request: REAL;
+	av_3248_idle_position_request: REAL;
 	av_3248_position_request: REAL;
 	av_3248_cip_position_request: REAL;
 	av_3248_manual_position_request: REAL;
@@ -96,9 +96,9 @@ VAR
 	av_3248_stop_request: BOOL;
 	av_3248_open_request: BOOL;
 	
-	av_3348_auto_request: BOOL;
+	av_3348_idle_request: BOOL;
 	av_3348_cip_request: BOOL;
-	av_3348_auto_position_request: REAL;
+	av_3348_idle_position_request: REAL;
 	av_3348_position_request: REAL;
 	av_3348_cip_position_request: REAL;
 	av_3348_manual_position_request: REAL;
@@ -297,7 +297,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"general.ed_routine_auto"</v>
+                                              <v n="Operand">"general.ed_routine_idle"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -316,7 +316,7 @@ END_VAR
                                           </o>
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"auto.nv_3110_auto_request"</v>
+                                              <v n="Operand">"idle.nv_3110_idle_request"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -671,7 +671,7 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"nv_3110_stop_request"</v>
+                              <v n="Operand">"stopping_mode.nv_3110_stop_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -889,7 +889,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"general.ed_routine_auto"</v>
+                                              <v n="Operand">"general.ed_routine_idle"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -908,7 +908,7 @@ END_VAR
                                           </o>
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"auto.nv_3210_auto_request"</v>
+                                              <v n="Operand">"idle.nv_3210_idle_request"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -1263,7 +1263,7 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"nv_3210_stop_request"</v>
+                              <v n="Operand">"stopping_mode.nv_3210_stop_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1481,7 +1481,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"general.ed_routine_auto"</v>
+                                              <v n="Operand">"general.ed_routine_idle"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -1500,7 +1500,7 @@ END_VAR
                                           </o>
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"auto.nv_3310_auto_request"</v>
+                                              <v n="Operand">"idle.nv_3310_idle_request"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -1855,7 +1855,7 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"nv_3310_stop_request"</v>
+                              <v n="Operand">"stopping_mode.nv_3310_stop_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -2073,7 +2073,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"general.ed_routine_auto"</v>
+                                              <v n="Operand">"general.ed_routine_idle"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -2092,7 +2092,7 @@ END_VAR
                                           </o>
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"auto.nv_3135_auto_request"</v>
+                                              <v n="Operand">"idle.nv_3135_idle_request"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -2447,7 +2447,7 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"nv_3135_stop_request"</v>
+                              <v n="Operand">"stopping_mode.nv_3135_stop_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -2665,7 +2665,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"general.ed_routine_auto"</v>
+                                              <v n="Operand">"general.ed_routine_idle"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -2684,7 +2684,7 @@ END_VAR
                                           </o>
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"auto.nv_3235_auto_request"</v>
+                                              <v n="Operand">"idle.nv_3235_idle_request"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -3039,7 +3039,7 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"nv_3235_stop_request"</v>
+                              <v n="Operand">"stopping_mode.nv_3235_stop_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -3257,7 +3257,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"general.ed_routine_auto"</v>
+                                              <v n="Operand">"general.ed_routine_idle"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -3276,7 +3276,7 @@ END_VAR
                                           </o>
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"auto.nv_3335_auto_request"</v>
+                                              <v n="Operand">"idle.nv_3335_idle_request"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -3631,7 +3631,7 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"nv_3335_stop_request"</v>
+                              <v n="Operand">"stopping_mode.nv_3335_stop_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -3849,7 +3849,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"general.ed_routine_auto"</v>
+                                              <v n="Operand">"general.ed_routine_idle"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -3868,7 +3868,7 @@ END_VAR
                                           </o>
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"auto.nv_3372_auto_request"</v>
+                                              <v n="Operand">"idle.nv_3372_idle_request"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -4223,7 +4223,7 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"nv_3372_stop_request"</v>
+                              <v n="Operand">"stopping_mode.nv_3372_stop_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -4441,7 +4441,7 @@ END_VAR
                                         <l2 n="InputItems" cet="BoxTreeOperand">
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"general.ed_routine_auto"</v>
+                                              <v n="Operand">"general.ed_routine_idle"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -4460,7 +4460,7 @@ END_VAR
                                           </o>
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"auto.nv_3162_auto_request"</v>
+                                              <v n="Operand">"idle.nv_3162_idle_request"</v>
                                               <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
@@ -4815,7 +4815,7 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"nv_3162_stop_request"</v>
+                              <v n="Operand">"stopping_mode.nv_3162_stop_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -5148,7 +5148,7 @@ END_VAR
                                                     <l2 n="InputItems" cet="BoxTreeOperand">
                                                       <o>
                                                         <o n="Operand" t="Operand">
-                                                          <v n="Operand">"general.ed_routine_auto"</v>
+                                                          <v n="Operand">"general.ed_routine_idle"</v>
                                                           <v n="Type">"BOOL"</v>
                                                           <v n="Comment">""</v>
                                                           <v n="SymbolComment">""</v>
@@ -5167,7 +5167,7 @@ END_VAR
                                                       </o>
                                                       <o>
                                                         <o n="Operand" t="Operand">
-                                                          <v n="Operand">"av_3148_auto_request"</v>
+                                                          <v n="Operand">"av_3148_idle_request"</v>
                                                           <v n="Type">"BOOL"</v>
                                                           <v n="Comment">""</v>
                                                           <v n="SymbolComment">""</v>
@@ -5203,7 +5203,7 @@ END_VAR
                                                   </o>
                                                   <o t="BoxTreeOperand">
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"av_3148_auto_position_request"</v>
+                                                      <v n="Operand">"av_3148_idle_position_request"</v>
                                                       <v n="Type">"REAL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
@@ -5518,7 +5518,7 @@ END_VAR
                                                       </o>
                                                       <o>
                                                         <o n="Operand" t="Operand">
-                                                          <v n="Operand">"general.ed_routine_auto"</v>
+                                                          <v n="Operand">"general.ed_routine_idle"</v>
                                                           <v n="Type">"BOOL"</v>
                                                           <v n="Comment">""</v>
                                                           <v n="SymbolComment">""</v>
@@ -6364,7 +6364,7 @@ END_VAR
                                                     <l2 n="InputItems" cet="BoxTreeOperand">
                                                       <o>
                                                         <o n="Operand" t="Operand">
-                                                          <v n="Operand">"general.ed_routine_auto"</v>
+                                                          <v n="Operand">"general.ed_routine_idle"</v>
                                                           <v n="Type">"BOOL"</v>
                                                           <v n="Comment">""</v>
                                                           <v n="SymbolComment">""</v>
@@ -6383,7 +6383,7 @@ END_VAR
                                                       </o>
                                                       <o>
                                                         <o n="Operand" t="Operand">
-                                                          <v n="Operand">"av_3248_auto_request"</v>
+                                                          <v n="Operand">"av_3248_idle_request"</v>
                                                           <v n="Type">"BOOL"</v>
                                                           <v n="Comment">""</v>
                                                           <v n="SymbolComment">""</v>
@@ -6419,7 +6419,7 @@ END_VAR
                                                   </o>
                                                   <o t="BoxTreeOperand">
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"av_3248_auto_position_request"</v>
+                                                      <v n="Operand">"av_3248_idle_position_request"</v>
                                                       <v n="Type">"REAL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
@@ -6734,7 +6734,7 @@ END_VAR
                                                       </o>
                                                       <o>
                                                         <o n="Operand" t="Operand">
-                                                          <v n="Operand">"general.ed_routine_auto"</v>
+                                                          <v n="Operand">"general.ed_routine_idle"</v>
                                                           <v n="Type">"BOOL"</v>
                                                           <v n="Comment">""</v>
                                                           <v n="SymbolComment">""</v>
@@ -7580,7 +7580,7 @@ END_VAR
                                                     <l2 n="InputItems" cet="BoxTreeOperand">
                                                       <o>
                                                         <o n="Operand" t="Operand">
-                                                          <v n="Operand">"general.ed_routine_auto"</v>
+                                                          <v n="Operand">"general.ed_routine_idle"</v>
                                                           <v n="Type">"BOOL"</v>
                                                           <v n="Comment">""</v>
                                                           <v n="SymbolComment">""</v>
@@ -7599,7 +7599,7 @@ END_VAR
                                                       </o>
                                                       <o>
                                                         <o n="Operand" t="Operand">
-                                                          <v n="Operand">"av_3348_auto_request"</v>
+                                                          <v n="Operand">"av_3348_idle_request"</v>
                                                           <v n="Type">"BOOL"</v>
                                                           <v n="Comment">""</v>
                                                           <v n="SymbolComment">""</v>
@@ -7635,7 +7635,7 @@ END_VAR
                                                   </o>
                                                   <o t="BoxTreeOperand">
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"av_3348_auto_position_request"</v>
+                                                      <v n="Operand">"av_3348_idle_position_request"</v>
                                                       <v n="Type">"REAL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
@@ -7950,7 +7950,7 @@ END_VAR
                                                       </o>
                                                       <o>
                                                         <o n="Operand" t="Operand">
-                                                          <v n="Operand">"general.ed_routine_auto"</v>
+                                                          <v n="Operand">"general.ed_routine_idle"</v>
                                                           <v n="Type">"BOOL"</v>
                                                           <v n="Comment">""</v>
                                                           <v n="SymbolComment">""</v>

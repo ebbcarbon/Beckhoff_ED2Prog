@@ -15,7 +15,7 @@ VAR PERSISTENT
 	alarm_ack_unlatch_sp : TIME :=T#3s;
 	
 	//PLC States - move as needed
-	ed_routine_auto : BOOL;
+	ed_routine_idle : BOOL;
 	ed_routine_cip : BOOL;
 	ed_routine_manual : BOOL;
 	ed_routine_maint : BOOL;
@@ -1015,7 +1015,7 @@ END_VAR
                             <v n="Id">302L</v>
                           </o>
                           <o>
-                            <v n="Operand">"ed_routine_auto"</v>
+                            <v n="Operand">"ed_routine_idle"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1108,7 +1108,7 @@ END_VAR
                             <v n="Id">295L</v>
                           </o>
                           <o>
-                            <v n="Operand">"ed_routine_auto"</v>
+                            <v n="Operand">"ed_routine_idle"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1241,7 +1241,7 @@ END_VAR
                       </o>
                       <o n="RValue" t="BoxTreeOperand">
                         <o n="Operand" t="Operand">
-                          <v n="Operand">"ed_routine_auto"</v>
+                          <v n="Operand">"ed_routine_idle"</v>
                           <v n="Type">"BOOL"</v>
                           <v n="Comment">""</v>
                           <v n="SymbolComment">""</v>
@@ -1294,7 +1294,7 @@ END_VAR
                             <v n="Id">283L</v>
                           </o>
                           <o>
-                            <v n="Operand">"ed_routine_auto"</v>
+                            <v n="Operand">"ed_routine_idle"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
