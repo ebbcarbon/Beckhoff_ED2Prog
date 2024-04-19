@@ -310,7 +310,7 @@ av_3148_position_fail.delay_setpoint:=opc.popa_0081_av_3148_position_fail_delay_
 av_3148_position_fail.enable:=opc.popa_0081_av_3148_position_fail_enable;
 
 //Place your alarm trigger logic here.  
-IF io_mapping.av_3148_position_feedback.scaled_value>valve_analog_control_st.av_3148.position_deadband_high OR io_mapping.av_3148_position_feedback.scaled_value<valve_analog_control_st.av_3148.position_deadband_low THEN
+IF io_mapping.av_3148_position_feedback.scaled_value>valve_digital_control_st.av_3148.position_deadband_high OR io_mapping.av_3148_position_feedback.scaled_value<valve_digital_control_st.av_3148.position_deadband_low THEN
 	av_3148_position_fail.trigger:=TRUE;
 	ELSE
 		av_3148_position_fail.trigger:=FALSE;

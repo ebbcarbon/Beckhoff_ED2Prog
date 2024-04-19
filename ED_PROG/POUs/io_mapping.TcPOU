@@ -798,8 +798,8 @@ u_3405_speed_feedback.raw_input := u_3405_speed_feedback_raw_input;
 //Instantiate av_3148 analog input function block----------------------------------------------------------------------------
 av_3148_position_feedback();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
-av_3148_position_feedback.eu_max:=opc.popa_0081_av_3148_position_feedback_eu_max;
-av_3148_position_feedback.eu_min:=opc.popa_0081_av_3148_position_feedback_eu_min;
+av_3148_position_feedback.eu_max:=100;
+av_3148_position_feedback.eu_min:=0;
 av_3148_position_feedback.filter_factor:=opc.popa_0081_av_3148_position_feedback_filter_factor;
 av_3148_position_feedback.raw_max:=opc.popa_0081_av_3148_position_feedback_raw_max;
 av_3148_position_feedback.raw_min:=opc.popa_0081_av_3148_position_feedback_raw_min;
@@ -809,13 +809,13 @@ av_3148_position_feedback.raw_input := av_3148_position_feedback_raw_input;
 //Instantiate av_3148 analog output function block
 av_3148_position_command();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
-av_3148_position_command.eu_max:=opc.popa_0081_av_3148_position_command_eu_max;
-av_3148_position_command.eu_min:=opc.popa_0081_av_3148_position_command_eu_min;
+av_3148_position_command.eu_max:=32767;
+av_3148_position_command.eu_min:=0;
 av_3148_position_command.filter_factor:=opc.popa_0081_av_3148_position_command_filter_factor;
-av_3148_position_command.raw_max:=opc.popa_0081_av_3148_position_command_raw_max;
-av_3148_position_command.raw_min:=opc.popa_0081_av_3148_position_command_raw_min;
+av_3148_position_command.raw_max:=100;
+av_3148_position_command.raw_min:=0;
 //Map output from valve control pou to scaling block
-av_3148_position_command.raw_input:=valve_analog_control_st.av_3148.Position_Command;
+av_3148_position_command.raw_input:=valve_digital_control_st.av_3148.Position_Command;
 //Map the analog scaling function block raw input to the physical raw output variable
 av_3148_position_command_io := REAL_TO_INT(av_3148_position_command.scaled_value);
 
@@ -823,51 +823,51 @@ av_3148_position_command_io := REAL_TO_INT(av_3148_position_command.scaled_value
 //Instantiate av_3248 analog input function block-----------------------------------------------------------------
 av_3248_position_feedback();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
-av_3248_position_feedback.eu_max:=opc.popa_0081_av_3248_position_feedback_eu_max;
-av_3248_position_feedback.eu_min:=opc.popa_0081_av_3248_position_feedback_eu_min;
+av_3248_position_feedback.eu_max:=100;
+av_3248_position_feedback.eu_min:=0;
 av_3248_position_feedback.filter_factor:=opc.popa_0081_av_3248_position_feedback_filter_factor;
 av_3248_position_feedback.raw_max:=opc.popa_0081_av_3248_position_feedback_raw_max;
 av_3248_position_feedback.raw_min:=opc.popa_0081_av_3248_position_feedback_raw_min;
 //Map the analog scaling function block raw input to the physical raw input variable
-av_3148_position_feedback.raw_input := av_3148_position_feedback_raw_input;
+av_3248_position_feedback.raw_input := av_3248_position_feedback_raw_input;
 
-//Instantiate av_3148 analog output function block
-av_3148_position_command();
+//Instantiate av_3248 analog output function block
+av_3248_position_command();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
-av_3148_position_command.eu_max:=opc.popa_0081_av_3148_position_command_eu_max;
-av_3148_position_command.eu_min:=opc.popa_0081_av_3148_position_command_eu_min;
-av_3148_position_command.filter_factor:=opc.popa_0081_av_3148_position_command_filter_factor;
-av_3148_position_command.raw_max:=opc.popa_0081_av_3148_position_command_raw_max;
-av_3148_position_command.raw_min:=opc.popa_0081_av_3148_position_command_raw_min;
+av_3248_position_command.eu_max:=32767;
+av_3248_position_command.eu_min:=0;
+av_3248_position_command.filter_factor:=opc.popa_0081_av_3248_position_command_filter_factor;
+av_3248_position_command.raw_max:=100;
+av_3248_position_command.raw_min:=0;
 //Map output from valve control pou to scaling block
-av_3148_position_command.raw_input:=valve_analog_control_st.av_3148.Position_Command;
+av_3248_position_command.raw_input:=valve_digital_control_st.av_3248.Position_Command;
 //Map the analog scaling function block raw input to the physical raw output variable
-av_3148_position_command_io := REAL_TO_INT(av_3148_position_command.scaled_value);
+av_3248_position_command_io := REAL_TO_INT(av_3248_position_command.scaled_value);
 
 
-//Instantiate av_3148 analog input function block----------------------------------------------------------------------
-av_3148_position_feedback();
+//Instantiate av_3348 analog input function block----------------------------------------------------------------------
+av_3348_position_feedback();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
-av_3148_position_feedback.eu_max:=opc.popa_0081_av_3148_position_feedback_eu_max;
-av_3148_position_feedback.eu_min:=opc.popa_0081_av_3148_position_feedback_eu_min;
-av_3148_position_feedback.filter_factor:=opc.popa_0081_av_3148_position_feedback_filter_factor;
-av_3148_position_feedback.raw_max:=opc.popa_0081_av_3148_position_feedback_raw_max;
-av_3148_position_feedback.raw_min:=opc.popa_0081_av_3148_position_feedback_raw_min;
+av_3348_position_feedback.eu_max:=100;
+av_3348_position_feedback.eu_min:=0;
+av_3348_position_feedback.filter_factor:=opc.popa_0081_av_3348_position_feedback_filter_factor;
+av_3348_position_feedback.raw_max:=opc.popa_0081_av_3348_position_feedback_raw_max;
+av_3348_position_feedback.raw_min:=opc.popa_0081_av_3348_position_feedback_raw_min;
 //Map the analog scaling function block raw input to the physical raw input variable
-av_3148_position_feedback.raw_input := av_3148_position_feedback_raw_input;
+av_3348_position_feedback.raw_input := av_3348_position_feedback_raw_input;
 
-//Instantiate av_3148 analog output function block
-av_3148_position_command();
+//Instantiate av_3348 analog output function block
+av_3348_position_command();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
-av_3148_position_command.eu_max:=opc.popa_0081_av_3148_position_command_eu_max;
-av_3148_position_command.eu_min:=opc.popa_0081_av_3148_position_command_eu_min;
-av_3148_position_command.filter_factor:=opc.popa_0081_av_3148_position_command_filter_factor;
-av_3148_position_command.raw_max:=opc.popa_0081_av_3148_position_command_raw_max;
-av_3148_position_command.raw_min:=opc.popa_0081_av_3148_position_command_raw_min;
+av_3348_position_command.eu_max:=32767;
+av_3348_position_command.eu_min:=0;
+av_3348_position_command.filter_factor:=opc.popa_0081_av_3348_position_command_filter_factor;
+av_3348_position_command.raw_max:=100;
+av_3348_position_command.raw_min:=0;
 //Map output from valve control pou to scaling block
-av_3148_position_command.raw_input:=valve_analog_control_st.av_3148.Position_Command;
+av_3348_position_command.raw_input:=valve_digital_control_st.av_3348.Position_Command;
 //Map the analog scaling function block raw input to the physical raw output variable
-av_3148_position_command_io := REAL_TO_INT(av_3148_position_command.scaled_value);
+av_3348_position_command_io := REAL_TO_INT(av_3348_position_command.scaled_value);
 
 
 //Map the digital valve open command to the command output

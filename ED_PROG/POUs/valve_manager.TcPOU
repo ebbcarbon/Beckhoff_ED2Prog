@@ -5117,94 +5117,30 @@ END_VAR
                                                   <v n="Extensible">false</v>
                                                 </o>
                                                 <n n="InputFlags" />
-                                                <l2 n="InputItems">
-                                                  <o t="BoxTreeBox">
-                                                    <v n="BoxType">"AND"</v>
-                                                    <o n="Instance" t="Operand">
-                                                      <n n="Operand" />
-                                                      <v n="Type">""</v>
+                                                <l2 n="InputItems" cet="BoxTreeOperand">
+                                                  <o>
+                                                    <o n="Operand" t="Operand">
+                                                      <v n="Operand">"general.ed_routine_idle"</v>
+                                                      <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
                                                       <v n="Address">""</v>
                                                       <o n="Flags" t="Flags">
                                                         <v n="Flags">0</v>
-                                                        <v n="Fixed">false</v>
+                                                        <v n="Fixed">true</v>
                                                         <v n="Extensible">false</v>
                                                       </o>
                                                       <v n="LValue">false</v>
-                                                      <v n="Boolean">false</v>
-                                                      <v n="IsInstance">true</v>
-                                                      <v n="Id">720L</v>
+                                                      <v n="Boolean">true</v>
+                                                      <v n="IsInstance">false</v>
+                                                      <v n="Id">723L</v>
                                                     </o>
-                                                    <o n="OutputItems" t="OutputItemList">
-                                                      <l2 n="OutputItems" />
-                                                    </o>
-                                                    <o n="Flags" t="Flags">
-                                                      <v n="Flags">0</v>
-                                                      <v n="Fixed">false</v>
-                                                      <v n="Extensible">false</v>
-                                                    </o>
-                                                    <n n="InputFlags" />
-                                                    <l2 n="InputItems" cet="BoxTreeOperand">
-                                                      <o>
-                                                        <o n="Operand" t="Operand">
-                                                          <v n="Operand">"general.ed_routine_idle"</v>
-                                                          <v n="Type">"BOOL"</v>
-                                                          <v n="Comment">""</v>
-                                                          <v n="SymbolComment">""</v>
-                                                          <v n="Address">""</v>
-                                                          <o n="Flags" t="Flags">
-                                                            <v n="Flags">0</v>
-                                                            <v n="Fixed">true</v>
-                                                            <v n="Extensible">false</v>
-                                                          </o>
-                                                          <v n="LValue">false</v>
-                                                          <v n="Boolean">true</v>
-                                                          <v n="IsInstance">false</v>
-                                                          <v n="Id">723L</v>
-                                                        </o>
-                                                        <v n="Id">722L</v>
-                                                      </o>
-                                                      <o>
-                                                        <o n="Operand" t="Operand">
-                                                          <v n="Operand">"av_3148_idle_request"</v>
-                                                          <v n="Type">"BOOL"</v>
-                                                          <v n="Comment">""</v>
-                                                          <v n="SymbolComment">""</v>
-                                                          <v n="Address">""</v>
-                                                          <o n="Flags" t="Flags">
-                                                            <v n="Flags">0</v>
-                                                            <v n="Fixed">true</v>
-                                                            <v n="Extensible">false</v>
-                                                          </o>
-                                                          <v n="LValue">false</v>
-                                                          <v n="Boolean">true</v>
-                                                          <v n="IsInstance">false</v>
-                                                          <v n="Id">725L</v>
-                                                        </o>
-                                                        <v n="Id">724L</v>
-                                                      </o>
-                                                    </l2>
-                                                    <o n="InputParam" t="ParamList">
-                                                      <l2 n="Names" />
-                                                      <l2 n="Types" />
-                                                    </o>
-                                                    <o n="OutputParam" t="ParamList">
-                                                      <l2 n="Names" />
-                                                      <l2 n="Types" />
-                                                    </o>
-                                                    <v n="CallType" t="Operator">And</v>
-                                                    <n n="EN" />
-                                                    <n n="ENO" />
-                                                    <n n="STSnippet" />
-                                                    <v n="ContainsExtensibleInputs">false</v>
-                                                    <v n="ProvidesSTSnippet">false</v>
-                                                    <v n="Id">721L</v>
+                                                    <v n="Id">722L</v>
                                                   </o>
-                                                  <o t="BoxTreeOperand">
+                                                  <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"av_3148_idle_position_request"</v>
-                                                      <v n="Type">"REAL"</v>
+                                                      <v n="Operand">"idle.av_3148_idle_position_request"</v>
+                                                      <v n="Type">"INT"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
                                                       <v n="Address">""</v>
@@ -5292,91 +5228,27 @@ END_VAR
                                                   <v n="Extensible">false</v>
                                                 </o>
                                                 <n n="InputFlags" />
-                                                <l2 n="InputItems">
-                                                  <o t="BoxTreeBox">
-                                                    <v n="BoxType">"AND"</v>
-                                                    <o n="Instance" t="Operand">
-                                                      <n n="Operand" />
-                                                      <v n="Type">""</v>
+                                                <l2 n="InputItems" cet="BoxTreeOperand">
+                                                  <o>
+                                                    <o n="Operand" t="Operand">
+                                                      <v n="Operand">"general.ed_routine_cip"</v>
+                                                      <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
                                                       <v n="Address">""</v>
                                                       <o n="Flags" t="Flags">
                                                         <v n="Flags">0</v>
-                                                        <v n="Fixed">false</v>
+                                                        <v n="Fixed">true</v>
                                                         <v n="Extensible">false</v>
                                                       </o>
                                                       <v n="LValue">false</v>
-                                                      <v n="Boolean">false</v>
-                                                      <v n="IsInstance">true</v>
-                                                      <v n="Id">731L</v>
+                                                      <v n="Boolean">true</v>
+                                                      <v n="IsInstance">false</v>
+                                                      <v n="Id">734L</v>
                                                     </o>
-                                                    <o n="OutputItems" t="OutputItemList">
-                                                      <l2 n="OutputItems" />
-                                                    </o>
-                                                    <o n="Flags" t="Flags">
-                                                      <v n="Flags">0</v>
-                                                      <v n="Fixed">false</v>
-                                                      <v n="Extensible">false</v>
-                                                    </o>
-                                                    <n n="InputFlags" />
-                                                    <l2 n="InputItems" cet="BoxTreeOperand">
-                                                      <o>
-                                                        <o n="Operand" t="Operand">
-                                                          <v n="Operand">"general.ed_routine_cip"</v>
-                                                          <v n="Type">"BOOL"</v>
-                                                          <v n="Comment">""</v>
-                                                          <v n="SymbolComment">""</v>
-                                                          <v n="Address">""</v>
-                                                          <o n="Flags" t="Flags">
-                                                            <v n="Flags">0</v>
-                                                            <v n="Fixed">true</v>
-                                                            <v n="Extensible">false</v>
-                                                          </o>
-                                                          <v n="LValue">false</v>
-                                                          <v n="Boolean">true</v>
-                                                          <v n="IsInstance">false</v>
-                                                          <v n="Id">734L</v>
-                                                        </o>
-                                                        <v n="Id">733L</v>
-                                                      </o>
-                                                      <o>
-                                                        <o n="Operand" t="Operand">
-                                                          <v n="Operand">"av_3148_cip_request"</v>
-                                                          <v n="Type">"BOOL"</v>
-                                                          <v n="Comment">""</v>
-                                                          <v n="SymbolComment">""</v>
-                                                          <v n="Address">""</v>
-                                                          <o n="Flags" t="Flags">
-                                                            <v n="Flags">0</v>
-                                                            <v n="Fixed">true</v>
-                                                            <v n="Extensible">false</v>
-                                                          </o>
-                                                          <v n="LValue">false</v>
-                                                          <v n="Boolean">true</v>
-                                                          <v n="IsInstance">false</v>
-                                                          <v n="Id">736L</v>
-                                                        </o>
-                                                        <v n="Id">735L</v>
-                                                      </o>
-                                                    </l2>
-                                                    <o n="InputParam" t="ParamList">
-                                                      <l2 n="Names" />
-                                                      <l2 n="Types" />
-                                                    </o>
-                                                    <o n="OutputParam" t="ParamList">
-                                                      <l2 n="Names" />
-                                                      <l2 n="Types" />
-                                                    </o>
-                                                    <v n="CallType" t="Operator">And</v>
-                                                    <n n="EN" />
-                                                    <n n="ENO" />
-                                                    <n n="STSnippet" />
-                                                    <v n="ContainsExtensibleInputs">false</v>
-                                                    <v n="ProvidesSTSnippet">false</v>
-                                                    <v n="Id">732L</v>
+                                                    <v n="Id">733L</v>
                                                   </o>
-                                                  <o t="BoxTreeOperand">
+                                                  <o>
                                                     <o n="Operand" t="Operand">
                                                       <v n="Operand">"av_3148_cip_position_request"</v>
                                                       <v n="Type">"REAL"</v>
@@ -5667,91 +5539,27 @@ END_VAR
                                           <v n="Extensible">false</v>
                                         </o>
                                         <n n="InputFlags" />
-                                        <l2 n="InputItems">
-                                          <o t="BoxTreeBox">
-                                            <v n="BoxType">"AND"</v>
-                                            <o n="Instance" t="Operand">
-                                              <n n="Operand" />
-                                              <v n="Type">""</v>
+                                        <l2 n="InputItems" cet="BoxTreeOperand">
+                                          <o>
+                                            <o n="Operand" t="Operand">
+                                              <v n="Operand">"general.ed_routine_manual"</v>
+                                              <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
                                               <v n="Address">""</v>
                                               <o n="Flags" t="Flags">
                                                 <v n="Flags">0</v>
-                                                <v n="Fixed">false</v>
+                                                <v n="Fixed">true</v>
                                                 <v n="Extensible">false</v>
                                               </o>
                                               <v n="LValue">false</v>
-                                              <v n="Boolean">false</v>
-                                              <v n="IsInstance">true</v>
-                                              <v n="Id">754L</v>
+                                              <v n="Boolean">true</v>
+                                              <v n="IsInstance">false</v>
+                                              <v n="Id">757L</v>
                                             </o>
-                                            <o n="OutputItems" t="OutputItemList">
-                                              <l2 n="OutputItems" />
-                                            </o>
-                                            <o n="Flags" t="Flags">
-                                              <v n="Flags">0</v>
-                                              <v n="Fixed">false</v>
-                                              <v n="Extensible">false</v>
-                                            </o>
-                                            <n n="InputFlags" />
-                                            <l2 n="InputItems" cet="BoxTreeOperand">
-                                              <o>
-                                                <o n="Operand" t="Operand">
-                                                  <v n="Operand">"general.ed_routine_manual"</v>
-                                                  <v n="Type">"BOOL"</v>
-                                                  <v n="Comment">""</v>
-                                                  <v n="SymbolComment">""</v>
-                                                  <v n="Address">""</v>
-                                                  <o n="Flags" t="Flags">
-                                                    <v n="Flags">0</v>
-                                                    <v n="Fixed">true</v>
-                                                    <v n="Extensible">false</v>
-                                                  </o>
-                                                  <v n="LValue">false</v>
-                                                  <v n="Boolean">true</v>
-                                                  <v n="IsInstance">false</v>
-                                                  <v n="Id">757L</v>
-                                                </o>
-                                                <v n="Id">756L</v>
-                                              </o>
-                                              <o>
-                                                <o n="Operand" t="Operand">
-                                                  <v n="Operand">"av_3148_manual_request"</v>
-                                                  <v n="Type">"BOOL"</v>
-                                                  <v n="Comment">""</v>
-                                                  <v n="SymbolComment">""</v>
-                                                  <v n="Address">""</v>
-                                                  <o n="Flags" t="Flags">
-                                                    <v n="Flags">0</v>
-                                                    <v n="Fixed">true</v>
-                                                    <v n="Extensible">false</v>
-                                                  </o>
-                                                  <v n="LValue">false</v>
-                                                  <v n="Boolean">true</v>
-                                                  <v n="IsInstance">false</v>
-                                                  <v n="Id">759L</v>
-                                                </o>
-                                                <v n="Id">758L</v>
-                                              </o>
-                                            </l2>
-                                            <o n="InputParam" t="ParamList">
-                                              <l2 n="Names" />
-                                              <l2 n="Types" />
-                                            </o>
-                                            <o n="OutputParam" t="ParamList">
-                                              <l2 n="Names" />
-                                              <l2 n="Types" />
-                                            </o>
-                                            <v n="CallType" t="Operator">And</v>
-                                            <n n="EN" />
-                                            <n n="ENO" />
-                                            <n n="STSnippet" />
-                                            <v n="ContainsExtensibleInputs">false</v>
-                                            <v n="ProvidesSTSnippet">false</v>
-                                            <v n="Id">755L</v>
+                                            <v n="Id">756L</v>
                                           </o>
-                                          <o t="BoxTreeOperand">
+                                          <o>
                                             <o n="Operand" t="Operand">
                                               <v n="Operand">"av_3148_manual_position_request"</v>
                                               <v n="Type">"REAL"</v>
@@ -5895,91 +5703,27 @@ END_VAR
                                   <v n="Extensible">false</v>
                                 </o>
                                 <n n="InputFlags" />
-                                <l2 n="InputItems">
-                                  <o t="BoxTreeBox">
-                                    <v n="BoxType">"AND"</v>
-                                    <o n="Instance" t="Operand">
-                                      <n n="Operand" />
-                                      <v n="Type">""</v>
+                                <l2 n="InputItems" cet="BoxTreeOperand">
+                                  <o>
+                                    <o n="Operand" t="Operand">
+                                      <v n="Operand">"general.ed_routine_maint"</v>
+                                      <v n="Type">"BOOL"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
                                       <v n="Address">""</v>
                                       <o n="Flags" t="Flags">
                                         <v n="Flags">0</v>
-                                        <v n="Fixed">false</v>
+                                        <v n="Fixed">true</v>
                                         <v n="Extensible">false</v>
                                       </o>
                                       <v n="LValue">false</v>
-                                      <v n="Boolean">false</v>
-                                      <v n="IsInstance">true</v>
-                                      <v n="Id">767L</v>
+                                      <v n="Boolean">true</v>
+                                      <v n="IsInstance">false</v>
+                                      <v n="Id">770L</v>
                                     </o>
-                                    <o n="OutputItems" t="OutputItemList">
-                                      <l2 n="OutputItems" />
-                                    </o>
-                                    <o n="Flags" t="Flags">
-                                      <v n="Flags">0</v>
-                                      <v n="Fixed">false</v>
-                                      <v n="Extensible">false</v>
-                                    </o>
-                                    <n n="InputFlags" />
-                                    <l2 n="InputItems" cet="BoxTreeOperand">
-                                      <o>
-                                        <o n="Operand" t="Operand">
-                                          <v n="Operand">"ed_routine_maint"</v>
-                                          <v n="Type">"BOOL"</v>
-                                          <v n="Comment">""</v>
-                                          <v n="SymbolComment">""</v>
-                                          <v n="Address">""</v>
-                                          <o n="Flags" t="Flags">
-                                            <v n="Flags">0</v>
-                                            <v n="Fixed">true</v>
-                                            <v n="Extensible">false</v>
-                                          </o>
-                                          <v n="LValue">false</v>
-                                          <v n="Boolean">true</v>
-                                          <v n="IsInstance">false</v>
-                                          <v n="Id">770L</v>
-                                        </o>
-                                        <v n="Id">769L</v>
-                                      </o>
-                                      <o>
-                                        <o n="Operand" t="Operand">
-                                          <v n="Operand">"av_3148_maint_request"</v>
-                                          <v n="Type">"BOOL"</v>
-                                          <v n="Comment">""</v>
-                                          <v n="SymbolComment">""</v>
-                                          <v n="Address">""</v>
-                                          <o n="Flags" t="Flags">
-                                            <v n="Flags">0</v>
-                                            <v n="Fixed">true</v>
-                                            <v n="Extensible">false</v>
-                                          </o>
-                                          <v n="LValue">false</v>
-                                          <v n="Boolean">true</v>
-                                          <v n="IsInstance">false</v>
-                                          <v n="Id">772L</v>
-                                        </o>
-                                        <v n="Id">771L</v>
-                                      </o>
-                                    </l2>
-                                    <o n="InputParam" t="ParamList">
-                                      <l2 n="Names" />
-                                      <l2 n="Types" />
-                                    </o>
-                                    <o n="OutputParam" t="ParamList">
-                                      <l2 n="Names" />
-                                      <l2 n="Types" />
-                                    </o>
-                                    <v n="CallType" t="Operator">And</v>
-                                    <n n="EN" />
-                                    <n n="ENO" />
-                                    <n n="STSnippet" />
-                                    <v n="ContainsExtensibleInputs">false</v>
-                                    <v n="ProvidesSTSnippet">false</v>
-                                    <v n="Id">768L</v>
+                                    <v n="Id">769L</v>
                                   </o>
-                                  <o t="BoxTreeOperand">
+                                  <o>
                                     <o n="Operand" t="Operand">
                                       <v n="Operand">"av_3148_maint_position_request"</v>
                                       <v n="Type">"REAL"</v>
@@ -6333,94 +6077,30 @@ END_VAR
                                                   <v n="Extensible">false</v>
                                                 </o>
                                                 <n n="InputFlags" />
-                                                <l2 n="InputItems">
-                                                  <o t="BoxTreeBox">
-                                                    <v n="BoxType">"AND"</v>
-                                                    <o n="Instance" t="Operand">
-                                                      <n n="Operand" />
-                                                      <v n="Type">""</v>
+                                                <l2 n="InputItems" cet="BoxTreeOperand">
+                                                  <o>
+                                                    <o n="Operand" t="Operand">
+                                                      <v n="Operand">"general.ed_routine_idle"</v>
+                                                      <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
                                                       <v n="Address">""</v>
                                                       <o n="Flags" t="Flags">
                                                         <v n="Flags">0</v>
-                                                        <v n="Fixed">false</v>
+                                                        <v n="Fixed">true</v>
                                                         <v n="Extensible">false</v>
                                                       </o>
                                                       <v n="LValue">false</v>
-                                                      <v n="Boolean">false</v>
-                                                      <v n="IsInstance">true</v>
-                                                      <v n="Id">808L</v>
+                                                      <v n="Boolean">true</v>
+                                                      <v n="IsInstance">false</v>
+                                                      <v n="Id">811L</v>
                                                     </o>
-                                                    <o n="OutputItems" t="OutputItemList">
-                                                      <l2 n="OutputItems" />
-                                                    </o>
-                                                    <o n="Flags" t="Flags">
-                                                      <v n="Flags">0</v>
-                                                      <v n="Fixed">false</v>
-                                                      <v n="Extensible">false</v>
-                                                    </o>
-                                                    <n n="InputFlags" />
-                                                    <l2 n="InputItems" cet="BoxTreeOperand">
-                                                      <o>
-                                                        <o n="Operand" t="Operand">
-                                                          <v n="Operand">"general.ed_routine_idle"</v>
-                                                          <v n="Type">"BOOL"</v>
-                                                          <v n="Comment">""</v>
-                                                          <v n="SymbolComment">""</v>
-                                                          <v n="Address">""</v>
-                                                          <o n="Flags" t="Flags">
-                                                            <v n="Flags">0</v>
-                                                            <v n="Fixed">true</v>
-                                                            <v n="Extensible">false</v>
-                                                          </o>
-                                                          <v n="LValue">false</v>
-                                                          <v n="Boolean">true</v>
-                                                          <v n="IsInstance">false</v>
-                                                          <v n="Id">811L</v>
-                                                        </o>
-                                                        <v n="Id">810L</v>
-                                                      </o>
-                                                      <o>
-                                                        <o n="Operand" t="Operand">
-                                                          <v n="Operand">"av_3248_idle_request"</v>
-                                                          <v n="Type">"BOOL"</v>
-                                                          <v n="Comment">""</v>
-                                                          <v n="SymbolComment">""</v>
-                                                          <v n="Address">""</v>
-                                                          <o n="Flags" t="Flags">
-                                                            <v n="Flags">0</v>
-                                                            <v n="Fixed">true</v>
-                                                            <v n="Extensible">false</v>
-                                                          </o>
-                                                          <v n="LValue">false</v>
-                                                          <v n="Boolean">true</v>
-                                                          <v n="IsInstance">false</v>
-                                                          <v n="Id">813L</v>
-                                                        </o>
-                                                        <v n="Id">812L</v>
-                                                      </o>
-                                                    </l2>
-                                                    <o n="InputParam" t="ParamList">
-                                                      <l2 n="Names" />
-                                                      <l2 n="Types" />
-                                                    </o>
-                                                    <o n="OutputParam" t="ParamList">
-                                                      <l2 n="Names" />
-                                                      <l2 n="Types" />
-                                                    </o>
-                                                    <v n="CallType" t="Operator">And</v>
-                                                    <n n="EN" />
-                                                    <n n="ENO" />
-                                                    <n n="STSnippet" />
-                                                    <v n="ContainsExtensibleInputs">false</v>
-                                                    <v n="ProvidesSTSnippet">false</v>
-                                                    <v n="Id">809L</v>
+                                                    <v n="Id">810L</v>
                                                   </o>
-                                                  <o t="BoxTreeOperand">
+                                                  <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"av_3248_idle_position_request"</v>
-                                                      <v n="Type">"REAL"</v>
+                                                      <v n="Operand">"idle.av_3248_idle_position_request"</v>
+                                                      <v n="Type">"INT"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
                                                       <v n="Address">""</v>
@@ -6508,91 +6188,27 @@ END_VAR
                                                   <v n="Extensible">false</v>
                                                 </o>
                                                 <n n="InputFlags" />
-                                                <l2 n="InputItems">
-                                                  <o t="BoxTreeBox">
-                                                    <v n="BoxType">"AND"</v>
-                                                    <o n="Instance" t="Operand">
-                                                      <n n="Operand" />
-                                                      <v n="Type">""</v>
+                                                <l2 n="InputItems" cet="BoxTreeOperand">
+                                                  <o>
+                                                    <o n="Operand" t="Operand">
+                                                      <v n="Operand">"general.ed_routine_cip"</v>
+                                                      <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
                                                       <v n="Address">""</v>
                                                       <o n="Flags" t="Flags">
                                                         <v n="Flags">0</v>
-                                                        <v n="Fixed">false</v>
+                                                        <v n="Fixed">true</v>
                                                         <v n="Extensible">false</v>
                                                       </o>
                                                       <v n="LValue">false</v>
-                                                      <v n="Boolean">false</v>
-                                                      <v n="IsInstance">true</v>
-                                                      <v n="Id">819L</v>
+                                                      <v n="Boolean">true</v>
+                                                      <v n="IsInstance">false</v>
+                                                      <v n="Id">822L</v>
                                                     </o>
-                                                    <o n="OutputItems" t="OutputItemList">
-                                                      <l2 n="OutputItems" />
-                                                    </o>
-                                                    <o n="Flags" t="Flags">
-                                                      <v n="Flags">0</v>
-                                                      <v n="Fixed">false</v>
-                                                      <v n="Extensible">false</v>
-                                                    </o>
-                                                    <n n="InputFlags" />
-                                                    <l2 n="InputItems" cet="BoxTreeOperand">
-                                                      <o>
-                                                        <o n="Operand" t="Operand">
-                                                          <v n="Operand">"general.ed_routine_cip"</v>
-                                                          <v n="Type">"BOOL"</v>
-                                                          <v n="Comment">""</v>
-                                                          <v n="SymbolComment">""</v>
-                                                          <v n="Address">""</v>
-                                                          <o n="Flags" t="Flags">
-                                                            <v n="Flags">0</v>
-                                                            <v n="Fixed">true</v>
-                                                            <v n="Extensible">false</v>
-                                                          </o>
-                                                          <v n="LValue">false</v>
-                                                          <v n="Boolean">true</v>
-                                                          <v n="IsInstance">false</v>
-                                                          <v n="Id">822L</v>
-                                                        </o>
-                                                        <v n="Id">821L</v>
-                                                      </o>
-                                                      <o>
-                                                        <o n="Operand" t="Operand">
-                                                          <v n="Operand">"av_3248_cip_request"</v>
-                                                          <v n="Type">"BOOL"</v>
-                                                          <v n="Comment">""</v>
-                                                          <v n="SymbolComment">""</v>
-                                                          <v n="Address">""</v>
-                                                          <o n="Flags" t="Flags">
-                                                            <v n="Flags">0</v>
-                                                            <v n="Fixed">true</v>
-                                                            <v n="Extensible">false</v>
-                                                          </o>
-                                                          <v n="LValue">false</v>
-                                                          <v n="Boolean">true</v>
-                                                          <v n="IsInstance">false</v>
-                                                          <v n="Id">824L</v>
-                                                        </o>
-                                                        <v n="Id">823L</v>
-                                                      </o>
-                                                    </l2>
-                                                    <o n="InputParam" t="ParamList">
-                                                      <l2 n="Names" />
-                                                      <l2 n="Types" />
-                                                    </o>
-                                                    <o n="OutputParam" t="ParamList">
-                                                      <l2 n="Names" />
-                                                      <l2 n="Types" />
-                                                    </o>
-                                                    <v n="CallType" t="Operator">And</v>
-                                                    <n n="EN" />
-                                                    <n n="ENO" />
-                                                    <n n="STSnippet" />
-                                                    <v n="ContainsExtensibleInputs">false</v>
-                                                    <v n="ProvidesSTSnippet">false</v>
-                                                    <v n="Id">820L</v>
+                                                    <v n="Id">821L</v>
                                                   </o>
-                                                  <o t="BoxTreeOperand">
+                                                  <o>
                                                     <o n="Operand" t="Operand">
                                                       <v n="Operand">"av_3248_cip_position_request"</v>
                                                       <v n="Type">"REAL"</v>
@@ -6883,91 +6499,27 @@ END_VAR
                                           <v n="Extensible">false</v>
                                         </o>
                                         <n n="InputFlags" />
-                                        <l2 n="InputItems">
-                                          <o t="BoxTreeBox">
-                                            <v n="BoxType">"AND"</v>
-                                            <o n="Instance" t="Operand">
-                                              <n n="Operand" />
-                                              <v n="Type">""</v>
+                                        <l2 n="InputItems" cet="BoxTreeOperand">
+                                          <o>
+                                            <o n="Operand" t="Operand">
+                                              <v n="Operand">"general.ed_routine_manual"</v>
+                                              <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
                                               <v n="Address">""</v>
                                               <o n="Flags" t="Flags">
                                                 <v n="Flags">0</v>
-                                                <v n="Fixed">false</v>
+                                                <v n="Fixed">true</v>
                                                 <v n="Extensible">false</v>
                                               </o>
                                               <v n="LValue">false</v>
-                                              <v n="Boolean">false</v>
-                                              <v n="IsInstance">true</v>
-                                              <v n="Id">842L</v>
+                                              <v n="Boolean">true</v>
+                                              <v n="IsInstance">false</v>
+                                              <v n="Id">845L</v>
                                             </o>
-                                            <o n="OutputItems" t="OutputItemList">
-                                              <l2 n="OutputItems" />
-                                            </o>
-                                            <o n="Flags" t="Flags">
-                                              <v n="Flags">0</v>
-                                              <v n="Fixed">false</v>
-                                              <v n="Extensible">false</v>
-                                            </o>
-                                            <n n="InputFlags" />
-                                            <l2 n="InputItems" cet="BoxTreeOperand">
-                                              <o>
-                                                <o n="Operand" t="Operand">
-                                                  <v n="Operand">"general.ed_routine_manual"</v>
-                                                  <v n="Type">"BOOL"</v>
-                                                  <v n="Comment">""</v>
-                                                  <v n="SymbolComment">""</v>
-                                                  <v n="Address">""</v>
-                                                  <o n="Flags" t="Flags">
-                                                    <v n="Flags">0</v>
-                                                    <v n="Fixed">true</v>
-                                                    <v n="Extensible">false</v>
-                                                  </o>
-                                                  <v n="LValue">false</v>
-                                                  <v n="Boolean">true</v>
-                                                  <v n="IsInstance">false</v>
-                                                  <v n="Id">845L</v>
-                                                </o>
-                                                <v n="Id">844L</v>
-                                              </o>
-                                              <o>
-                                                <o n="Operand" t="Operand">
-                                                  <v n="Operand">"av_3248_manual_request"</v>
-                                                  <v n="Type">"BOOL"</v>
-                                                  <v n="Comment">""</v>
-                                                  <v n="SymbolComment">""</v>
-                                                  <v n="Address">""</v>
-                                                  <o n="Flags" t="Flags">
-                                                    <v n="Flags">0</v>
-                                                    <v n="Fixed">true</v>
-                                                    <v n="Extensible">false</v>
-                                                  </o>
-                                                  <v n="LValue">false</v>
-                                                  <v n="Boolean">true</v>
-                                                  <v n="IsInstance">false</v>
-                                                  <v n="Id">847L</v>
-                                                </o>
-                                                <v n="Id">846L</v>
-                                              </o>
-                                            </l2>
-                                            <o n="InputParam" t="ParamList">
-                                              <l2 n="Names" />
-                                              <l2 n="Types" />
-                                            </o>
-                                            <o n="OutputParam" t="ParamList">
-                                              <l2 n="Names" />
-                                              <l2 n="Types" />
-                                            </o>
-                                            <v n="CallType" t="Operator">And</v>
-                                            <n n="EN" />
-                                            <n n="ENO" />
-                                            <n n="STSnippet" />
-                                            <v n="ContainsExtensibleInputs">false</v>
-                                            <v n="ProvidesSTSnippet">false</v>
-                                            <v n="Id">843L</v>
+                                            <v n="Id">844L</v>
                                           </o>
-                                          <o t="BoxTreeOperand">
+                                          <o>
                                             <o n="Operand" t="Operand">
                                               <v n="Operand">"av_3248_manual_position_request"</v>
                                               <v n="Type">"REAL"</v>
@@ -7111,91 +6663,27 @@ END_VAR
                                   <v n="Extensible">false</v>
                                 </o>
                                 <n n="InputFlags" />
-                                <l2 n="InputItems">
-                                  <o t="BoxTreeBox">
-                                    <v n="BoxType">"AND"</v>
-                                    <o n="Instance" t="Operand">
-                                      <n n="Operand" />
-                                      <v n="Type">""</v>
+                                <l2 n="InputItems" cet="BoxTreeOperand">
+                                  <o>
+                                    <o n="Operand" t="Operand">
+                                      <v n="Operand">"general.ed_routine_maint"</v>
+                                      <v n="Type">"BOOL"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
                                       <v n="Address">""</v>
                                       <o n="Flags" t="Flags">
                                         <v n="Flags">0</v>
-                                        <v n="Fixed">false</v>
+                                        <v n="Fixed">true</v>
                                         <v n="Extensible">false</v>
                                       </o>
                                       <v n="LValue">false</v>
-                                      <v n="Boolean">false</v>
-                                      <v n="IsInstance">true</v>
-                                      <v n="Id">855L</v>
+                                      <v n="Boolean">true</v>
+                                      <v n="IsInstance">false</v>
+                                      <v n="Id">858L</v>
                                     </o>
-                                    <o n="OutputItems" t="OutputItemList">
-                                      <l2 n="OutputItems" />
-                                    </o>
-                                    <o n="Flags" t="Flags">
-                                      <v n="Flags">0</v>
-                                      <v n="Fixed">false</v>
-                                      <v n="Extensible">false</v>
-                                    </o>
-                                    <n n="InputFlags" />
-                                    <l2 n="InputItems" cet="BoxTreeOperand">
-                                      <o>
-                                        <o n="Operand" t="Operand">
-                                          <v n="Operand">"ed_routine_maint"</v>
-                                          <v n="Type">"BOOL"</v>
-                                          <v n="Comment">""</v>
-                                          <v n="SymbolComment">""</v>
-                                          <v n="Address">""</v>
-                                          <o n="Flags" t="Flags">
-                                            <v n="Flags">0</v>
-                                            <v n="Fixed">true</v>
-                                            <v n="Extensible">false</v>
-                                          </o>
-                                          <v n="LValue">false</v>
-                                          <v n="Boolean">true</v>
-                                          <v n="IsInstance">false</v>
-                                          <v n="Id">858L</v>
-                                        </o>
-                                        <v n="Id">857L</v>
-                                      </o>
-                                      <o>
-                                        <o n="Operand" t="Operand">
-                                          <v n="Operand">"av_3248_maint_request"</v>
-                                          <v n="Type">"BOOL"</v>
-                                          <v n="Comment">""</v>
-                                          <v n="SymbolComment">""</v>
-                                          <v n="Address">""</v>
-                                          <o n="Flags" t="Flags">
-                                            <v n="Flags">0</v>
-                                            <v n="Fixed">true</v>
-                                            <v n="Extensible">false</v>
-                                          </o>
-                                          <v n="LValue">false</v>
-                                          <v n="Boolean">true</v>
-                                          <v n="IsInstance">false</v>
-                                          <v n="Id">860L</v>
-                                        </o>
-                                        <v n="Id">859L</v>
-                                      </o>
-                                    </l2>
-                                    <o n="InputParam" t="ParamList">
-                                      <l2 n="Names" />
-                                      <l2 n="Types" />
-                                    </o>
-                                    <o n="OutputParam" t="ParamList">
-                                      <l2 n="Names" />
-                                      <l2 n="Types" />
-                                    </o>
-                                    <v n="CallType" t="Operator">And</v>
-                                    <n n="EN" />
-                                    <n n="ENO" />
-                                    <n n="STSnippet" />
-                                    <v n="ContainsExtensibleInputs">false</v>
-                                    <v n="ProvidesSTSnippet">false</v>
-                                    <v n="Id">856L</v>
+                                    <v n="Id">857L</v>
                                   </o>
-                                  <o t="BoxTreeOperand">
+                                  <o>
                                     <o n="Operand" t="Operand">
                                       <v n="Operand">"av_3248_maint_position_request"</v>
                                       <v n="Type">"REAL"</v>
@@ -7549,94 +7037,30 @@ END_VAR
                                                   <v n="Extensible">false</v>
                                                 </o>
                                                 <n n="InputFlags" />
-                                                <l2 n="InputItems">
-                                                  <o t="BoxTreeBox">
-                                                    <v n="BoxType">"AND"</v>
-                                                    <o n="Instance" t="Operand">
-                                                      <n n="Operand" />
-                                                      <v n="Type">""</v>
+                                                <l2 n="InputItems" cet="BoxTreeOperand">
+                                                  <o>
+                                                    <o n="Operand" t="Operand">
+                                                      <v n="Operand">"general.ed_routine_idle"</v>
+                                                      <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
                                                       <v n="Address">""</v>
                                                       <o n="Flags" t="Flags">
                                                         <v n="Flags">0</v>
-                                                        <v n="Fixed">false</v>
+                                                        <v n="Fixed">true</v>
                                                         <v n="Extensible">false</v>
                                                       </o>
                                                       <v n="LValue">false</v>
-                                                      <v n="Boolean">false</v>
-                                                      <v n="IsInstance">true</v>
-                                                      <v n="Id">883L</v>
+                                                      <v n="Boolean">true</v>
+                                                      <v n="IsInstance">false</v>
+                                                      <v n="Id">886L</v>
                                                     </o>
-                                                    <o n="OutputItems" t="OutputItemList">
-                                                      <l2 n="OutputItems" />
-                                                    </o>
-                                                    <o n="Flags" t="Flags">
-                                                      <v n="Flags">0</v>
-                                                      <v n="Fixed">false</v>
-                                                      <v n="Extensible">false</v>
-                                                    </o>
-                                                    <n n="InputFlags" />
-                                                    <l2 n="InputItems" cet="BoxTreeOperand">
-                                                      <o>
-                                                        <o n="Operand" t="Operand">
-                                                          <v n="Operand">"general.ed_routine_idle"</v>
-                                                          <v n="Type">"BOOL"</v>
-                                                          <v n="Comment">""</v>
-                                                          <v n="SymbolComment">""</v>
-                                                          <v n="Address">""</v>
-                                                          <o n="Flags" t="Flags">
-                                                            <v n="Flags">0</v>
-                                                            <v n="Fixed">true</v>
-                                                            <v n="Extensible">false</v>
-                                                          </o>
-                                                          <v n="LValue">false</v>
-                                                          <v n="Boolean">true</v>
-                                                          <v n="IsInstance">false</v>
-                                                          <v n="Id">886L</v>
-                                                        </o>
-                                                        <v n="Id">885L</v>
-                                                      </o>
-                                                      <o>
-                                                        <o n="Operand" t="Operand">
-                                                          <v n="Operand">"av_3348_idle_request"</v>
-                                                          <v n="Type">"BOOL"</v>
-                                                          <v n="Comment">""</v>
-                                                          <v n="SymbolComment">""</v>
-                                                          <v n="Address">""</v>
-                                                          <o n="Flags" t="Flags">
-                                                            <v n="Flags">0</v>
-                                                            <v n="Fixed">true</v>
-                                                            <v n="Extensible">false</v>
-                                                          </o>
-                                                          <v n="LValue">false</v>
-                                                          <v n="Boolean">true</v>
-                                                          <v n="IsInstance">false</v>
-                                                          <v n="Id">888L</v>
-                                                        </o>
-                                                        <v n="Id">887L</v>
-                                                      </o>
-                                                    </l2>
-                                                    <o n="InputParam" t="ParamList">
-                                                      <l2 n="Names" />
-                                                      <l2 n="Types" />
-                                                    </o>
-                                                    <o n="OutputParam" t="ParamList">
-                                                      <l2 n="Names" />
-                                                      <l2 n="Types" />
-                                                    </o>
-                                                    <v n="CallType" t="Operator">And</v>
-                                                    <n n="EN" />
-                                                    <n n="ENO" />
-                                                    <n n="STSnippet" />
-                                                    <v n="ContainsExtensibleInputs">false</v>
-                                                    <v n="ProvidesSTSnippet">false</v>
-                                                    <v n="Id">884L</v>
+                                                    <v n="Id">885L</v>
                                                   </o>
-                                                  <o t="BoxTreeOperand">
+                                                  <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"av_3348_idle_position_request"</v>
-                                                      <v n="Type">"REAL"</v>
+                                                      <v n="Operand">"idle.av_3348_idle_position_request"</v>
+                                                      <v n="Type">"INT"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
                                                       <v n="Address">""</v>
@@ -7724,91 +7148,27 @@ END_VAR
                                                   <v n="Extensible">false</v>
                                                 </o>
                                                 <n n="InputFlags" />
-                                                <l2 n="InputItems">
-                                                  <o t="BoxTreeBox">
-                                                    <v n="BoxType">"AND"</v>
-                                                    <o n="Instance" t="Operand">
-                                                      <n n="Operand" />
-                                                      <v n="Type">""</v>
+                                                <l2 n="InputItems" cet="BoxTreeOperand">
+                                                  <o>
+                                                    <o n="Operand" t="Operand">
+                                                      <v n="Operand">"general.ed_routine_cip"</v>
+                                                      <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
                                                       <v n="Address">""</v>
                                                       <o n="Flags" t="Flags">
                                                         <v n="Flags">0</v>
-                                                        <v n="Fixed">false</v>
+                                                        <v n="Fixed">true</v>
                                                         <v n="Extensible">false</v>
                                                       </o>
                                                       <v n="LValue">false</v>
-                                                      <v n="Boolean">false</v>
-                                                      <v n="IsInstance">true</v>
-                                                      <v n="Id">894L</v>
+                                                      <v n="Boolean">true</v>
+                                                      <v n="IsInstance">false</v>
+                                                      <v n="Id">897L</v>
                                                     </o>
-                                                    <o n="OutputItems" t="OutputItemList">
-                                                      <l2 n="OutputItems" />
-                                                    </o>
-                                                    <o n="Flags" t="Flags">
-                                                      <v n="Flags">0</v>
-                                                      <v n="Fixed">false</v>
-                                                      <v n="Extensible">false</v>
-                                                    </o>
-                                                    <n n="InputFlags" />
-                                                    <l2 n="InputItems" cet="BoxTreeOperand">
-                                                      <o>
-                                                        <o n="Operand" t="Operand">
-                                                          <v n="Operand">"general.ed_routine_cip"</v>
-                                                          <v n="Type">"BOOL"</v>
-                                                          <v n="Comment">""</v>
-                                                          <v n="SymbolComment">""</v>
-                                                          <v n="Address">""</v>
-                                                          <o n="Flags" t="Flags">
-                                                            <v n="Flags">0</v>
-                                                            <v n="Fixed">true</v>
-                                                            <v n="Extensible">false</v>
-                                                          </o>
-                                                          <v n="LValue">false</v>
-                                                          <v n="Boolean">true</v>
-                                                          <v n="IsInstance">false</v>
-                                                          <v n="Id">897L</v>
-                                                        </o>
-                                                        <v n="Id">896L</v>
-                                                      </o>
-                                                      <o>
-                                                        <o n="Operand" t="Operand">
-                                                          <v n="Operand">"av_3348_cip_request"</v>
-                                                          <v n="Type">"BOOL"</v>
-                                                          <v n="Comment">""</v>
-                                                          <v n="SymbolComment">""</v>
-                                                          <v n="Address">""</v>
-                                                          <o n="Flags" t="Flags">
-                                                            <v n="Flags">0</v>
-                                                            <v n="Fixed">true</v>
-                                                            <v n="Extensible">false</v>
-                                                          </o>
-                                                          <v n="LValue">false</v>
-                                                          <v n="Boolean">true</v>
-                                                          <v n="IsInstance">false</v>
-                                                          <v n="Id">899L</v>
-                                                        </o>
-                                                        <v n="Id">898L</v>
-                                                      </o>
-                                                    </l2>
-                                                    <o n="InputParam" t="ParamList">
-                                                      <l2 n="Names" />
-                                                      <l2 n="Types" />
-                                                    </o>
-                                                    <o n="OutputParam" t="ParamList">
-                                                      <l2 n="Names" />
-                                                      <l2 n="Types" />
-                                                    </o>
-                                                    <v n="CallType" t="Operator">And</v>
-                                                    <n n="EN" />
-                                                    <n n="ENO" />
-                                                    <n n="STSnippet" />
-                                                    <v n="ContainsExtensibleInputs">false</v>
-                                                    <v n="ProvidesSTSnippet">false</v>
-                                                    <v n="Id">895L</v>
+                                                    <v n="Id">896L</v>
                                                   </o>
-                                                  <o t="BoxTreeOperand">
+                                                  <o>
                                                     <o n="Operand" t="Operand">
                                                       <v n="Operand">"av_3348_cip_position_request"</v>
                                                       <v n="Type">"REAL"</v>
@@ -8099,91 +7459,27 @@ END_VAR
                                           <v n="Extensible">false</v>
                                         </o>
                                         <n n="InputFlags" />
-                                        <l2 n="InputItems">
-                                          <o t="BoxTreeBox">
-                                            <v n="BoxType">"AND"</v>
-                                            <o n="Instance" t="Operand">
-                                              <n n="Operand" />
-                                              <v n="Type">""</v>
+                                        <l2 n="InputItems" cet="BoxTreeOperand">
+                                          <o>
+                                            <o n="Operand" t="Operand">
+                                              <v n="Operand">"general.ed_routine_manual"</v>
+                                              <v n="Type">"BOOL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
                                               <v n="Address">""</v>
                                               <o n="Flags" t="Flags">
                                                 <v n="Flags">0</v>
-                                                <v n="Fixed">false</v>
+                                                <v n="Fixed">true</v>
                                                 <v n="Extensible">false</v>
                                               </o>
                                               <v n="LValue">false</v>
-                                              <v n="Boolean">false</v>
-                                              <v n="IsInstance">true</v>
-                                              <v n="Id">917L</v>
+                                              <v n="Boolean">true</v>
+                                              <v n="IsInstance">false</v>
+                                              <v n="Id">920L</v>
                                             </o>
-                                            <o n="OutputItems" t="OutputItemList">
-                                              <l2 n="OutputItems" />
-                                            </o>
-                                            <o n="Flags" t="Flags">
-                                              <v n="Flags">0</v>
-                                              <v n="Fixed">false</v>
-                                              <v n="Extensible">false</v>
-                                            </o>
-                                            <n n="InputFlags" />
-                                            <l2 n="InputItems" cet="BoxTreeOperand">
-                                              <o>
-                                                <o n="Operand" t="Operand">
-                                                  <v n="Operand">"general.ed_routine_manual"</v>
-                                                  <v n="Type">"BOOL"</v>
-                                                  <v n="Comment">""</v>
-                                                  <v n="SymbolComment">""</v>
-                                                  <v n="Address">""</v>
-                                                  <o n="Flags" t="Flags">
-                                                    <v n="Flags">0</v>
-                                                    <v n="Fixed">true</v>
-                                                    <v n="Extensible">false</v>
-                                                  </o>
-                                                  <v n="LValue">false</v>
-                                                  <v n="Boolean">true</v>
-                                                  <v n="IsInstance">false</v>
-                                                  <v n="Id">920L</v>
-                                                </o>
-                                                <v n="Id">919L</v>
-                                              </o>
-                                              <o>
-                                                <o n="Operand" t="Operand">
-                                                  <v n="Operand">"av_3348_manual_request"</v>
-                                                  <v n="Type">"BOOL"</v>
-                                                  <v n="Comment">""</v>
-                                                  <v n="SymbolComment">""</v>
-                                                  <v n="Address">""</v>
-                                                  <o n="Flags" t="Flags">
-                                                    <v n="Flags">0</v>
-                                                    <v n="Fixed">true</v>
-                                                    <v n="Extensible">false</v>
-                                                  </o>
-                                                  <v n="LValue">false</v>
-                                                  <v n="Boolean">true</v>
-                                                  <v n="IsInstance">false</v>
-                                                  <v n="Id">922L</v>
-                                                </o>
-                                                <v n="Id">921L</v>
-                                              </o>
-                                            </l2>
-                                            <o n="InputParam" t="ParamList">
-                                              <l2 n="Names" />
-                                              <l2 n="Types" />
-                                            </o>
-                                            <o n="OutputParam" t="ParamList">
-                                              <l2 n="Names" />
-                                              <l2 n="Types" />
-                                            </o>
-                                            <v n="CallType" t="Operator">And</v>
-                                            <n n="EN" />
-                                            <n n="ENO" />
-                                            <n n="STSnippet" />
-                                            <v n="ContainsExtensibleInputs">false</v>
-                                            <v n="ProvidesSTSnippet">false</v>
-                                            <v n="Id">918L</v>
+                                            <v n="Id">919L</v>
                                           </o>
-                                          <o t="BoxTreeOperand">
+                                          <o>
                                             <o n="Operand" t="Operand">
                                               <v n="Operand">"av_3348_manual_position_request"</v>
                                               <v n="Type">"REAL"</v>
@@ -8327,91 +7623,27 @@ END_VAR
                                   <v n="Extensible">false</v>
                                 </o>
                                 <n n="InputFlags" />
-                                <l2 n="InputItems">
-                                  <o t="BoxTreeBox">
-                                    <v n="BoxType">"AND"</v>
-                                    <o n="Instance" t="Operand">
-                                      <n n="Operand" />
-                                      <v n="Type">""</v>
+                                <l2 n="InputItems" cet="BoxTreeOperand">
+                                  <o>
+                                    <o n="Operand" t="Operand">
+                                      <v n="Operand">"general.ed_routine_maint"</v>
+                                      <v n="Type">"BOOL"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
                                       <v n="Address">""</v>
                                       <o n="Flags" t="Flags">
                                         <v n="Flags">0</v>
-                                        <v n="Fixed">false</v>
+                                        <v n="Fixed">true</v>
                                         <v n="Extensible">false</v>
                                       </o>
                                       <v n="LValue">false</v>
-                                      <v n="Boolean">false</v>
-                                      <v n="IsInstance">true</v>
-                                      <v n="Id">930L</v>
+                                      <v n="Boolean">true</v>
+                                      <v n="IsInstance">false</v>
+                                      <v n="Id">933L</v>
                                     </o>
-                                    <o n="OutputItems" t="OutputItemList">
-                                      <l2 n="OutputItems" />
-                                    </o>
-                                    <o n="Flags" t="Flags">
-                                      <v n="Flags">0</v>
-                                      <v n="Fixed">false</v>
-                                      <v n="Extensible">false</v>
-                                    </o>
-                                    <n n="InputFlags" />
-                                    <l2 n="InputItems" cet="BoxTreeOperand">
-                                      <o>
-                                        <o n="Operand" t="Operand">
-                                          <v n="Operand">"ed_routine_maint"</v>
-                                          <v n="Type">"BOOL"</v>
-                                          <v n="Comment">""</v>
-                                          <v n="SymbolComment">""</v>
-                                          <v n="Address">""</v>
-                                          <o n="Flags" t="Flags">
-                                            <v n="Flags">0</v>
-                                            <v n="Fixed">true</v>
-                                            <v n="Extensible">false</v>
-                                          </o>
-                                          <v n="LValue">false</v>
-                                          <v n="Boolean">true</v>
-                                          <v n="IsInstance">false</v>
-                                          <v n="Id">933L</v>
-                                        </o>
-                                        <v n="Id">932L</v>
-                                      </o>
-                                      <o>
-                                        <o n="Operand" t="Operand">
-                                          <v n="Operand">"av_3348_maint_request"</v>
-                                          <v n="Type">"BOOL"</v>
-                                          <v n="Comment">""</v>
-                                          <v n="SymbolComment">""</v>
-                                          <v n="Address">""</v>
-                                          <o n="Flags" t="Flags">
-                                            <v n="Flags">0</v>
-                                            <v n="Fixed">true</v>
-                                            <v n="Extensible">false</v>
-                                          </o>
-                                          <v n="LValue">false</v>
-                                          <v n="Boolean">true</v>
-                                          <v n="IsInstance">false</v>
-                                          <v n="Id">935L</v>
-                                        </o>
-                                        <v n="Id">934L</v>
-                                      </o>
-                                    </l2>
-                                    <o n="InputParam" t="ParamList">
-                                      <l2 n="Names" />
-                                      <l2 n="Types" />
-                                    </o>
-                                    <o n="OutputParam" t="ParamList">
-                                      <l2 n="Names" />
-                                      <l2 n="Types" />
-                                    </o>
-                                    <v n="CallType" t="Operator">And</v>
-                                    <n n="EN" />
-                                    <n n="ENO" />
-                                    <n n="STSnippet" />
-                                    <v n="ContainsExtensibleInputs">false</v>
-                                    <v n="ProvidesSTSnippet">false</v>
-                                    <v n="Id">931L</v>
+                                    <v n="Id">932L</v>
                                   </o>
-                                  <o t="BoxTreeOperand">
+                                  <o>
                                     <o n="Operand" t="Operand">
                                       <v n="Operand">"av_3348_maint_position_request"</v>
                                       <v n="Type">"REAL"</v>

@@ -98,9 +98,6 @@
     <Compile Include="POUs\stopping_mode.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\valve_analog_control_st.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="POUs\valve_manager.TcPOU">
       <SubType>Code</SubType>
     </Compile>
