@@ -115,7 +115,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{A69D7AB4-53AC-40E7-8E11-A7DF25BBEC0A}" Name="ED_PROG" PrjFilePath="ED_PROG\ED_PROG.plcproj" TmcFilePath="ED_PROG\ED_PROG.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" CopyTmcToTarget="true" CopyTpyToTarget="false" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="ED_PROG\ED_PROG.tmc" TmcHash="{4DC129B1-3CC3-880E-3067-CC930EB6EA58}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="ED_PROG\ED_PROG.tmc" TmcHash="{CD71D26C-1E62-E719-2090-4C0671D7DF5C}">
 					<Name>ED_PROG Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
@@ -351,6 +351,22 @@ Motor vfd run feedback, mapped to a physical input]]></Comment>
 						<Var>
 							<Name>io_mapping.nv_3162_closed_feedback</Name>
 							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.pt_3428_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.pt_3414_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.lt_3402_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.tt_3432_raw_input</Name>
+							<Type>INT</Type>
 						</Var>
 					</Vars>
 					<Vars VarGrpType="2" AreaNo="1">

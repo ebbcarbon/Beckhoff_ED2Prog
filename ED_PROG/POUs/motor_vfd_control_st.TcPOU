@@ -37,7 +37,7 @@ u_3112.daily_reset:=general.daily_reset;
 
 //Instantiate u_3112_PID function block, and map inputs
 u_3112_pid();
-u_3112_pid.fActualValue := io_mapping.u_3112_speed_feedback.scaled_value;
+u_3112_pid.fActualValue := io_mapping.pt_3119.scaled_value;
 u_3112_pid.fCtrlCycleTime := 1; 
 u_3112_pid.fKp            := 1; 
 u_3112_pid.fTn            := 1; 
@@ -46,7 +46,7 @@ u_3112_pid.fTd            := 1;
 
 //PID logic. Basic PID, if pump enable is false, set setpoint to 0.
 IF pump_manager.u_3112_enable = TRUE THEN
-	u_3112_pid.fSetpointValue := pump_manager.u_3112_speed_request;
+	u_3112_pid.fSetpointValue := pump_manager.u_3112_setpoint_request;
 	ELSE
 		u_3112_pid.fSetpointValue := 0;
 END_IF
@@ -74,7 +74,7 @@ u_3212.daily_reset:=general.daily_reset;
 
 //Instantiate u_3212_PID function block, and map inputs
 u_3212_pid();
-u_3212_pid.fActualValue := io_mapping.u_3212_speed_feedback.scaled_value;
+u_3212_pid.fActualValue := io_mapping.pt_3219.scaled_value;
 u_3212_pid.fCtrlCycleTime := 1; 
 u_3212_pid.fKp            := 1; 
 u_3212_pid.fTn            := 1; 
@@ -83,7 +83,7 @@ u_3212_pid.fTd            := 1;
 
 //PID logic. Basic PID, if pump enable is false, set setpoint to 0.
 IF pump_manager.u_3212_enable = TRUE THEN
-	u_3212_pid.fSetpointValue := pump_manager.u_3212_speed_request;
+	u_3212_pid.fSetpointValue := pump_manager.u_3212_setpoint_request;
 	ELSE
 		u_3212_pid.fSetpointValue := 0;
 END_IF
@@ -110,7 +110,7 @@ u_3312.daily_reset:=general.daily_reset;
 
 //Instantiate u_3312_PID function block, and map inputs
 u_3312_pid();
-u_3312_pid.fActualValue := io_mapping.u_3312_speed_feedback.scaled_value;
+u_3312_pid.fActualValue := io_mapping.pt_3319.scaled_value;
 u_3312_pid.fCtrlCycleTime := 1; 
 u_3312_pid.fKp            := 1; 
 u_3312_pid.fTn            := 1; 
@@ -119,7 +119,7 @@ u_3312_pid.fTd            := 1;
 
 //PID logic. Basic PID, if pump enable is false, set setpoint to 0.
 IF pump_manager.u_3312_enable = TRUE THEN
-	u_3312_pid.fSetpointValue := pump_manager.u_3312_speed_request;
+	u_3312_pid.fSetpointValue := pump_manager.u_3312_setpoint_request;
 	ELSE
 		u_3312_pid.fSetpointValue := 0;
 END_IF
@@ -296,7 +296,7 @@ u_3405.daily_reset:=general.daily_reset;
 
 //Instantiate u_3405_PID function block, and map inputs
 u_3405_pid();
-u_3405_pid.fActualValue := io_mapping.u_3405_speed_feedback.scaled_value;
+//u_3405_pid.fActualValue := io_mapping.pt_3414.scaled_value;
 u_3405_pid.fCtrlCycleTime := 1; 
 u_3405_pid.fKp            := 1; 
 u_3405_pid.fTn            := 1; 
@@ -305,7 +305,7 @@ u_3405_pid.fTd            := 1;
 
 //PID logic. Basic PID, if pump enable is false, set setpoint to 0.
 IF pump_manager.u_3405_enable = TRUE THEN
-	u_3405_pid.fSetpointValue := pump_manager.u_3405_speed_request;
+	u_3405_pid.fSetpointValue := pump_manager.u_3405_setpoint_request;
 	ELSE
 		u_3405_pid.fSetpointValue := 0;
 END_IF

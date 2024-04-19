@@ -9,8 +9,6 @@ END_VAR
       <ST><![CDATA[//This program maps values from the local variable to the OPC readable tag.
 //Setpoints should NOT be mapped here.  The OPC tag should be used directly where needed
 opc.popa_0081_av_3148_position_fail_active :=faults.av_3148_position_fail.active;
-opc.popa_0081_nv_3372_fail_to_open_active :=faults.nv_3372_fail_to_open.active;
-opc.popa_0081_nv_3372_fail_to_close_active :=faults.nv_3372_fail_to_close.active;
 opc.popa_0081_u_3112_fail_to_start_active:=faults.u_3112_fail_to_start.active;
 opc.popa_0081_u_3112_fail_to_stop_active:=faults.u_3112_fail_to_stop.active;
 opc.popa_0081_u_3160_fail_to_start_active:=faults.u_3160_fail_to_start.active;
@@ -28,18 +26,25 @@ opc.popa_0081_system_date_time_second:=general.system_date_time.second;
 
 //---Field Instrumentation---------------------------------------------------------------------------------------------------------------------------
 opc.popa_0081_cpt_3144_scaled_value:=io_mapping.cpt_3144.scaled_value;
+
+opc.popa_0081_lt_3402_scaled_value:=io_mapping.lt_3402.scaled_value;
+
 opc.popa_0081_pt_3119_scaled_value:=io_mapping.pt_3119.scaled_value;
 opc.popa_0081_pt_3219_scaled_value:=io_mapping.pt_3219.scaled_value;
 opc.popa_0081_pt_3319_scaled_value:=io_mapping.pt_3319.scaled_value;
 opc.popa_0081_pt_3141_scaled_value:=io_mapping.pt_3141.scaled_value;
 opc.popa_0081_pt_3241_scaled_value:=io_mapping.pt_3241.scaled_value;
 opc.popa_0081_pt_3341_scaled_value:=io_mapping.pt_3341.scaled_value;
+opc.popa_0081_pt_3428_scaled_value:=io_mapping.pt_3428.scaled_value;
+opc.popa_0081_pt_3414_scaled_value:=io_mapping.pt_3414.scaled_value;
+
 opc.popa_0081_tt_3118_scaled_value:=io_mapping.tt_3118.scaled_value;
 opc.popa_0081_tt_3218_scaled_value:=io_mapping.tt_3218.scaled_value;
 opc.popa_0081_tt_3318_scaled_value:=io_mapping.tt_3318.scaled_value;
 opc.popa_0081_tt_3140_scaled_value:=io_mapping.tt_3140.scaled_value;
 opc.popa_0081_tt_3240_scaled_value:=io_mapping.tt_3240.scaled_value;
 opc.popa_0081_tt_3340_scaled_value:=io_mapping.tt_3340.scaled_value;
+opc.popa_0081_tt_3432_scaled_value:=io_mapping.tt_3432.scaled_value;
 
 //---Pumps---------------------------------------------------------------------------------------------------------------
 opc.popa_0081_u_3112_speed_command_scaled_value:=io_mapping.u_3112_speed_command.scaled_value;
@@ -124,7 +129,7 @@ opc.popa_0081_u_3405_status:=motor_vfd_control_st.u_3405.status;
 
 
 
-//---------------------------------------------------------------------------------------------------------------------
+//---Valves------------------------------------------------------------------------------------------------------------------
 
 opc.popa_0081_av_3148_position_feedback_scaled_value:=io_mapping.av_3148_position_feedback.scaled_value;
 opc.popa_0081_av_3148_position_command_scaled_value:=io_mapping.av_3148_position_command.scaled_value;
@@ -139,8 +144,45 @@ opc.popa_0081_av_3148_position_feedback:=valve_analog_control.av_3148.position_f
 opc.popa_0081_av_3148_position_request:=valve_analog_control.av_3148.position_request;
 opc.popa_0081_av_3148_status:=valve_analog_control.av_3148.status;
 *)
+opc.popa_0081_nv_3110_open_request:=valve_digital_control_st.nv_3110.open_request;
+opc.popa_0081_nv_3110_status:=valve_digital_control_st.nv_3110.status;
+opc.popa_0081_nv_3110_fail_to_open_active :=faults.nv_3110_fail_to_open.active;
+opc.popa_0081_nv_3110_fail_to_close_active :=faults.nv_3110_fail_to_close.active;
+
+opc.popa_0081_nv_3210_open_request:=valve_digital_control_st.nv_3210.open_request;
+opc.popa_0081_nv_3210_status:=valve_digital_control_st.nv_3210.status;
+opc.popa_0081_nv_3210_fail_to_open_active :=faults.nv_3210_fail_to_open.active;
+opc.popa_0081_nv_3210_fail_to_close_active :=faults.nv_3210_fail_to_close.active;
+
+opc.popa_0081_nv_3310_open_request:=valve_digital_control_st.nv_3310.open_request;
+opc.popa_0081_nv_3310_status:=valve_digital_control_st.nv_3310.status;
+opc.popa_0081_nv_3310_fail_to_open_active :=faults.nv_3310_fail_to_open.active;
+opc.popa_0081_nv_3310_fail_to_close_active :=faults.nv_3310_fail_to_close.active;
+
+opc.popa_0081_nv_3135_open_request:=valve_digital_control_st.nv_3135.open_request;
+opc.popa_0081_nv_3135_status:=valve_digital_control_st.nv_3135.status;
+opc.popa_0081_nv_3135_fail_to_open_active :=faults.nv_3135_fail_to_open.active;
+opc.popa_0081_nv_3135_fail_to_close_active :=faults.nv_3135_fail_to_close.active;
+
+opc.popa_0081_nv_3235_open_request:=valve_digital_control_st.nv_3235.open_request;
+opc.popa_0081_nv_3235_status:=valve_digital_control_st.nv_3235.status;
+opc.popa_0081_nv_3235_fail_to_open_active :=faults.nv_3235_fail_to_open.active;
+opc.popa_0081_nv_3235_fail_to_close_active :=faults.nv_3235_fail_to_close.active;
+
+opc.popa_0081_nv_3335_open_request:=valve_digital_control_st.nv_3335.open_request;
+opc.popa_0081_nv_3335_status:=valve_digital_control_st.nv_3335.status;
+opc.popa_0081_nv_3335_fail_to_open_active :=faults.nv_3335_fail_to_open.active;
+opc.popa_0081_nv_3335_fail_to_close_active :=faults.nv_3335_fail_to_close.active;
+
 opc.popa_0081_nv_3372_open_request:=valve_digital_control_st.nv_3372.open_request;
-opc.popa_0081_nv_3372_status:=valve_digital_control_st.nv_3372.status;]]></ST>
+opc.popa_0081_nv_3372_status:=valve_digital_control_st.nv_3372.status;
+opc.popa_0081_nv_3372_fail_to_open_active :=faults.nv_3372_fail_to_open.active;
+opc.popa_0081_nv_3372_fail_to_close_active :=faults.nv_3372_fail_to_close.active;
+
+opc.popa_0081_nv_3162_open_request:=valve_digital_control_st.nv_3162.open_request;
+opc.popa_0081_nv_3162_status:=valve_digital_control_st.nv_3162.status;
+opc.popa_0081_nv_3162_fail_to_open_active :=faults.nv_3162_fail_to_open.active;
+opc.popa_0081_nv_3162_fail_to_close_active :=faults.nv_3162_fail_to_close.active;]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

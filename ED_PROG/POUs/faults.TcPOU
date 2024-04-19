@@ -27,10 +27,26 @@ VAR PERSISTENT
 
 	// Example analog valve position fail alarm
 	av_3148_position_fail: Alarm;
+	av_3248_position_fail: Alarm;
+	av_3348_position_fail: Alarm;
 	// Example digital valve fail to open alarm
+	nv_3110_fail_to_open: Alarm;
+	nv_3210_fail_to_open: Alarm;
+	nv_3310_fail_to_open: Alarm;
+	nv_3135_fail_to_open: Alarm;
+	nv_3235_fail_to_open: Alarm;
+	nv_3335_fail_to_open: Alarm;
 	nv_3372_fail_to_open: Alarm;
+	nv_3162_fail_to_open: Alarm;
 	// Example digital valve fail to close alarm
+	nv_3110_fail_to_close: Alarm;
+	nv_3210_fail_to_close: Alarm;
+	nv_3310_fail_to_close: Alarm;
+	nv_3135_fail_to_close: Alarm;
+	nv_3235_fail_to_close: Alarm;
+	nv_3335_fail_to_close: Alarm;
 	nv_3372_fail_to_close: Alarm;
+	nv_3162_fail_to_close: Alarm;
 	
 //---System threshold alarms------------------------------------------------------------------------------------------------
 
