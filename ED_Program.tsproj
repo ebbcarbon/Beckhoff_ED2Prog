@@ -115,7 +115,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{A69D7AB4-53AC-40E7-8E11-A7DF25BBEC0A}" Name="ED_PROG" PrjFilePath="ED_PROG\ED_PROG.plcproj" TmcFilePath="ED_PROG\ED_PROG.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" CopyTmcToTarget="true" CopyTpyToTarget="false" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="ED_PROG\ED_PROG.tmc" TmcHash="{CD71D26C-1E62-E719-2090-4C0671D7DF5C}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="ED_PROG\ED_PROG.tmc" TmcHash="{FE97CB23-5838-2A40-EF5A-1AE9F093FA7C}">
 					<Name>ED_PROG Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
@@ -366,6 +366,30 @@ Motor vfd run feedback, mapped to a physical input]]></Comment>
 						</Var>
 						<Var>
 							<Name>io_mapping.tt_3432_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.lt_3102_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.lt_3202_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.lt_3302_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.lt_3153_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.lt_3253_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.lt_3353_raw_input</Name>
 							<Type>INT</Type>
 						</Var>
 					</Vars>
@@ -5104,10 +5128,20 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Inputs^io_mapping.tt_3218_raw_input" VarB="AI Standard Channel 8^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 15 (EL3058)">
+				<Link VarA="PlcTask Inputs^io_mapping.av_3148_position_feedback_raw_input" VarB="AI Standard Channel 8^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^io_mapping.tt_3140_raw_input" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^io_mapping.tt_3240_raw_input" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^io_mapping.tt_3318_raw_input" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^io_mapping.tt_3340_raw_input" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 16 (EL3058)">
+				<Link VarA="PlcTask Inputs^io_mapping.av_3248_position_feedback_raw_input" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.av_3348_position_feedback_raw_input" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 19 (EL4124)">
+				<Link VarA="PlcTask Outputs^io_mapping.av_3148_position_command_io" VarB="AO Output Channel 1^Analog output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^io_mapping.av_3248_position_command_io" VarB="AO Output Channel 2^Analog output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^io_mapping.av_3348_position_command_io" VarB="AO Output Channel 3^Analog output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 4 (EtherCAT)^Term 21 (EK1914)^Term 22 (EL1859)">
 				<Link VarA="PlcTask Outputs^io_mapping.nv_3110_open_command_io" VarB="Channel 11^Output" AutoLink="true"/>
@@ -5120,6 +5154,10 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Outputs^io_mapping.nv_3372_open_command_io" VarB="Channel 16^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 4 (EtherCAT)^Term 25 (EK1100)^Term 26 (EL3058)">
+				<Link VarA="PlcTask Inputs^io_mapping.lt_3402_raw_input" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.pt_3414_raw_input" VarB="AI Standard Channel 5^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.pt_3428_raw_input" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.tt_3432_raw_input" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^io_mapping.u_3405_speed_feedback_raw_input" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 4 (EtherCAT)^Term 25 (EK1100)^Term 27 (EL4124)">

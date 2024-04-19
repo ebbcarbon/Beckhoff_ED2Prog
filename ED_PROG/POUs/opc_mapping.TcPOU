@@ -33,7 +33,7 @@ opc.popa_0081_lt_3302_scaled_value:=io_mapping.lt_3402.scaled_value;
 opc.popa_0081_lt_3153_scaled_value:=io_mapping.lt_3153.scaled_value;
 opc.popa_0081_lt_3253_scaled_value:=io_mapping.lt_3253.scaled_value;
 opc.popa_0081_lt_3353_scaled_value:=io_mapping.lt_3353.scaled_value;
-opc.popa_0081_lt_3402_scaled_value:=io_mapping.lt_3402.scaled_value;
+opc.popa_0091_lt_3402_scaled_value:=io_mapping.lt_3402.scaled_value;
 
 opc.popa_0081_pt_3119_scaled_value:=io_mapping.pt_3119.scaled_value;
 opc.popa_0081_pt_3219_scaled_value:=io_mapping.pt_3219.scaled_value;
@@ -41,8 +41,8 @@ opc.popa_0081_pt_3319_scaled_value:=io_mapping.pt_3319.scaled_value;
 opc.popa_0081_pt_3141_scaled_value:=io_mapping.pt_3141.scaled_value;
 opc.popa_0081_pt_3241_scaled_value:=io_mapping.pt_3241.scaled_value;
 opc.popa_0081_pt_3341_scaled_value:=io_mapping.pt_3341.scaled_value;
-opc.popa_0081_pt_3428_scaled_value:=io_mapping.pt_3428.scaled_value;
-opc.popa_0081_pt_3414_scaled_value:=io_mapping.pt_3414.scaled_value;
+opc.popa_0091_pt_3428_scaled_value:=io_mapping.pt_3428.scaled_value;
+opc.popa_0091_pt_3414_scaled_value:=io_mapping.pt_3414.scaled_value;
 
 opc.popa_0081_tt_3118_scaled_value:=io_mapping.tt_3118.scaled_value;
 opc.popa_0081_tt_3218_scaled_value:=io_mapping.tt_3218.scaled_value;
@@ -50,14 +50,13 @@ opc.popa_0081_tt_3318_scaled_value:=io_mapping.tt_3318.scaled_value;
 opc.popa_0081_tt_3140_scaled_value:=io_mapping.tt_3140.scaled_value;
 opc.popa_0081_tt_3240_scaled_value:=io_mapping.tt_3240.scaled_value;
 opc.popa_0081_tt_3340_scaled_value:=io_mapping.tt_3340.scaled_value;
-opc.popa_0081_tt_3432_scaled_value:=io_mapping.tt_3432.scaled_value;
+opc.popa_0091_tt_3432_scaled_value:=io_mapping.tt_3432.scaled_value;
 
 //---Pumps---------------------------------------------------------------------------------------------------------------
 opc.popa_0081_u_3112_speed_command_scaled_value:=io_mapping.u_3112_speed_command.scaled_value;
 opc.popa_0081_u_3112_speed_feedback_scaled_value:=io_mapping.u_3112_speed_feedback.scaled_value;
 opc.popa_0081_u_3112_run_request:=motor_vfd_control_st.u_3112.run_request;
 opc.popa_0081_u_3112_speed_request:=motor_vfd_control_st.u_3112.speed_request;
-opc.popa_0081_u_3112_speed_feedback:=motor_vfd_control_st.u_3112.speed_feedback;
 opc.popa_0081_u_3112_runtime_today:=motor_vfd_control_st.u_3112.runtime_today;
 opc.popa_0081_u_3112_runtime_total:=motor_vfd_control_st.u_3112.runtime_total;
 opc.popa_0081_u_3112_runtime_maint:=motor_vfd_control_st.u_3112.runtime_maint;
@@ -67,7 +66,6 @@ opc.popa_0081_u_3212_speed_command_scaled_value:=io_mapping.u_3212_speed_command
 opc.popa_0081_u_3212_speed_feedback_scaled_value:=io_mapping.u_3212_speed_feedback.scaled_value;
 opc.popa_0081_u_3212_run_request:=motor_vfd_control_st.u_3212.run_request;
 opc.popa_0081_u_3212_speed_request:=motor_vfd_control_st.u_3212.speed_request;
-opc.popa_0081_u_3212_speed_feedback:=motor_vfd_control_st.u_3212.speed_feedback;
 opc.popa_0081_u_3212_runtime_today:=motor_vfd_control_st.u_3212.runtime_today;
 opc.popa_0081_u_3212_runtime_total:=motor_vfd_control_st.u_3212.runtime_total;
 opc.popa_0081_u_3212_runtime_maint:=motor_vfd_control_st.u_3212.runtime_maint;
@@ -77,7 +75,6 @@ opc.popa_0081_u_3312_speed_command_scaled_value:=io_mapping.u_3312_speed_command
 opc.popa_0081_u_3312_speed_feedback_scaled_value:=io_mapping.u_3312_speed_feedback.scaled_value;
 opc.popa_0081_u_3312_run_request:=motor_vfd_control_st.u_3312.run_request;
 opc.popa_0081_u_3312_speed_request:=motor_vfd_control_st.u_3312.speed_request;
-opc.popa_0081_u_3312_speed_feedback:=motor_vfd_control_st.u_3312.speed_feedback;
 opc.popa_0081_u_3312_runtime_today:=motor_vfd_control_st.u_3312.runtime_today;
 opc.popa_0081_u_3312_runtime_total:=motor_vfd_control_st.u_3312.runtime_total;
 opc.popa_0081_u_3312_runtime_maint:=motor_vfd_control_st.u_3312.runtime_maint;
@@ -87,7 +84,6 @@ opc.popa_0081_u_3160_speed_command_scaled_value:=io_mapping.u_3160_speed_command
 opc.popa_0081_u_3160_speed_feedback_scaled_value:=io_mapping.u_3160_speed_feedback.scaled_value;
 opc.popa_0081_u_3160_run_request:=motor_vfd_control_st.u_3160.run_request;
 opc.popa_0081_u_3160_speed_request:=motor_vfd_control_st.u_3160.speed_request;
-opc.popa_0081_u_3160_speed_feedback:=motor_vfd_control_st.u_3160.speed_feedback;
 opc.popa_0081_u_3160_runtime_today:=motor_vfd_control_st.u_3160.runtime_today;
 opc.popa_0081_u_3160_runtime_total:=motor_vfd_control_st.u_3160.runtime_total;
 opc.popa_0081_u_3160_runtime_maint:=motor_vfd_control_st.u_3160.runtime_maint;
@@ -97,7 +93,6 @@ opc.popa_0081_u_3260_speed_command_scaled_value:=io_mapping.u_3260_speed_command
 opc.popa_0081_u_3260_speed_feedback_scaled_value:=io_mapping.u_3260_speed_feedback.scaled_value;
 opc.popa_0081_u_3260_run_request:=motor_vfd_control_st.u_3260.run_request;
 opc.popa_0081_u_3260_speed_request:=motor_vfd_control_st.u_3260.speed_request;
-opc.popa_0081_u_3260_speed_feedback:=motor_vfd_control_st.u_3260.speed_feedback;
 opc.popa_0081_u_3260_runtime_today:=motor_vfd_control_st.u_3260.runtime_today;
 opc.popa_0081_u_3260_runtime_total:=motor_vfd_control_st.u_3260.runtime_total;
 opc.popa_0081_u_3260_runtime_maint:=motor_vfd_control_st.u_3260.runtime_maint;
@@ -107,7 +102,6 @@ opc.popa_0081_u_3360_speed_command_scaled_value:=io_mapping.u_3360_speed_command
 opc.popa_0081_u_3360_speed_feedback_scaled_value:=io_mapping.u_3360_speed_feedback.scaled_value;
 opc.popa_0081_u_3360_run_request:=motor_vfd_control_st.u_3360.run_request;
 opc.popa_0081_u_3360_speed_request:=motor_vfd_control_st.u_3360.speed_request;
-opc.popa_0081_u_3360_speed_feedback:=motor_vfd_control_st.u_3360.speed_feedback;
 opc.popa_0081_u_3360_runtime_today:=motor_vfd_control_st.u_3360.runtime_today;
 opc.popa_0081_u_3360_runtime_total:=motor_vfd_control_st.u_3360.runtime_total;
 opc.popa_0081_u_3360_runtime_maint:=motor_vfd_control_st.u_3360.runtime_maint;
@@ -117,21 +111,19 @@ opc.popa_0081_u_3370_speed_command_scaled_value:=io_mapping.u_3370_speed_command
 opc.popa_0081_u_3370_speed_feedback_scaled_value:=io_mapping.u_3370_speed_feedback.scaled_value;
 opc.popa_0081_u_3370_run_request:=motor_vfd_control_st.u_3370.run_request;
 opc.popa_0081_u_3370_speed_request:=motor_vfd_control_st.u_3370.speed_request;
-opc.popa_0081_u_3370_speed_feedback:=motor_vfd_control_st.u_3370.speed_feedback;
 opc.popa_0081_u_3370_runtime_today:=motor_vfd_control_st.u_3370.runtime_today;
 opc.popa_0081_u_3370_runtime_total:=motor_vfd_control_st.u_3370.runtime_total;
 opc.popa_0081_u_3370_runtime_maint:=motor_vfd_control_st.u_3370.runtime_maint;
 opc.popa_0081_u_3370_status:=motor_vfd_control_st.u_3370.status;
 
-opc.popa_0081_u_3405_speed_command_scaled_value:=io_mapping.u_3405_speed_command.scaled_value;
-opc.popa_0081_u_3405_speed_feedback_scaled_value:=io_mapping.u_3405_speed_feedback.scaled_value;
-opc.popa_0081_u_3405_run_request:=motor_vfd_control_st.u_3405.run_request;
-opc.popa_0081_u_3405_speed_request:=motor_vfd_control_st.u_3405.speed_request;
-opc.popa_0081_u_3405_speed_feedback:=motor_vfd_control_st.u_3405.speed_feedback;
-opc.popa_0081_u_3405_runtime_today:=motor_vfd_control_st.u_3405.runtime_today;
-opc.popa_0081_u_3405_runtime_total:=motor_vfd_control_st.u_3405.runtime_total;
-opc.popa_0081_u_3405_runtime_maint:=motor_vfd_control_st.u_3405.runtime_maint;
-opc.popa_0081_u_3405_status:=motor_vfd_control_st.u_3405.status;
+opc.popa_0091_u_3405_speed_command_scaled_value:=io_mapping.u_3405_speed_command.scaled_value;
+opc.popa_0091_u_3405_speed_feedback_scaled_value:=io_mapping.u_3405_speed_feedback.scaled_value;
+opc.popa_0091_u_3405_run_request:=motor_vfd_control_st.u_3405.run_request;
+opc.popa_0091_u_3405_speed_request:=motor_vfd_control_st.u_3405.speed_request;
+opc.popa_0091_u_3405_runtime_today:=motor_vfd_control_st.u_3405.runtime_today;
+opc.popa_0091_u_3405_runtime_total:=motor_vfd_control_st.u_3405.runtime_total;
+opc.popa_0091_u_3405_runtime_maint:=motor_vfd_control_st.u_3405.runtime_maint;
+opc.popa_0091_u_3405_status:=motor_vfd_control_st.u_3405.status;
 
 
 
@@ -139,17 +131,30 @@ opc.popa_0081_u_3405_status:=motor_vfd_control_st.u_3405.status;
 
 opc.popa_0081_av_3148_position_feedback_scaled_value:=io_mapping.av_3148_position_feedback.scaled_value;
 opc.popa_0081_av_3148_position_command_scaled_value:=io_mapping.av_3148_position_command.scaled_value;
+opc.popa_0081_av_3148_position_feedback:=valve_digital_control_st.av_3148.position_feedback;
+opc.popa_0081_av_3148_position_request:=valve_digital_control_st.av_3148.position_request;
+opc.popa_0081_av_3148_status:=valve_digital_control_st.av_3148.status;
+
+opc.popa_0081_av_3248_position_feedback_scaled_value:=io_mapping.av_3248_position_feedback.scaled_value;
+opc.popa_0081_av_3248_position_command_scaled_value:=io_mapping.av_3248_position_command.scaled_value;
+opc.popa_0081_av_3248_position_feedback:=valve_digital_control_st.av_3248.position_feedback;
+opc.popa_0081_av_3248_position_request:=valve_digital_control_st.av_3248.position_request;
+opc.popa_0081_av_3248_status:=valve_digital_control_st.av_3248.status;
+
+opc.popa_0081_av_3348_position_feedback_scaled_value:=io_mapping.av_3348_position_feedback.scaled_value;
+opc.popa_0081_av_3348_position_command_scaled_value:=io_mapping.av_3348_position_command.scaled_value;
+opc.popa_0081_av_3348_position_feedback:=valve_digital_control_st.av_3348.position_feedback;
+opc.popa_0081_av_3348_position_request:=valve_digital_control_st.av_3348.position_request;
+opc.popa_0081_av_3348_status:=valve_digital_control_st.av_3348.status;
 (*
 opc.popa_0081_u_3160_run_request:=motor_starter_control.u_3160.run_request;
 opc.popa_0081_u_3160_runtime_today:=motor_starter_control.u_3160.runtime_today;
 opc.popa_0081_u_3160_runtime_total:=motor_starter_control.u_3160.runtime_total;
 opc.popa_0081_u_3160_runtime_maint:=motor_starter_control.u_3160.runtime_maint;
 opc.popa_0081_u_3160_status:=motor_starter_control.u_3160.status;
-
-opc.popa_0081_av_3148_position_feedback:=valve_analog_control.av_3148.position_feedback;
-opc.popa_0081_av_3148_position_request:=valve_analog_control.av_3148.position_request;
-opc.popa_0081_av_3148_status:=valve_analog_control.av_3148.status;
 *)
+
+
 opc.popa_0081_nv_3110_open_request:=valve_digital_control_st.nv_3110.open_request;
 opc.popa_0081_nv_3110_status:=valve_digital_control_st.nv_3110.status;
 opc.popa_0081_nv_3110_fail_to_open_active :=faults.nv_3110_fail_to_open.active;

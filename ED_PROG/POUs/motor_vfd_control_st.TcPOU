@@ -290,7 +290,7 @@ IF opc.popa_0081_u_3370_runtime_maint_Reset=TRUE THEN
 //Instantiate u_3405 motor vfd function block, and map inputs
 u_3405();
 u_3405.run_feedback:=io_mapping.u_3405_run_feedback;
-u_3405.runtime_maint_reset:=opc.popa_0081_u_3405_runtime_maint_reset;
+u_3405.runtime_maint_reset:=opc.popa_0091_u_3405_runtime_maint_reset;
 u_3405.run_request:=pump_manager.u_3405_enable;
 u_3405.daily_reset:=general.daily_reset;
 
@@ -319,8 +319,8 @@ IF faults.u_3405_fail_to_start.active=TRUE OR faults.u_3405_fail_to_stop.active=
 	END_IF
 	
 //Reset runtime maint reset after cycle
-IF opc.popa_0081_u_3405_runtime_maint_Reset=TRUE THEN
-	opc.popa_0081_u_3405_runtime_maint_reset:=FALSE;
+IF opc.popa_0091_u_3405_runtime_maint_Reset=TRUE THEN
+	opc.popa_0091_u_3405_runtime_maint_reset:=FALSE;
 	END_IF
 	]]></ST>
     </Implementation>

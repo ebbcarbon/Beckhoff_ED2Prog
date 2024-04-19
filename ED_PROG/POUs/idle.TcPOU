@@ -49,6 +49,7 @@ VAR
 	u_3212_idle_pressure_setpoint_request: REAL;
 	u_3312_idle_pressure_setpoint_request: REAL;
 	u_3405_idle_pressure_setpoint_request: REAL;
+	idle_stable: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -299,13 +300,13 @@ END_VAR
                               </o>
                               <o>
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"nv_3110_open_feedback"</v>
+                                  <v n="Operand">"faults.nv_3110_fail_to_open.trigger"</v>
                                   <v n="Type">"BOOL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
                                   <v n="Address">""</v>
                                   <o n="Flags" t="Flags">
-                                    <v n="Flags">0</v>
+                                    <v n="Flags">1</v>
                                     <v n="Fixed">true</v>
                                     <v n="Extensible">false</v>
                                   </o>
@@ -318,13 +319,13 @@ END_VAR
                               </o>
                               <o>
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"nv_3210_open_feedback"</v>
+                                  <v n="Operand">"faults.nv_3210_fail_to_open.trigger"</v>
                                   <v n="Type">"BOOL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
                                   <v n="Address">""</v>
                                   <o n="Flags" t="Flags">
-                                    <v n="Flags">0</v>
+                                    <v n="Flags">1</v>
                                     <v n="Fixed">true</v>
                                     <v n="Extensible">false</v>
                                   </o>
@@ -337,13 +338,13 @@ END_VAR
                               </o>
                               <o>
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"nv_3310_open_feedback"</v>
+                                  <v n="Operand">"faults.nv_3310_fail_to_open.trigger"</v>
                                   <v n="Type">"BOOL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
                                   <v n="Address">""</v>
                                   <o n="Flags" t="Flags">
-                                    <v n="Flags">0</v>
+                                    <v n="Flags">1</v>
                                     <v n="Fixed">true</v>
                                     <v n="Extensible">false</v>
                                   </o>
@@ -1309,7 +1310,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"idle_stack_power_enable"</v>
+                            <v n="Operand">"idle_stable"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1380,7 +1381,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"u_3112_ready"</v>
+                              <v n="Operand">"faults.u_3112_fail_to_start.trigger"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1399,7 +1400,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"u_3212_ready"</v>
+                              <v n="Operand">"faults.u_3212_fail_to_start.trigger"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1418,7 +1419,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"u_3312_ready"</v>
+                              <v n="Operand">"faults.u_3312_fail_to_start.trigger"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1437,7 +1438,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"u_3405_ready"</v>
+                              <v n="Operand">"faults.u_3405_fail_to_start.trigger"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
