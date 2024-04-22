@@ -3,6 +3,9 @@
   <POU Name="motor_vfd_control_st" Id="{a46dfc99-89d7-4ba2-a2c1-28118d28ec13}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM motor_vfd_control_st
 VAR PERSISTENT
+	
+	fbGetTaskIndex : GETCURTASKINDEX;
+	
 	//Motor starter block.  
 	u_3112 : motor_vfd;
 	u_3212 : motor_vfd;
@@ -22,6 +25,8 @@ VAR PERSISTENT
 	u_3360_pid : FB_BasicPID;
 	u_3370_pid : FB_BasicPID;
 	u_3405_pid : FB_BasicPID;
+	
+	u_3112_pid_error : UINT;
 END_VAR
 
 VAR
@@ -38,11 +43,13 @@ u_3112.daily_reset:=general.daily_reset;
 //Instantiate u_3112_PID function block, and map inputs
 u_3112_pid();
 u_3112_pid.fActualValue := io_mapping.pt_3119.scaled_value;
-u_3112_pid.fCtrlCycleTime := 1; 
+u_3112_pid.fCtrlCycleTime := UDINT_TO_LREAL(_TaskInfo[GETCURTASKINDEXEX()].CycleTime) / 10_000_000; 
 u_3112_pid.fKp            := 1; 
 u_3112_pid.fTn            := 1; 
 u_3112_pid.fTv            := 1; 
 u_3112_pid.fTd            := 1; 
+u_3112_pid.fCtrlOutput;
+u_3112_pid_error := u_3112_pid.nErrorStatus;
 
 //PID logic. Basic PID, if pump enable is false, set setpoint to 0.
 IF pump_manager.u_3112_enable = TRUE THEN

@@ -554,7 +554,7 @@ END_VAR
                                                   </o>
                                                   <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"general.ed_routine_idle"</v>
+                                                      <v n="Operand">"general.ed_routine_stop"</v>
                                                       <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
@@ -1347,7 +1347,7 @@ END_VAR
                                                   </o>
                                                   <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"general.ed_routine_idle"</v>
+                                                      <v n="Operand">"general.ed_routine_stop"</v>
                                                       <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
@@ -2140,7 +2140,7 @@ END_VAR
                                                   </o>
                                                   <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"general.ed_routine_idle"</v>
+                                                      <v n="Operand">"general.ed_routine_stop"</v>
                                                       <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
@@ -2933,7 +2933,7 @@ END_VAR
                                                   </o>
                                                   <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"general.ed_routine_idle"</v>
+                                                      <v n="Operand">"general.ed_routine_stop"</v>
                                                       <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>
@@ -4642,7 +4642,7 @@ END_VAR
                                                   </o>
                                                   <o>
                                                     <o n="Operand" t="Operand">
-                                                      <v n="Operand">"general.ed_routine_cip"</v>
+                                                      <v n="Operand">"general.ed_routine_stop"</v>
                                                       <v n="Type">"BOOL"</v>
                                                       <v n="Comment">""</v>
                                                       <v n="SymbolComment">""</v>

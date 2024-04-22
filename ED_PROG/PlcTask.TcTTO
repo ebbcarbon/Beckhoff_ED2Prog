@@ -11,9 +11,6 @@
       <Name>example_loop_control</Name>
     </PouCall>
     <PouCall>
-      <Name>faults</Name>
-    </PouCall>
-    <PouCall>
       <Name>general</Name>
     </PouCall>
     <PouCall>
@@ -50,10 +47,13 @@
       <Name>motor_vfd_control_st</Name>
     </PouCall>
     <PouCall>
+      <Name>idle</Name>
+    </PouCall>
+    <PouCall>
       <Name>maint_mode</Name>
     </PouCall>
     <PouCall>
-      <Name>idle</Name>
+      <Name>faults</Name>
     </PouCall>
     <TaskFBGuid>{b444c442-1e08-4dc9-9582-92f769dd2481}</TaskFBGuid>
     <Fb_init>{577a81fe-f5e0-461c-b354-40a78c1bce7d}</Fb_init>

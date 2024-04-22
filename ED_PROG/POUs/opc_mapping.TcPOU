@@ -17,6 +17,12 @@ opc.popa_0081_cpt_3144_low_low_active:=faults.cpt_3144_low_low.active;
 opc.popa_0081_cpt_3144_low_active:=faults.cpt_3144_low.active;
 opc.popa_0081_cpt_3144_high_active:=faults.cpt_3144_high.active;
 opc.popa_0081_cpt_3144_high_high_active:=faults.cpt_3144_high_high.active;
+
+opc.popa_0081_ed_routine_critical_stop := general.ed_critical_stop;
+opc.popa_0081_ed_routine_stop := general.ed_routine_stop;
+opc.popa_0081_ed_routine_idle := general.ed_routine_idle;
+opc.popa_0081_ed_routine_maint := general.ed_routine_maint;
+
 opc.popa_0081_system_date_time_year:=general.system_date_time.year;
 opc.popa_0081_system_date_time_month:=general.system_date_time.month;
 opc.popa_0081_system_date_time_day:=general.system_date_time.day;
