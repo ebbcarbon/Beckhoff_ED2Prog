@@ -16,6 +16,14 @@ VAR PERSISTENT
 	u_3370 : motor_vfd;
 	u_3405 : motor_vfd;
 	
+
+	
+	u_3112_pid_error : UINT;
+END_VAR
+
+VAR
+	u_3212_run_feedback: REAL;
+	
 	//Motor starter block.  
 	u_3112_pid : FB_BasicPID;
 	u_3212_pid : FB_BasicPID;
@@ -25,12 +33,9 @@ VAR PERSISTENT
 	u_3360_pid : FB_BasicPID;
 	u_3370_pid : FB_BasicPID;
 	u_3405_pid : FB_BasicPID;
-	
-	u_3112_pid_error : UINT;
-END_VAR
-
-VAR
-	u_3212_run_feedback: REAL;
+	u_3212_pid_error: UINT;
+	u_3312_pid_error: UINT;
+	u_3405_pid_error: UINT;
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[//Instantiate U_3112 motor vfd function block, and map inputs
@@ -44,12 +49,13 @@ u_3112.daily_reset:=general.daily_reset;
 u_3112_pid();
 u_3112_pid.fActualValue := io_mapping.pt_3119.scaled_value;
 u_3112_pid.fCtrlCycleTime := UDINT_TO_LREAL(_TaskInfo[GETCURTASKINDEXEX()].CycleTime) / 10_000_000; 
-u_3112_pid.fKp            := 1; 
+u_3112_pid.fKp            := 1000; 
 u_3112_pid.fTn            := 1; 
 u_3112_pid.fTv            := 1; 
 u_3112_pid.fTd            := 1; 
 u_3112_pid.fCtrlOutput;
 u_3112_pid_error := u_3112_pid.nErrorStatus;
+u_3112_pid.bReset := pump_manager.u_3112_pid_reset;
 
 //PID logic. Basic PID, if pump enable is false, set setpoint to 0.
 IF pump_manager.u_3112_enable = TRUE THEN
@@ -82,11 +88,13 @@ u_3212.daily_reset:=general.daily_reset;
 //Instantiate u_3212_PID function block, and map inputs
 u_3212_pid();
 u_3212_pid.fActualValue := io_mapping.pt_3219.scaled_value;
-u_3212_pid.fCtrlCycleTime := 1; 
-u_3212_pid.fKp            := 1; 
+u_3212_pid.fCtrlCycleTime := UDINT_TO_LREAL(_TaskInfo[GETCURTASKINDEXEX()].CycleTime) / 10_000_000; 
+u_3212_pid.fKp            := 1000; 
 u_3212_pid.fTn            := 1; 
 u_3212_pid.fTv            := 1; 
 u_3212_pid.fTd            := 1; 
+u_3212_pid_error := u_3212_pid.nErrorStatus;
+u_3212_pid.bReset := pump_manager.u_3212_pid_reset;
 
 //PID logic. Basic PID, if pump enable is false, set setpoint to 0.
 IF pump_manager.u_3212_enable = TRUE THEN
@@ -118,11 +126,13 @@ u_3312.daily_reset:=general.daily_reset;
 //Instantiate u_3312_PID function block, and map inputs
 u_3312_pid();
 u_3312_pid.fActualValue := io_mapping.pt_3319.scaled_value;
-u_3312_pid.fCtrlCycleTime := 1; 
-u_3312_pid.fKp            := 1; 
+u_3312_pid.fCtrlCycleTime := UDINT_TO_LREAL(_TaskInfo[GETCURTASKINDEXEX()].CycleTime) / 10_000_000; 
+u_3312_pid.fKp            := 1000; 
 u_3312_pid.fTn            := 1; 
 u_3312_pid.fTv            := 1; 
 u_3312_pid.fTd            := 1; 
+u_3312_pid_error := u_3312_pid.nErrorStatus;
+u_3312_pid.bReset := pump_manager.u_3312_pid_reset;
 
 //PID logic. Basic PID, if pump enable is false, set setpoint to 0.
 IF pump_manager.u_3312_enable = TRUE THEN
@@ -155,11 +165,13 @@ u_3160.daily_reset:=general.daily_reset;
 //Instantiate u_3160_PID function block, and map inputs
 u_3160_pid();
 u_3160_pid.fActualValue := io_mapping.u_3160_speed_feedback.scaled_value;
-u_3160_pid.fCtrlCycleTime := 1; 
+u_3160_pid.fCtrlCycleTime := UDINT_TO_LREAL(_TaskInfo[GETCURTASKINDEXEX()].CycleTime) / 10_000_000; 
 u_3160_pid.fKp            := 1; 
 u_3160_pid.fTn            := 1; 
 u_3160_pid.fTv            := 1; 
 u_3160_pid.fTd            := 1; 
+u_3405_pid_error := u_3405_pid.nErrorStatus;
+u_3405_pid.bReset := pump_manager.u_3405_pid_reset;
 
 //PID logic. Basic PID, if pump enable is false, set setpoint to 0.
 IF pump_manager.u_3160_enable = TRUE THEN
@@ -192,7 +204,7 @@ u_3260.daily_reset:=general.daily_reset;
 //Instantiate u_3260_PID function block, and map inputs
 u_3260_pid();
 u_3260_pid.fActualValue := io_mapping.u_3260_speed_feedback.scaled_value;
-u_3260_pid.fCtrlCycleTime := 1; 
+u_3260_pid.fCtrlCycleTime := UDINT_TO_LREAL(_TaskInfo[GETCURTASKINDEXEX()].CycleTime) / 10_000_000; 
 u_3260_pid.fKp            := 1; 
 u_3260_pid.fTn            := 1; 
 u_3260_pid.fTv            := 1; 
@@ -229,7 +241,7 @@ u_3360.daily_reset:=general.daily_reset;
 //Instantiate u_3360_PID function block, and map inputs
 u_3360_pid();
 u_3360_pid.fActualValue := io_mapping.u_3360_speed_feedback.scaled_value;
-u_3360_pid.fCtrlCycleTime := 1; 
+u_3360_pid.fCtrlCycleTime := UDINT_TO_LREAL(_TaskInfo[GETCURTASKINDEXEX()].CycleTime) / 10_000_000; 
 u_3360_pid.fKp            := 1; 
 u_3360_pid.fTn            := 1; 
 u_3360_pid.fTv            := 1; 
@@ -267,7 +279,7 @@ u_3370.daily_reset:=general.daily_reset;
 //Instantiate u_3370_PID function block, and map inputs
 u_3370_pid();
 u_3370_pid.fActualValue := io_mapping.u_3370_speed_feedback.scaled_value;
-u_3370_pid.fCtrlCycleTime := 1; 
+u_3370_pid.fCtrlCycleTime := UDINT_TO_LREAL(_TaskInfo[GETCURTASKINDEXEX()].CycleTime) / 10_000_000; 
 u_3370_pid.fKp            := 1; 
 u_3370_pid.fTn            := 1; 
 u_3370_pid.fTv            := 1; 
@@ -304,7 +316,7 @@ u_3405.daily_reset:=general.daily_reset;
 //Instantiate u_3405_PID function block, and map inputs
 u_3405_pid();
 //u_3405_pid.fActualValue := io_mapping.pt_3414.scaled_value;
-u_3405_pid.fCtrlCycleTime := 1; 
+u_3405_pid.fCtrlCycleTime := UDINT_TO_LREAL(_TaskInfo[GETCURTASKINDEXEX()].CycleTime) / 10_000_000; 
 u_3405_pid.fKp            := 1; 
 u_3405_pid.fTn            := 1; 
 u_3405_pid.fTv            := 1; 
