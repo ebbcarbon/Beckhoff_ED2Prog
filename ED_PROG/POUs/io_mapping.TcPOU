@@ -271,7 +271,7 @@ VAR PERSISTENT
 	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 21 (EK1914)^Term 22 (EL1859)^Channel 9^Output'}
 	nv_3162_open_command_io AT %Q* : BOOL;
 	
-	
+	safety_reset AT %Q* : BOOL;
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[//---Field Instrumentation
