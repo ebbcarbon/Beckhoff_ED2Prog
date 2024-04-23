@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.50">
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.47">
 	<DataTypes>
 		<DataType>
 			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
@@ -17,24 +17,6 @@
 			<ArrayInfo>
 				<LBound>0</LBound>
 				<Elements>6</Elements>
-			</ArrayInfo>
-		</DataType>
-		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000002}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..1] OF BIT</Name>
-			<BitSize>2</BitSize>
-			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
-			<ArrayInfo>
-				<LBound>0</LBound>
-				<Elements>2</Elements>
-			</ArrayInfo>
-		</DataType>
-		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000005}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..4] OF BIT</Name>
-			<BitSize>5</BitSize>
-			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
-			<ArrayInfo>
-				<LBound>0</LBound>
-				<Elements>5</Elements>
 			</ArrayInfo>
 		</DataType>
 		<DataType>
@@ -100,7 +82,7 @@
 		<ImageData Id="1004">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ffff00ffff00ffff00ffff00ffff00ff808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff007fff007fff007fff007fff007fff007fffc0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffff00ff</ImageData>
 		<ImageData Id="1005">424dd6020000000000003600000028000000100000000e0000000100180000000000a0020000c40e0000c40e00000000000000000000ff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080808080808080808080808080808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c000ffffc0c0c000ffff808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0ff0000c0c0c0ff0000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c00000ffc0c0c00000ff808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c000bfff00bfffc0c0c0808080c0c0c0000000c0c0c0000000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0008000c0c0c0008000808080ff00ffff00ffff00ffff00ffff00ffff00ffc0c0c0c0c0c0c0c0c0c0c0c0808080c0c0c0c0c0c0c0c0c0c0c0c0808080ff00ffff00ffff00ffff00ffff00ff</ImageData>
 	</ImageDatas>
-	<Project ProjectGUID="{1C1D7615-AE41-499E-83EB-D40AA26E5F09}" Target64Bit="true" ShowHideConfigurations="#x6">
+	<Project ProjectGUID="{1C1D7615-AE41-499E-83EB-D40AA26E5F09}" TargetNetId="10.50.1.27.1.1" ShowHideConfigurations="#x6">
 		<System>
 			<Licenses>
 				<Target>
@@ -111,11 +93,33 @@
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
 					<Name>PlcTask</Name>
 				</Task>
+				<Task Id="4" Priority="1" CycleTime="100000" AmsPort="301">
+					<Name>twinsafe</Name>
+					<Vars VarGrpType="1" InsertType="1">
+						<Name>Inputs</Name>
+					</Vars>
+					<Vars VarGrpType="2" InsertType="1">
+						<Name>Outputs</Name>
+						<Var>
+							<Name>twinsaferun</Name>
+							<Type>BIT</Type>
+						</Var>
+						<Var>
+							<Name>twinsafeack</Name>
+							<Type>BIT</Type>
+							<BitOffs>8</BitOffs>
+							<ExternalAddress>1</ExternalAddress>
+						</Var>
+					</Vars>
+					<Image Id="5" AddrType="1" ImageType="1" SizeOut="2">
+						<Name>Image</Name>
+					</Image>
+				</Task>
 			</Tasks>
 		</System>
 		<Plc>
 			<Project GUID="{A69D7AB4-53AC-40E7-8E11-A7DF25BBEC0A}" Name="ED_PROG" PrjFilePath="ED_PROG\ED_PROG.plcproj" TmcFilePath="ED_PROG\ED_PROG.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" CopyTmcToTarget="true" CopyTpyToTarget="false" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="ED_PROG\ED_PROG.tmc" TmcHash="{C5B99277-E97F-49DD-2A32-3D5C8223CAA7}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="ED_PROG\ED_PROG.tmc" TmcHash="{AFA83384-821B-FEBC-8F8A-554BFA5BC19C}">
 					<Name>ED_PROG Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
@@ -150,6 +154,42 @@
 							<Type>INT</Type>
 						</Var>
 						<Var>
+							<Name>io_mapping.pt_3428_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.pt_3414_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.lt_3102_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.lt_3202_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.lt_3302_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.lt_3153_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.lt_3253_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.lt_3353_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.lt_3402_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
 							<Name>io_mapping.tt_3118_raw_input</Name>
 							<Type>INT</Type>
 						</Var>
@@ -171,6 +211,10 @@
 						</Var>
 						<Var>
 							<Name>io_mapping.tt_3340_raw_input</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>io_mapping.tt_3432_raw_input</Name>
 							<Type>INT</Type>
 						</Var>
 						<Var>
@@ -352,46 +396,6 @@ Motor vfd run feedback, mapped to a physical input]]></Comment>
 							<Name>io_mapping.nv_3162_closed_feedback</Name>
 							<Type>BOOL</Type>
 						</Var>
-						<Var>
-							<Name>io_mapping.pt_3428_raw_input</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>io_mapping.pt_3414_raw_input</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>io_mapping.lt_3402_raw_input</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>io_mapping.tt_3432_raw_input</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>io_mapping.lt_3102_raw_input</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>io_mapping.lt_3202_raw_input</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>io_mapping.lt_3302_raw_input</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>io_mapping.lt_3153_raw_input</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>io_mapping.lt_3253_raw_input</Name>
-							<Type>INT</Type>
-						</Var>
-						<Var>
-							<Name>io_mapping.lt_3353_raw_input</Name>
-							<Type>INT</Type>
-						</Var>
 					</Vars>
 					<Vars VarGrpType="2" AreaNo="1">
 						<Name>PlcTask Outputs</Name>
@@ -569,7 +573,7 @@ Motor vfd run feedback, mapped to a physical input]]></Comment>
 			<Project File="ED_SAFE.xti"/>
 		</Safety>
 		<Io>
-			<Device Id="1" DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="10.100.2.44.2.1" RemoteName="Device 1 (EtherCAT)" InfoImageId="2">
+			<Device Id="1" DevType="111" DevFlags="#x0003" AmsPort="28673" AmsNetId="10.50.1.27.2.1" RemoteName="Device 1 (EtherCAT)" InfoImageId="2">
 				<Name>Device 1 (EtherCAT)</Name>
 				<AddressInfo>
 					<Ccat>
@@ -583,6 +587,9 @@ Motor vfd run feedback, mapped to a physical input]]></Comment>
 				</AddressInfo>
 				<Image Id="1" AddrType="9" ImageType="3">
 					<Name>Image</Name>
+				</Image>
+				<Image Id="6" AddrType="10" ImageType="3">
+					<Name>Image-2</Name>
 				</Image>
 				<Box Id="1" BoxType="9099">
 					<Name>Term 1 (EK1200)</Name>
@@ -1791,8 +1798,8 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 						<EtherCAT SlaveType="2" PdiType="#x0005" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="3" FoeType="1" VendorId="#x00000002" ProductCode="#x0b5f3052" RevisionNo="#x00100000" InfoDataAddr="true" RepeatSupport="true" TimeoutStateChange1="5000" TimeoutMailbox2="10000" TComSupport="true" PortPhys="51" DebugMemory="8" SafetyLogicSupported="true" MaxSlotCount="4" Type="EL2911, Potential supply terminal (10 A) with 4 Ch. Safety Inputs, TwinSAFE" Desc="EL2911" PortABoxInfo="#x01000009">
 							<SyncMan>001000012600010001000000000100010001001026010000</SyncMan>
 							<SyncMan>001100012200010002000000000100010001001122010000</SyncMan>
-							<SyncMan>001208002400010003000000000000000700001224010000</SyncMan>
-							<SyncMan>001d09002000010004000000000000000900001d20010000</SyncMan>
+							<SyncMan>001203002400010003000000000000000700001224010000</SyncMan>
+							<SyncMan>001d03002000010004000000000000000900001d20010000</SyncMan>
 							<SyncMan>002e00002400000003000000000000000000002e24000000</SyncMan>
 							<SyncMan>002f00002000000004000000000000000000002f20000000</SyncMan>
 							<SyncMan>fa2f01002400010003000000000000000200fa2f24010000</SyncMan>
@@ -1811,91 +1818,47 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 							<SuTask>#x00000000</SuTask>
 							<SuTask>#x00000000</SuTask>
 							<SuTask>#x00000000</SuTask>
-							<MBoxUserCmdData>004003000a00000000000000030010000000000000000000000000000000000020f3100502000000010000</MBoxUserCmdData>
-							<Pdo Name="FSoE Inputs" Index="#x1a00" Flags="#x0091" SyncMan="3">
-								<Entry Name="FSOE__FSoE Command" Index="#x6020" Sub="#x01">
-									<Type>USINT</Type>
-								</Entry>
-								<Entry Name="FSOE__FSOUT Module.Module Fault" Index="#x6002" Sub="#x01">
+							<MBoxUserCmdData>004003000a00000000000000000000000000000000000000000000000000000020f3100502000000010000</MBoxUserCmdData>
+							<Pdo Name="StandardOutputs" Index="#x17f0" InOut="1" Flags="#x2011" SyncMan="2">
+								<Entry Name="Standard In Var 1" Index="#x6000" Sub="#x01">
 									<Type>BIT</Type>
 								</Entry>
-								<Entry Name="FSOE__FSIN Module.Channel 1.Input" Index="#x6011" Sub="#x01">
-									<Type>BIT</Type>
-								</Entry>
-								<Entry Name="FSOE__FSIN Module.Channel 2.Input" Index="#x6011" Sub="#x02">
-									<Type>BIT</Type>
-								</Entry>
-								<Entry Name="FSOE__FSIN Module.Channel 3.Input" Index="#x6011" Sub="#x03">
-									<Type>BIT</Type>
-								</Entry>
-								<Entry Name="FSOE__FSIN Module.Channel 4.Input" Index="#x6011" Sub="#x04">
-									<Type>BIT</Type>
-								</Entry>
-								<Entry Name="FSOE__FSIN Module.Module Fault" Index="#x6012" Sub="#x01">
-									<Type>BIT</Type>
-								</Entry>
-								<Entry Name="FSOE__">
-									<Type GUID="{18071995-0000-0000-0000-002000000002}">ARRAY [0..1] OF BIT</Type>
-								</Entry>
-								<Entry Name="FSOE__FSoE CRC 000" Index="#x6020" Sub="#x03">
-									<Type>UINT</Type>
-								</Entry>
-								<Entry Name="FSOE__FSoE Connection ID" Index="#x6020" Sub="#x02">
-									<Type>UINT</Type>
-								</Entry>
-							</Pdo>
-							<Pdo Name="FSoE Outputs" Index="#x1600" InOut="1" Flags="#x0091" SyncMan="2">
-								<Entry Name="FSOE__FSoE Command" Index="#x7020" Sub="#x01">
-									<Type>USINT</Type>
-								</Entry>
-								<Entry Name="FSOE__FSOUT Module.Output" Index="#x7001" Sub="#x01">
-									<Type>BIT</Type>
-								</Entry>
-								<Entry Name="FSOE__FSOUT Module.ErrAck" Index="#x7002" Sub="#x01">
-									<Type>BIT</Type>
-								</Entry>
-								<Entry Name="FSOE__FSIN Module.ErrAck" Index="#x7012" Sub="#x01">
-									<Type>BIT</Type>
-								</Entry>
-								<Entry Name="FSOE__">
-									<Type GUID="{18071995-0000-0000-0000-002000000005}">ARRAY [0..4] OF BIT</Type>
-								</Entry>
-								<Entry Name="FSOE__FSoE CRC 000" Index="#x7020" Sub="#x03">
-									<Type>UINT</Type>
-								</Entry>
-								<Entry Name="FSOE__FSoE Connection ID" Index="#x7020" Sub="#x02">
-									<Type>UINT</Type>
-								</Entry>
-							</Pdo>
-							<Pdo Name="Outputs" Index="#x17fe" InOut="1" Flags="#x0091" SyncMan="6" SyncUnit="2">
-								<Entry Name="Standard Output" Index="#x7003" Sub="#x01">
-									<Type>BIT</Type>
-								</Entry>
-								<Entry>
-									<Type GUID="{18071995-0000-0000-0000-002000000007}">ARRAY [0..6] OF BIT</Type>
-								</Entry>
-							</Pdo>
-							<Pdo Name="FIELDVOLTAGE Field Voltage Status" Index="#x1bfe" Flags="#x0091" SyncMan="3">
-								<Entry Name="Fieldvoltage Underrange" Index="#xf6c0" Sub="#x01">
-									<Type>BIT</Type>
-								</Entry>
-								<Entry Name="Fieldvoltage Overrange" Index="#xf6c0" Sub="#x02">
+								<Entry Name="Standard In Var 2" Index="#x6000" Sub="#x02">
 									<Type>BIT</Type>
 								</Entry>
 								<Entry>
 									<Type GUID="{18071995-0000-0000-0000-002000000006}">ARRAY [0..5] OF BIT</Type>
 								</Entry>
 							</Pdo>
+							<Pdo Name="Outputs" Index="#x17fe" InOut="1" Flags="#x0091" SyncMan="6" SyncUnit="2">
+								<Entry Name="Standard Output" BitLen="1" Index="#x7003" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry BitLen="7">
+									<Type GUID="{18071995-0000-0000-0000-002000000007}">ARRAY [0..6] OF BIT</Type>
+								</Entry>
+							</Pdo>
+							<Pdo Name="FIELDVOLTAGE Field Voltage Status" Index="#x1bfe" Flags="#x0091" SyncMan="3">
+								<Entry Name="Fieldvoltage Underrange" BitLen="1" Index="#xf6c0" Sub="#x01">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry Name="Fieldvoltage Overrange" BitLen="1" Index="#xf6c0" Sub="#x02">
+									<Type>BIT</Type>
+								</Entry>
+								<Entry BitLen="6">
+									<Type GUID="{18071995-0000-0000-0000-002000000006}">ARRAY [0..5] OF BIT</Type>
+								</Entry>
+							</Pdo>
 							<Pdo Name="FSLOGIC Inputs" Index="#x1bff" Flags="#x0091" SyncMan="3">
-								<Entry Name="Safe Logic State" Index="#xf100" Sub="#x01">
+								<Entry Name="Safe Logic State" BitLen="8" Index="#xf100" Sub="#x01">
 									<Type>USINT</Type>
 								</Entry>
-								<Entry Name="Cycle Counter" Index="#xf100" Sub="#x02">
+								<Entry Name="Cycle Counter" BitLen="8" Index="#xf100" Sub="#x02">
 									<Type>USINT</Type>
 								</Entry>
 							</Pdo>
 							<Pdo Name="FSLOGIC Outputs" Index="#x17ff" InOut="1" Flags="#x0091" SyncMan="2">
-								<Entry>
+								<Entry BitLen="16">
 									<Type GUID="{18071995-0000-0000-0000-002000000010}">ARRAY [0..1] OF BYTE</Type>
 								</Entry>
 							</Pdo>
@@ -1905,14 +1868,6 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 							<Slot Name="FSOE-Slot">
 								<SlotData>0000000001000400000000000000000000000000000000000000000000000000</SlotData>
 								<ModuleIdent>2911</ModuleIdent>
-								<Module Id="#x03090001" Type="FSOE" Class="2911">
-									<Name>Module 1 (FSOE)</Name>
-									<ImageId>408</ImageId>
-									<ModuleData>020000005f0b000000002c000000000000000000000000000000000000000000</ModuleData>
-									<PdoIndex>6656</PdoIndex>
-									<PdoIndex>5632</PdoIndex>
-									<CoeProfile ProfileNo="#x01231389"/>
-								</Module>
 							</Slot>
 							<Slot Name="FSOUT-Slot">
 								<SlotData>0000010001000400000000000000000000000000000000000000000000000000</SlotData>
@@ -2022,7 +1977,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				</Box>
 				<EtherCAT/>
 			</Device>
-			<Device Id="4" DevType="111" DevFlags="#x0003" AmsPort="28676" AmsNetId="10.100.2.44.5.1" RemoteName="Device 4 (EtherCAT)" InfoImageId="4">
+			<Device Id="4" DevType="111" DevFlags="#x0003" AmsPort="28676" AmsNetId="10.50.1.27.5.1" RemoteName="Device 4 (EtherCAT)" InfoImageId="4">
 				<Name>Device 4 (EtherCAT)</Name>
 				<AddressInfo>
 					<Pnp>
@@ -5168,6 +5123,12 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Inputs^io_mapping.u_3405_run_feedback" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^io_mapping.u_3405_fault_reset_io" VarB="Channel 10^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^io_mapping.u_3405_run_command_io" VarB="Channel 9^Output" AutoLink="true"/>
+			</OwnerB>
+		</OwnerA>
+		<OwnerA Name="TIRT^twinsafe">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 10 (EL2911)">
+				<Link VarA="Outputs^twinsafeack" VarB="StandardOutputs^Standard In Var 1"/>
+				<Link VarA="Outputs^twinsaferun" VarB="StandardOutputs^Standard In Var 2"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>
