@@ -1434,6 +1434,261 @@ VAR_GLOBAL PERSISTENT
 	{attribute 'OPC.UA.DA' :='1'}
 	popa_0081_cpt_3144_scaled_value : REAL;
 
+	//---ft_3122-----------------------------------------------------------------------------------------------------------------------
+	//Alarm Priority setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_low_low_priority : INT;
+	//Alarm delay setpoint(seconds)
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_low_low_delay_setpoint : INT;
+	//Alarm active for HMI
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_low_low_active : BOOL;
+	//Analog Alarm Setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_low_low_setpoint : REAL;
+	//Alarm enable
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_low_low_enable: BOOL;
+	
+	//Alarm Priority setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_low_priority : INT;
+	//Alarm delay setpoint(seconds)
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_low_delay_setpoint : INT;
+	//Alarm active for HMI
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_low_active : BOOL;
+	//Analog Alarm Setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_low_setpoint : REAL;
+	//Alarm enable
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_low_enable: BOOL;
+	
+	//Alarm Priority setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_high_priority : INT;
+	//Alarm delay setpoint(seconds)
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_high_delay_setpoint : INT;
+	//Alarm active for HMI
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_high_active : BOOL;
+	//Analog Alarm Setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_high_setpoint : REAL;
+	//Alarm enable
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_high_enable: BOOL;
+	
+	//Alarm Priority setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_high_high_priority : INT;
+	//Alarm delay setpoint(seconds)
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_high_high_delay_setpoint : INT;
+	//Alarm active for HMI
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_high_high_active : BOOL;
+	//Analog Alarm Setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_high_high_setpoint : REAL;
+	//Alarm enable
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_high_high_enable: BOOL;
+	
+	
+	//Raw Min value for analog input
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_raw_min : REAL :=0;
+	//Raw max value for analog input
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_raw_max : REAL :=32767;
+	//EU Min value for analog input
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_eu_min : REAL;
+	//EU Max value for analog input
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_eu_max : REAL;
+	//Filter factor value for analog input
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_filter_factor : REAL;
+	//Scaled value for analog input
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3122_scaled_value : REAL;
+	
+	//---ft_3222-----------------------------------------------------------------------------------------------------------------------
+	//Alarm Priority setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_low_low_priority : INT;
+	//Alarm delay setpoint(seconds)
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_low_low_delay_setpoint : INT;
+	//Alarm active for HMI
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_low_low_active : BOOL;
+	//Analog Alarm Setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_low_low_setpoint : REAL;
+	//Alarm enable
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_low_low_enable: BOOL;
+	
+	//Alarm Priority setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_low_priority : INT;
+	//Alarm delay setpoint(seconds)
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_low_delay_setpoint : INT;
+	//Alarm active for HMI
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_low_active : BOOL;
+	//Analog Alarm Setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_low_setpoint : REAL;
+	//Alarm enable
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_low_enable: BOOL;
+	
+	//Alarm Priority setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_high_priority : INT;
+	//Alarm delay setpoint(seconds)
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_high_delay_setpoint : INT;
+	//Alarm active for HMI
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_high_active : BOOL;
+	//Analog Alarm Setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_high_setpoint : REAL;
+	//Alarm enable
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_high_enable: BOOL;
+	
+	//Alarm Priority setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_high_high_priority : INT;
+	//Alarm delay setpoint(seconds)
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_high_high_delay_setpoint : INT;
+	//Alarm active for HMI
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_high_high_active : BOOL;
+	//Analog Alarm Setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_high_high_setpoint : REAL;
+	//Alarm enable
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_high_high_enable: BOOL;
+	
+	
+	//Raw Min value for analog input
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_raw_min : REAL :=0;
+	//Raw max value for analog input
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_raw_max : REAL :=32767;
+	//EU Min value for analog input
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_eu_min : REAL;
+	//EU Max value for analog input
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_eu_max : REAL;
+	//Filter factor value for analog input
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_filter_factor : REAL;
+	//Scaled value for analog input
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3222_scaled_value : REAL;
+	
+	//---ft_3322-----------------------------------------------------------------------------------------------------------------------
+	//Alarm Priority setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_low_low_priority : INT;
+	//Alarm delay setpoint(seconds)
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_low_low_delay_setpoint : INT;
+	//Alarm active for HMI
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_low_low_active : BOOL;
+	//Analog Alarm Setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_low_low_setpoint : REAL;
+	//Alarm enable
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_low_low_enable: BOOL;
+	
+	//Alarm Priority setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_low_priority : INT;
+	//Alarm delay setpoint(seconds)
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_low_delay_setpoint : INT;
+	//Alarm active for HMI
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_low_active : BOOL;
+	//Analog Alarm Setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_low_setpoint : REAL;
+	//Alarm enable
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_low_enable: BOOL;
+	
+	//Alarm Priority setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_high_priority : INT;
+	//Alarm delay setpoint(seconds)
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_high_delay_setpoint : INT;
+	//Alarm active for HMI
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_high_active : BOOL;
+	//Analog Alarm Setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_high_setpoint : REAL;
+	//Alarm enable
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_high_enable: BOOL;
+	
+	//Alarm Priority setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_high_high_priority : INT;
+	//Alarm delay setpoint(seconds)
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_high_high_delay_setpoint : INT;
+	//Alarm active for HMI
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_high_high_active : BOOL;
+	//Analog Alarm Setpoint
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_high_high_setpoint : REAL;
+	//Alarm enable
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_high_high_enable: BOOL;
+	
+	
+	//Raw Min value for analog input
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_raw_min : REAL :=0;
+	//Raw max value for analog input
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_raw_max : REAL :=32767;
+	//EU Min value for analog input
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_eu_min : REAL;
+	//EU Max value for analog input
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_eu_max : REAL;
+	//Filter factor value for analog input
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_filter_factor : REAL;
+	//Scaled value for analog input
+	{attribute 'OPC.UA.DA' :='1'}
+	popa_0081_ft_3322_scaled_value : REAL;
+	
 	//---lt_3102-----------------------------------------------------------------------------------------------------------------------
 	//Alarm Priority setpoint
 	{attribute 'OPC.UA.DA' :='1'}
@@ -1518,7 +1773,6 @@ VAR_GLOBAL PERSISTENT
 	//Scaled value for analog input
 	{attribute 'OPC.UA.DA' :='1'}
 	popa_0081_lt_3102_scaled_value : REAL;
-	
 	
 	//---lt_3202-----------------------------------------------------------------------------------------------------------------------
 	//Alarm Priority setpoint

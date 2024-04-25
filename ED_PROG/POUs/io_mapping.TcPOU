@@ -7,6 +7,10 @@ VAR PERSISTENT
     //Analog input function block
 	cpt_3144: analog_scaling;
 	
+	ft_3122 : analog_scaling;
+	ft_3222 : analog_scaling;
+	ft_3322 : analog_scaling;
+	
 	lt_3102 : analog_scaling;
 	lt_3202 : analog_scaling;
 	lt_3302 : analog_scaling;
@@ -35,6 +39,13 @@ VAR PERSISTENT
     //Analog input raw input, mapped to a physical input
     cpt_3144_raw_input AT %I* : INT;
 	
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 18 (EL3058)^AI Standard Channel 1^Value'}
+	ft_3122_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 18 (EL3058)^AI Standard Channel 2^Value'}
+	ft_3222_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 18 (EL3058)^AI Standard Channel 3^Value'}
+	ft_3322_raw_input AT %I* : INT;
+	
 	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 14 (EL3058)^AI Standard Channel 1^Value'}
 	pt_3119_raw_input AT %I* : INT;
 	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 14 (EL3058)^AI Standard Channel 2^Value'}
@@ -47,18 +58,24 @@ VAR PERSISTENT
 	pt_3241_raw_input AT %I* : INT;
 	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 14 (EL3058)^AI Standard Channel 6^Value'}
 	pt_3341_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 25 (EK1100)^Term 26 (EL3058)^AI Standard Channel 4^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 35 (EK1100)^Term 36 (EL3058)^AI Standard Channel 4^Value'}
 	pt_3428_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 25 (EK1100)^Term 26 (EL3058)^AI Standard Channel 5^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 35 (EK1100)^Term 36 (EL3058)^AI Standard Channel 5^Value'}
 	pt_3414_raw_input AT %I* : INT;
 	
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 16 (EL3058)^AI Standard Channel 3^Value'}
 	lt_3102_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 16 (EL3058)^AI Standard Channel 4^Value'}
 	lt_3202_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 16 (EL3058)^AI Standard Channel 5^Value'}
 	lt_3302_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 16 (EL3058)^AI Standard Channel 6^Value'}
 	lt_3153_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 16 (EL3058)^AI Standard Channel 7^Value'}
 	lt_3253_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 16 (EL3058)^AI Standard Channel 8^Value'}
 	lt_3353_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 25 (EK1100)^Term 26 (EL3058)^AI Standard Channel 3^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 35 (EK1100)^Term 36 (EL3058)^AI Standard Channel 3^Value'}
 	lt_3402_raw_input AT %I* : INT;
 	
 	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 14 (EL3058)^AI Standard Channel 7^Value'}
@@ -73,7 +90,7 @@ VAR PERSISTENT
 	tt_3240_raw_input AT %I* : INT;
 	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 15 (EL3058)^AI Standard Channel 4^Value'}
 	tt_3340_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 25 (EK1100)^Term 26 (EL3058)^AI Standard Channel 2^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 35 (EK1100)^Term 36 (EL3058)^AI Standard Channel 2^Value'}
 	tt_3432_raw_input AT %I* : INT;
 	
 //---Field Equipment:Pumps----------------------------------------------------------------------------------------------------------
@@ -93,7 +110,7 @@ VAR PERSISTENT
 	u_3360_run_feedback AT %I* : BOOL;
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL1859)^Channel 6^Input'}
 	u_3370_run_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 25 (EK1100)^Term 28 (EL1859)^Channel 2^Input'}
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 35 (EK1100)^Term 38 (EL1859)^Channel 2^Input'}
 	u_3405_run_feedback AT %I* : BOOL;
 	
 	//Motor Fault feedback
@@ -111,7 +128,7 @@ VAR PERSISTENT
 	u_3360_fault_feedback AT %I* : BOOL;
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL1859)^Channel 5^Input'}
 	u_3370_fault_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 25 (EK1100)^Term 28 (EL1859)^Channel 1^Input'}
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 35 (EK1100)^Term 38 (EL1859)^Channel 1^Input'}
 	u_3405_fault_feedback AT %I* : BOOL;
 	
 	
@@ -128,19 +145,19 @@ VAR PERSISTENT
 	//Motor vfd speed command scaled output, mappped to a physical output
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 1^Analog output'}
 	u_3112_speed_command_io AT %Q* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 3^Analog output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 2^Analog output'}
 	u_3212_speed_command_io AT %Q* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 5^Analog output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 3^Analog output'}
 	u_3312_speed_command_io AT %Q* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 7^Analog output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 4^Analog output'}
 	u_3160_speed_command_io AT %Q* : INT;
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EL4124)^AO Output Channel 1^Analog output'}
 	u_3260_speed_command_io AT %Q* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EL4124)^AO Output Channel 3^Analog output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EL4124)^AO Output Channel 2^Analog output'}
 	u_3360_speed_command_io AT %Q* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EL4124)^AO Output Channel 5^Analog output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EL4124)^AO Output Channel 3^Analog output'}
 	u_3370_speed_command_io AT %Q* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 25 (EK1100)^Term 27 (EL4124)^AO Output Channel 1^Analog output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 35 (EK1100)^Term 37 (EL4124)^AO Output Channel 1^Analog output'}
 	u_3405_speed_command_io AT %Q* : INT;
 	
 	//Motor vfd run command, mapped to a physical output
@@ -158,7 +175,7 @@ VAR PERSISTENT
 	u_3360_run_command_io AT %Q* : BOOL;
 	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL1859)^Channel 13^Output'}
 	u_3370_run_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' :=  'TIID^Device 4 (EtherCAT)^Term 25 (EK1100)^Term 28 (EL1859)^Channel 9^Output'}
+	{attribute 'TcLinkTo' :=  'TIID^Device 4 (EtherCAT)^Term 35 (EK1100)^Term 38 (EL1859)^Channel 9^Output'}
 	u_3405_run_command_io AT %Q* : BOOL;
 	
 	//Motor Fault Reset
@@ -176,7 +193,7 @@ VAR PERSISTENT
 	u_3360_fault_reset_io AT %Q* : BOOL;
 	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL1859)^Channel 14^Output'}
 	u_3370_fault_reset_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' :=  'TIID^Device 4 (EtherCAT)^Term 25 (EK1100)^Term 28 (EL1859)^Channel 10^Output'}
+	{attribute 'TcLinkTo' :=  'TIID^Device 4 (EtherCAT)^Term 35 (EK1100)^Term 38 (EL1859)^Channel 10^Output'}
 	u_3405_fault_reset_io AT %Q* : BOOL;
 	
 	//Motor vfd speed feedback
@@ -204,7 +221,7 @@ VAR PERSISTENT
 	u_3360_speed_feedback_raw_input AT %I* : INT;
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 7^Value'}
 	u_3370_speed_feedback_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 25 (EK1100)^Term 26 (EL3058)^AI Standard Channel 1^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 35 (EK1100)^Term 36 (EL3058)^AI Standard Channel 1^Value'}
 	u_3405_speed_feedback_raw_input AT %I* : INT;
 	
 //--Field Equipent: Valves---------------------------------------------------------------------------------------------------------------
@@ -225,6 +242,9 @@ VAR PERSISTENT
 	av_3148_position_command : analog_scaling;
 	av_3248_position_command : analog_scaling;
 	av_3348_position_command : analog_scaling;
+	nv_3110_position_command : analog_scaling;
+	nv_3210_position_command : analog_scaling;
+	nv_3310_position_command : analog_scaling;
 	//Analog valve position command output valve
 	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 19 (EL4124)^AO Output Channel 1^Analog output'}
 	av_3148_position_command_io AT %Q* : INT;
@@ -233,42 +253,58 @@ VAR PERSISTENT
 	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 19 (EL4124)^AO Output Channel 3^Analog output'}
 	av_3348_position_command_io AT %Q* : INT;
 	
-	//Example digital valve open feedback
-	nv_3110_open_feedback AT %I* : BOOL;
-	nv_3210_open_feedback AT %I* : BOOL;
-	nv_3310_open_feedback AT %I* : BOOL;
+	//Digital valve open feedback
+	//{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
+	//nv_3110_open_feedback AT %I* : BOOL;
+	//{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
+	//nv_3210_open_feedback AT %I* : BOOL;
+	//{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
+	//nv_3310_open_feedback AT %I* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 21 (EL1859)^Channel 1^Input'}
 	nv_3135_open_feedback AT %I* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 21 (EL1859)^Channel 2^Input'}
 	nv_3235_open_feedback AT %I* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 21 (EL1859)^Channel 3^Input'}
 	nv_3335_open_feedback AT %I* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 21 (EL1859)^Channel 4^Input'}
 	nv_3372_open_feedback AT %I* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 21 (EL1859)^Channel 5^Input'}
 	nv_3162_open_feedback AT %I* : BOOL;
 	
-	//Example digital valve closed feedback
-	nv_3110_closed_feedback AT %I* : BOOL;
-	nv_3210_closed_feedback AT %I* : BOOL;
-	nv_3310_closed_feedback AT %I* : BOOL;
+	//Digital valve closed feedback
+	//{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
+	//nv_3110_closed_feedback AT %I* : BOOL;
+	//{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
+	//nv_3210_closed_feedback AT %I* : BOOL;
+	//{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
+	//nv_3310_closed_feedback AT %I* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 22 (EL1859)^Channel 1^Input'}
 	nv_3135_closed_feedback AT %I* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 22 (EL1859)^Channel 2^Input'}
 	nv_3235_closed_feedback AT %I* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 22 (EL1859)^Channel 3^Input'}
 	nv_3335_closed_feedback AT %I* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 22 (EL1859)^Channel 4^Input'}
 	nv_3372_closed_feedback AT %I* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 22 (EL1859)^Channel 5^Input'}
 	nv_3162_closed_feedback AT %I* : BOOL;
 	
-	//Example digital valve open command
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 21 (EK1914)^Term 22 (EL1859)^Channel 11^Output'}
+	//Digital valve open command
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
 	nv_3110_open_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 21 (EK1914)^Term 22 (EL1859)^Channel 10^Output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 10^Output'}
 	nv_3210_open_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 21 (EK1914)^Term 22 (EL1859)^Channel 13^Output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 13^Output'}
 	nv_3310_open_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 21 (EK1914)^Term 22 (EL1859)^Channel 12^Output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 12^Output'}
 	nv_3135_open_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 21 (EK1914)^Term 22 (EL1859)^Channel 14^Output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 14^Output'}
 	nv_3235_open_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 21 (EK1914)^Term 22 (EL1859)^Channel 15^Output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 15^Output'}
 	nv_3335_open_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 21 (EK1914)^Term 22 (EL1859)^Channel 16^Output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 16^Output'}
 	nv_3372_open_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 21 (EK1914)^Term 22 (EL1859)^Channel 9^Output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 9^Output'}
 	nv_3162_open_command_io AT %Q* : BOOL;
 	
 	safety_reset AT %Q* : BOOL;
@@ -286,6 +322,39 @@ cpt_3144.raw_max:=opc.popa_0081_cpt_3144_raw_max;
 cpt_3144.raw_min:=opc.popa_0081_cpt_3144_raw_min;
 //Map the analog scaling function block raw input to the physical raw input variable
 cpt_3144.raw_input := cpt_3144_raw_input;
+
+//Instantiate analog input function block
+ft_3122();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+ft_3122.eu_max:=opc.popa_0081_ft_3122_eu_max;
+ft_3122.eu_min:=opc.popa_0081_ft_3122_eu_min;
+ft_3122.filter_factor:=opc.popa_0081_ft_3122_filter_factor;
+ft_3122.raw_max:=opc.popa_0081_ft_3122_raw_max;
+ft_3122.raw_min:=opc.popa_0081_ft_3122_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+ft_3122.raw_input := ft_3122_raw_input;
+
+//Instantiate analog input function block
+ft_3222();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+ft_3222.eu_max:=opc.popa_0081_ft_3222_eu_max;
+ft_3222.eu_min:=opc.popa_0081_ft_3222_eu_min;
+ft_3222.filter_factor:=opc.popa_0081_ft_3222_filter_factor;
+ft_3222.raw_max:=opc.popa_0081_ft_3222_raw_max;
+ft_3222.raw_min:=opc.popa_0081_ft_3222_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+ft_3222.raw_input := ft_3222_raw_input;
+
+//Instantiate analog input function block
+ft_3322();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+ft_3322.eu_max:=opc.popa_0081_ft_3322_eu_max;
+ft_3322.eu_min:=opc.popa_0081_ft_3322_eu_min;
+ft_3322.filter_factor:=opc.popa_0081_ft_3322_filter_factor;
+ft_3322.raw_max:=opc.popa_0081_ft_3322_raw_max;
+ft_3322.raw_min:=opc.popa_0081_ft_3322_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+ft_3322.raw_input := ft_3322_raw_input;
 
 //Instantiate analog input function block
 lt_3102();
@@ -544,11 +613,11 @@ u_3405_run_command_io:=motor_vfd_control_st.u_3405.run_command;
 //Instantiate u_3112 Speed command analog output function block
 u_3112_speed_command();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
-u_3112_speed_command.eu_max:=opc.popa_0081_u_3112_speed_command_eu_max;
-u_3112_speed_command.eu_min:=opc.popa_0081_u_3112_speed_command_eu_min;
+u_3112_speed_command.eu_max:=32767;
+u_3112_speed_command.eu_min:=0;
 u_3112_speed_command.filter_factor:=opc.popa_0081_u_3112_speed_command_filter_factor;
-u_3112_speed_command.raw_max:=opc.popa_0081_u_3112_speed_command_raw_max;
-u_3112_speed_command.raw_min:=opc.popa_0081_u_3112_speed_command_raw_min;
+u_3112_speed_command.raw_max:=60;
+u_3112_speed_command.raw_min:=0;
 
 //Map output from motor control pou to scaling block
 IF general.ed_routine_maint OR general.ed_routine_manual THEN
@@ -579,11 +648,11 @@ u_3112_speed_feedback.raw_input := u_3112_speed_feedback_raw_input;
 //Instantiate Example analog output function block
 u_3212_speed_command();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
-u_3212_speed_command.eu_max:=opc.popa_0081_u_3212_speed_command_eu_max;
-u_3212_speed_command.eu_min:=opc.popa_0081_u_3212_speed_command_eu_min;
+u_3212_speed_command.eu_max:=32767;
+u_3212_speed_command.eu_min:=0;
 u_3212_speed_command.filter_factor:=opc.popa_0081_u_3212_speed_command_filter_factor;
-u_3212_speed_command.raw_max:=opc.popa_0081_u_3212_speed_command_raw_max;
-u_3212_speed_command.raw_min:=opc.popa_0081_u_3212_speed_command_raw_min;
+u_3212_speed_command.raw_max:=60;
+u_3212_speed_command.raw_min:=0;
 
 //Map output from motor control pou to scaling block
 IF general.ed_routine_maint OR general.ed_routine_manual THEN
@@ -610,11 +679,11 @@ u_3212_speed_feedback.raw_input := u_3212_speed_feedback_raw_input;
 //Instantiate Example analog output function block
 u_3312_speed_command();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
-u_3312_speed_command.eu_max:=opc.popa_0081_u_3312_speed_command_eu_max;
-u_3312_speed_command.eu_min:=opc.popa_0081_u_3312_speed_command_eu_min;
+u_3312_speed_command.eu_max:=32767;
+u_3312_speed_command.eu_min:=0;
 u_3312_speed_command.filter_factor:=opc.popa_0081_u_3312_speed_command_filter_factor;
-u_3312_speed_command.raw_max:=opc.popa_0081_u_3312_speed_command_raw_max;
-u_3312_speed_command.raw_min:=opc.popa_0081_u_3312_speed_command_raw_min;
+u_3312_speed_command.raw_max:=60;
+u_3312_speed_command.raw_min:=0;
 
 //Map output from motor control pou to scaling block
 IF general.ed_routine_maint OR general.ed_routine_manual THEN
@@ -641,11 +710,11 @@ u_3312_speed_feedback.raw_input := u_3312_speed_feedback_raw_input;
 //Instantiate Example analog output function block
 u_3160_speed_command();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
-u_3160_speed_command.eu_max:=opc.popa_0081_u_3160_speed_command_eu_max;
-u_3160_speed_command.eu_min:=opc.popa_0081_u_3160_speed_command_eu_min;
+u_3160_speed_command.eu_max:=32767;
+u_3160_speed_command.eu_min:=0;
 u_3160_speed_command.filter_factor:=opc.popa_0081_u_3160_speed_command_filter_factor;
-u_3160_speed_command.raw_max:=opc.popa_0081_u_3160_speed_command_raw_max;
-u_3160_speed_command.raw_min:=opc.popa_0081_u_3160_speed_command_raw_min;
+u_3160_speed_command.raw_max:=60;
+u_3160_speed_command.raw_min:=0;
 
 //Map output from motor control pou to scaling block
 IF general.ed_routine_maint OR general.ed_routine_manual THEN
@@ -672,11 +741,11 @@ u_3160_speed_feedback.raw_input := u_3160_speed_feedback_raw_input;
 //Instantiate Example analog output function block
 u_3260_speed_command();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
-u_3260_speed_command.eu_max:=opc.popa_0081_u_3260_speed_command_eu_max;
-u_3260_speed_command.eu_min:=opc.popa_0081_u_3260_speed_command_eu_min;
+u_3260_speed_command.eu_max:=32767;
+u_3260_speed_command.eu_min:=0;
 u_3260_speed_command.filter_factor:=opc.popa_0081_u_3260_speed_command_filter_factor;
-u_3260_speed_command.raw_max:=opc.popa_0081_u_3260_speed_command_raw_max;
-u_3260_speed_command.raw_min:=opc.popa_0081_u_3260_speed_command_raw_min;
+u_3260_speed_command.raw_max:=60;
+u_3260_speed_command.raw_min:=0;
 
 //Map output from motor control pou to scaling block
 IF general.ed_routine_maint OR general.ed_routine_manual THEN
@@ -703,11 +772,11 @@ u_3260_speed_feedback.raw_input := u_3260_speed_feedback_raw_input;
 //Instantiate Example analog output function block
 u_3360_speed_command();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
-u_3360_speed_command.eu_max:=opc.popa_0081_u_3360_speed_command_eu_max;
-u_3360_speed_command.eu_min:=opc.popa_0081_u_3360_speed_command_eu_min;
+u_3360_speed_command.eu_max:=32767;
+u_3360_speed_command.eu_min:=0;
 u_3360_speed_command.filter_factor:=opc.popa_0081_u_3360_speed_command_filter_factor;
-u_3360_speed_command.raw_max:=opc.popa_0081_u_3360_speed_command_raw_max;
-u_3360_speed_command.raw_min:=opc.popa_0081_u_3360_speed_command_raw_min;
+u_3360_speed_command.raw_max:=60;
+u_3360_speed_command.raw_min:=0;
 
 //Map output from motor control pou to scaling block
 IF general.ed_routine_maint OR general.ed_routine_manual THEN
@@ -734,11 +803,11 @@ u_3360_speed_feedback.raw_input := u_3360_speed_feedback_raw_input;
 //Instantiate Example analog output function block
 u_3370_speed_command();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
-u_3370_speed_command.eu_max:=opc.popa_0081_u_3370_speed_command_eu_max;
-u_3370_speed_command.eu_min:=opc.popa_0081_u_3370_speed_command_eu_min;
+u_3370_speed_command.eu_max:=32767;
+u_3370_speed_command.eu_min:=0;
 u_3370_speed_command.filter_factor:=opc.popa_0081_u_3370_speed_command_filter_factor;
-u_3370_speed_command.raw_max:=opc.popa_0081_u_3370_speed_command_raw_max;
-u_3370_speed_command.raw_min:=opc.popa_0081_u_3370_speed_command_raw_min;
+u_3370_speed_command.raw_max:=60;
+u_3370_speed_command.raw_min:=0;
 
 //Map output from motor control pou to scaling block
 IF general.ed_routine_maint OR general.ed_routine_manual THEN
@@ -765,11 +834,11 @@ u_3370_speed_feedback.raw_input := u_3370_speed_feedback_raw_input;
 //Instantiate Example analog output function block
 u_3405_speed_command();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
-u_3405_speed_command.eu_max:=opc.popa_0091_u_3405_speed_command_eu_max;
-u_3405_speed_command.eu_min:=opc.popa_0091_u_3405_speed_command_eu_min;
+u_3405_speed_command.eu_max:=32767;
+u_3405_speed_command.eu_min:=0;
 u_3405_speed_command.filter_factor:=opc.popa_0091_u_3405_speed_command_filter_factor;
-u_3405_speed_command.raw_max:=opc.popa_0091_u_3405_speed_command_raw_max;
-u_3405_speed_command.raw_min:=opc.popa_0091_u_3405_speed_command_raw_min;
+u_3405_speed_command.raw_max:=60;
+u_3405_speed_command.raw_min:=0;
 
 //Map output from motor control pou to scaling block
 IF general.ed_routine_maint OR general.ed_routine_manual THEN

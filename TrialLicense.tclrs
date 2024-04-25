@@ -1,25 +1,10 @@
 <?xml version="1.0"?>
 <TcLicenseInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2011/11/TcLicenseInfo">
 	<LicenseInfo>
-		<SystemId>{0DB9188C-D847-6D2A-2AA3-F6383DC05EF0}</SystemId>
-		<IssueTime>2024-04-17T15:59:00</IssueTime>
-		<ExpireTime>2024-04-25T00:00:00</ExpireTime>
-		<LicenseKey>587da41a689c98e796f288a356962b624fe4aaa1e22fd70bedbe84e8bb7294000017697a21b99dedba6c927d240203d5ae2d16605a6c1332b9dc228db7523f0623c6ac1947b44405b9445f4585dd2326a888a005ca99215c1dc1d64dd8cfe9051146c8d33ff1e3cfb4ff1269c9cf6f176d5001b63fd902dbcedcea0d4ff2987edaa7e8a0636371de2c2d5a2a230d54c2301c7aa7040c66e2c6bb1d1ee547add9f2fec8ac7ff06cf321c981ae59f844b619d3a94baf2082eb97eeae6e2cf14329b418894f1220032c8050013275e56c6d73abd63e44b4a29d17e845a32cbe7fa1ba6cf5e720d717febfaf050407bb4744cf80d79a176a8578afbbf261f6b80445</LicenseKey>
-		<License>
-			<LicenseId>{4C256767-E6E6-4AF5-BD68-9F7ABAD0C200}</LicenseId>
-			<Name>TC3 ADS</Name>
-			<OrderNo>TC1000</OrderNo>
-		</License>
-		<License>
-			<LicenseId>{3FF18E97-7754-401B-93FB-70544DE28A13}</LicenseId>
-			<Name>TC3 IO</Name>
-			<OrderNo>TC1100</OrderNo>
-		</License>
-		<License>
-			<LicenseId>{66689887-CCBD-452C-AC9A-039D997C6E66}</LicenseId>
-			<Name>TC3 PLC</Name>
-			<OrderNo>TC1200</OrderNo>
-		</License>
+		<SystemId>{73B9A94D-D571-B603-3162-9B557038050C}</SystemId>
+		<IssueTime>2024-04-24T18:17:00</IssueTime>
+		<ExpireTime>2024-05-02T00:00:00</ExpireTime>
+		<LicenseKey>3ce3f59fa3a2ab54b7b5b8e05b8f984586ce46361cfe7f7517801f351fbedcb9ecd5ae1fdcdd31022f0ed04cd434e1c07d533d79082c32d01312962b4865990c706fa1232e730ccda03822f72cf3190d6b06f96d7cbdb6e1dde8d7e0722dbe86613ca78b5a94342ae4b6f015fbfcbc5d1a94544c56a9faf968834c5b8d5f53288e0eecdf8f7e535dfe835ab6182ef77dba7122edcabe8846bd7d21ad6e3d3d4f7a011246cb2e06198d88cc3d6840992ea351ed5763c7505f4de25afc7db693ceb194c4213fe1ad9fa861b574cec57346148b15d2e0f5866d73aa26f38263296b94934a960298391a95fa4746d86cbbbcf0cb01b07ffd876cdab9a8da446cb851</LicenseKey>
 		<License>
 			<LicenseId>{CC0BCBD5-3EA7-D7D4-4C71-A8B125F0DB72}</LicenseId>
 			<Name>TC3 OPC-UA Analytics Read</Name>
