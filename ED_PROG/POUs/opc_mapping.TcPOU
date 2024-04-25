@@ -200,6 +200,7 @@ opc.popa_0081_nv_3372_status:=valve_digital_control_st.nv_3372.status;
 opc.popa_0081_nv_3372_fail_to_open_active :=faults.nv_3372_fail_to_open.active;
 opc.popa_0081_nv_3372_fail_to_close_active :=faults.nv_3372_fail_to_close.active;
 
+//opc.popa_0081_nv_3162_hmi_open_request:=valve_digital_control_st.nv_3162.open_request;
 opc.popa_0081_nv_3162_open_request:=valve_digital_control_st.nv_3162.open_request;
 opc.popa_0081_nv_3162_status:=valve_digital_control_st.nv_3162.status;
 opc.popa_0081_nv_3162_fail_to_open_active :=faults.nv_3162_fail_to_open.active;

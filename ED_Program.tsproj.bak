@@ -135,7 +135,7 @@
 					<Vars VarGrpType="1" InsertType="1">
 						<Name>Inputs</Name>
 						<Var>
-							<Name>SAFE_to_PLC_sts</Name>
+							<Name>twinsafe_sts</Name>
 							<Type>BOOL</Type>
 						</Var>
 					</Vars>
@@ -157,8 +157,20 @@
 							<BitOffs>16</BitOffs>
 							<ExternalAddress>2</ExternalAddress>
 						</Var>
+						<Var>
+							<Name>twinsafe_eack</Name>
+							<Type>BOOL</Type>
+							<BitOffs>24</BitOffs>
+							<ExternalAddress>3</ExternalAddress>
+						</Var>
+						<Var>
+							<Name>twinsafe_run</Name>
+							<Type>BOOL</Type>
+							<BitOffs>32</BitOffs>
+							<ExternalAddress>4</ExternalAddress>
+						</Var>
 					</Vars>
-					<Image Id="5" AddrType="1" ImageType="1" SizeIn="1" SizeOut="3">
+					<Image Id="5" AddrType="1" ImageType="1" SizeIn="1" SizeOut="5">
 						<Name>Image</Name>
 					</Image>
 				</Task>
@@ -166,7 +178,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{A69D7AB4-53AC-40E7-8E11-A7DF25BBEC0A}" Name="ED_PROG" PrjFilePath="ED_PROG\ED_PROG.plcproj" TmcFilePath="ED_PROG\ED_PROG.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" CopyTmcToTarget="true" CopyTpyToTarget="false" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="ED_PROG\ED_PROG.tmc" TmcHash="{FD8EC150-696F-2B6E-B0E9-C9EBD7CEFCB4}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="ED_PROG\ED_PROG.tmc" TmcHash="{7A6A8F35-40BE-1F27-A7E2-875EF27A9E48}">
 					<Name>ED_PROG Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
@@ -376,6 +388,10 @@ Motor vfd run feedback, mapped to a physical input]]></Comment>
 						<Var>
 							<Name>io_mapping.av_3348_position_feedback_raw_input</Name>
 							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>general.twinsafe_safeout</Name>
+							<Type>BOOL</Type>
 						</Var>
 						<Var>
 							<Name>io_mapping.nv_3135_open_feedback</Name>
@@ -1881,7 +1897,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 								</Entry>
 							</Pdo>
 							<Pdo Name="StandardInputs" Index="#x1bf0" Flags="#x2011" SyncMan="3">
-								<Entry Name="Standard Out Var 15" Index="#x7000" Sub="#x01">
+								<Entry Name="Standard Out Var 16" Index="#x7000" Sub="#x01">
 									<Type>BIT</Type>
 								</Entry>
 								<Entry>
@@ -5270,6 +5286,11 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<EtherCAT/>
 			</Device>
 		</Io>
+		<SymbolWatch>
+			<Variable>TIRT^twinsafe^Outputs^twinsafeack</Variable>
+			<Variable>TIRT^twinsafe^Outputs^twinsaferun</Variable>
+			<Variable>TIRT^twinsafe^Inputs^twinsafe_sts</Variable>
+		</SymbolWatch>
 	</Project>
 	<Mappings>
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500830000403}" Id="#x02030040"/>
@@ -5278,12 +5299,12 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 		<MappingInfo Identifier="{03040010-0030-0304-1000-040330000403}" Id="#x02030020" Watchdog="04000000040000000400000004000000"/>
 		<OwnerA Name="TIID^Device 1 (EtherCAT)">
 			<OwnerB Name="TIID^Device 4 (EtherCAT)^Term 31 (EK1914)">
-				<Link VarA="Term 1 (EK1200)^Term 10 (EL2911)^ConnectionInputs^Message_14 TxPDO" VarB="Module 1 (FSOE)^Outputs^FSOE"/>
+				<Link VarA="Term 1 (EK1200)^Term 10 (EL2911)^ConnectionOutputs^Message_14 RxPDO" VarB="Module 1 (FSOE)^Inputs^FSOE"/>
 			</OwnerB>
 		</OwnerA>
 		<OwnerA Name="TIID^Device 4 (EtherCAT)">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 10 (EL2911)">
-				<Link VarA="Term 31 (EK1914)^Module 1 (FSOE)^Inputs^FSOE" VarB="ConnectionOutputs^Message_14 RxPDO"/>
+				<Link VarA="Term 31 (EK1914)^Module 1 (FSOE)^Outputs^FSOE" VarB="ConnectionInputs^Message_14 TxPDO"/>
 			</OwnerB>
 		</OwnerA>
 		<OwnerA Name="TIPC^ED_PROG^ED_PROG Instance">
@@ -5416,13 +5437,16 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 				<Link VarA="PlcTask Outputs^io_mapping.u_3405_fault_reset_io" VarB="Channel 10^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^io_mapping.u_3405_run_command_io" VarB="Channel 9^Output" AutoLink="true"/>
 			</OwnerB>
+			<OwnerB Name="TIRT^twinsafe">
+				<Link VarA="PlcTask Inputs^general.twinsafe_safeout" VarB="Inputs^twinsafe_sts" AutoLink="true"/>
+			</OwnerB>
 		</OwnerA>
 		<OwnerA Name="TIRT^twinsafe">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 10 (EL2911)">
-				<Link VarA="Inputs^SAFE_to_PLC_sts" VarB="StandardInputs^Standard Out Var 15"/>
+				<Link VarA="Inputs^twinsafe_sts" VarB="StandardInputs^Standard Out Var 16"/>
 				<Link VarA="Outputs^estopreset" VarB="StandardOutputs^Standard In Var 13"/>
-				<Link VarA="Outputs^twinsafeack" VarB="StandardOutputs^Standard In Var 1"/>
-				<Link VarA="Outputs^twinsaferun" VarB="StandardOutputs^Standard In Var 2"/>
+				<Link VarA="Outputs^twinsafe_eack" VarB="StandardOutputs^Standard In Var 1"/>
+				<Link VarA="Outputs^twinsafe_run" VarB="StandardOutputs^Standard In Var 2"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>

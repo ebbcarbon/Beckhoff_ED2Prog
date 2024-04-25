@@ -62,6 +62,7 @@ IF pump_manager.u_3112_enable = TRUE THEN
 	u_3112_pid.fSetpointValue := pump_manager.u_3112_setpoint_request;
 	ELSE
 		u_3112_pid.fSetpointValue := 0;
+		opc.popa_0081_u_3112_hmi_speed_request :=0;
 END_IF
 
 
@@ -101,6 +102,7 @@ IF pump_manager.u_3212_enable = TRUE THEN
 	u_3212_pid.fSetpointValue := pump_manager.u_3212_setpoint_request;
 	ELSE
 		u_3212_pid.fSetpointValue := 0;
+		opc.popa_0081_u_3212_hmi_speed_request :=0;
 END_IF
 
 //Generic pump fault collector.  If any pump u_3212 related faults are true, set the function block fault status to true
@@ -139,6 +141,7 @@ IF pump_manager.u_3312_enable = TRUE THEN
 	u_3312_pid.fSetpointValue := pump_manager.u_3312_setpoint_request;
 	ELSE
 		u_3312_pid.fSetpointValue := 0;
+		opc.popa_0081_u_3312_hmi_speed_request :=0;
 END_IF
 
 
@@ -170,14 +173,14 @@ u_3160_pid.fKp            := 5;
 u_3160_pid.fTn            := 1; 
 u_3160_pid.fTv            := 1; 
 u_3160_pid.fTd            := 1; 
-u_3405_pid_error := u_3405_pid.nErrorStatus;
-u_3405_pid.bReset := pump_manager.u_3405_pid_reset;
+
 
 //PID logic. Basic PID, if pump enable is false, set setpoint to 0.
 IF pump_manager.u_3160_enable = TRUE THEN
 	u_3160_pid.fSetpointValue := pump_manager.u_3160_speed_request;
 	ELSE
 		u_3160_pid.fSetpointValue := 0;
+		opc.popa_0081_u_3160_hmi_speed_request :=0;
 END_IF
 
 
@@ -215,6 +218,7 @@ IF pump_manager.u_3260_enable = TRUE THEN
 	u_3260_pid.fSetpointValue := pump_manager.u_3260_speed_request;
 	ELSE
 		u_3260_pid.fSetpointValue := 0;
+		opc.popa_0081_u_3260_hmi_speed_request :=0;
 END_IF
 
 
@@ -252,6 +256,7 @@ IF pump_manager.u_3360_enable = TRUE THEN
 	u_3360_pid.fSetpointValue := pump_manager.u_3360_speed_request;
 	ELSE
 		u_3360_pid.fSetpointValue := 0;
+		opc.popa_0081_u_3360_hmi_speed_request :=0;
 END_IF
 
 
@@ -290,6 +295,7 @@ IF pump_manager.u_3370_enable = TRUE THEN
 	u_3370_pid.fSetpointValue := pump_manager.u_3370_speed_request;
 	ELSE
 		u_3370_pid.fSetpointValue := 0;
+		opc.popa_0081_u_3370_hmi_speed_request :=0;
 END_IF
 
 
@@ -315,18 +321,21 @@ u_3405.daily_reset:=general.daily_reset;
 
 //Instantiate u_3405_PID function block, and map inputs
 u_3405_pid();
-//u_3405_pid.fActualValue := io_mapping.pt_3414.scaled_value;
+u_3405_pid.fActualValue := io_mapping.pt_3414.scaled_value;
 u_3405_pid.fCtrlCycleTime := UDINT_TO_LREAL(_TaskInfo[GETCURTASKINDEXEX()].CycleTime) / 10_000_000; 
 u_3405_pid.fKp            := 5; 
 u_3405_pid.fTn            := 1; 
 u_3405_pid.fTv            := 1; 
 u_3405_pid.fTd            := 1; 
+u_3405_pid_error := u_3405_pid.nErrorStatus;
+u_3405_pid.bReset := pump_manager.u_3405_pid_reset;
 
 //PID logic. Basic PID, if pump enable is false, set setpoint to 0.
 IF pump_manager.u_3405_enable = TRUE THEN
 	u_3405_pid.fSetpointValue := pump_manager.u_3405_setpoint_request;
 	ELSE
 		u_3405_pid.fSetpointValue := 0;
+		opc.popa_0091_u_3405_hmi_speed_request :=0;
 END_IF
 
 
