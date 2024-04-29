@@ -36,6 +36,7 @@ VAR
 	u_3212_pid_error: UINT;
 	u_3312_pid_error: UINT;
 	u_3405_pid_error: UINT;
+	u_3370_pid_error: UINT;
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[//Instantiate U_3112 motor vfd function block, and map inputs
@@ -283,16 +284,18 @@ u_3370.daily_reset:=general.daily_reset;
 
 //Instantiate u_3370_PID function block, and map inputs
 u_3370_pid();
-u_3370_pid.fActualValue := io_mapping.u_3370_speed_feedback.scaled_value;
+u_3370_pid.fActualValue := io_mapping.pt_3319.scaled_value;
 u_3370_pid.fCtrlCycleTime := UDINT_TO_LREAL(_TaskInfo[GETCURTASKINDEXEX()].CycleTime) / 10_000_000; 
 u_3370_pid.fKp            := 5; 
 u_3370_pid.fTn            := 1; 
 u_3370_pid.fTv            := 1; 
 u_3370_pid.fTd            := 1; 
+u_3370_pid_error := u_3370_pid.nErrorStatus;
+u_3370_pid.bReset := pump_manager.u_3370_pid_reset;
 
 //PID logic. Basic PID, if pump enable is false, set setpoint to 0.
 IF pump_manager.u_3370_enable = TRUE THEN
-	u_3370_pid.fSetpointValue := pump_manager.u_3370_speed_request;
+	u_3370_pid.fSetpointValue := pump_manager.u_3370_setpoint_request;
 	ELSE
 		u_3370_pid.fSetpointValue := 0;
 		opc.popa_0081_u_3370_hmi_speed_request :=0;
