@@ -48,8 +48,9 @@ VAR PERSISTENT
 	nv_3372_fail_to_close: Alarm;
 	nv_3162_fail_to_close: Alarm;
 	
-//---System threshold alarms------------------------------------------------------------------------------------------------
 
+
+//---Sensor threshold alarms----------------------------------------
 	// Analog alarm low low
 	cct_3120_low_low: Alarm;
 	cct_3142_low_low: Alarm;
@@ -237,11 +238,18 @@ VAR PERSISTENT
 	tt_3432_high_high: Alarm;
 	tt_3601_high_high: Alarm;
 
-
-
+//---System threshold alarms------------------------------------------------------------------------------------------------
+	stack_inlet_cross_pressure_alm: Alarm;
+	stack_redox_inlet_cross_pressure_alm: Alarm;
 END_VAR
 VAR
-
+	salt_cross_pressure : REAL;
+	acid_cross_pressure : REAL;
+	base_cross_pressure : REAL;
+	cross_pressure_cmp : REAL;
+	redox_cross_pressure_cmp : REAL;
+	max_inlet_pressure : REAL;
+	min_inlet_pressure : REAL;
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[//Instantiate the alarm block, and map the inputs from the OPC GVL
@@ -575,6 +583,39 @@ IF valve_digital_control_st.nv_3372.open_command=FALSE AND valve_digital_control
 	
 //---System threshold alarms---------------------------------------------------------------------------------------------------
 
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+stack_inlet_cross_pressure_alm();
+stack_inlet_cross_pressure_alm.alm_ack:=opc.popa_0081_alarm_ack;
+stack_inlet_cross_pressure_alm.reset:=opc.popa_0081_alarm_reset;
+stack_inlet_cross_pressure_alm.priority:=3;//opc.popa_0081_nv_3372_fail_to_close_priority;
+stack_inlet_cross_pressure_alm.delay_setpoint:= 1;//opc.popa_0081_nv_3372_fail_to_close_delay_setpoint;
+stack_inlet_cross_pressure_alm.enable:=TRUE;//opc.popa_0081_nv_3372_fail_to_close_enable;
+
+//Place your alarm trigger logic here.  
+max_inlet_pressure := MAX(io_mapping.pt_3119.scaled_value, io_mapping.pt_3219.scaled_value, io_mapping.pt_3319.scaled_value); 
+min_inlet_pressure := MIN(io_mapping.pt_3119.scaled_value, io_mapping.pt_3219.scaled_value, io_mapping.pt_3319.scaled_value);
+cross_pressure_cmp :=(max_inlet_pressure - min_inlet_pressure); 
+IF cross_pressure_cmp >= 0.1 THEN//OR (((io_mapping.pt_3119.scaled_value + io_mapping.pt_3141.scaled_value)/2) - io_mapping.pt_3414.scaled_value) >=0.1 THEN
+	stack_inlet_cross_pressure_alm.trigger := TRUE;
+	ELSE
+		stack_inlet_cross_pressure_alm.trigger := FALSE;
+END_IF
+
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+stack_redox_inlet_cross_pressure_alm();
+stack_redox_inlet_cross_pressure_alm.alm_ack:=opc.popa_0081_alarm_ack;
+stack_redox_inlet_cross_pressure_alm.reset:=opc.popa_0081_alarm_reset;
+stack_redox_inlet_cross_pressure_alm.priority:=3;//opc.popa_0081_nv_3372_fail_to_close_priority;
+stack_redox_inlet_cross_pressure_alm.delay_setpoint:= 3;//opc.popa_0081_nv_3372_fail_to_close_delay_setpoint;
+stack_redox_inlet_cross_pressure_alm.enable:=TRUE;//opc.popa_0081_nv_3372_fail_to_close_enable;
+
+//Place your alarm trigger logic here.  
+redox_cross_pressure_cmp :=ABS(((io_mapping.pt_3119.scaled_value + io_mapping.pt_3141.scaled_value)/2) - io_mapping.pt_3414.scaled_value);
+IF  redox_cross_pressure_cmp >= 0.2 THEN
+	stack_redox_inlet_cross_pressure_alm.trigger := TRUE;
+	ELSE
+		stack_redox_inlet_cross_pressure_alm.trigger := FALSE;
+END_IF
 	
 	]]></ST>
     </Implementation>
