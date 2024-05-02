@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<safetyApplication Crc="217894440" xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.4.0.0" Id="c1d73c98-8628-427e-8a79-d786159e3a40" name="" mapState="false" mapDiag="false" groupOrderId="0" passificationAllowed="false" temporaryDeactivationAllowed="false" permamentDeactivationAllowed="false" xmlid="0" analogFBOutputReplacementValues="Zero" verifyAnalogFBInputsIfStart="false" userFbId="00000000-0000-0000-0000-000000000000" xmlns="http://schemas.microsoft.com/dsltools/SafetyApplicationLanguage">
+<safetyApplication Crc="1129477468" xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.4.0.0" Id="c1d73c98-8628-427e-8a79-d786159e3a40" name="" mapState="false" mapDiag="false" groupOrderId="0" passificationAllowed="false" temporaryDeactivationAllowed="false" permamentDeactivationAllowed="false" xmlid="0" analogFBOutputReplacementValues="Zero" verifyAnalogFBInputsIfStart="false" userFbId="00000000-0000-0000-0000-000000000000" xmlns="http://schemas.microsoft.com/dsltools/SafetyApplicationLanguage">
   <networks>
     <safetyApplicationHasNetworks Id="160a0408-8184-4082-a4a8-9bebfe559c69">
       <Network Id="cfc885b1-960d-4ca2-b634-1d1365effbff" name="Network1" networkName="Network1" intId="1" networkOrderId="0">
@@ -250,8 +250,11 @@
           <variableHasTargetUsages Id="5242c55d-538d-4b1c-bf89-3d1cf8e426c6">
             <variableUsages Id="df99af9a-64bb-4571-83b5-f1c04aa64a79">
               <usages>
-                <variableUsagesHasUsages Id="da09da22-6d3a-4554-a47a-944eddd59d68">
-                  <aliasDeviceIoUsage Id="a2d946ab-561a-40be-acd7-962b703df1b2" sdsId="9" channelId="1" functionId="1879113985" />
+                <variableUsagesHasUsages Id="1c4a84fc-559d-4002-bab9-69b17f7f88e5">
+                  <aliasDeviceIoUsage Id="12e111ad-39af-4067-be4e-624897fa4e06" sdsId="9" channelId="1" functionId="1879113985" />
+                </variableUsagesHasUsages>
+                <variableUsagesHasUsages Id="db281e6f-62fc-4f43-b848-a3861f7042bb">
+                  <aliasDeviceIoUsage Id="1089894a-9ca4-4be4-88ca-4beeca9f8e3a" sdsId="16" channelId="1" functionId="1131179972" />
                 </variableUsagesHasUsages>
               </usages>
             </variableUsages>
