@@ -22,7 +22,14 @@ END_VAR
     <Implementation>
       <ST><![CDATA[//Instantiate nv_3110 valve function block, and map inputs
 nv_3110();
-//nv_3110.open_feedback:=io_mapping.nv_3110_open_feedback;
+IF general.test_nv_3110_open THEN
+	nv_3110.open_feedback:=1;//io_mapping.nv_3110_open_feedback;
+	nv_3110.closed_feedback:=0;
+	ELSE
+		nv_3110.open_feedback:=0;//io_mapping.nv_3110_open_feedback;
+		nv_3110.closed_feedback:=1;
+END_IF
+
 //nv_3110.closed_feedback:=io_mapping.nv_3110_closed_feedback;
 nv_3110.open_request:=valve_manager.nv_3110_open_request;
 
