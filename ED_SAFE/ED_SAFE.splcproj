@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Crc="3097774685" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project Crc="2377890315" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
@@ -27,7 +27,7 @@
     <TextBox />
     <AddMultiSettingDocuments>False</AddMultiSettingDocuments>
     <AddHashValueTablePages>False</AddHashValueTablePages>
-    <NextSdsId>18</NextSdsId>
+    <NextSdsId>19</NextSdsId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugSymbols>false</DebugSymbols>
@@ -36,8 +36,8 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="emergency_stop_buttons\Alias Devices\EK1914, 2 digital inputs and 2 digital outputs_1.sds" />
     <None Include="emergency_stop_buttons\Alias Devices\E_Stop_Reset_Cmd.sds" />
-    <None Include="emergency_stop_buttons\Alias Devices\Device 4 - Term 31 - EK1914.sds" />
     <None Include="emergency_stop_buttons\Alias Devices\Device 1 - Term 10 - EL2911.sds" />
     <None Include="emergency_stop_buttons\emergency_stop_buttons.sal" />
     <None Include="emergency_stop_buttons\emergency_stop_buttons.sal.diagram">
