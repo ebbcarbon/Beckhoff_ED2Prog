@@ -326,8 +326,8 @@ cpt_3144.raw_input := cpt_3144_raw_input;
 //Instantiate analog input function block
 ft_3122();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
-ft_3122.eu_max:=500;//opc.popa_0081_ft_3122_eu_max;
-ft_3122.eu_min:=0;//opc.popa_0081_ft_3122_eu_min;
+ft_3122.eu_max:=opc.popa_0081_ft_3122_eu_max;
+ft_3122.eu_min:=opc.popa_0081_ft_3122_eu_min;
 ft_3122.filter_factor:=opc.popa_0081_ft_3122_filter_factor;
 ft_3122.raw_max:=opc.popa_0081_ft_3122_raw_max;
 ft_3122.raw_min:=opc.popa_0081_ft_3122_raw_min;
@@ -337,8 +337,8 @@ ft_3122.raw_input := ft_3122_raw_input;
 //Instantiate analog input function block
 ft_3222();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
-ft_3222.eu_max:=500;//opc.popa_0081_ft_3222_eu_max;
-ft_3222.eu_min:=0;//opc.popa_0081_ft_3222_eu_min;
+ft_3222.eu_max:=opc.popa_0081_ft_3222_eu_max;
+ft_3222.eu_min:=opc.popa_0081_ft_3222_eu_min;
 ft_3222.filter_factor:=opc.popa_0081_ft_3222_filter_factor;
 ft_3222.raw_max:=opc.popa_0081_ft_3222_raw_max;
 ft_3222.raw_min:=opc.popa_0081_ft_3222_raw_min;
@@ -348,8 +348,8 @@ ft_3222.raw_input := ft_3222_raw_input;
 //Instantiate analog input function block
 ft_3322();
 //Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
-ft_3322.eu_max:=500;//opc.popa_0081_ft_3322_eu_max;
-ft_3322.eu_min:=0;//opc.popa_0081_ft_3322_eu_min;
+ft_3322.eu_max:=opc.popa_0081_ft_3322_eu_max;
+ft_3322.eu_min:=opc.popa_0081_ft_3322_eu_min;
 ft_3322.filter_factor:=opc.popa_0081_ft_3322_filter_factor;
 ft_3322.raw_max:=opc.popa_0081_ft_3322_raw_max;
 ft_3322.raw_min:=opc.popa_0081_ft_3322_raw_min;
