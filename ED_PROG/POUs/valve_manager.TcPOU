@@ -6078,8 +6078,8 @@ END_VAR
                                           </o>
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"av_3148_manual_position_request"</v>
-                                              <v n="Type">"REAL"</v>
+                                              <v n="Operand">"opc.popa_0081_av_3148_hmi_position_request"</v>
+                                              <v n="Type">"LREAL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
                                               <v n="Address">""</v>
@@ -6242,8 +6242,8 @@ END_VAR
                                   </o>
                                   <o>
                                     <o n="Operand" t="Operand">
-                                      <v n="Operand">"av_3148_maint_position_request"</v>
-                                      <v n="Type">"REAL"</v>
+                                      <v n="Operand">"opc.popa_0081_av_3148_hmi_position_request"</v>
+                                      <v n="Type">"LREAL"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
                                       <v n="Address">""</v>
@@ -6891,8 +6891,8 @@ END_VAR
                                           </o>
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"av_3248_manual_position_request"</v>
-                                              <v n="Type">"REAL"</v>
+                                              <v n="Operand">"opc.popa_0081_av_3248_hmi_position_request"</v>
+                                              <v n="Type">"LREAL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
                                               <v n="Address">""</v>
@@ -7055,8 +7055,8 @@ END_VAR
                                   </o>
                                   <o>
                                     <o n="Operand" t="Operand">
-                                      <v n="Operand">"av_3248_maint_position_request"</v>
-                                      <v n="Type">"REAL"</v>
+                                      <v n="Operand">"opc.popa_0081_av_3248_hmi_position_request"</v>
+                                      <v n="Type">"LREAL"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
                                       <v n="Address">""</v>
@@ -7704,8 +7704,8 @@ END_VAR
                                           </o>
                                           <o>
                                             <o n="Operand" t="Operand">
-                                              <v n="Operand">"av_3348_manual_position_request"</v>
-                                              <v n="Type">"REAL"</v>
+                                              <v n="Operand">"opc.popa_0081_av_3348_hmi_position_request"</v>
+                                              <v n="Type">"LREAL"</v>
                                               <v n="Comment">""</v>
                                               <v n="SymbolComment">""</v>
                                               <v n="Address">""</v>
@@ -7868,8 +7868,8 @@ END_VAR
                                   </o>
                                   <o>
                                     <o n="Operand" t="Operand">
-                                      <v n="Operand">"av_3348_maint_position_request"</v>
-                                      <v n="Type">"REAL"</v>
+                                      <v n="Operand">"opc.popa_0081_av_3348_hmi_position_request"</v>
+                                      <v n="Type">"LREAL"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
                                       <v n="Address">""</v>
