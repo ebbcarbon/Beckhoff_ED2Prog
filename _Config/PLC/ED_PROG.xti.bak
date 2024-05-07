@@ -1,0 +1,603 @@
+<?xml version="1.0"?>
+<TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.55" ClassName="CNestedPlcProjDef">
+	<Project GUID="{A69D7AB4-53AC-40E7-8E11-A7DF25BBEC0A}" Name="ED_PROG" PrjFilePath="..\..\ED_PROG\ED_PROG.plcproj" TmcFilePath="..\..\ED_PROG\ED_PROG.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="ED_PROG\ED_PROG.tmc" TmcHash="{544C7E1B-3FB5-3E25-31F7-EF8BC31BD9BA}">
+			<Name>ED_PROG Instance</Name>
+			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+			<Vars VarGrpType="1">
+				<Name>PlcTask Inputs</Name>
+				<Var>
+					<Name>general.twinsafe_safeout</Name>
+					<Comment><![CDATA[{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 10 (EL2911)^StandardInputs^Standard Out Var 16'}]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>general.twinsafe_status</Name>
+					<Type>USINT</Type>
+				</Var>
+				<Var>
+					<Name>general.test_valve_position</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3112_run_feedback</Name>
+					<Comment><![CDATA[---Field Equipment:Pumps----------------------------------------------------------------------------------------------------------
+Motor vfd run feedback, mapped to a physical input]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.cpt_3144_raw_input</Name>
+					<Comment><![CDATA[Analog input raw input, mapped to a physical input]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.ft_3122_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.ft_3222_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.ft_3322_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.pt_3119_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.pt_3219_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.pt_3319_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.pt_3141_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.pt_3241_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.pt_3341_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.pt_3428_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.pt_3414_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.lt_3102_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.lt_3202_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.lt_3302_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.lt_3153_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.lt_3253_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.lt_3353_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.lt_3402_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.tt_3118_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.tt_3218_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.tt_3318_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.tt_3140_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.tt_3240_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.tt_3340_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.tt_3432_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3212_run_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3312_run_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3160_run_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3260_run_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3360_run_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3370_run_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3405_run_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3112_fault_feedback</Name>
+					<Comment><![CDATA[Motor Fault feedback]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3212_fault_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3312_fault_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3160_fault_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3260_fault_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3360_fault_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3370_fault_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3405_fault_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3135_open_feedback</Name>
+					<Comment><![CDATA[Digital valve open feedback
+{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
+nv_3110_open_feedback AT %I* : BOOL;
+{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
+nv_3210_open_feedback AT %I* : BOOL;
+{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
+nv_3310_open_feedback AT %I* : BOOL;]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3112_speed_feedback_raw_input</Name>
+					<Comment><![CDATA[Motor vfd speed feedback raw input]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3212_speed_feedback_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3312_speed_feedback_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3160_speed_feedback_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3260_speed_feedback_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3360_speed_feedback_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3370_speed_feedback_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3405_speed_feedback_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.av_3148_position_feedback_raw_input</Name>
+					<Comment><![CDATA[Analog valve position feedback raw input]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.av_3248_position_feedback_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.av_3348_position_feedback_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3235_open_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3335_open_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3372_open_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3162_open_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3135_closed_feedback</Name>
+					<Comment><![CDATA[Digital valve closed feedback
+{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
+nv_3110_closed_feedback AT %I* : BOOL;
+{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
+nv_3210_closed_feedback AT %I* : BOOL;
+{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
+nv_3310_closed_feedback AT %I* : BOOL;]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3235_closed_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3335_closed_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3372_closed_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3162_closed_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>alarm_manager.safety_status</Name>
+					<Type>BOOL</Type>
+				</Var>
+			</Vars>
+			<Vars VarGrpType="2" AreaNo="1">
+				<Name>PlcTask Outputs</Name>
+				<Var>
+					<Name>io_mapping.u_3112_run_command_io</Name>
+					<Comment><![CDATA[Motor vfd run command, mapped to a physical output]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3112_speed_command_io</Name>
+					<Comment><![CDATA[Motor vfd speed command scaled output, mappped to a physical output]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3212_speed_command_io</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3312_speed_command_io</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3160_speed_command_io</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3260_speed_command_io</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3360_speed_command_io</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3370_speed_command_io</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3405_speed_command_io</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3212_run_command_io</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3312_run_command_io</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3160_run_command_io</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3260_run_command_io</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3360_run_command_io</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3370_run_command_io</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3405_run_command_io</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3112_fault_reset_io</Name>
+					<Comment><![CDATA[Motor Fault Reset]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3212_fault_reset_io</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3312_fault_reset_io</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3160_fault_reset_io</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3260_fault_reset_io</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3360_fault_reset_io</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3370_fault_reset_io</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.u_3405_fault_reset_io</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.av_3148_position_command_io</Name>
+					<Comment><![CDATA[Analog valve position command output valve]]></Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.av_3248_position_command_io</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.av_3348_position_command_io</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3110_open_command_io</Name>
+					<Comment><![CDATA[Digital valve open command]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3210_open_command_io</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3310_open_command_io</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3135_open_command_io</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3235_open_command_io</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3335_open_command_io</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3372_open_command_io</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3162_open_command_io</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.safety_reset</Name>
+					<Type>BOOL</Type>
+				</Var>
+			</Vars>
+			<Contexts>
+				<Context>
+					<Id>0</Id>
+					<Name>PlcTask</Name>
+					<ManualConfig>
+						<OTCID>#x02010030</OTCID>
+					</ManualConfig>
+					<Priority>20</Priority>
+					<CycleTime>10000000</CycleTime>
+				</Context>
+			</Contexts>
+			<TaskPouOids>
+				<TaskPouOid Prio="20" OTCID="#x08502001"/>
+			</TaskPouOids>
+		</Instance>
+	</Project>
+	<Mappings>
+		<OwnerA Name="ED_PROG Instance">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 10 (EL2911)">
+				<Link VarA="PlcTask Inputs^general.twinsafe_status" VarB="Function Block Info Data^emergency_stop_buttons.Network1.FBEstop1 Info Data^State"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)">
+				<Link VarA="PlcTask Inputs^io_mapping.u_3112_speed_feedback_raw_input" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3160_speed_feedback_raw_input" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3212_speed_feedback_raw_input" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3260_speed_feedback_raw_input" VarB="AI Standard Channel 5^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3312_speed_feedback_raw_input" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3360_speed_feedback_raw_input" VarB="AI Standard Channel 6^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3370_speed_feedback_raw_input" VarB="AI Standard Channel 7^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)">
+				<Link VarA="PlcTask Outputs^io_mapping.u_3112_speed_command_io" VarB="AO Output Channel 1^Analog output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^io_mapping.u_3160_speed_command_io" VarB="AO Output Channel 4^Analog output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^io_mapping.u_3212_speed_command_io" VarB="AO Output Channel 2^Analog output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^io_mapping.u_3312_speed_command_io" VarB="AO Output Channel 3^Analog output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EL4124)">
+				<Link VarA="PlcTask Outputs^io_mapping.u_3260_speed_command_io" VarB="AO Output Channel 1^Analog output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^io_mapping.u_3360_speed_command_io" VarB="AO Output Channel 2^Analog output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^io_mapping.u_3370_speed_command_io" VarB="AO Output Channel 3^Analog output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)">
+				<Link VarA="PlcTask Inputs^io_mapping.u_3112_fault_feedback" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3112_run_feedback" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3160_fault_feedback" VarB="Channel 7^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3160_run_feedback" VarB="Channel 8^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3212_fault_feedback" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3212_run_feedback" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3312_fault_feedback" VarB="Channel 5^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3312_run_feedback" VarB="Channel 6^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.u_3112_fault_reset_io" VarB="Channel 10^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.u_3112_run_command_io" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.u_3160_fault_reset_io" VarB="Channel 16^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.u_3160_run_command_io" VarB="Channel 15^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.u_3212_fault_reset_io" VarB="Channel 12^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.u_3212_run_command_io" VarB="Channel 11^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.u_3312_fault_reset_io" VarB="Channel 14^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.u_3312_run_command_io" VarB="Channel 13^Output" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL1859)">
+				<Link VarA="PlcTask Inputs^io_mapping.u_3260_fault_feedback" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3260_run_feedback" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3360_fault_feedback" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3360_run_feedback" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3370_fault_feedback" VarB="Channel 5^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3370_run_feedback" VarB="Channel 6^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.u_3260_fault_reset_io" VarB="Channel 10^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.u_3260_run_command_io" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.u_3360_fault_reset_io" VarB="Channel 12^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.u_3360_run_command_io" VarB="Channel 11^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.u_3370_fault_reset_io" VarB="Channel 14^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.u_3370_run_command_io" VarB="Channel 13^Output" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 14 (EL3058)">
+				<Link VarA="PlcTask Inputs^io_mapping.pt_3119_raw_input" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.pt_3141_raw_input" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.pt_3219_raw_input" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.pt_3241_raw_input" VarB="AI Standard Channel 5^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.pt_3319_raw_input" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.pt_3341_raw_input" VarB="AI Standard Channel 6^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.tt_3118_raw_input" VarB="AI Standard Channel 7^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.tt_3218_raw_input" VarB="AI Standard Channel 8^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 15 (EL3058)">
+				<Link VarA="PlcTask Inputs^io_mapping.av_3148_position_feedback_raw_input" VarB="AI Standard Channel 8^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.tt_3140_raw_input" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.tt_3240_raw_input" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.tt_3318_raw_input" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.tt_3340_raw_input" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 16 (EL3058)">
+				<Link VarA="PlcTask Inputs^io_mapping.av_3248_position_feedback_raw_input" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.av_3348_position_feedback_raw_input" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.lt_3102_raw_input" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.lt_3153_raw_input" VarB="AI Standard Channel 6^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.lt_3202_raw_input" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.lt_3253_raw_input" VarB="AI Standard Channel 7^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.lt_3302_raw_input" VarB="AI Standard Channel 5^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.lt_3353_raw_input" VarB="AI Standard Channel 8^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 18 (EL3058)">
+				<Link VarA="PlcTask Inputs^io_mapping.ft_3122_raw_input" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.ft_3222_raw_input" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.ft_3322_raw_input" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 19 (EL4124)">
+				<Link VarA="PlcTask Outputs^io_mapping.av_3148_position_command_io" VarB="AO Output Channel 1^Analog output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^io_mapping.av_3248_position_command_io" VarB="AO Output Channel 2^Analog output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^io_mapping.av_3348_position_command_io" VarB="AO Output Channel 3^Analog output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 21 (EL1859)">
+				<Link VarA="PlcTask Inputs^io_mapping.nv_3135_open_feedback" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^io_mapping.nv_3162_open_feedback" VarB="Channel 5^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^io_mapping.nv_3235_open_feedback" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^io_mapping.nv_3335_open_feedback" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^io_mapping.nv_3372_open_feedback" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 22 (EL1859)">
+				<Link VarA="PlcTask Inputs^io_mapping.nv_3135_closed_feedback" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^io_mapping.nv_3162_closed_feedback" VarB="Channel 5^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^io_mapping.nv_3235_closed_feedback" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^io_mapping.nv_3335_closed_feedback" VarB="Channel 3^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^io_mapping.nv_3372_closed_feedback" VarB="Channel 4^Input" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)">
+				<Link VarA="PlcTask Outputs^io_mapping.nv_3110_open_command_io" VarB="Channel 11^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.nv_3135_open_command_io" VarB="Channel 12^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.nv_3162_open_command_io" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.nv_3210_open_command_io" VarB="Channel 10^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.nv_3235_open_command_io" VarB="Channel 14^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.nv_3310_open_command_io" VarB="Channel 13^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.nv_3335_open_command_io" VarB="Channel 15^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.nv_3372_open_command_io" VarB="Channel 16^Output" AutoLink="true" Size="1"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 4 (EtherCAT)^Term 40 (EK1100)^Term 41 (EL3058)">
+				<Link VarA="PlcTask Inputs^io_mapping.lt_3402_raw_input" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.pt_3414_raw_input" VarB="AI Standard Channel 5^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.pt_3428_raw_input" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.tt_3432_raw_input" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3405_speed_feedback_raw_input" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 4 (EtherCAT)^Term 40 (EK1100)^Term 42 (EL4124)">
+				<Link VarA="PlcTask Outputs^io_mapping.u_3405_speed_command_io" VarB="AO Output Channel 1^Analog output" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 4 (EtherCAT)^Term 40 (EK1100)^Term 43 (EL1859)">
+				<Link VarA="PlcTask Inputs^io_mapping.u_3405_fault_feedback" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Inputs^io_mapping.u_3405_run_feedback" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.u_3405_fault_reset_io" VarB="Channel 10^Output" AutoLink="true" Size="1"/>
+				<Link VarA="PlcTask Outputs^io_mapping.u_3405_run_command_io" VarB="Channel 9^Output" AutoLink="true" Size="1"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
+</TcSmItem>
