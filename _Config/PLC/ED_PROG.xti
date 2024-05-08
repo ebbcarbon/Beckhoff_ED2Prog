@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.55" ClassName="CNestedPlcProjDef">
 	<Project GUID="{A69D7AB4-53AC-40E7-8E11-A7DF25BBEC0A}" Name="ED_PROG" PrjFilePath="..\..\ED_PROG\ED_PROG.plcproj" TmcFilePath="..\..\ED_PROG\ED_PROG.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" CopyTmcToTarget="true" CopyTpyToTarget="false" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="ED_PROG\ED_PROG.tmc" TmcHash="{0729DEA9-5408-2577-F7D4-4178C1F1D8E7}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="ED_PROG\ED_PROG.tmc" TmcHash="{25771ECB-0DCF-93AD-138D-81466B1B1F0C}">
 			<Name>ED_PROG Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -13,6 +13,7 @@
 				</Var>
 				<Var>
 					<Name>general.twinsafe_status</Name>
+					<Comment><![CDATA[Linked manually]]></Comment>
 					<Type>USINT</Type>
 				</Var>
 				<Var>
@@ -299,6 +300,18 @@ nv_3310_closed_feedback AT %I* : BOOL;]]></Comment>
 			<Vars VarGrpType="2" AreaNo="1">
 				<Name>PlcTask Outputs</Name>
 				<Var>
+					<Name>general.twinsafe_reset</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>general.twinsafe_ack</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>general.twinsafe_run</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>io_mapping.u_3112_run_command_io</Name>
 					<Comment><![CDATA[Motor vfd run command, mapped to a physical output]]></Comment>
 					<Type>BOOL</Type>
@@ -468,6 +481,9 @@ nv_3310_closed_feedback AT %I* : BOOL;]]></Comment>
 		<OwnerA Name="ED_PROG Instance">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 10 (EL2911)">
 				<Link VarA="PlcTask Inputs^general.twinsafe_status" VarB="Function Block Info Data^emergency_stop_buttons.Network1.FBEstop1 Info Data^State"/>
+				<Link VarA="PlcTask Outputs^general.twinsafe_ack" VarB="StandardOutputs^Standard In Var 1" Size="1"/>
+				<Link VarA="PlcTask Outputs^general.twinsafe_reset" VarB="StandardOutputs^Standard In Var 13" Size="1"/>
+				<Link VarA="PlcTask Outputs^general.twinsafe_run" VarB="StandardOutputs^Standard In Var 2" Size="1"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)">
 				<Link VarA="PlcTask Inputs^io_mapping.u_3112_speed_feedback_raw_input" VarB="AI Standard Channel 1^Value" AutoLink="true"/>

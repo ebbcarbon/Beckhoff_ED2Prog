@@ -161,16 +161,6 @@
 					<Vars VarGrpType="2" InsertType="1">
 						<Name>Outputs</Name>
 						<Var>
-							<Name>twinsaferun</Name>
-							<Type>BIT</Type>
-						</Var>
-						<Var>
-							<Name>twinsafeack</Name>
-							<Type>BIT</Type>
-							<BitOffs>8</BitOffs>
-							<ExternalAddress>1</ExternalAddress>
-						</Var>
-						<Var>
 							<Name>estopreset</Name>
 							<Type>BIT</Type>
 							<BitOffs>16</BitOffs>
@@ -216,9 +206,6 @@
 				</AddressInfo>
 				<Image Id="1" AddrType="9" ImageType="3">
 					<Name>Image</Name>
-				</Image>
-				<Image Id="6" AddrType="10" ImageType="3">
-					<Name>Image-2</Name>
 				</Image>
 				<Box Id="1" BoxType="9099">
 					<Name>Term 1 (EK1200)</Name>
@@ -5008,8 +4995,6 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 			</Device>
 		</Io>
 		<SymbolWatch>
-			<Variable>TIRT^twinsafe^Outputs^twinsafeack</Variable>
-			<Variable>TIRT^twinsafe^Outputs^twinsaferun</Variable>
 			<Variable>TIRT^twinsafe^Inputs^twinsafe_sts</Variable>
 			<Variable>TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 10 (EL2911)^WcState^WcState0</Variable>
 			<Variable>TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 10 (EL2911)^InfoData^State</Variable>
@@ -5034,13 +5019,6 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 		<OwnerA Name="TIID^Device 4 (EtherCAT)">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 10 (EL2911)">
 				<Link VarA="Term 31 (EK1914)^Module 1 (FSOE)^Outputs^FSOE" VarB="ConnectionInputs^Message_18 TxPDO"/>
-			</OwnerB>
-		</OwnerA>
-		<OwnerA Name="TIRT^twinsafe">
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 10 (EL2911)">
-				<Link VarA="Outputs^estopreset" VarB="StandardOutputs^Standard In Var 13"/>
-				<Link VarA="Outputs^twinsafe_eack" VarB="StandardOutputs^Standard In Var 1"/>
-				<Link VarA="Outputs^twinsafe_run" VarB="StandardOutputs^Standard In Var 2"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>
