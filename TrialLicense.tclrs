@@ -2,9 +2,24 @@
 <TcLicenseInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2011/11/TcLicenseInfo">
 	<LicenseInfo>
 		<SystemId>{73B9A94D-D571-B603-3162-9B557038050C}</SystemId>
-		<IssueTime>2024-05-02T17:01:00</IssueTime>
-		<ExpireTime>2024-05-10T00:00:00</ExpireTime>
-		<LicenseKey>5add71954dd442a4c4f6a2bafc016615cab04f1db1c502461f5eee7efa56f34aab2324e593014ab36a53d024eb5869835fed7186389369c508f512a51037c6314590a67a9c1d12601a059e3999d2a15c70948713c43fefcf50b7c7d118e145c9721456cc81bab78df44764c7ca8f298ed69bb4797269759fd70674b00d305899f91a40fcb606acee8a0b0826d4cfe46fa273b27de204de202d148f450158f9c142bf361a97c8cdc11542eff1a7d2b44b877a35bf14288661eb84df1f64387a1b914bb56eb7ed265e4a57023ef13463369f0a8f939ad814578d6bb7f1de3d8cea91966113eb41f0029edc37e6a2626f0f3c121837f2a2bb21ab4c3b0cb652480c</LicenseKey>
+		<IssueTime>2024-06-20T20:41:00</IssueTime>
+		<ExpireTime>2024-06-28T00:00:00</ExpireTime>
+		<LicenseKey>4e266bbd7626326ad32088be3fbb1ac364b6a1c0769c877c1ea531e8d20b1ba216857143302e1df784d042db8d26a52f0aa8e85c4710123d54e85685169968f5074af300c818b077d2d3e19dc89cb4416b253f67de23aabe996200676c3cc4423cff2673cf9033b62a3ea3dba14991d835e7bb8002b38322b138b0fcfca27865cef7b932d7b9c1599c8317743d2547b017eb935d5c8045f3e0281b042156a32fe49efebdb80696fc6cd9e5f00980bfbc1059dd750cb908671686db0c0a214ef725cdc64feed4d4712e810e4f0cbc16622b7a1993df9d284406c151f97a3e0a2722011a2e735ba63cd27f51dd7d667a41d0f6a62c1364211fd17ac7c7622ed2a5</LicenseKey>
+		<License>
+			<LicenseId>{4C256767-E6E6-4AF5-BD68-9F7ABAD0C200}</LicenseId>
+			<Name>TC3 ADS</Name>
+			<OrderNo>TC1000</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{3FF18E97-7754-401B-93FB-70544DE28A13}</LicenseId>
+			<Name>TC3 IO</Name>
+			<OrderNo>TC1100</OrderNo>
+		</License>
+		<License>
+			<LicenseId>{66689887-CCBD-452C-AC9A-039D997C6E66}</LicenseId>
+			<Name>TC3 PLC</Name>
+			<OrderNo>TC1200</OrderNo>
+		</License>
 		<License>
 			<LicenseId>{CC0BCBD5-3EA7-D7D4-4C71-A8B125F0DB72}</LicenseId>
 			<Name>TC3 OPC-UA Analytics Read</Name>

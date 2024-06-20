@@ -95,6 +95,9 @@
     <Compile Include="POUs\opc_mapping.TcPOU">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\output_mapping.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\pump_manager.TcPOU">
       <SubType>Code</SubType>
     </Compile>

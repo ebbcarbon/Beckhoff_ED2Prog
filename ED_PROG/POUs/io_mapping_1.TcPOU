@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
-  <POU Name="io_mapping" Id="{87c33c1f-405d-4536-940a-0d0026912d98}" SpecialFunc="None">
-    <Declaration><![CDATA[PROGRAM io_mapping
+  <POU Name="io_mapping_1" Id="{b1e86316-0471-4278-82d4-67e34c6d1c77}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM io_mapping_1
 VAR PERSISTENT
 //---Field Instrumentation-----------------------------------------------------------------------------------------------
     //Analog input function block
@@ -36,20 +36,6 @@ VAR PERSISTENT
 	tt_3340 : analog_scaling;
 	tt_3432 : analog_scaling;
 
-	//Motor vfd speed feedback
-	u_3112_speed_feedback : analog_scaling;
-	u_3212_speed_feedback : analog_scaling;
-	u_3312_speed_feedback : analog_scaling;
-	u_3160_speed_feedback : analog_scaling;
-	u_3260_speed_feedback : analog_scaling;
-	u_3360_speed_feedback : analog_scaling;
-	u_3370_speed_feedback : analog_scaling;
-	u_3405_speed_feedback : analog_scaling;	
-	
-	//Analog valve position feedback
-	av_3148_position_feedback : analog_scaling;
-	av_3248_position_feedback : analog_scaling;
-	av_3348_position_feedback : analog_scaling;
     //Analog input raw input, mapped to a physical input
     cpt_3144_raw_input AT %I* : INT;
 	
@@ -146,9 +132,79 @@ VAR PERSISTENT
 	u_3405_fault_feedback AT %I* : BOOL;
 	
 	
+	//Motor vfd speed command function block
+	u_3112_speed_command : analog_scaling;
+	u_3212_speed_command : analog_scaling;
+	u_3312_speed_command : analog_scaling;
+	u_3160_speed_command : analog_scaling;
+	u_3260_speed_command : analog_scaling;
+	u_3360_speed_command : analog_scaling;
+	u_3370_speed_command : analog_scaling;
+	u_3405_speed_command : analog_scaling;
 	
+	//Motor vfd speed command scaled output, mappped to a physical output
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 1^Analog output'}
+	u_3112_speed_command_io AT %Q* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 2^Analog output'}
+	u_3212_speed_command_io AT %Q* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 3^Analog output'}
+	u_3312_speed_command_io AT %Q* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 4 (EL4124)^AO Output Channel 4^Analog output'}
+	u_3160_speed_command_io AT %Q* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EL4124)^AO Output Channel 1^Analog output'}
+	u_3260_speed_command_io AT %Q* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EL4124)^AO Output Channel 2^Analog output'}
+	u_3360_speed_command_io AT %Q* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EL4124)^AO Output Channel 3^Analog output'}
+	u_3370_speed_command_io AT %Q* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 40 (EK1100)^Term 42 (EL4124)^AO Output Channel 1^Analog output'}
+	u_3405_speed_command_io AT %Q* : INT;
 	
-
+	//Motor vfd run command, mapped to a physical output
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 9^Output'}
+	u_3112_run_command_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 11^Output'}
+	u_3212_run_command_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 13^Output'}
+	u_3312_run_command_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 15^Output'}	
+	u_3160_run_command_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL1859)^Channel 9^Output'}
+	u_3260_run_command_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL1859)^Channel 11^Output'}
+	u_3360_run_command_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL1859)^Channel 13^Output'}
+	u_3370_run_command_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' :=  'TIID^Device 4 (EtherCAT)^Term 40 (EK1100)^Term 43 (EL1859)^Channel 9^Output'}
+	u_3405_run_command_io AT %Q* : BOOL;
+	
+	//Motor Fault Reset
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 10^Output'}
+	u_3112_fault_reset_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 12^Output'}
+	u_3212_fault_reset_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 14^Output'}
+	u_3312_fault_reset_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 7 (EL1859)^Channel 16^Output'}
+	u_3160_fault_reset_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL1859)^Channel 10^Output'}
+	u_3260_fault_reset_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL1859)^Channel 12^Output'}
+	u_3360_fault_reset_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL1859)^Channel 14^Output'}
+	u_3370_fault_reset_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' :=  'TIID^Device 4 (EtherCAT)^Term 40 (EK1100)^Term 43 (EL1859)^Channel 10^Output'}
+	u_3405_fault_reset_io AT %Q* : BOOL;
+	
+	//Motor vfd speed feedback
+	u_3112_speed_feedback : analog_scaling;
+	u_3212_speed_feedback : analog_scaling;
+	u_3312_speed_feedback : analog_scaling;
+	u_3160_speed_feedback : analog_scaling;
+	u_3260_speed_feedback : analog_scaling;
+	u_3360_speed_feedback : analog_scaling;
+	u_3370_speed_feedback : analog_scaling;
+	u_3405_speed_feedback : analog_scaling;
 	
 	//Motor vfd speed feedback raw input
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 1^Value'}
@@ -170,7 +226,10 @@ VAR PERSISTENT
 	
 //--Field Equipent: Valves---------------------------------------------------------------------------------------------------------------
 	
-
+	//Analog valve position feedback
+	av_3148_position_feedback : analog_scaling;
+	av_3248_position_feedback : analog_scaling;
+	av_3348_position_feedback : analog_scaling;
 	//Analog valve position feedback raw input
 	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 15 (EL3058)^AI Standard Channel 8^Value'}
 	av_3148_position_feedback_raw_input AT %I* : INT;
@@ -179,7 +238,20 @@ VAR PERSISTENT
 	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 16 (EL3058)^AI Standard Channel 2^Value'}
 	av_3348_position_feedback_raw_input AT %I* : INT;
 	
-
+	//Analog valve position command
+	av_3148_position_command : analog_scaling;
+	av_3248_position_command : analog_scaling;
+	av_3348_position_command : analog_scaling;
+	nv_3110_position_command : analog_scaling;
+	nv_3210_position_command : analog_scaling;
+	nv_3310_position_command : analog_scaling;
+	//Analog valve position command output valve
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 19 (EL4124)^AO Output Channel 1^Analog output'}
+	av_3148_position_command_io AT %Q* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 19 (EL4124)^AO Output Channel 2^Analog output'}
+	av_3248_position_command_io AT %Q* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 19 (EL4124)^AO Output Channel 3^Analog output'}
+	av_3348_position_command_io AT %Q* : INT;
 	
 	//Digital valve open feedback
 	//{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
@@ -217,7 +289,25 @@ VAR PERSISTENT
 	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 22 (EL1859)^Channel 5^Input'}
 	nv_3162_closed_feedback AT %I* : BOOL;
 	
-
+	//Digital valve open command
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
+	nv_3110_open_command_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 10^Output'}
+	nv_3210_open_command_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 13^Output'}
+	nv_3310_open_command_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 12^Output'}
+	nv_3135_open_command_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 14^Output'}
+	nv_3235_open_command_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 15^Output'}
+	nv_3335_open_command_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 16^Output'}
+	nv_3372_open_command_io AT %Q* : BOOL;
+	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 9^Output'}
+	nv_3162_open_command_io AT %Q* : BOOL;
+	
+	safety_reset AT %Q* : BOOL;
 END_VAR]]></Declaration>
     <Implementation>
       <ST><![CDATA[//---Field Instrumentation
@@ -510,7 +600,34 @@ tt_3432.raw_input := tt_3432_raw_input;
 
 //---Pumps---------------------------------------------------------------------------------------------------------------------------------
 
+//Map the motor run command to the command output
+u_3112_run_command_io:=motor_vfd_control_st.u_3112.run_command;
+u_3212_run_command_io:=motor_vfd_control_st.u_3212.run_command;
+u_3312_run_command_io:=motor_vfd_control_st.u_3312.run_command;
+u_3160_run_command_io:=motor_vfd_control_st.u_3160.run_command;
+u_3260_run_command_io:=motor_vfd_control_st.u_3260.run_command;
+u_3360_run_command_io:=motor_vfd_control_st.u_3360.run_command;
+u_3370_run_command_io:=motor_vfd_control_st.u_3370.run_command;
+u_3405_run_command_io:=motor_vfd_control_st.u_3405.run_command;
 
+//Instantiate u_3112 Speed command analog output function block
+u_3112_speed_command();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3112_speed_command.eu_max:=32767;
+u_3112_speed_command.eu_min:=0;
+u_3112_speed_command.filter_factor:=opc.popa_0081_u_3112_speed_command_filter_factor;
+u_3112_speed_command.raw_max:=60;
+u_3112_speed_command.raw_min:=0;
+
+//Map output from motor control pou to scaling block
+IF general.ed_routine_maint OR general.ed_routine_manual THEN
+	u_3112_speed_command.raw_input := opc.popa_0081_u_3112_hmi_speed_request;
+	ELSE
+		u_3112_speed_command.raw_input:=motor_vfd_control_st.u_3112_pid.fCtrlOutput;
+END_IF
+
+//Map the analog scaling function block raw input to the physical raw output variable
+u_3112_speed_command_io := REAL_TO_INT(u_3112_speed_command.scaled_value);
 
 //Instantiate u_3112 speed feedback analog input function block
 u_3112_speed_feedback();
@@ -528,7 +645,24 @@ u_3112_speed_feedback.raw_input := u_3112_speed_feedback_raw_input;
 
 
 //--------------------------------------------------------------------------------------------------------------
+//Instantiate Example analog output function block
+u_3212_speed_command();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3212_speed_command.eu_max:=32767;
+u_3212_speed_command.eu_min:=0;
+u_3212_speed_command.filter_factor:=opc.popa_0081_u_3212_speed_command_filter_factor;
+u_3212_speed_command.raw_max:=60;
+u_3212_speed_command.raw_min:=0;
 
+//Map output from motor control pou to scaling block
+IF general.ed_routine_maint OR general.ed_routine_manual THEN
+	u_3212_speed_command.raw_input := opc.popa_0081_u_3212_hmi_speed_request;
+	ELSE
+		u_3212_speed_command.raw_input:=motor_vfd_control_st.u_3212_pid.fCtrlOutput;
+END_IF
+
+//Map the analog scaling function block raw input to the physical raw output variable
+u_3212_speed_command_io := REAL_TO_INT(u_3212_speed_command.scaled_value);
 
 //Instantiate Example analog input function block
 u_3212_speed_feedback();
@@ -542,7 +676,24 @@ u_3212_speed_feedback.raw_min:=opc.popa_0081_u_3212_speed_feedback_raw_min;
 u_3212_speed_feedback.raw_input := u_3212_speed_feedback_raw_input;
 
 //--------------------------------------------------------------------------------------------------------------
+//Instantiate Example analog output function block
+u_3312_speed_command();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3312_speed_command.eu_max:=32767;
+u_3312_speed_command.eu_min:=0;
+u_3312_speed_command.filter_factor:=opc.popa_0081_u_3312_speed_command_filter_factor;
+u_3312_speed_command.raw_max:=60;
+u_3312_speed_command.raw_min:=0;
 
+//Map output from motor control pou to scaling block
+IF general.ed_routine_maint OR general.ed_routine_manual THEN
+	u_3312_speed_command.raw_input := opc.popa_0081_u_3312_hmi_speed_request;
+	ELSE
+		u_3312_speed_command.raw_input:=motor_vfd_control_st.u_3312_pid.fCtrlOutput;
+END_IF
+
+//Map the analog scaling function block raw input to the physical raw output variable
+u_3312_speed_command_io := REAL_TO_INT(u_3312_speed_command.scaled_value);
 
 //Instantiate Example analog input function block
 u_3312_speed_feedback();
@@ -556,7 +707,24 @@ u_3312_speed_feedback.raw_min:=opc.popa_0081_u_3312_speed_feedback_raw_min;
 u_3312_speed_feedback.raw_input := u_3312_speed_feedback_raw_input;
 
 //--------------------------------------------------------------------------------------------------------------
+//Instantiate Example analog output function block
+u_3160_speed_command();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3160_speed_command.eu_max:=32767;
+u_3160_speed_command.eu_min:=0;
+u_3160_speed_command.filter_factor:=opc.popa_0081_u_3160_speed_command_filter_factor;
+u_3160_speed_command.raw_max:=60;
+u_3160_speed_command.raw_min:=0;
 
+//Map output from motor control pou to scaling block
+IF general.ed_routine_maint OR general.ed_routine_manual THEN
+	u_3160_speed_command.raw_input := opc.popa_0081_u_3160_hmi_speed_request;
+	ELSE
+		u_3160_speed_command.raw_input:=motor_vfd_control_st.u_3160_pid.fCtrlOutput;
+END_IF
+
+//Map the analog scaling function block raw input to the physical raw output variable
+u_3160_speed_command_io := REAL_TO_INT(u_3160_speed_command.scaled_value);
 
 //Instantiate Example analog input function block
 u_3160_speed_feedback();
@@ -570,7 +738,24 @@ u_3160_speed_feedback.raw_min:=opc.popa_0081_u_3160_speed_feedback_raw_min;
 u_3160_speed_feedback.raw_input := u_3160_speed_feedback_raw_input;
 
 //--------------------------------------------------------------------------------------------------------------
+//Instantiate Example analog output function block
+u_3260_speed_command();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3260_speed_command.eu_max:=32767;
+u_3260_speed_command.eu_min:=0;
+u_3260_speed_command.filter_factor:=opc.popa_0081_u_3260_speed_command_filter_factor;
+u_3260_speed_command.raw_max:=60;
+u_3260_speed_command.raw_min:=0;
 
+//Map output from motor control pou to scaling block
+IF general.ed_routine_maint OR general.ed_routine_manual THEN
+	u_3260_speed_command.raw_input := opc.popa_0081_u_3260_hmi_speed_request;
+	ELSE
+		u_3260_speed_command.raw_input:=motor_vfd_control_st.u_3260_pid.fCtrlOutput;
+END_IF
+
+//Map the analog scaling function block raw input to the physical raw output variable
+u_3260_speed_command_io := REAL_TO_INT(u_3260_speed_command.scaled_value);
 
 //Instantiate Example analog input function block
 u_3260_speed_feedback();
@@ -584,7 +769,24 @@ u_3260_speed_feedback.raw_min:=opc.popa_0081_u_3260_speed_feedback_raw_min;
 u_3260_speed_feedback.raw_input := u_3260_speed_feedback_raw_input;
 
 //--------------------------------------------------------------------------------------------------------------
+//Instantiate Example analog output function block
+u_3360_speed_command();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3360_speed_command.eu_max:=32767;
+u_3360_speed_command.eu_min:=0;
+u_3360_speed_command.filter_factor:=opc.popa_0081_u_3360_speed_command_filter_factor;
+u_3360_speed_command.raw_max:=60;
+u_3360_speed_command.raw_min:=0;
 
+//Map output from motor control pou to scaling block
+IF general.ed_routine_maint OR general.ed_routine_manual THEN
+	u_3360_speed_command.raw_input := opc.popa_0081_u_3360_hmi_speed_request;
+	ELSE
+		u_3360_speed_command.raw_input:=motor_vfd_control_st.u_3360_pid.fCtrlOutput;
+END_IF
+
+//Map the analog scaling function block raw input to the physical raw output variable
+u_3360_speed_command_io := REAL_TO_INT(u_3360_speed_command.scaled_value);
 
 //Instantiate Example analog input function block
 u_3360_speed_feedback();
@@ -598,7 +800,24 @@ u_3360_speed_feedback.raw_min:=opc.popa_0081_u_3360_speed_feedback_raw_min;
 u_3360_speed_feedback.raw_input := u_3360_speed_feedback_raw_input;
 
 //--------------------------------------------------------------------------------------------------------------
+//Instantiate Example analog output function block
+u_3370_speed_command();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3370_speed_command.eu_max:=32767;
+u_3370_speed_command.eu_min:=0;
+u_3370_speed_command.filter_factor:=opc.popa_0081_u_3370_speed_command_filter_factor;
+u_3370_speed_command.raw_max:=60;
+u_3370_speed_command.raw_min:=0;
 
+//Map output from motor control pou to scaling block
+IF general.ed_routine_maint OR general.ed_routine_manual THEN
+	u_3370_speed_command.raw_input := opc.popa_0081_u_3370_hmi_speed_request;
+	ELSE
+		u_3370_speed_command.raw_input:=motor_vfd_control_st.u_3370_pid.fCtrlOutput;
+END_IF
+
+//Map the analog scaling function block raw input to the physical raw output variable
+u_3370_speed_command_io := REAL_TO_INT(u_3370_speed_command.scaled_value);
 
 //Instantiate Example analog input function block
 u_3370_speed_feedback();
@@ -612,7 +831,24 @@ u_3370_speed_feedback.raw_min:=opc.popa_0081_u_3370_speed_feedback_raw_min;
 u_3370_speed_feedback.raw_input := u_3370_speed_feedback_raw_input;
 
 //--------------------------------------------------------------------------------------------------------------
+//Instantiate Example analog output function block
+u_3405_speed_command();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+u_3405_speed_command.eu_max:=32767;
+u_3405_speed_command.eu_min:=0;
+u_3405_speed_command.filter_factor:=opc.popa_0091_u_3405_speed_command_filter_factor;
+u_3405_speed_command.raw_max:=60;
+u_3405_speed_command.raw_min:=0;
 
+//Map output from motor control pou to scaling block
+IF general.ed_routine_maint OR general.ed_routine_manual THEN
+	u_3405_speed_command.raw_input := opc.popa_0091_u_3405_hmi_speed_request;
+	ELSE
+		u_3405_speed_command.raw_input:=motor_vfd_control_st.u_3405_pid.fCtrlOutput;
+END_IF
+
+//Map the analog scaling function block raw input to the physical raw output variable
+u_3405_speed_command_io := REAL_TO_INT(u_3405_speed_command.scaled_value);
 
 //Instantiate Example analog input function block
 u_3405_speed_feedback();
@@ -639,7 +875,18 @@ av_3148_position_feedback.raw_min:=opc.popa_0081_av_3148_position_feedback_raw_m
 //Map the analog scaling function block raw input to the physical raw input variable
 av_3148_position_feedback.raw_input := av_3148_position_feedback_raw_input;
 
-
+//Instantiate av_3148 analog output function block
+av_3148_position_command();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+av_3148_position_command.eu_max:=32767;
+av_3148_position_command.eu_min:=0;
+av_3148_position_command.filter_factor:=opc.popa_0081_av_3148_position_command_filter_factor;
+av_3148_position_command.raw_max:=100;
+av_3148_position_command.raw_min:=0;
+//Map output from valve control pou to scaling block
+av_3148_position_command.raw_input:=valve_digital_control_st.av_3148.Position_Command;
+//Map the analog scaling function block raw input to the physical raw output variable
+av_3148_position_command_io := REAL_TO_INT(av_3148_position_command.scaled_value);
 
 
 //Instantiate av_3248 analog input function block-----------------------------------------------------------------
@@ -653,7 +900,18 @@ av_3248_position_feedback.raw_min:=opc.popa_0081_av_3248_position_feedback_raw_m
 //Map the analog scaling function block raw input to the physical raw input variable
 av_3248_position_feedback.raw_input := av_3248_position_feedback_raw_input;
 
-
+//Instantiate av_3248 analog output function block
+av_3248_position_command();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+av_3248_position_command.eu_max:=32767;
+av_3248_position_command.eu_min:=0;
+av_3248_position_command.filter_factor:=opc.popa_0081_av_3248_position_command_filter_factor;
+av_3248_position_command.raw_max:=100;
+av_3248_position_command.raw_min:=0;
+//Map output from valve control pou to scaling block
+av_3248_position_command.raw_input:=valve_digital_control_st.av_3248.Position_Command;
+//Map the analog scaling function block raw input to the physical raw output variable
+av_3248_position_command_io := REAL_TO_INT(av_3248_position_command.scaled_value);
 
 
 //Instantiate av_3348 analog input function block----------------------------------------------------------------------
@@ -667,7 +925,29 @@ av_3348_position_feedback.raw_min:=opc.popa_0081_av_3348_position_feedback_raw_m
 //Map the analog scaling function block raw input to the physical raw input variable
 av_3348_position_feedback.raw_input := av_3348_position_feedback_raw_input;
 
+//Instantiate av_3348 analog output function block
+av_3348_position_command();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+av_3348_position_command.eu_max:=32767;
+av_3348_position_command.eu_min:=0;
+av_3348_position_command.filter_factor:=opc.popa_0081_av_3348_position_command_filter_factor;
+av_3348_position_command.raw_max:=100;
+av_3348_position_command.raw_min:=0;
+//Map output from valve control pou to scaling block
+av_3348_position_command.raw_input:=valve_digital_control_st.av_3348.Position_Command;
+//Map the analog scaling function block raw input to the physical raw output variable
+av_3348_position_command_io := REAL_TO_INT(av_3348_position_command.scaled_value);
 
+
+//Map the digital valve open command to the command output
+nv_3110_open_command_io:=valve_digital_control_st.nv_3110.open_command;
+nv_3210_open_command_io:=valve_digital_control_st.nv_3210.open_command;
+nv_3310_open_command_io:=valve_digital_control_st.nv_3310.open_command;
+nv_3135_open_command_io:=valve_digital_control_st.nv_3135.open_command;
+nv_3235_open_command_io:=valve_digital_control_st.nv_3235.open_command;
+nv_3335_open_command_io:=valve_digital_control_st.nv_3335.open_command;
+nv_3372_open_command_io:=valve_digital_control_st.nv_3372.open_command;
+nv_3162_open_command_io:=valve_digital_control_st.nv_3162.open_command;
 ]]></ST>
     </Implementation>
   </POU>
