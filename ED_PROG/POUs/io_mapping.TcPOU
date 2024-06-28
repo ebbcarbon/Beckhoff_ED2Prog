@@ -53,58 +53,58 @@ VAR PERSISTENT
     //Analog input raw input, mapped to a physical input
     cpt_3144_raw_input AT %I* : INT;
 	
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 18 (EL3058)^AI Standard Channel 1^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 25 (EL3058)^AI Standard Channel 1^Value'}
 	ft_3122_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 18 (EL3058)^AI Standard Channel 2^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 25 (EL3058)^AI Standard Channel 2^Value'}
 	ft_3222_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 18 (EL3058)^AI Standard Channel 3^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 25 (EL3058)^AI Standard Channel 3^Value'}
 	ft_3322_raw_input AT %I* : INT;
 	
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 14 (EL3058)^AI Standard Channel 1^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 21 (EL3058)^AI Standard Channel 1^Value'}
 	pt_3119_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 14 (EL3058)^AI Standard Channel 2^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 21 (EL3058)^AI Standard Channel 2^Value'}
 	pt_3219_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 14 (EL3058)^AI Standard Channel 3^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 21 (EL3058)^AI Standard Channel 3^Value'}
 	pt_3319_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 14 (EL3058)^AI Standard Channel 4^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 21 (EL3058)^AI Standard Channel 4^Value'}
 	pt_3141_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 14 (EL3058)^AI Standard Channel 5^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 21 (EL3058)^AI Standard Channel 5^Value'}
 	pt_3241_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 14 (EL3058)^AI Standard Channel 6^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 21 (EL3058)^AI Standard Channel 6^Value'}
 	pt_3341_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 40 (EK1100)^Term 41 (EL3058)^AI Standard Channel 4^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 40 (EK1100)^Term 41 (EL3058)^AI Standard Channel 4^Value'}
 	pt_3428_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 40 (EK1100)^Term 41 (EL3058)^AI Standard Channel 5^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 40 (EK1100)^Term 41 (EL3058)^AI Standard Channel 5^Value'}
 	pt_3414_raw_input AT %I* : INT;
 	
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 16 (EL3058)^AI Standard Channel 3^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 23 (EL3058)^AI Standard Channel 3^Value'}
 	lt_3102_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 16 (EL3058)^AI Standard Channel 4^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 23 (EL3058)^AI Standard Channel 4^Value'}
 	lt_3202_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 16 (EL3058)^AI Standard Channel 5^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 23 (EL3058)^AI Standard Channel 5^Value'}
 	lt_3302_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 16 (EL3058)^AI Standard Channel 6^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 23 (EL3058)^AI Standard Channel 6^Value'}
 	lt_3153_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 16 (EL3058)^AI Standard Channel 7^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 23 (EL3058)^AI Standard Channel 7^Value'}
 	lt_3253_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 16 (EL3058)^AI Standard Channel 8^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 23 (EL3058)^AI Standard Channel 8^Value'}
 	lt_3353_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 40 (EK1100)^Term 41 (EL3058)^AI Standard Channel 3^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 40 (EK1100)^Term 41 (EL3058)^AI Standard Channel 3^Value'}
 	lt_3402_raw_input AT %I* : INT;
 	
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 14 (EL3058)^AI Standard Channel 7^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 21 (EL3058)^AI Standard Channel 7^Value'}
 	tt_3118_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 14 (EL3058)^AI Standard Channel 8^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 21 (EL3058)^AI Standard Channel 8^Value'}
 	tt_3218_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 15 (EL3058)^AI Standard Channel 1^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 22 (EL3058)^AI Standard Channel 1^Value'}
 	tt_3318_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 15 (EL3058)^AI Standard Channel 2^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 22 (EL3058)^AI Standard Channel 2^Value'}
 	tt_3140_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 15 (EL3058)^AI Standard Channel 3^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 22 (EL3058)^AI Standard Channel 3^Value'}
 	tt_3240_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 15 (EL3058)^AI Standard Channel 4^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 22 (EL3058)^AI Standard Channel 4^Value'}
 	tt_3340_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 40 (EK1100)^Term 41 (EL3058)^AI Standard Channel 2^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 40 (EK1100)^Term 41 (EL3058)^AI Standard Channel 2^Value'}
 	tt_3432_raw_input AT %I* : INT;
 	
 //---Field Equipment:Pumps----------------------------------------------------------------------------------------------------------
@@ -124,7 +124,7 @@ VAR PERSISTENT
 	u_3360_run_feedback AT %I* : BOOL;
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL1859)^Channel 6^Input'}
 	u_3370_run_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 40 (EK1100)^Term 43 (EL1859)^Channel 2^Input'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 40 (EK1100)^Term 43 (EL1859)^Channel 2^Input'}
 	u_3405_run_feedback AT %I* : BOOL;
 	
 	//Motor Fault feedback
@@ -142,7 +142,7 @@ VAR PERSISTENT
 	u_3360_fault_feedback AT %I* : BOOL;
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL1859)^Channel 5^Input'}
 	u_3370_fault_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 40 (EK1100)^Term 43 (EL1859)^Channel 1^Input'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 40 (EK1100)^Term 43 (EL1859)^Channel 1^Input'}
 	u_3405_fault_feedback AT %I* : BOOL;
 	
 	
@@ -165,56 +165,56 @@ VAR PERSISTENT
 	u_3360_speed_feedback_raw_input AT %I* : INT;
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 2 (EL3058)^AI Standard Channel 7^Value'}
 	u_3370_speed_feedback_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 40 (EK1100)^Term 41 (EL3058)^AI Standard Channel 1^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 40 (EK1100)^Term 41 (EL3058)^AI Standard Channel 1^Value'}
 	u_3405_speed_feedback_raw_input AT %I* : INT;
 	
 //--Field Equipent: Valves---------------------------------------------------------------------------------------------------------------
 	
 
 	//Analog valve position feedback raw input
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 15 (EL3058)^AI Standard Channel 8^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 22 (EL3058)^AI Standard Channel 8^Value'}
 	av_3148_position_feedback_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 16 (EL3058)^AI Standard Channel 1^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 23 (EL3058)^AI Standard Channel 1^Value'}
 	av_3248_position_feedback_raw_input AT %I* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 16 (EL3058)^AI Standard Channel 2^Value'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 23 (EL3058)^AI Standard Channel 2^Value'}
 	av_3348_position_feedback_raw_input AT %I* : INT;
 	
 
 	
 	//Digital valve open feedback
-	//{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
 	//nv_3110_open_feedback AT %I* : BOOL;
-	//{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
 	//nv_3210_open_feedback AT %I* : BOOL;
-	//{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
 	//nv_3310_open_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 21 (EL1859)^Channel 1^Input'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 28 (EL1859)^Channel 1^Input'}
 	nv_3135_open_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 21 (EL1859)^Channel 2^Input'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 28 (EL1859)^Channel 2^Input'}
 	nv_3235_open_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 21 (EL1859)^Channel 3^Input'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 28 (EL1859)^Channel 3^Input'}
 	nv_3335_open_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 21 (EL1859)^Channel 4^Input'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 28 (EL1859)^Channel 4^Input'}
 	nv_3372_open_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 21 (EL1859)^Channel 5^Input'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 28 (EL1859)^Channel 5^Input'}
 	nv_3162_open_feedback AT %I* : BOOL;
 	
 	//Digital valve closed feedback
-	//{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
 	//nv_3110_closed_feedback AT %I* : BOOL;
-	//{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
 	//nv_3210_closed_feedback AT %I* : BOOL;
-	//{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
+	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
 	//nv_3310_closed_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 22 (EL1859)^Channel 1^Input'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 29 (EL1859)^Channel 1^Input'}
 	nv_3135_closed_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 22 (EL1859)^Channel 2^Input'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 29 (EL1859)^Channel 2^Input'}
 	nv_3235_closed_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 22 (EL1859)^Channel 3^Input'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 29 (EL1859)^Channel 3^Input'}
 	nv_3335_closed_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 22 (EL1859)^Channel 4^Input'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 29 (EL1859)^Channel 4^Input'}
 	nv_3372_closed_feedback AT %I* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 22 (EL1859)^Channel 5^Input'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 29 (EL1859)^Channel 5^Input'}
 	nv_3162_closed_feedback AT %I* : BOOL;
 	
 

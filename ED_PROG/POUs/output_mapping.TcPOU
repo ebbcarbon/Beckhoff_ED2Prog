@@ -35,7 +35,7 @@ VAR PERSISTENT
 	u_3360_speed_command_io AT %Q* : INT;
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 5 (EL4124)^AO Output Channel 3^Analog output'}
 	u_3370_speed_command_io AT %Q* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 40 (EK1100)^Term 42 (EL4124)^AO Output Channel 1^Analog output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 40 (EK1100)^Term 42 (EL4124)^AO Output Channel 1^Analog output'}
 	u_3405_speed_command_io AT %Q* : INT;
 	
 	//Motor vfd run command, mapped to a physical output
@@ -53,7 +53,7 @@ VAR PERSISTENT
 	u_3360_run_command_io AT %Q* : BOOL;
 	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL1859)^Channel 13^Output'}
 	u_3370_run_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' :=  'TIID^Device 4 (EtherCAT)^Term 40 (EK1100)^Term 43 (EL1859)^Channel 9^Output'}
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 40 (EK1100)^Term 43 (EL1859)^Channel 9^Output'}
 	u_3405_run_command_io AT %Q* : BOOL;
 	
 	//Motor Fault Reset
@@ -71,34 +71,34 @@ VAR PERSISTENT
 	u_3360_fault_reset_io AT %Q* : BOOL;
 	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 8 (EL1859)^Channel 14^Output'}
 	u_3370_fault_reset_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' :=  'TIID^Device 4 (EtherCAT)^Term 40 (EK1100)^Term 43 (EL1859)^Channel 10^Output'}
+	{attribute 'TcLinkTo' :=  'TIID^Device 1 (EtherCAT)^Term 40 (EK1100)^Term 43 (EL1859)^Channel 10^Output'}
 	u_3405_fault_reset_io AT %Q* : BOOL;
 	
 		
 	//Analog valve position command output valve
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 19 (EL4124)^AO Output Channel 1^Analog output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 26 (EL4124)^AO Output Channel 1^Analog output'}
 	av_3148_position_command_io AT %Q* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 19 (EL4124)^AO Output Channel 2^Analog output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 26 (EL4124)^AO Output Channel 2^Analog output'}
 	av_3248_position_command_io AT %Q* : INT;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 13 (EK1100-0018)^Term 19 (EL4124)^AO Output Channel 3^Analog output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 26 (EL4124)^AO Output Channel 3^Analog output'}
 	av_3348_position_command_io AT %Q* : INT;
 	
 		//Digital valve open command
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
 	nv_3110_open_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 10^Output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 10^Output'}
 	nv_3210_open_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 13^Output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 13^Output'}
 	nv_3310_open_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 12^Output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 12^Output'}
 	nv_3135_open_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 14^Output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 14^Output'}
 	nv_3235_open_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 15^Output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 15^Output'}
 	nv_3335_open_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 16^Output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 16^Output'}
 	nv_3372_open_command_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 4 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 9^Output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 9^Output'}
 	nv_3162_open_command_io AT %Q* : BOOL;
 	
 	safety_reset AT %Q* : BOOL;
