@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.50" ClassName="CNestedPlcProjDef">
 	<Project GUID="{A69D7AB4-53AC-40E7-8E11-A7DF25BBEC0A}" Name="ED_PROG" PrjFilePath="..\..\ED_PROG\ED_PROG.plcproj" TmcFilePath="..\..\ED_PROG\ED_PROG.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" CopyTmcToTarget="true" CopyTpyToTarget="false" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="ED_PROG\ED_PROG.tmc" TmcHash="{D77232D5-8D17-9EEA-B93E-94AA78690116}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="ED_PROG\ED_PROG.tmc" TmcHash="{5A7F1079-CF3D-6C31-A486-C4D084A7FEF9}">
 			<Name>ED_PROG Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -193,6 +193,22 @@ Motor vfd run feedback, mapped to a physical input]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>io_mapping.cct_3120_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.cct_3220_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.cct_3320_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.cct_3142_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>io_mapping.nv_3135_open_feedback</Name>
 					<Comment><![CDATA[Digital valve open feedback
 {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
@@ -248,6 +264,14 @@ Analog valve position feedback raw input]]></Comment>
 				</Var>
 				<Var>
 					<Name>io_mapping.av_3348_position_feedback_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.cct_3242_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.cct_3342_raw_input</Name>
 					<Type>INT</Type>
 				</Var>
 				<Var>
@@ -558,6 +582,14 @@ nv_3310_closed_feedback AT %I* : BOOL;]]></Comment>
 				<Link VarA="PlcTask Inputs^io_mapping.lt_3253_raw_input" VarB="AI Standard Channel 7^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^io_mapping.lt_3302_raw_input" VarB="AI Standard Channel 5^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^io_mapping.lt_3353_raw_input" VarB="AI Standard Channel 8^Value" AutoLink="true"/>
+			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 24 (EL3058)">
+				<Link VarA="PlcTask Inputs^io_mapping.cct_3120_raw_input" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.cct_3142_raw_input" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.cct_3220_raw_input" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.cct_3242_raw_input" VarB="AI Standard Channel 5^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.cct_3320_raw_input" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^io_mapping.cct_3342_raw_input" VarB="AI Standard Channel 6^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 25 (EL3058)">
 				<Link VarA="PlcTask Inputs^io_mapping.ft_3122_raw_input" VarB="AI Standard Channel 1^Value" AutoLink="true"/>

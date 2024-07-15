@@ -19,12 +19,13 @@ END_VAR
 VAR_OUTPUT
 	//Alarm is triggered
 	active : BOOL;
+	delay_ton_et : TIME;
 END_VAR
 VAR
 	//Delay Timer Tags
 	delay_ton : TON;
 	delay_ton_pt : TIME;
-	delay_ton_et : TIME;
+	//delay_ton_et : TIME;
 	//Delay setpoint converted to Milliseconds
 	delay_ms : REAL;
 	//Cutoff for needing to reset vs ack an alarm.  At or above this value requires reset.  

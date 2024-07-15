@@ -7,6 +7,13 @@ VAR PERSISTENT
     //Analog input function block
 	cpt_3144: analog_scaling;
 	
+	cct_3120 : analog_scaling;
+	cct_3220 : analog_scaling;
+	cct_3320 : analog_scaling;
+	cct_3142 : analog_scaling;
+	cct_3242 : analog_scaling;
+	cct_3342 : analog_scaling;
+	
 	ft_3122 : analog_scaling;
 	ft_3222 : analog_scaling;
 	ft_3322 : analog_scaling;
@@ -52,6 +59,18 @@ VAR PERSISTENT
 	av_3348_position_feedback : analog_scaling;
     //Analog input raw input, mapped to a physical input
     cpt_3144_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 24 (EL3058)^AI Standard Channel 1^Value'}
+	cct_3120_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 24 (EL3058)^AI Standard Channel 2^Value'}
+	cct_3220_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 24 (EL3058)^AI Standard Channel 3^Value'}
+	cct_3320_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 24 (EL3058)^AI Standard Channel 4^Value'}
+	cct_3142_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 24 (EL3058)^AI Standard Channel 5^Value'}
+	cct_3242_raw_input AT %I* : INT;
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 24 (EL3058)^AI Standard Channel 6^Value'}
+	cct_3342_raw_input AT %I* : INT;
 	
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 25 (EL3058)^AI Standard Channel 1^Value'}
 	ft_3122_raw_input AT %I* : INT;
@@ -220,7 +239,7 @@ VAR PERSISTENT
 
 END_VAR]]></Declaration>
     <Implementation>
-      <ST><![CDATA[//---Field Instrumentation
+      <ST><![CDATA[//---Field Instrumentation--------------------------------------------------------------------------------------------------
 
 //Instantiate analog input function block
 cpt_3144();
@@ -232,6 +251,72 @@ cpt_3144.raw_max:=opc.popa_0081_cpt_3144_raw_max;
 cpt_3144.raw_min:=opc.popa_0081_cpt_3144_raw_min;
 //Map the analog scaling function block raw input to the physical raw input variable
 cpt_3144.raw_input := cpt_3144_raw_input;
+
+//Instantiate analog input function block
+cct_3120();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+cct_3120.eu_max:=opc.popa_0081_cct_3120_eu_max;
+cct_3120.eu_min:=opc.popa_0081_cct_3120_eu_min;
+cct_3120.filter_factor:=opc.popa_0081_cct_3120_filter_factor;
+cct_3120.raw_max:=opc.popa_0081_cct_3120_raw_max;
+cct_3120.raw_min:=opc.popa_0081_cct_3120_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+cct_3120.raw_input := cct_3120_raw_input;
+
+//Instantiate analog input function block
+cct_3220();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+cct_3220.eu_max:=opc.popa_0081_cct_3220_eu_max;
+cct_3220.eu_min:=opc.popa_0081_cct_3220_eu_min;
+cct_3220.filter_factor:=opc.popa_0081_cct_3220_filter_factor;
+cct_3220.raw_max:=opc.popa_0081_cct_3220_raw_max;
+cct_3220.raw_min:=opc.popa_0081_cct_3220_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+cct_3220.raw_input := cct_3220_raw_input;
+
+//Instantiate analog input function block
+cct_3320();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+cct_3320.eu_max:=opc.popa_0081_cct_3320_eu_max;
+cct_3320.eu_min:=opc.popa_0081_cct_3320_eu_min;
+cct_3320.filter_factor:=opc.popa_0081_cct_3320_filter_factor;
+cct_3320.raw_max:=opc.popa_0081_cct_3320_raw_max;
+cct_3320.raw_min:=opc.popa_0081_cct_3320_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+cct_3320.raw_input := cct_3320_raw_input;
+
+//Instantiate analog input function block
+cct_3142();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+cct_3142.eu_max:=opc.popa_0081_cct_3142_eu_max;
+cct_3142.eu_min:=opc.popa_0081_cct_3142_eu_min;
+cct_3142.filter_factor:=opc.popa_0081_cct_3142_filter_factor;
+cct_3142.raw_max:=opc.popa_0081_cct_3142_raw_max;
+cct_3142.raw_min:=opc.popa_0081_cct_3142_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+cct_3142.raw_input := cct_3142_raw_input;
+
+//Instantiate analog input function block
+cct_3242();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+cct_3242.eu_max:=opc.popa_0081_cct_3242_eu_max;
+cct_3242.eu_min:=opc.popa_0081_cct_3242_eu_min;
+cct_3242.filter_factor:=opc.popa_0081_cct_3242_filter_factor;
+cct_3242.raw_max:=opc.popa_0081_cct_3242_raw_max;
+cct_3242.raw_min:=opc.popa_0081_cct_3242_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+cct_3242.raw_input := cct_3242_raw_input;
+
+//Instantiate analog input function block
+cct_3342();
+//Map values from the OPC GVL so that they can be written to from outside POU(IE from HMI)
+cct_3342.eu_max:=opc.popa_0081_cct_3342_eu_max;
+cct_3342.eu_min:=opc.popa_0081_cct_3342_eu_min;
+cct_3342.filter_factor:=opc.popa_0081_cct_3342_filter_factor;
+cct_3342.raw_max:=opc.popa_0081_cct_3342_raw_max;
+cct_3342.raw_min:=opc.popa_0081_cct_3342_raw_min;
+//Map the analog scaling function block raw input to the physical raw input variable
+cct_3342.raw_input := cct_3342_raw_input;
 
 //Instantiate analog input function block
 ft_3122();
