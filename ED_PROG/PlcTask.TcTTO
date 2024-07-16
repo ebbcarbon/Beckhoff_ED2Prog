@@ -44,9 +44,6 @@
       <Name>valve_digital_control_st</Name>
     </PouCall>
     <PouCall>
-      <Name>motor_vfd_control_st</Name>
-    </PouCall>
-    <PouCall>
       <Name>idle</Name>
     </PouCall>
     <PouCall>
