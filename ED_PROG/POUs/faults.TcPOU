@@ -616,35 +616,94 @@ IF  redox_cross_pressure_cmp >= 0.2 THEN
 	ELSE
 		stack_redox_inlet_cross_pressure_alm.trigger := FALSE;
 END_IF
-	
+
+
+//tt_3340-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+tt_3340_high_high();
+tt_3340_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3340_high_high.reset:=opc.popa_0081_alarm_reset;
+tt_3340_high_high.priority:=opc.popa_0081_tt_3340_high_high_priority;
+tt_3340_high_high.delay_setpoint:=opc.popa_0081_tt_3340_high_high_setpoint;
+tt_3340_high_high.enable:=opc.popa_0081_tt_3340_high_high_enable;
+
+//Timer delay elapsed
+tt_3340_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3340.scaled_value >= opc.popa_0081_tt_3340_high_high_setpoint THEN
+    tt_3340_high_high.trigger := TRUE;
+    ELSE
+        tt_3340_high_high.trigger := FALSE;
+END_IF
+
 	
 //cct_3120-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
-cct_3120_low_low();
-cct_3120_low_low.alm_ack:=opc.popa_0081_alarm_ack;
-cct_3120_low_low.reset:=opc.popa_0081_alarm_reset;
-cct_3120_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-cct_3120_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-cct_3120_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+cct_3120_low();
+cct_3120_low.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3120_low.reset:=opc.popa_0081_alarm_reset;
+cct_3120_low.priority:=opc.popa_0081_cct_3120_low_priority;
+cct_3120_low.delay_setpoint:=opc.popa_0081_cct_3120_low_setpoint;
+cct_3120_low.enable:=opc.popa_0081_cct_3120_low_enable;
 
 //Timer delay elapsed
-cct_3120_low_low.delay_ton_et;
+cct_3120_low.delay_ton_et;
 
 //Place your alarm trigger logic here. 
-IF io_mapping.cct_3120.scaled_value <= opc.popa_0081_cct_3120_low_low_setpoint THEN
-    cct_3120_low_low.trigger := TRUE;
+IF io_mapping.cct_3120.scaled_value < opc.popa_0081_cct_3120_low_setpoint THEN
+    cct_3120_low.trigger := TRUE;
     ELSE
-        cct_3120_low_low.trigger := FALSE;
+        cct_3120_low.trigger := FALSE;
 END_IF
+	
+//cct_3120-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+cct_3120_high();
+cct_3120_high.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3120_high.reset:=opc.popa_0081_alarm_reset;
+cct_3120_high.priority:=opc.popa_0081_cct_3120_high_priority;
+cct_3120_high.delay_setpoint:=opc.popa_0081_cct_3120_high_setpoint;
+cct_3120_high.enable:=opc.popa_0081_cct_3120_high_enable;
+
+//Timer delay elapsed
+cct_3120_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.cct_3120.scaled_value > opc.popa_0081_cct_3120_high_setpoint THEN
+    cct_3120_high.trigger := TRUE;
+    ELSE
+        cct_3120_high.trigger := FALSE;
+END_IF
+	
+//cct_3120-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+cct_3120_high_high();
+cct_3120_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3120_high_high.reset:=opc.popa_0081_alarm_reset;
+cct_3120_high_high.priority:=opc.popa_0081_cct_3120_high_high_priority;
+cct_3120_high_high.delay_setpoint:=opc.popa_0081_cct_3120_high_high_setpoint;
+cct_3120_high_high.enable:=opc.popa_0081_cct_3120_high_high_enable;
+
+//Timer delay elapsed
+cct_3120_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.cct_3120.scaled_value >= opc.popa_0081_cct_3120_high_high_setpoint THEN
+    cct_3120_high_high.trigger := TRUE;
+    ELSE
+        cct_3120_high_high.trigger := FALSE;
+END_IF
+
 
 //cct_3220-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 cct_3220_low_low();
 cct_3220_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 cct_3220_low_low.reset:=opc.popa_0081_alarm_reset;
-cct_3220_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-cct_3220_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-cct_3220_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+cct_3220_low_low.priority:=opc.popa_0081_cct_3220_low_low_priority;
+cct_3220_low_low.delay_setpoint:=opc.popa_0081_cct_3220_low_low_setpoint;
+cct_3220_low_low.enable:=opc.popa_0081_cct_3220_low_low_enable;
 
 //Timer delay elapsed
 cct_3220_low_low.delay_ton_et;
@@ -655,14 +714,73 @@ IF io_mapping.cct_3220.scaled_value <= opc.popa_0081_cct_3220_low_low_setpoint T
     ELSE
         cct_3220_low_low.trigger := FALSE;
 END_IF
+	
+//cct_3220-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+cct_3220_low();
+cct_3220_low.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3220_low.reset:=opc.popa_0081_alarm_reset;
+cct_3220_low.priority:=opc.popa_0081_cct_3220_low_priority;
+cct_3220_low.delay_setpoint:=opc.popa_0081_cct_3220_low_setpoint;
+cct_3220_low.enable:=opc.popa_0081_cct_3220_low_enable;
+
+//Timer delay elapsed
+cct_3220_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.cct_3220.scaled_value < opc.popa_0081_cct_3220_low_setpoint THEN
+    cct_3220_low.trigger := TRUE;
+    ELSE
+        cct_3220_low.trigger := FALSE;
+END_IF
+	
+//cct_3220-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+cct_3220_high();
+cct_3220_high.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3220_high.reset:=opc.popa_0081_alarm_reset;
+cct_3220_high.priority:=opc.popa_0081_cct_3220_high_priority;
+cct_3220_high.delay_setpoint:=opc.popa_0081_cct_3220_high_setpoint;
+cct_3220_high.enable:=opc.popa_0081_cct_3220_high_enable;
+
+//Timer delay elapsed
+cct_3220_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.cct_3220.scaled_value > opc.popa_0081_cct_3220_high_setpoint THEN
+    cct_3220_high.trigger := TRUE;
+    ELSE
+        cct_3220_high.trigger := FALSE;
+END_IF
+	
+//cct_3220-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+cct_3220_high_high();
+cct_3220_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3220_high_high.reset:=opc.popa_0081_alarm_reset;
+cct_3220_high_high.priority:=opc.popa_0081_cct_3220_high_high_priority;
+cct_3220_high_high.delay_setpoint:=opc.popa_0081_cct_3220_high_high_setpoint;
+cct_3220_high_high.enable:=opc.popa_0081_cct_3220_high_high_enable;
+
+//Timer delay elapsed
+cct_3220_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.cct_3220.scaled_value >= opc.popa_0081_cct_3220_high_high_setpoint THEN
+    cct_3220_high_high.trigger := TRUE;
+    ELSE
+        cct_3220_high_high.trigger := FALSE;
+END_IF
+
+
 //cct_3320-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 cct_3320_low_low();
 cct_3320_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 cct_3320_low_low.reset:=opc.popa_0081_alarm_reset;
-cct_3320_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-cct_3320_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-cct_3320_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+cct_3320_low_low.priority:=opc.popa_0081_cct_3320_low_low_priority;
+cct_3320_low_low.delay_setpoint:=opc.popa_0081_cct_3320_low_low_setpoint;
+cct_3320_low_low.enable:=opc.popa_0081_cct_3320_low_low_enable;
 
 //Timer delay elapsed
 cct_3320_low_low.delay_ton_et;
@@ -673,15 +791,73 @@ IF io_mapping.cct_3320.scaled_value <= opc.popa_0081_cct_3320_low_low_setpoint T
     ELSE
         cct_3320_low_low.trigger := FALSE;
 END_IF
+	
+//cct_3320-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+cct_3320_low();
+cct_3320_low.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3320_low.reset:=opc.popa_0081_alarm_reset;
+cct_3320_low.priority:=opc.popa_0081_cct_3320_low_priority;
+cct_3320_low.delay_setpoint:=opc.popa_0081_cct_3320_low_setpoint;
+cct_3320_low.enable:=opc.popa_0081_cct_3320_low_enable;
+
+//Timer delay elapsed
+cct_3320_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.cct_3320.scaled_value < opc.popa_0081_cct_3320_low_setpoint THEN
+    cct_3320_low.trigger := TRUE;
+    ELSE
+        cct_3320_low.trigger := FALSE;
+END_IF
+	
+//cct_3320-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+cct_3320_high();
+cct_3320_high.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3320_high.reset:=opc.popa_0081_alarm_reset;
+cct_3320_high.priority:=opc.popa_0081_cct_3320_high_priority;
+cct_3320_high.delay_setpoint:=opc.popa_0081_cct_3320_high_setpoint;
+cct_3320_high.enable:=opc.popa_0081_cct_3320_high_enable;
+
+//Timer delay elapsed
+cct_3320_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.cct_3320.scaled_value > opc.popa_0081_cct_3320_high_setpoint THEN
+    cct_3320_high.trigger := TRUE;
+    ELSE
+        cct_3320_high.trigger := FALSE;
+END_IF
+	
+//cct_3320-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+cct_3320_high_high();
+cct_3320_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3320_high_high.reset:=opc.popa_0081_alarm_reset;
+cct_3320_high_high.priority:=opc.popa_0081_cct_3320_high_high_priority;
+cct_3320_high_high.delay_setpoint:=opc.popa_0081_cct_3320_high_high_setpoint;
+cct_3320_high_high.enable:=opc.popa_0081_cct_3320_high_high_enable;
+
+//Timer delay elapsed
+cct_3320_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.cct_3320.scaled_value >= opc.popa_0081_cct_3320_high_high_setpoint THEN
+    cct_3320_high_high.trigger := TRUE;
+    ELSE
+        cct_3320_high_high.trigger := FALSE;
+END_IF
+
 
 //cct_3142-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 cct_3142_low_low();
 cct_3142_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 cct_3142_low_low.reset:=opc.popa_0081_alarm_reset;
-cct_3142_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-cct_3142_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-cct_3142_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+cct_3142_low_low.priority:=opc.popa_0081_cct_3142_low_low_priority;
+cct_3142_low_low.delay_setpoint:=opc.popa_0081_cct_3142_low_low_setpoint;
+cct_3142_low_low.enable:=opc.popa_0081_cct_3142_low_low_enable;
 
 //Timer delay elapsed
 cct_3142_low_low.delay_ton_et;
@@ -692,14 +868,73 @@ IF io_mapping.cct_3142.scaled_value <= opc.popa_0081_cct_3142_low_low_setpoint T
     ELSE
         cct_3142_low_low.trigger := FALSE;
 END_IF
+	
+//cct_3142-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+cct_3142_low();
+cct_3142_low.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3142_low.reset:=opc.popa_0081_alarm_reset;
+cct_3142_low.priority:=opc.popa_0081_cct_3142_low_priority;
+cct_3142_low.delay_setpoint:=opc.popa_0081_cct_3142_low_setpoint;
+cct_3142_low.enable:=opc.popa_0081_cct_3142_low_enable;
+
+//Timer delay elapsed
+cct_3142_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.cct_3142.scaled_value < opc.popa_0081_cct_3142_low_setpoint THEN
+    cct_3142_low.trigger := TRUE;
+    ELSE
+        cct_3142_low.trigger := FALSE;
+END_IF
+	
+//cct_3142-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+cct_3142_high();
+cct_3142_high.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3142_high.reset:=opc.popa_0081_alarm_reset;
+cct_3142_high.priority:=opc.popa_0081_cct_3142_high_priority;
+cct_3142_high.delay_setpoint:=opc.popa_0081_cct_3142_high_setpoint;
+cct_3142_high.enable:=opc.popa_0081_cct_3142_high_enable;
+
+//Timer delay elapsed
+cct_3142_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.cct_3142.scaled_value > opc.popa_0081_cct_3142_high_setpoint THEN
+    cct_3142_high.trigger := TRUE;
+    ELSE
+        cct_3142_high.trigger := FALSE;
+END_IF
+	
+//cct_3142-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+cct_3142_high_high();
+cct_3142_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3142_high_high.reset:=opc.popa_0081_alarm_reset;
+cct_3142_high_high.priority:=opc.popa_0081_cct_3142_high_high_priority;
+cct_3142_high_high.delay_setpoint:=opc.popa_0081_cct_3142_high_high_setpoint;
+cct_3142_high_high.enable:=opc.popa_0081_cct_3142_high_high_enable;
+
+//Timer delay elapsed
+cct_3142_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.cct_3142.scaled_value >= opc.popa_0081_cct_3142_high_high_setpoint THEN
+    cct_3142_high_high.trigger := TRUE;
+    ELSE
+        cct_3142_high_high.trigger := FALSE;
+END_IF
+
+
 //cct_3242-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 cct_3242_low_low();
 cct_3242_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 cct_3242_low_low.reset:=opc.popa_0081_alarm_reset;
-cct_3242_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-cct_3242_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-cct_3242_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+cct_3242_low_low.priority:=opc.popa_0081_cct_3242_low_low_priority;
+cct_3242_low_low.delay_setpoint:=opc.popa_0081_cct_3242_low_low_setpoint;
+cct_3242_low_low.enable:=opc.popa_0081_cct_3242_low_low_enable;
 
 //Timer delay elapsed
 cct_3242_low_low.delay_ton_et;
@@ -710,14 +945,73 @@ IF io_mapping.cct_3242.scaled_value <= opc.popa_0081_cct_3242_low_low_setpoint T
     ELSE
         cct_3242_low_low.trigger := FALSE;
 END_IF
+	
+//cct_3242-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+cct_3242_low();
+cct_3242_low.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3242_low.reset:=opc.popa_0081_alarm_reset;
+cct_3242_low.priority:=opc.popa_0081_cct_3242_low_priority;
+cct_3242_low.delay_setpoint:=opc.popa_0081_cct_3242_low_setpoint;
+cct_3242_low.enable:=opc.popa_0081_cct_3242_low_enable;
+
+//Timer delay elapsed
+cct_3242_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.cct_3242.scaled_value < opc.popa_0081_cct_3242_low_setpoint THEN
+    cct_3242_low.trigger := TRUE;
+    ELSE
+        cct_3242_low.trigger := FALSE;
+END_IF
+	
+//cct_3242-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+cct_3242_high();
+cct_3242_high.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3242_high.reset:=opc.popa_0081_alarm_reset;
+cct_3242_high.priority:=opc.popa_0081_cct_3242_high_priority;
+cct_3242_high.delay_setpoint:=opc.popa_0081_cct_3242_high_setpoint;
+cct_3242_high.enable:=opc.popa_0081_cct_3242_high_enable;
+
+//Timer delay elapsed
+cct_3242_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.cct_3242.scaled_value > opc.popa_0081_cct_3242_high_setpoint THEN
+    cct_3242_high.trigger := TRUE;
+    ELSE
+        cct_3242_high.trigger := FALSE;
+END_IF
+	
+//cct_3242-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+cct_3242_high_high();
+cct_3242_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3242_high_high.reset:=opc.popa_0081_alarm_reset;
+cct_3242_high_high.priority:=opc.popa_0081_cct_3242_high_high_priority;
+cct_3242_high_high.delay_setpoint:=opc.popa_0081_cct_3242_high_high_setpoint;
+cct_3242_high_high.enable:=opc.popa_0081_cct_3242_high_high_enable;
+
+//Timer delay elapsed
+cct_3242_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.cct_3242.scaled_value >= opc.popa_0081_cct_3242_high_high_setpoint THEN
+    cct_3242_high_high.trigger := TRUE;
+    ELSE
+        cct_3242_high_high.trigger := FALSE;
+END_IF
+
+
 //cct_3342-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 cct_3342_low_low();
 cct_3342_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 cct_3342_low_low.reset:=opc.popa_0081_alarm_reset;
-cct_3342_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-cct_3342_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-cct_3342_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+cct_3342_low_low.priority:=opc.popa_0081_cct_3342_low_low_priority;
+cct_3342_low_low.delay_setpoint:=opc.popa_0081_cct_3342_low_low_setpoint;
+cct_3342_low_low.enable:=opc.popa_0081_cct_3342_low_low_enable;
 
 //Timer delay elapsed
 cct_3342_low_low.delay_ton_et;
@@ -728,15 +1022,151 @@ IF io_mapping.cct_3342.scaled_value <= opc.popa_0081_cct_3342_low_low_setpoint T
     ELSE
         cct_3342_low_low.trigger := FALSE;
 END_IF
+	
+//cct_3342-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+cct_3342_low();
+cct_3342_low.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3342_low.reset:=opc.popa_0081_alarm_reset;
+cct_3342_low.priority:=opc.popa_0081_cct_3342_low_priority;
+cct_3342_low.delay_setpoint:=opc.popa_0081_cct_3342_low_setpoint;
+cct_3342_low.enable:=opc.popa_0081_cct_3342_low_enable;
+
+//Timer delay elapsed
+cct_3342_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.cct_3342.scaled_value < opc.popa_0081_cct_3342_low_setpoint THEN
+    cct_3342_low.trigger := TRUE;
+    ELSE
+        cct_3342_low.trigger := FALSE;
+END_IF
+	
+//cct_3342-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+cct_3342_high();
+cct_3342_high.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3342_high.reset:=opc.popa_0081_alarm_reset;
+cct_3342_high.priority:=opc.popa_0081_cct_3342_high_priority;
+cct_3342_high.delay_setpoint:=opc.popa_0081_cct_3342_high_setpoint;
+cct_3342_high.enable:=opc.popa_0081_cct_3342_high_enable;
+
+//Timer delay elapsed
+cct_3342_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.cct_3342.scaled_value > opc.popa_0081_cct_3342_high_setpoint THEN
+    cct_3342_high.trigger := TRUE;
+    ELSE
+        cct_3342_high.trigger := FALSE;
+END_IF
+	
+//cct_3342-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+cct_3342_high_high();
+cct_3342_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3342_high_high.reset:=opc.popa_0081_alarm_reset;
+cct_3342_high_high.priority:=opc.popa_0081_cct_3342_high_high_priority;
+cct_3342_high_high.delay_setpoint:=opc.popa_0081_cct_3342_high_high_setpoint;
+cct_3342_high_high.enable:=opc.popa_0081_cct_3342_high_high_enable;
+
+//Timer delay elapsed
+cct_3342_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.cct_3342.scaled_value >= opc.popa_0081_cct_3342_high_high_setpoint THEN
+    cct_3342_high_high.trigger := TRUE;
+    ELSE
+        cct_3342_high_high.trigger := FALSE;
+END_IF
+
+(*
+//cct_3413-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+cct_3413_low_low();
+cct_3413_low_low.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3413_low_low.reset:=opc.popa_0081_alarm_reset;
+cct_3413_low_low.priority:=opc.popa_0091_cct_3413_low_low_priority;
+cct_3413_low_low.delay_setpoint:=opc.popa_0091_cct_3413_low_low_setpoint;
+cct_3413_low_low.enable:=opc.popa_0091_cct_3413_low_low_enable;
+
+//Timer delay elapsed
+cct_3413_low_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.cct_3413.scaled_value <= opc.popa_0091_cct_3413_low_low_setpoint THEN
+    cct_3413_low_low.trigger := TRUE;
+    ELSE
+        cct_3413_low_low.trigger := FALSE;
+END_IF
+	
+//cct_3413-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+cct_3413_low();
+cct_3413_low.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3413_low.reset:=opc.popa_0081_alarm_reset;
+cct_3413_low.priority:=opc.popa_0091_cct_3413_low_priority;
+cct_3413_low.delay_setpoint:=opc.popa_0091_cct_3413_low_setpoint;
+cct_3413_low.enable:=opc.popa_0091_cct_3413_low_enable;
+
+//Timer delay elapsed
+cct_3413_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.cct_3413.scaled_value < opc.popa_0091_cct_3413_low_setpoint THEN
+    cct_3413_low.trigger := TRUE;
+    ELSE
+        cct_3413_low.trigger := FALSE;
+END_IF
+	
+//cct_3413-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+cct_3413_high();
+cct_3413_high.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3413_high.reset:=opc.popa_0081_alarm_reset;
+cct_3413_high.priority:=opc.popa_0091_cct_3413_high_priority;
+cct_3413_high.delay_setpoint:=opc.popa_0091_cct_3413_high_setpoint;
+cct_3413_high.enable:=opc.popa_0091_cct_3413_high_enable;
+
+//Timer delay elapsed
+cct_3413_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.cct_3413.scaled_value > opc.popa_0091_cct_3413_high_setpoint THEN
+    cct_3413_high.trigger := TRUE;
+    ELSE
+        cct_3413_high.trigger := FALSE;
+END_IF
+	
+//cct_3413-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+cct_3413_high_high();
+cct_3413_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+cct_3413_high_high.reset:=opc.popa_0081_alarm_reset;
+cct_3413_high_high.priority:=opc.popa_0091_cct_3413_high_high_priority;
+cct_3413_high_high.delay_setpoint:=opc.popa_0091_cct_3413_high_high_setpoint;
+cct_3413_high_high.enable:=opc.popa_0091_cct_3413_high_high_enable;
+
+//Timer delay elapsed
+cct_3413_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.cct_3413.scaled_value >= opc.popa_0091_cct_3413_high_high_setpoint THEN
+    cct_3413_high_high.trigger := TRUE;
+    ELSE
+        cct_3413_high_high.trigger := FALSE;
+END_IF
+
+*)
 
 //ft_3122-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 ft_3122_low_low();
 ft_3122_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 ft_3122_low_low.reset:=opc.popa_0081_alarm_reset;
-ft_3122_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-ft_3122_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-ft_3122_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+ft_3122_low_low.priority:=opc.popa_0081_ft_3122_low_low_priority;
+ft_3122_low_low.delay_setpoint:=opc.popa_0081_ft_3122_low_low_setpoint;
+ft_3122_low_low.enable:=opc.popa_0081_ft_3122_low_low_enable;
 
 //Timer delay elapsed
 ft_3122_low_low.delay_ton_et;
@@ -747,14 +1177,73 @@ IF io_mapping.ft_3122.scaled_value <= opc.popa_0081_ft_3122_low_low_setpoint THE
     ELSE
         ft_3122_low_low.trigger := FALSE;
 END_IF
+	
+//ft_3122-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+ft_3122_low();
+ft_3122_low.alm_ack:=opc.popa_0081_alarm_ack;
+ft_3122_low.reset:=opc.popa_0081_alarm_reset;
+ft_3122_low.priority:=opc.popa_0081_ft_3122_low_priority;
+ft_3122_low.delay_setpoint:=opc.popa_0081_ft_3122_low_setpoint;
+ft_3122_low.enable:=opc.popa_0081_ft_3122_low_enable;
+
+//Timer delay elapsed
+ft_3122_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.ft_3122.scaled_value < opc.popa_0081_ft_3122_low_setpoint THEN
+    ft_3122_low.trigger := TRUE;
+    ELSE
+        ft_3122_low.trigger := FALSE;
+END_IF
+	
+//ft_3122-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+ft_3122_high();
+ft_3122_high.alm_ack:=opc.popa_0081_alarm_ack;
+ft_3122_high.reset:=opc.popa_0081_alarm_reset;
+ft_3122_high.priority:=opc.popa_0081_ft_3122_high_priority;
+ft_3122_high.delay_setpoint:=opc.popa_0081_ft_3122_high_setpoint;
+ft_3122_high.enable:=opc.popa_0081_ft_3122_high_enable;
+
+//Timer delay elapsed
+ft_3122_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.ft_3122.scaled_value > opc.popa_0081_ft_3122_high_setpoint THEN
+    ft_3122_high.trigger := TRUE;
+    ELSE
+        ft_3122_high.trigger := FALSE;
+END_IF
+	
+//ft_3122-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+ft_3122_high_high();
+ft_3122_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+ft_3122_high_high.reset:=opc.popa_0081_alarm_reset;
+ft_3122_high_high.priority:=opc.popa_0081_ft_3122_high_high_priority;
+ft_3122_high_high.delay_setpoint:=opc.popa_0081_ft_3122_high_high_setpoint;
+ft_3122_high_high.enable:=opc.popa_0081_ft_3122_high_high_enable;
+
+//Timer delay elapsed
+ft_3122_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.ft_3122.scaled_value >= opc.popa_0081_ft_3122_high_high_setpoint THEN
+    ft_3122_high_high.trigger := TRUE;
+    ELSE
+        ft_3122_high_high.trigger := FALSE;
+END_IF
+
+
 //ft_3222-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 ft_3222_low_low();
 ft_3222_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 ft_3222_low_low.reset:=opc.popa_0081_alarm_reset;
-ft_3222_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-ft_3222_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-ft_3222_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+ft_3222_low_low.priority:=opc.popa_0081_ft_3222_low_low_priority;
+ft_3222_low_low.delay_setpoint:=opc.popa_0081_ft_3222_low_low_setpoint;
+ft_3222_low_low.enable:=opc.popa_0081_ft_3222_low_low_enable;
 
 //Timer delay elapsed
 ft_3222_low_low.delay_ton_et;
@@ -765,14 +1254,73 @@ IF io_mapping.ft_3222.scaled_value <= opc.popa_0081_ft_3222_low_low_setpoint THE
     ELSE
         ft_3222_low_low.trigger := FALSE;
 END_IF
+	
+//ft_3222-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+ft_3222_low();
+ft_3222_low.alm_ack:=opc.popa_0081_alarm_ack;
+ft_3222_low.reset:=opc.popa_0081_alarm_reset;
+ft_3222_low.priority:=opc.popa_0081_ft_3222_low_priority;
+ft_3222_low.delay_setpoint:=opc.popa_0081_ft_3222_low_setpoint;
+ft_3222_low.enable:=opc.popa_0081_ft_3222_low_enable;
+
+//Timer delay elapsed
+ft_3222_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.ft_3222.scaled_value < opc.popa_0081_ft_3222_low_setpoint THEN
+    ft_3222_low.trigger := TRUE;
+    ELSE
+        ft_3222_low.trigger := FALSE;
+END_IF
+	
+//ft_3222-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+ft_3222_high();
+ft_3222_high.alm_ack:=opc.popa_0081_alarm_ack;
+ft_3222_high.reset:=opc.popa_0081_alarm_reset;
+ft_3222_high.priority:=opc.popa_0081_ft_3222_high_priority;
+ft_3222_high.delay_setpoint:=opc.popa_0081_ft_3222_high_setpoint;
+ft_3222_high.enable:=opc.popa_0081_ft_3222_high_enable;
+
+//Timer delay elapsed
+ft_3222_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.ft_3222.scaled_value > opc.popa_0081_ft_3222_high_setpoint THEN
+    ft_3222_high.trigger := TRUE;
+    ELSE
+        ft_3222_high.trigger := FALSE;
+END_IF
+	
+//ft_3222-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+ft_3222_high_high();
+ft_3222_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+ft_3222_high_high.reset:=opc.popa_0081_alarm_reset;
+ft_3222_high_high.priority:=opc.popa_0081_ft_3222_high_high_priority;
+ft_3222_high_high.delay_setpoint:=opc.popa_0081_ft_3222_high_high_setpoint;
+ft_3222_high_high.enable:=opc.popa_0081_ft_3222_high_high_enable;
+
+//Timer delay elapsed
+ft_3222_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.ft_3222.scaled_value >= opc.popa_0081_ft_3222_high_high_setpoint THEN
+    ft_3222_high_high.trigger := TRUE;
+    ELSE
+        ft_3222_high_high.trigger := FALSE;
+END_IF
+
+
 //ft_3322-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 ft_3322_low_low();
 ft_3322_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 ft_3322_low_low.reset:=opc.popa_0081_alarm_reset;
-ft_3322_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-ft_3322_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-ft_3322_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+ft_3322_low_low.priority:=opc.popa_0081_ft_3322_low_low_priority;
+ft_3322_low_low.delay_setpoint:=opc.popa_0081_ft_3322_low_low_setpoint;
+ft_3322_low_low.enable:=opc.popa_0081_ft_3322_low_low_enable;
 
 //Timer delay elapsed
 ft_3322_low_low.delay_ton_et;
@@ -783,15 +1331,73 @@ IF io_mapping.ft_3322.scaled_value <= opc.popa_0081_ft_3322_low_low_setpoint THE
     ELSE
         ft_3322_low_low.trigger := FALSE;
 END_IF
+	
+//ft_3322-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+ft_3322_low();
+ft_3322_low.alm_ack:=opc.popa_0081_alarm_ack;
+ft_3322_low.reset:=opc.popa_0081_alarm_reset;
+ft_3322_low.priority:=opc.popa_0081_ft_3322_low_priority;
+ft_3322_low.delay_setpoint:=opc.popa_0081_ft_3322_low_setpoint;
+ft_3322_low.enable:=opc.popa_0081_ft_3322_low_enable;
+
+//Timer delay elapsed
+ft_3322_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.ft_3322.scaled_value < opc.popa_0081_ft_3322_low_setpoint THEN
+    ft_3322_low.trigger := TRUE;
+    ELSE
+        ft_3322_low.trigger := FALSE;
+END_IF
+	
+//ft_3322-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+ft_3322_high();
+ft_3322_high.alm_ack:=opc.popa_0081_alarm_ack;
+ft_3322_high.reset:=opc.popa_0081_alarm_reset;
+ft_3322_high.priority:=opc.popa_0081_ft_3322_high_priority;
+ft_3322_high.delay_setpoint:=opc.popa_0081_ft_3322_high_setpoint;
+ft_3322_high.enable:=opc.popa_0081_ft_3322_high_enable;
+
+//Timer delay elapsed
+ft_3322_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.ft_3322.scaled_value > opc.popa_0081_ft_3322_high_setpoint THEN
+    ft_3322_high.trigger := TRUE;
+    ELSE
+        ft_3322_high.trigger := FALSE;
+END_IF
+	
+//ft_3322-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+ft_3322_high_high();
+ft_3322_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+ft_3322_high_high.reset:=opc.popa_0081_alarm_reset;
+ft_3322_high_high.priority:=opc.popa_0081_ft_3322_high_high_priority;
+ft_3322_high_high.delay_setpoint:=opc.popa_0081_ft_3322_high_high_setpoint;
+ft_3322_high_high.enable:=opc.popa_0081_ft_3322_high_high_enable;
+
+//Timer delay elapsed
+ft_3322_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.ft_3322.scaled_value >= opc.popa_0081_ft_3322_high_high_setpoint THEN
+    ft_3322_high_high.trigger := TRUE;
+    ELSE
+        ft_3322_high_high.trigger := FALSE;
+END_IF
+
 
 //lt_3102-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 lt_3102_low_low();
 lt_3102_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 lt_3102_low_low.reset:=opc.popa_0081_alarm_reset;
-lt_3102_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-lt_3102_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-lt_3102_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+lt_3102_low_low.priority:=opc.popa_0081_lt_3102_low_low_priority;
+lt_3102_low_low.delay_setpoint:=opc.popa_0081_lt_3102_low_low_setpoint;
+lt_3102_low_low.enable:=opc.popa_0081_lt_3102_low_low_enable;
 
 //Timer delay elapsed
 lt_3102_low_low.delay_ton_et;
@@ -802,14 +1408,73 @@ IF io_mapping.lt_3102.scaled_value <= opc.popa_0081_lt_3102_low_low_setpoint THE
     ELSE
         lt_3102_low_low.trigger := FALSE;
 END_IF
+	
+//lt_3102-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+lt_3102_low();
+lt_3102_low.alm_ack:=opc.popa_0081_alarm_ack;
+lt_3102_low.reset:=opc.popa_0081_alarm_reset;
+lt_3102_low.priority:=opc.popa_0081_lt_3102_low_priority;
+lt_3102_low.delay_setpoint:=opc.popa_0081_lt_3102_low_setpoint;
+lt_3102_low.enable:=opc.popa_0081_lt_3102_low_enable;
+
+//Timer delay elapsed
+lt_3102_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.lt_3102.scaled_value < opc.popa_0081_lt_3102_low_setpoint THEN
+    lt_3102_low.trigger := TRUE;
+    ELSE
+        lt_3102_low.trigger := FALSE;
+END_IF
+	
+//lt_3102-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+lt_3102_high();
+lt_3102_high.alm_ack:=opc.popa_0081_alarm_ack;
+lt_3102_high.reset:=opc.popa_0081_alarm_reset;
+lt_3102_high.priority:=opc.popa_0081_lt_3102_high_priority;
+lt_3102_high.delay_setpoint:=opc.popa_0081_lt_3102_high_setpoint;
+lt_3102_high.enable:=opc.popa_0081_lt_3102_high_enable;
+
+//Timer delay elapsed
+lt_3102_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.lt_3102.scaled_value > opc.popa_0081_lt_3102_high_setpoint THEN
+    lt_3102_high.trigger := TRUE;
+    ELSE
+        lt_3102_high.trigger := FALSE;
+END_IF
+	
+//lt_3102-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+lt_3102_high_high();
+lt_3102_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+lt_3102_high_high.reset:=opc.popa_0081_alarm_reset;
+lt_3102_high_high.priority:=opc.popa_0081_lt_3102_high_high_priority;
+lt_3102_high_high.delay_setpoint:=opc.popa_0081_lt_3102_high_high_setpoint;
+lt_3102_high_high.enable:=opc.popa_0081_lt_3102_high_high_enable;
+
+//Timer delay elapsed
+lt_3102_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.lt_3102.scaled_value >= opc.popa_0081_lt_3102_high_high_setpoint THEN
+    lt_3102_high_high.trigger := TRUE;
+    ELSE
+        lt_3102_high_high.trigger := FALSE;
+END_IF
+
+
 //lt_3202-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 lt_3202_low_low();
 lt_3202_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 lt_3202_low_low.reset:=opc.popa_0081_alarm_reset;
-lt_3202_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-lt_3202_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-lt_3202_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+lt_3202_low_low.priority:=opc.popa_0081_lt_3202_low_low_priority;
+lt_3202_low_low.delay_setpoint:=opc.popa_0081_lt_3202_low_low_setpoint;
+lt_3202_low_low.enable:=opc.popa_0081_lt_3202_low_low_enable;
 
 //Timer delay elapsed
 lt_3202_low_low.delay_ton_et;
@@ -820,14 +1485,73 @@ IF io_mapping.lt_3202.scaled_value <= opc.popa_0081_lt_3202_low_low_setpoint THE
     ELSE
         lt_3202_low_low.trigger := FALSE;
 END_IF
+	
+//lt_3202-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+lt_3202_low();
+lt_3202_low.alm_ack:=opc.popa_0081_alarm_ack;
+lt_3202_low.reset:=opc.popa_0081_alarm_reset;
+lt_3202_low.priority:=opc.popa_0081_lt_3202_low_priority;
+lt_3202_low.delay_setpoint:=opc.popa_0081_lt_3202_low_setpoint;
+lt_3202_low.enable:=opc.popa_0081_lt_3202_low_enable;
+
+//Timer delay elapsed
+lt_3202_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.lt_3202.scaled_value < opc.popa_0081_lt_3202_low_setpoint THEN
+    lt_3202_low.trigger := TRUE;
+    ELSE
+        lt_3202_low.trigger := FALSE;
+END_IF
+	
+//lt_3202-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+lt_3202_high();
+lt_3202_high.alm_ack:=opc.popa_0081_alarm_ack;
+lt_3202_high.reset:=opc.popa_0081_alarm_reset;
+lt_3202_high.priority:=opc.popa_0081_lt_3202_high_priority;
+lt_3202_high.delay_setpoint:=opc.popa_0081_lt_3202_high_setpoint;
+lt_3202_high.enable:=opc.popa_0081_lt_3202_high_enable;
+
+//Timer delay elapsed
+lt_3202_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.lt_3202.scaled_value > opc.popa_0081_lt_3202_high_setpoint THEN
+    lt_3202_high.trigger := TRUE;
+    ELSE
+        lt_3202_high.trigger := FALSE;
+END_IF
+	
+//lt_3202-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+lt_3202_high_high();
+lt_3202_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+lt_3202_high_high.reset:=opc.popa_0081_alarm_reset;
+lt_3202_high_high.priority:=opc.popa_0081_lt_3202_high_high_priority;
+lt_3202_high_high.delay_setpoint:=opc.popa_0081_lt_3202_high_high_setpoint;
+lt_3202_high_high.enable:=opc.popa_0081_lt_3202_high_high_enable;
+
+//Timer delay elapsed
+lt_3202_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.lt_3202.scaled_value >= opc.popa_0081_lt_3202_high_high_setpoint THEN
+    lt_3202_high_high.trigger := TRUE;
+    ELSE
+        lt_3202_high_high.trigger := FALSE;
+END_IF
+
+
 //lt_3302-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 lt_3302_low_low();
 lt_3302_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 lt_3302_low_low.reset:=opc.popa_0081_alarm_reset;
-lt_3302_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-lt_3302_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-lt_3302_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+lt_3302_low_low.priority:=opc.popa_0081_lt_3302_low_low_priority;
+lt_3302_low_low.delay_setpoint:=opc.popa_0081_lt_3302_low_low_setpoint;
+lt_3302_low_low.enable:=opc.popa_0081_lt_3302_low_low_enable;
 
 //Timer delay elapsed
 lt_3302_low_low.delay_ton_et;
@@ -838,14 +1562,73 @@ IF io_mapping.lt_3302.scaled_value <= opc.popa_0081_lt_3302_low_low_setpoint THE
     ELSE
         lt_3302_low_low.trigger := FALSE;
 END_IF
+	
+//lt_3302-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+lt_3302_low();
+lt_3302_low.alm_ack:=opc.popa_0081_alarm_ack;
+lt_3302_low.reset:=opc.popa_0081_alarm_reset;
+lt_3302_low.priority:=opc.popa_0081_lt_3302_low_priority;
+lt_3302_low.delay_setpoint:=opc.popa_0081_lt_3302_low_setpoint;
+lt_3302_low.enable:=opc.popa_0081_lt_3302_low_enable;
+
+//Timer delay elapsed
+lt_3302_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.lt_3302.scaled_value < opc.popa_0081_lt_3302_low_setpoint THEN
+    lt_3302_low.trigger := TRUE;
+    ELSE
+        lt_3302_low.trigger := FALSE;
+END_IF
+	
+//lt_3302-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+lt_3302_high();
+lt_3302_high.alm_ack:=opc.popa_0081_alarm_ack;
+lt_3302_high.reset:=opc.popa_0081_alarm_reset;
+lt_3302_high.priority:=opc.popa_0081_lt_3302_high_priority;
+lt_3302_high.delay_setpoint:=opc.popa_0081_lt_3302_high_setpoint;
+lt_3302_high.enable:=opc.popa_0081_lt_3302_high_enable;
+
+//Timer delay elapsed
+lt_3302_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.lt_3302.scaled_value > opc.popa_0081_lt_3302_high_setpoint THEN
+    lt_3302_high.trigger := TRUE;
+    ELSE
+        lt_3302_high.trigger := FALSE;
+END_IF
+	
+//lt_3302-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+lt_3302_high_high();
+lt_3302_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+lt_3302_high_high.reset:=opc.popa_0081_alarm_reset;
+lt_3302_high_high.priority:=opc.popa_0081_lt_3302_high_high_priority;
+lt_3302_high_high.delay_setpoint:=opc.popa_0081_lt_3302_high_high_setpoint;
+lt_3302_high_high.enable:=opc.popa_0081_lt_3302_high_high_enable;
+
+//Timer delay elapsed
+lt_3302_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.lt_3302.scaled_value >= opc.popa_0081_lt_3302_high_high_setpoint THEN
+    lt_3302_high_high.trigger := TRUE;
+    ELSE
+        lt_3302_high_high.trigger := FALSE;
+END_IF
+
+
 //lt_3153-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 lt_3153_low_low();
 lt_3153_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 lt_3153_low_low.reset:=opc.popa_0081_alarm_reset;
-lt_3153_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-lt_3153_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-lt_3153_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+lt_3153_low_low.priority:=opc.popa_0081_lt_3153_low_low_priority;
+lt_3153_low_low.delay_setpoint:=opc.popa_0081_lt_3153_low_low_setpoint;
+lt_3153_low_low.enable:=opc.popa_0081_lt_3153_low_low_enable;
 
 //Timer delay elapsed
 lt_3153_low_low.delay_ton_et;
@@ -856,14 +1639,73 @@ IF io_mapping.lt_3153.scaled_value <= opc.popa_0081_lt_3153_low_low_setpoint THE
     ELSE
         lt_3153_low_low.trigger := FALSE;
 END_IF
+	
+//lt_3153-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+lt_3153_low();
+lt_3153_low.alm_ack:=opc.popa_0081_alarm_ack;
+lt_3153_low.reset:=opc.popa_0081_alarm_reset;
+lt_3153_low.priority:=opc.popa_0081_lt_3153_low_priority;
+lt_3153_low.delay_setpoint:=opc.popa_0081_lt_3153_low_setpoint;
+lt_3153_low.enable:=opc.popa_0081_lt_3153_low_enable;
+
+//Timer delay elapsed
+lt_3153_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.lt_3153.scaled_value < opc.popa_0081_lt_3153_low_setpoint THEN
+    lt_3153_low.trigger := TRUE;
+    ELSE
+        lt_3153_low.trigger := FALSE;
+END_IF
+	
+//lt_3153-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+lt_3153_high();
+lt_3153_high.alm_ack:=opc.popa_0081_alarm_ack;
+lt_3153_high.reset:=opc.popa_0081_alarm_reset;
+lt_3153_high.priority:=opc.popa_0081_lt_3153_high_priority;
+lt_3153_high.delay_setpoint:=opc.popa_0081_lt_3153_high_setpoint;
+lt_3153_high.enable:=opc.popa_0081_lt_3153_high_enable;
+
+//Timer delay elapsed
+lt_3153_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.lt_3153.scaled_value > opc.popa_0081_lt_3153_high_setpoint THEN
+    lt_3153_high.trigger := TRUE;
+    ELSE
+        lt_3153_high.trigger := FALSE;
+END_IF
+	
+//lt_3153-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+lt_3153_high_high();
+lt_3153_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+lt_3153_high_high.reset:=opc.popa_0081_alarm_reset;
+lt_3153_high_high.priority:=opc.popa_0081_lt_3153_high_high_priority;
+lt_3153_high_high.delay_setpoint:=opc.popa_0081_lt_3153_high_high_setpoint;
+lt_3153_high_high.enable:=opc.popa_0081_lt_3153_high_high_enable;
+
+//Timer delay elapsed
+lt_3153_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.lt_3153.scaled_value >= opc.popa_0081_lt_3153_high_high_setpoint THEN
+    lt_3153_high_high.trigger := TRUE;
+    ELSE
+        lt_3153_high_high.trigger := FALSE;
+END_IF
+
+
 //lt_3253-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 lt_3253_low_low();
 lt_3253_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 lt_3253_low_low.reset:=opc.popa_0081_alarm_reset;
-lt_3253_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-lt_3253_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-lt_3253_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+lt_3253_low_low.priority:=opc.popa_0081_lt_3253_low_low_priority;
+lt_3253_low_low.delay_setpoint:=opc.popa_0081_lt_3253_low_low_setpoint;
+lt_3253_low_low.enable:=opc.popa_0081_lt_3253_low_low_enable;
 
 //Timer delay elapsed
 lt_3253_low_low.delay_ton_et;
@@ -874,15 +1716,73 @@ IF io_mapping.lt_3253.scaled_value <= opc.popa_0081_lt_3253_low_low_setpoint THE
     ELSE
         lt_3253_low_low.trigger := FALSE;
 END_IF
+	
+//lt_3253-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+lt_3253_low();
+lt_3253_low.alm_ack:=opc.popa_0081_alarm_ack;
+lt_3253_low.reset:=opc.popa_0081_alarm_reset;
+lt_3253_low.priority:=opc.popa_0081_lt_3253_low_priority;
+lt_3253_low.delay_setpoint:=opc.popa_0081_lt_3253_low_setpoint;
+lt_3253_low.enable:=opc.popa_0081_lt_3253_low_enable;
+
+//Timer delay elapsed
+lt_3253_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.lt_3253.scaled_value < opc.popa_0081_lt_3253_low_setpoint THEN
+    lt_3253_low.trigger := TRUE;
+    ELSE
+        lt_3253_low.trigger := FALSE;
+END_IF
+	
+//lt_3253-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+lt_3253_high();
+lt_3253_high.alm_ack:=opc.popa_0081_alarm_ack;
+lt_3253_high.reset:=opc.popa_0081_alarm_reset;
+lt_3253_high.priority:=opc.popa_0081_lt_3253_high_priority;
+lt_3253_high.delay_setpoint:=opc.popa_0081_lt_3253_high_setpoint;
+lt_3253_high.enable:=opc.popa_0081_lt_3253_high_enable;
+
+//Timer delay elapsed
+lt_3253_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.lt_3253.scaled_value > opc.popa_0081_lt_3253_high_setpoint THEN
+    lt_3253_high.trigger := TRUE;
+    ELSE
+        lt_3253_high.trigger := FALSE;
+END_IF
+	
+//lt_3253-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+lt_3253_high_high();
+lt_3253_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+lt_3253_high_high.reset:=opc.popa_0081_alarm_reset;
+lt_3253_high_high.priority:=opc.popa_0081_lt_3253_high_high_priority;
+lt_3253_high_high.delay_setpoint:=opc.popa_0081_lt_3253_high_high_setpoint;
+lt_3253_high_high.enable:=opc.popa_0081_lt_3253_high_high_enable;
+
+//Timer delay elapsed
+lt_3253_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.lt_3253.scaled_value >= opc.popa_0081_lt_3253_high_high_setpoint THEN
+    lt_3253_high_high.trigger := TRUE;
+    ELSE
+        lt_3253_high_high.trigger := FALSE;
+END_IF
+
 
 //lt_3353-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 lt_3353_low_low();
 lt_3353_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 lt_3353_low_low.reset:=opc.popa_0081_alarm_reset;
-lt_3353_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-lt_3353_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-lt_3353_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+lt_3353_low_low.priority:=opc.popa_0081_lt_3353_low_low_priority;
+lt_3353_low_low.delay_setpoint:=opc.popa_0081_lt_3353_low_low_setpoint;
+lt_3353_low_low.enable:=opc.popa_0081_lt_3353_low_low_enable;
 
 //Timer delay elapsed
 lt_3353_low_low.delay_ton_et;
@@ -893,14 +1793,73 @@ IF io_mapping.lt_3353.scaled_value <= opc.popa_0081_lt_3353_low_low_setpoint THE
     ELSE
         lt_3353_low_low.trigger := FALSE;
 END_IF
+	
+//lt_3353-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+lt_3353_low();
+lt_3353_low.alm_ack:=opc.popa_0081_alarm_ack;
+lt_3353_low.reset:=opc.popa_0081_alarm_reset;
+lt_3353_low.priority:=opc.popa_0081_lt_3353_low_priority;
+lt_3353_low.delay_setpoint:=opc.popa_0081_lt_3353_low_setpoint;
+lt_3353_low.enable:=opc.popa_0081_lt_3353_low_enable;
+
+//Timer delay elapsed
+lt_3353_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.lt_3353.scaled_value < opc.popa_0081_lt_3353_low_setpoint THEN
+    lt_3353_low.trigger := TRUE;
+    ELSE
+        lt_3353_low.trigger := FALSE;
+END_IF
+	
+//lt_3353-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+lt_3353_high();
+lt_3353_high.alm_ack:=opc.popa_0081_alarm_ack;
+lt_3353_high.reset:=opc.popa_0081_alarm_reset;
+lt_3353_high.priority:=opc.popa_0081_lt_3353_high_priority;
+lt_3353_high.delay_setpoint:=opc.popa_0081_lt_3353_high_setpoint;
+lt_3353_high.enable:=opc.popa_0081_lt_3353_high_enable;
+
+//Timer delay elapsed
+lt_3353_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.lt_3353.scaled_value > opc.popa_0081_lt_3353_high_setpoint THEN
+    lt_3353_high.trigger := TRUE;
+    ELSE
+        lt_3353_high.trigger := FALSE;
+END_IF
+	
+//lt_3353-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+lt_3353_high_high();
+lt_3353_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+lt_3353_high_high.reset:=opc.popa_0081_alarm_reset;
+lt_3353_high_high.priority:=opc.popa_0081_lt_3353_high_high_priority;
+lt_3353_high_high.delay_setpoint:=opc.popa_0081_lt_3353_high_high_setpoint;
+lt_3353_high_high.enable:=opc.popa_0081_lt_3353_high_high_enable;
+
+//Timer delay elapsed
+lt_3353_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.lt_3353.scaled_value >= opc.popa_0081_lt_3353_high_high_setpoint THEN
+    lt_3353_high_high.trigger := TRUE;
+    ELSE
+        lt_3353_high_high.trigger := FALSE;
+END_IF
+
+
 //lt_3402-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 lt_3402_low_low();
 lt_3402_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 lt_3402_low_low.reset:=opc.popa_0081_alarm_reset;
-lt_3402_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-lt_3402_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-lt_3402_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+lt_3402_low_low.priority:=opc.popa_0091_lt_3402_low_low_priority;
+lt_3402_low_low.delay_setpoint:=opc.popa_0091_lt_3402_low_low_setpoint;
+lt_3402_low_low.enable:=opc.popa_0091_lt_3402_low_low_enable;
 
 //Timer delay elapsed
 lt_3402_low_low.delay_ton_et;
@@ -911,14 +1870,73 @@ IF io_mapping.lt_3402.scaled_value <= opc.popa_0091_lt_3402_low_low_setpoint THE
     ELSE
         lt_3402_low_low.trigger := FALSE;
 END_IF
+	
+//lt_3402-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+lt_3402_low();
+lt_3402_low.alm_ack:=opc.popa_0081_alarm_ack;
+lt_3402_low.reset:=opc.popa_0081_alarm_reset;
+lt_3402_low.priority:=opc.popa_0091_lt_3402_low_priority;
+lt_3402_low.delay_setpoint:=opc.popa_0091_lt_3402_low_setpoint;
+lt_3402_low.enable:=opc.popa_0091_lt_3402_low_enable;
+
+//Timer delay elapsed
+lt_3402_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.lt_3402.scaled_value < opc.popa_0091_lt_3402_low_setpoint THEN
+    lt_3402_low.trigger := TRUE;
+    ELSE
+        lt_3402_low.trigger := FALSE;
+END_IF
+	
+//lt_3402-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+lt_3402_high();
+lt_3402_high.alm_ack:=opc.popa_0081_alarm_ack;
+lt_3402_high.reset:=opc.popa_0081_alarm_reset;
+lt_3402_high.priority:=opc.popa_0091_lt_3402_high_priority;
+lt_3402_high.delay_setpoint:=opc.popa_0091_lt_3402_high_setpoint;
+lt_3402_high.enable:=opc.popa_0091_lt_3402_high_enable;
+
+//Timer delay elapsed
+lt_3402_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.lt_3402.scaled_value > opc.popa_0091_lt_3402_high_setpoint THEN
+    lt_3402_high.trigger := TRUE;
+    ELSE
+        lt_3402_high.trigger := FALSE;
+END_IF
+	
+//lt_3402-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+lt_3402_high_high();
+lt_3402_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+lt_3402_high_high.reset:=opc.popa_0081_alarm_reset;
+lt_3402_high_high.priority:=opc.popa_0091_lt_3402_high_high_priority;
+lt_3402_high_high.delay_setpoint:=opc.popa_0091_lt_3402_high_high_setpoint;
+lt_3402_high_high.enable:=opc.popa_0091_lt_3402_high_high_enable;
+
+//Timer delay elapsed
+lt_3402_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.lt_3402.scaled_value >= opc.popa_0091_lt_3402_high_high_setpoint THEN
+    lt_3402_high_high.trigger := TRUE;
+    ELSE
+        lt_3402_high_high.trigger := FALSE;
+END_IF
+
+
 //pt_3119-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 pt_3119_low_low();
 pt_3119_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 pt_3119_low_low.reset:=opc.popa_0081_alarm_reset;
-pt_3119_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-pt_3119_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-pt_3119_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+pt_3119_low_low.priority:=opc.popa_0081_pt_3119_low_low_priority;
+pt_3119_low_low.delay_setpoint:=opc.popa_0081_pt_3119_low_low_setpoint;
+pt_3119_low_low.enable:=opc.popa_0081_pt_3119_low_low_enable;
 
 //Timer delay elapsed
 pt_3119_low_low.delay_ton_et;
@@ -929,14 +1947,73 @@ IF io_mapping.pt_3119.scaled_value <= opc.popa_0081_pt_3119_low_low_setpoint THE
     ELSE
         pt_3119_low_low.trigger := FALSE;
 END_IF
+	
+//pt_3119-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3119_low();
+pt_3119_low.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3119_low.reset:=opc.popa_0081_alarm_reset;
+pt_3119_low.priority:=opc.popa_0081_pt_3119_low_priority;
+pt_3119_low.delay_setpoint:=opc.popa_0081_pt_3119_low_setpoint;
+pt_3119_low.enable:=opc.popa_0081_pt_3119_low_enable;
+
+//Timer delay elapsed
+pt_3119_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3119.scaled_value < opc.popa_0081_pt_3119_low_setpoint THEN
+    pt_3119_low.trigger := TRUE;
+    ELSE
+        pt_3119_low.trigger := FALSE;
+END_IF
+	
+//pt_3119-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3119_high();
+pt_3119_high.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3119_high.reset:=opc.popa_0081_alarm_reset;
+pt_3119_high.priority:=opc.popa_0081_pt_3119_high_priority;
+pt_3119_high.delay_setpoint:=opc.popa_0081_pt_3119_high_setpoint;
+pt_3119_high.enable:=opc.popa_0081_pt_3119_high_enable;
+
+//Timer delay elapsed
+pt_3119_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3119.scaled_value > opc.popa_0081_pt_3119_high_setpoint THEN
+    pt_3119_high.trigger := TRUE;
+    ELSE
+        pt_3119_high.trigger := FALSE;
+END_IF
+	
+//pt_3119-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3119_high_high();
+pt_3119_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3119_high_high.reset:=opc.popa_0081_alarm_reset;
+pt_3119_high_high.priority:=opc.popa_0081_pt_3119_high_high_priority;
+pt_3119_high_high.delay_setpoint:=opc.popa_0081_pt_3119_high_high_setpoint;
+pt_3119_high_high.enable:=opc.popa_0081_pt_3119_high_high_enable;
+
+//Timer delay elapsed
+pt_3119_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3119.scaled_value >= opc.popa_0081_pt_3119_high_high_setpoint THEN
+    pt_3119_high_high.trigger := TRUE;
+    ELSE
+        pt_3119_high_high.trigger := FALSE;
+END_IF
+
+
 //pt_3219-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 pt_3219_low_low();
 pt_3219_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 pt_3219_low_low.reset:=opc.popa_0081_alarm_reset;
-pt_3219_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-pt_3219_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-pt_3219_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+pt_3219_low_low.priority:=opc.popa_0081_pt_3219_low_low_priority;
+pt_3219_low_low.delay_setpoint:=opc.popa_0081_pt_3219_low_low_setpoint;
+pt_3219_low_low.enable:=opc.popa_0081_pt_3219_low_low_enable;
 
 //Timer delay elapsed
 pt_3219_low_low.delay_ton_et;
@@ -947,14 +2024,73 @@ IF io_mapping.pt_3219.scaled_value <= opc.popa_0081_pt_3219_low_low_setpoint THE
     ELSE
         pt_3219_low_low.trigger := FALSE;
 END_IF
+	
+//pt_3219-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3219_low();
+pt_3219_low.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3219_low.reset:=opc.popa_0081_alarm_reset;
+pt_3219_low.priority:=opc.popa_0081_pt_3219_low_priority;
+pt_3219_low.delay_setpoint:=opc.popa_0081_pt_3219_low_setpoint;
+pt_3219_low.enable:=opc.popa_0081_pt_3219_low_enable;
+
+//Timer delay elapsed
+pt_3219_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3219.scaled_value < opc.popa_0081_pt_3219_low_setpoint THEN
+    pt_3219_low.trigger := TRUE;
+    ELSE
+        pt_3219_low.trigger := FALSE;
+END_IF
+	
+//pt_3219-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3219_high();
+pt_3219_high.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3219_high.reset:=opc.popa_0081_alarm_reset;
+pt_3219_high.priority:=opc.popa_0081_pt_3219_high_priority;
+pt_3219_high.delay_setpoint:=opc.popa_0081_pt_3219_high_setpoint;
+pt_3219_high.enable:=opc.popa_0081_pt_3219_high_enable;
+
+//Timer delay elapsed
+pt_3219_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3219.scaled_value > opc.popa_0081_pt_3219_high_setpoint THEN
+    pt_3219_high.trigger := TRUE;
+    ELSE
+        pt_3219_high.trigger := FALSE;
+END_IF
+	
+//pt_3219-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3219_high_high();
+pt_3219_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3219_high_high.reset:=opc.popa_0081_alarm_reset;
+pt_3219_high_high.priority:=opc.popa_0081_pt_3219_high_high_priority;
+pt_3219_high_high.delay_setpoint:=opc.popa_0081_pt_3219_high_high_setpoint;
+pt_3219_high_high.enable:=opc.popa_0081_pt_3219_high_high_enable;
+
+//Timer delay elapsed
+pt_3219_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3219.scaled_value >= opc.popa_0081_pt_3219_high_high_setpoint THEN
+    pt_3219_high_high.trigger := TRUE;
+    ELSE
+        pt_3219_high_high.trigger := FALSE;
+END_IF
+
+
 //pt_3319-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 pt_3319_low_low();
 pt_3319_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 pt_3319_low_low.reset:=opc.popa_0081_alarm_reset;
-pt_3319_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-pt_3319_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-pt_3319_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+pt_3319_low_low.priority:=opc.popa_0081_pt_3319_low_low_priority;
+pt_3319_low_low.delay_setpoint:=opc.popa_0081_pt_3319_low_low_setpoint;
+pt_3319_low_low.enable:=opc.popa_0081_pt_3319_low_low_enable;
 
 //Timer delay elapsed
 pt_3319_low_low.delay_ton_et;
@@ -965,14 +2101,73 @@ IF io_mapping.pt_3319.scaled_value <= opc.popa_0081_pt_3319_low_low_setpoint THE
     ELSE
         pt_3319_low_low.trigger := FALSE;
 END_IF
+	
+//pt_3319-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3319_low();
+pt_3319_low.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3319_low.reset:=opc.popa_0081_alarm_reset;
+pt_3319_low.priority:=opc.popa_0081_pt_3319_low_priority;
+pt_3319_low.delay_setpoint:=opc.popa_0081_pt_3319_low_setpoint;
+pt_3319_low.enable:=opc.popa_0081_pt_3319_low_enable;
+
+//Timer delay elapsed
+pt_3319_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3319.scaled_value < opc.popa_0081_pt_3319_low_setpoint THEN
+    pt_3319_low.trigger := TRUE;
+    ELSE
+        pt_3319_low.trigger := FALSE;
+END_IF
+	
+//pt_3319-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3319_high();
+pt_3319_high.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3319_high.reset:=opc.popa_0081_alarm_reset;
+pt_3319_high.priority:=opc.popa_0081_pt_3319_high_priority;
+pt_3319_high.delay_setpoint:=opc.popa_0081_pt_3319_high_setpoint;
+pt_3319_high.enable:=opc.popa_0081_pt_3319_high_enable;
+
+//Timer delay elapsed
+pt_3319_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3319.scaled_value > opc.popa_0081_pt_3319_high_setpoint THEN
+    pt_3319_high.trigger := TRUE;
+    ELSE
+        pt_3319_high.trigger := FALSE;
+END_IF
+	
+//pt_3319-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3319_high_high();
+pt_3319_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3319_high_high.reset:=opc.popa_0081_alarm_reset;
+pt_3319_high_high.priority:=opc.popa_0081_pt_3319_high_high_priority;
+pt_3319_high_high.delay_setpoint:=opc.popa_0081_pt_3319_high_high_setpoint;
+pt_3319_high_high.enable:=opc.popa_0081_pt_3319_high_high_enable;
+
+//Timer delay elapsed
+pt_3319_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3319.scaled_value >= opc.popa_0081_pt_3319_high_high_setpoint THEN
+    pt_3319_high_high.trigger := TRUE;
+    ELSE
+        pt_3319_high_high.trigger := FALSE;
+END_IF
+
+
 //pt_3141-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 pt_3141_low_low();
 pt_3141_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 pt_3141_low_low.reset:=opc.popa_0081_alarm_reset;
-pt_3141_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-pt_3141_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-pt_3141_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+pt_3141_low_low.priority:=opc.popa_0081_pt_3141_low_low_priority;
+pt_3141_low_low.delay_setpoint:=opc.popa_0081_pt_3141_low_low_setpoint;
+pt_3141_low_low.enable:=opc.popa_0081_pt_3141_low_low_enable;
 
 //Timer delay elapsed
 pt_3141_low_low.delay_ton_et;
@@ -983,14 +2178,73 @@ IF io_mapping.pt_3141.scaled_value <= opc.popa_0081_pt_3141_low_low_setpoint THE
     ELSE
         pt_3141_low_low.trigger := FALSE;
 END_IF
+	
+//pt_3141-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3141_low();
+pt_3141_low.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3141_low.reset:=opc.popa_0081_alarm_reset;
+pt_3141_low.priority:=opc.popa_0081_pt_3141_low_priority;
+pt_3141_low.delay_setpoint:=opc.popa_0081_pt_3141_low_setpoint;
+pt_3141_low.enable:=opc.popa_0081_pt_3141_low_enable;
+
+//Timer delay elapsed
+pt_3141_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3141.scaled_value < opc.popa_0081_pt_3141_low_setpoint THEN
+    pt_3141_low.trigger := TRUE;
+    ELSE
+        pt_3141_low.trigger := FALSE;
+END_IF
+	
+//pt_3141-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3141_high();
+pt_3141_high.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3141_high.reset:=opc.popa_0081_alarm_reset;
+pt_3141_high.priority:=opc.popa_0081_pt_3141_high_priority;
+pt_3141_high.delay_setpoint:=opc.popa_0081_pt_3141_high_setpoint;
+pt_3141_high.enable:=opc.popa_0081_pt_3141_high_enable;
+
+//Timer delay elapsed
+pt_3141_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3141.scaled_value > opc.popa_0081_pt_3141_high_setpoint THEN
+    pt_3141_high.trigger := TRUE;
+    ELSE
+        pt_3141_high.trigger := FALSE;
+END_IF
+	
+//pt_3141-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3141_high_high();
+pt_3141_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3141_high_high.reset:=opc.popa_0081_alarm_reset;
+pt_3141_high_high.priority:=opc.popa_0081_pt_3141_high_high_priority;
+pt_3141_high_high.delay_setpoint:=opc.popa_0081_pt_3141_high_high_setpoint;
+pt_3141_high_high.enable:=opc.popa_0081_pt_3141_high_high_enable;
+
+//Timer delay elapsed
+pt_3141_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3141.scaled_value >= opc.popa_0081_pt_3141_high_high_setpoint THEN
+    pt_3141_high_high.trigger := TRUE;
+    ELSE
+        pt_3141_high_high.trigger := FALSE;
+END_IF
+
+
 //pt_3241-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 pt_3241_low_low();
 pt_3241_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 pt_3241_low_low.reset:=opc.popa_0081_alarm_reset;
-pt_3241_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-pt_3241_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-pt_3241_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+pt_3241_low_low.priority:=opc.popa_0081_pt_3241_low_low_priority;
+pt_3241_low_low.delay_setpoint:=opc.popa_0081_pt_3241_low_low_setpoint;
+pt_3241_low_low.enable:=opc.popa_0081_pt_3241_low_low_enable;
 
 //Timer delay elapsed
 pt_3241_low_low.delay_ton_et;
@@ -1001,14 +2255,73 @@ IF io_mapping.pt_3241.scaled_value <= opc.popa_0081_pt_3241_low_low_setpoint THE
     ELSE
         pt_3241_low_low.trigger := FALSE;
 END_IF
+	
+//pt_3241-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3241_low();
+pt_3241_low.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3241_low.reset:=opc.popa_0081_alarm_reset;
+pt_3241_low.priority:=opc.popa_0081_pt_3241_low_priority;
+pt_3241_low.delay_setpoint:=opc.popa_0081_pt_3241_low_setpoint;
+pt_3241_low.enable:=opc.popa_0081_pt_3241_low_enable;
+
+//Timer delay elapsed
+pt_3241_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3241.scaled_value < opc.popa_0081_pt_3241_low_setpoint THEN
+    pt_3241_low.trigger := TRUE;
+    ELSE
+        pt_3241_low.trigger := FALSE;
+END_IF
+	
+//pt_3241-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3241_high();
+pt_3241_high.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3241_high.reset:=opc.popa_0081_alarm_reset;
+pt_3241_high.priority:=opc.popa_0081_pt_3241_high_priority;
+pt_3241_high.delay_setpoint:=opc.popa_0081_pt_3241_high_setpoint;
+pt_3241_high.enable:=opc.popa_0081_pt_3241_high_enable;
+
+//Timer delay elapsed
+pt_3241_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3241.scaled_value > opc.popa_0081_pt_3241_high_setpoint THEN
+    pt_3241_high.trigger := TRUE;
+    ELSE
+        pt_3241_high.trigger := FALSE;
+END_IF
+	
+//pt_3241-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3241_high_high();
+pt_3241_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3241_high_high.reset:=opc.popa_0081_alarm_reset;
+pt_3241_high_high.priority:=opc.popa_0081_pt_3241_high_high_priority;
+pt_3241_high_high.delay_setpoint:=opc.popa_0081_pt_3241_high_high_setpoint;
+pt_3241_high_high.enable:=opc.popa_0081_pt_3241_high_high_enable;
+
+//Timer delay elapsed
+pt_3241_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3241.scaled_value >= opc.popa_0081_pt_3241_high_high_setpoint THEN
+    pt_3241_high_high.trigger := TRUE;
+    ELSE
+        pt_3241_high_high.trigger := FALSE;
+END_IF
+
+
 //pt_3341-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 pt_3341_low_low();
 pt_3341_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 pt_3341_low_low.reset:=opc.popa_0081_alarm_reset;
-pt_3341_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-pt_3341_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-pt_3341_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+pt_3341_low_low.priority:=opc.popa_0081_pt_3341_low_low_priority;
+pt_3341_low_low.delay_setpoint:=opc.popa_0081_pt_3341_low_low_setpoint;
+pt_3341_low_low.enable:=opc.popa_0081_pt_3341_low_low_enable;
 
 //Timer delay elapsed
 pt_3341_low_low.delay_ton_et;
@@ -1019,14 +2332,73 @@ IF io_mapping.pt_3341.scaled_value <= opc.popa_0081_pt_3341_low_low_setpoint THE
     ELSE
         pt_3341_low_low.trigger := FALSE;
 END_IF
+	
+//pt_3341-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3341_low();
+pt_3341_low.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3341_low.reset:=opc.popa_0081_alarm_reset;
+pt_3341_low.priority:=opc.popa_0081_pt_3341_low_priority;
+pt_3341_low.delay_setpoint:=opc.popa_0081_pt_3341_low_setpoint;
+pt_3341_low.enable:=opc.popa_0081_pt_3341_low_enable;
+
+//Timer delay elapsed
+pt_3341_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3341.scaled_value < opc.popa_0081_pt_3341_low_setpoint THEN
+    pt_3341_low.trigger := TRUE;
+    ELSE
+        pt_3341_low.trigger := FALSE;
+END_IF
+	
+//pt_3341-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3341_high();
+pt_3341_high.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3341_high.reset:=opc.popa_0081_alarm_reset;
+pt_3341_high.priority:=opc.popa_0081_pt_3341_high_priority;
+pt_3341_high.delay_setpoint:=opc.popa_0081_pt_3341_high_setpoint;
+pt_3341_high.enable:=opc.popa_0081_pt_3341_high_enable;
+
+//Timer delay elapsed
+pt_3341_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3341.scaled_value > opc.popa_0081_pt_3341_high_setpoint THEN
+    pt_3341_high.trigger := TRUE;
+    ELSE
+        pt_3341_high.trigger := FALSE;
+END_IF
+	
+//pt_3341-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3341_high_high();
+pt_3341_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3341_high_high.reset:=opc.popa_0081_alarm_reset;
+pt_3341_high_high.priority:=opc.popa_0081_pt_3341_high_high_priority;
+pt_3341_high_high.delay_setpoint:=opc.popa_0081_pt_3341_high_high_setpoint;
+pt_3341_high_high.enable:=opc.popa_0081_pt_3341_high_high_enable;
+
+//Timer delay elapsed
+pt_3341_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3341.scaled_value >= opc.popa_0081_pt_3341_high_high_setpoint THEN
+    pt_3341_high_high.trigger := TRUE;
+    ELSE
+        pt_3341_high_high.trigger := FALSE;
+END_IF
+
+
 //pt_3414-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 pt_3414_low_low();
 pt_3414_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 pt_3414_low_low.reset:=opc.popa_0081_alarm_reset;
-pt_3414_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-pt_3414_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-pt_3414_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+pt_3414_low_low.priority:=opc.popa_0091_pt_3414_low_low_priority;
+pt_3414_low_low.delay_setpoint:=opc.popa_0091_pt_3414_low_low_setpoint;
+pt_3414_low_low.enable:=opc.popa_0091_pt_3414_low_low_enable;
 
 //Timer delay elapsed
 pt_3414_low_low.delay_ton_et;
@@ -1037,32 +2409,151 @@ IF io_mapping.pt_3414.scaled_value <= opc.popa_0091_pt_3414_low_low_setpoint THE
     ELSE
         pt_3414_low_low.trigger := FALSE;
 END_IF
+	
+//pt_3414-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3414_low();
+pt_3414_low.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3414_low.reset:=opc.popa_0081_alarm_reset;
+pt_3414_low.priority:=opc.popa_0091_pt_3414_low_priority;
+pt_3414_low.delay_setpoint:=opc.popa_0091_pt_3414_low_setpoint;
+pt_3414_low.enable:=opc.popa_0091_pt_3414_low_enable;
+
+//Timer delay elapsed
+pt_3414_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3414.scaled_value < opc.popa_0091_pt_3414_low_setpoint THEN
+    pt_3414_low.trigger := TRUE;
+    ELSE
+        pt_3414_low.trigger := FALSE;
+END_IF
+	
+//pt_3414-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3414_high();
+pt_3414_high.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3414_high.reset:=opc.popa_0081_alarm_reset;
+pt_3414_high.priority:=opc.popa_0091_pt_3414_high_priority;
+pt_3414_high.delay_setpoint:=opc.popa_0091_pt_3414_high_setpoint;
+pt_3414_high.enable:=opc.popa_0091_pt_3414_high_enable;
+
+//Timer delay elapsed
+pt_3414_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3414.scaled_value > opc.popa_0091_pt_3414_high_setpoint THEN
+    pt_3414_high.trigger := TRUE;
+    ELSE
+        pt_3414_high.trigger := FALSE;
+END_IF
+	
+//pt_3414-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3414_high_high();
+pt_3414_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3414_high_high.reset:=opc.popa_0081_alarm_reset;
+pt_3414_high_high.priority:=opc.popa_0091_pt_3414_high_high_priority;
+pt_3414_high_high.delay_setpoint:=opc.popa_0091_pt_3414_high_high_setpoint;
+pt_3414_high_high.enable:=opc.popa_0091_pt_3414_high_high_enable;
+
+//Timer delay elapsed
+pt_3414_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3414.scaled_value >= opc.popa_0091_pt_3414_high_high_setpoint THEN
+    pt_3414_high_high.trigger := TRUE;
+    ELSE
+        pt_3414_high_high.trigger := FALSE;
+END_IF
+
+(*
+
 //pt_3428-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 pt_3428_low_low();
 pt_3428_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 pt_3428_low_low.reset:=opc.popa_0081_alarm_reset;
-pt_3428_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-pt_3428_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-pt_3428_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+pt_3428_low_low.priority:=opc.popa_0081_pt_3428_low_low_priority;
+pt_3428_low_low.delay_setpoint:=opc.popa_0081_pt_3428_low_low_setpoint;
+pt_3428_low_low.enable:=opc.popa_0081_pt_3428_low_low_enable;
 
 //Timer delay elapsed
 pt_3428_low_low.delay_ton_et;
 
 //Place your alarm trigger logic here. 
-IF io_mapping.pt_3428.scaled_value <= opc.popa_0091_pt_3428_low_low_setpoint THEN
+IF io_mapping.pt_3428.scaled_value <= opc.popa_0081_pt_3428_low_low_setpoint THEN
     pt_3428_low_low.trigger := TRUE;
     ELSE
         pt_3428_low_low.trigger := FALSE;
 END_IF
+	
+//pt_3428-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3428_low();
+pt_3428_low.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3428_low.reset:=opc.popa_0081_alarm_reset;
+pt_3428_low.priority:=opc.popa_0081_pt_3428_low_priority;
+pt_3428_low.delay_setpoint:=opc.popa_0081_pt_3428_low_setpoint;
+pt_3428_low.enable:=opc.popa_0081_pt_3428_low_enable;
+
+//Timer delay elapsed
+pt_3428_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3428.scaled_value < opc.popa_0081_pt_3428_low_setpoint THEN
+    pt_3428_low.trigger := TRUE;
+    ELSE
+        pt_3428_low.trigger := FALSE;
+END_IF
+	
+//pt_3428-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3428_high();
+pt_3428_high.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3428_high.reset:=opc.popa_0081_alarm_reset;
+pt_3428_high.priority:=opc.popa_0081_pt_3428_high_priority;
+pt_3428_high.delay_setpoint:=opc.popa_0081_pt_3428_high_setpoint;
+pt_3428_high.enable:=opc.popa_0081_pt_3428_high_enable;
+
+//Timer delay elapsed
+pt_3428_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3428.scaled_value > opc.popa_0081_pt_3428_high_setpoint THEN
+    pt_3428_high.trigger := TRUE;
+    ELSE
+        pt_3428_high.trigger := FALSE;
+END_IF
+	
+//pt_3428-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+pt_3428_high_high();
+pt_3428_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+pt_3428_high_high.reset:=opc.popa_0081_alarm_reset;
+pt_3428_high_high.priority:=opc.popa_0081_pt_3428_high_high_priority;
+pt_3428_high_high.delay_setpoint:=opc.popa_0081_pt_3428_high_high_setpoint;
+pt_3428_high_high.enable:=opc.popa_0081_pt_3428_high_high_enable;
+
+//Timer delay elapsed
+pt_3428_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.pt_3428.scaled_value >= opc.popa_0081_pt_3428_high_high_setpoint THEN
+    pt_3428_high_high.trigger := TRUE;
+    ELSE
+        pt_3428_high_high.trigger := FALSE;
+END_IF
+
+*)
 //tt_3118-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 tt_3118_low_low();
 tt_3118_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 tt_3118_low_low.reset:=opc.popa_0081_alarm_reset;
-tt_3118_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-tt_3118_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-tt_3118_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+tt_3118_low_low.priority:=opc.popa_0081_tt_3118_low_low_priority;
+tt_3118_low_low.delay_setpoint:=opc.popa_0081_tt_3118_low_low_setpoint;
+tt_3118_low_low.enable:=opc.popa_0081_tt_3118_low_low_enable;
 
 //Timer delay elapsed
 tt_3118_low_low.delay_ton_et;
@@ -1073,14 +2564,73 @@ IF io_mapping.tt_3118.scaled_value <= opc.popa_0081_tt_3118_low_low_setpoint THE
     ELSE
         tt_3118_low_low.trigger := FALSE;
 END_IF
+	
+//tt_3118-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+tt_3118_low();
+tt_3118_low.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3118_low.reset:=opc.popa_0081_alarm_reset;
+tt_3118_low.priority:=opc.popa_0081_tt_3118_low_priority;
+tt_3118_low.delay_setpoint:=opc.popa_0081_tt_3118_low_setpoint;
+tt_3118_low.enable:=opc.popa_0081_tt_3118_low_enable;
+
+//Timer delay elapsed
+tt_3118_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3118.scaled_value < opc.popa_0081_tt_3118_low_setpoint THEN
+    tt_3118_low.trigger := TRUE;
+    ELSE
+        tt_3118_low.trigger := FALSE;
+END_IF
+	
+//tt_3118-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+tt_3118_high();
+tt_3118_high.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3118_high.reset:=opc.popa_0081_alarm_reset;
+tt_3118_high.priority:=opc.popa_0081_tt_3118_high_priority;
+tt_3118_high.delay_setpoint:=opc.popa_0081_tt_3118_high_setpoint;
+tt_3118_high.enable:=opc.popa_0081_tt_3118_high_enable;
+
+//Timer delay elapsed
+tt_3118_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3118.scaled_value > opc.popa_0081_tt_3118_high_setpoint THEN
+    tt_3118_high.trigger := TRUE;
+    ELSE
+        tt_3118_high.trigger := FALSE;
+END_IF
+	
+//tt_3118-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+tt_3118_high_high();
+tt_3118_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3118_high_high.reset:=opc.popa_0081_alarm_reset;
+tt_3118_high_high.priority:=opc.popa_0081_tt_3118_high_high_priority;
+tt_3118_high_high.delay_setpoint:=opc.popa_0081_tt_3118_high_high_setpoint;
+tt_3118_high_high.enable:=opc.popa_0081_tt_3118_high_high_enable;
+
+//Timer delay elapsed
+tt_3118_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3118.scaled_value >= opc.popa_0081_tt_3118_high_high_setpoint THEN
+    tt_3118_high_high.trigger := TRUE;
+    ELSE
+        tt_3118_high_high.trigger := FALSE;
+END_IF
+
+
 //tt_3218-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 tt_3218_low_low();
 tt_3218_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 tt_3218_low_low.reset:=opc.popa_0081_alarm_reset;
-tt_3218_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-tt_3218_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-tt_3218_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+tt_3218_low_low.priority:=opc.popa_0081_tt_3218_low_low_priority;
+tt_3218_low_low.delay_setpoint:=opc.popa_0081_tt_3218_low_low_setpoint;
+tt_3218_low_low.enable:=opc.popa_0081_tt_3218_low_low_enable;
 
 //Timer delay elapsed
 tt_3218_low_low.delay_ton_et;
@@ -1091,14 +2641,73 @@ IF io_mapping.tt_3218.scaled_value <= opc.popa_0081_tt_3218_low_low_setpoint THE
     ELSE
         tt_3218_low_low.trigger := FALSE;
 END_IF
+	
+//tt_3218-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+tt_3218_low();
+tt_3218_low.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3218_low.reset:=opc.popa_0081_alarm_reset;
+tt_3218_low.priority:=opc.popa_0081_tt_3218_low_priority;
+tt_3218_low.delay_setpoint:=opc.popa_0081_tt_3218_low_setpoint;
+tt_3218_low.enable:=opc.popa_0081_tt_3218_low_enable;
+
+//Timer delay elapsed
+tt_3218_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3218.scaled_value < opc.popa_0081_tt_3218_low_setpoint THEN
+    tt_3218_low.trigger := TRUE;
+    ELSE
+        tt_3218_low.trigger := FALSE;
+END_IF
+	
+//tt_3218-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+tt_3218_high();
+tt_3218_high.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3218_high.reset:=opc.popa_0081_alarm_reset;
+tt_3218_high.priority:=opc.popa_0081_tt_3218_high_priority;
+tt_3218_high.delay_setpoint:=opc.popa_0081_tt_3218_high_setpoint;
+tt_3218_high.enable:=opc.popa_0081_tt_3218_high_enable;
+
+//Timer delay elapsed
+tt_3218_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3218.scaled_value > opc.popa_0081_tt_3218_high_setpoint THEN
+    tt_3218_high.trigger := TRUE;
+    ELSE
+        tt_3218_high.trigger := FALSE;
+END_IF
+	
+//tt_3218-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+tt_3218_high_high();
+tt_3218_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3218_high_high.reset:=opc.popa_0081_alarm_reset;
+tt_3218_high_high.priority:=opc.popa_0081_tt_3218_high_high_priority;
+tt_3218_high_high.delay_setpoint:=opc.popa_0081_tt_3218_high_high_setpoint;
+tt_3218_high_high.enable:=opc.popa_0081_tt_3218_high_high_enable;
+
+//Timer delay elapsed
+tt_3218_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3218.scaled_value >= opc.popa_0081_tt_3218_high_high_setpoint THEN
+    tt_3218_high_high.trigger := TRUE;
+    ELSE
+        tt_3218_high_high.trigger := FALSE;
+END_IF
+
+
 //tt_3318-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 tt_3318_low_low();
 tt_3318_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 tt_3318_low_low.reset:=opc.popa_0081_alarm_reset;
-tt_3318_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-tt_3318_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-tt_3318_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+tt_3318_low_low.priority:=opc.popa_0081_tt_3318_low_low_priority;
+tt_3318_low_low.delay_setpoint:=opc.popa_0081_tt_3318_low_low_setpoint;
+tt_3318_low_low.enable:=opc.popa_0081_tt_3318_low_low_enable;
 
 //Timer delay elapsed
 tt_3318_low_low.delay_ton_et;
@@ -1109,14 +2718,73 @@ IF io_mapping.tt_3318.scaled_value <= opc.popa_0081_tt_3318_low_low_setpoint THE
     ELSE
         tt_3318_low_low.trigger := FALSE;
 END_IF
+	
+//tt_3318-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+tt_3318_low();
+tt_3318_low.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3318_low.reset:=opc.popa_0081_alarm_reset;
+tt_3318_low.priority:=opc.popa_0081_tt_3318_low_priority;
+tt_3318_low.delay_setpoint:=opc.popa_0081_tt_3318_low_setpoint;
+tt_3318_low.enable:=opc.popa_0081_tt_3318_low_enable;
+
+//Timer delay elapsed
+tt_3318_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3318.scaled_value < opc.popa_0081_tt_3318_low_setpoint THEN
+    tt_3318_low.trigger := TRUE;
+    ELSE
+        tt_3318_low.trigger := FALSE;
+END_IF
+	
+//tt_3318-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+tt_3318_high();
+tt_3318_high.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3318_high.reset:=opc.popa_0081_alarm_reset;
+tt_3318_high.priority:=opc.popa_0081_tt_3318_high_priority;
+tt_3318_high.delay_setpoint:=opc.popa_0081_tt_3318_high_setpoint;
+tt_3318_high.enable:=opc.popa_0081_tt_3318_high_enable;
+
+//Timer delay elapsed
+tt_3318_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3318.scaled_value > opc.popa_0081_tt_3318_high_setpoint THEN
+    tt_3318_high.trigger := TRUE;
+    ELSE
+        tt_3318_high.trigger := FALSE;
+END_IF
+	
+//tt_3318-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+tt_3318_high_high();
+tt_3318_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3318_high_high.reset:=opc.popa_0081_alarm_reset;
+tt_3318_high_high.priority:=opc.popa_0081_tt_3318_high_high_priority;
+tt_3318_high_high.delay_setpoint:=opc.popa_0081_tt_3318_high_high_setpoint;
+tt_3318_high_high.enable:=opc.popa_0081_tt_3318_high_high_enable;
+
+//Timer delay elapsed
+tt_3318_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3318.scaled_value >= opc.popa_0081_tt_3318_high_high_setpoint THEN
+    tt_3318_high_high.trigger := TRUE;
+    ELSE
+        tt_3318_high_high.trigger := FALSE;
+END_IF
+
+
 //tt_3140-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 tt_3140_low_low();
 tt_3140_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 tt_3140_low_low.reset:=opc.popa_0081_alarm_reset;
-tt_3140_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-tt_3140_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-tt_3140_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+tt_3140_low_low.priority:=opc.popa_0081_tt_3140_low_low_priority;
+tt_3140_low_low.delay_setpoint:=opc.popa_0081_tt_3140_low_low_setpoint;
+tt_3140_low_low.enable:=opc.popa_0081_tt_3140_low_low_enable;
 
 //Timer delay elapsed
 tt_3140_low_low.delay_ton_et;
@@ -1127,14 +2795,73 @@ IF io_mapping.tt_3140.scaled_value <= opc.popa_0081_tt_3140_low_low_setpoint THE
     ELSE
         tt_3140_low_low.trigger := FALSE;
 END_IF
+	
+//tt_3140-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+tt_3140_low();
+tt_3140_low.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3140_low.reset:=opc.popa_0081_alarm_reset;
+tt_3140_low.priority:=opc.popa_0081_tt_3140_low_priority;
+tt_3140_low.delay_setpoint:=opc.popa_0081_tt_3140_low_setpoint;
+tt_3140_low.enable:=opc.popa_0081_tt_3140_low_enable;
+
+//Timer delay elapsed
+tt_3140_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3140.scaled_value < opc.popa_0081_tt_3140_low_setpoint THEN
+    tt_3140_low.trigger := TRUE;
+    ELSE
+        tt_3140_low.trigger := FALSE;
+END_IF
+	
+//tt_3140-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+tt_3140_high();
+tt_3140_high.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3140_high.reset:=opc.popa_0081_alarm_reset;
+tt_3140_high.priority:=opc.popa_0081_tt_3140_high_priority;
+tt_3140_high.delay_setpoint:=opc.popa_0081_tt_3140_high_setpoint;
+tt_3140_high.enable:=opc.popa_0081_tt_3140_high_enable;
+
+//Timer delay elapsed
+tt_3140_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3140.scaled_value > opc.popa_0081_tt_3140_high_setpoint THEN
+    tt_3140_high.trigger := TRUE;
+    ELSE
+        tt_3140_high.trigger := FALSE;
+END_IF
+	
+//tt_3140-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+tt_3140_high_high();
+tt_3140_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3140_high_high.reset:=opc.popa_0081_alarm_reset;
+tt_3140_high_high.priority:=opc.popa_0081_tt_3140_high_high_priority;
+tt_3140_high_high.delay_setpoint:=opc.popa_0081_tt_3140_high_high_setpoint;
+tt_3140_high_high.enable:=opc.popa_0081_tt_3140_high_high_enable;
+
+//Timer delay elapsed
+tt_3140_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3140.scaled_value >= opc.popa_0081_tt_3140_high_high_setpoint THEN
+    tt_3140_high_high.trigger := TRUE;
+    ELSE
+        tt_3140_high_high.trigger := FALSE;
+END_IF
+
+
 //tt_3240-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 tt_3240_low_low();
 tt_3240_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 tt_3240_low_low.reset:=opc.popa_0081_alarm_reset;
-tt_3240_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-tt_3240_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-tt_3240_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+tt_3240_low_low.priority:=opc.popa_0081_tt_3240_low_low_priority;
+tt_3240_low_low.delay_setpoint:=opc.popa_0081_tt_3240_low_low_setpoint;
+tt_3240_low_low.enable:=opc.popa_0081_tt_3240_low_low_enable;
 
 //Timer delay elapsed
 tt_3240_low_low.delay_ton_et;
@@ -1145,14 +2872,73 @@ IF io_mapping.tt_3240.scaled_value <= opc.popa_0081_tt_3240_low_low_setpoint THE
     ELSE
         tt_3240_low_low.trigger := FALSE;
 END_IF
+	
+//tt_3240-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+tt_3240_low();
+tt_3240_low.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3240_low.reset:=opc.popa_0081_alarm_reset;
+tt_3240_low.priority:=opc.popa_0081_tt_3240_low_priority;
+tt_3240_low.delay_setpoint:=opc.popa_0081_tt_3240_low_setpoint;
+tt_3240_low.enable:=opc.popa_0081_tt_3240_low_enable;
+
+//Timer delay elapsed
+tt_3240_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3240.scaled_value < opc.popa_0081_tt_3240_low_setpoint THEN
+    tt_3240_low.trigger := TRUE;
+    ELSE
+        tt_3240_low.trigger := FALSE;
+END_IF
+	
+//tt_3240-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+tt_3240_high();
+tt_3240_high.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3240_high.reset:=opc.popa_0081_alarm_reset;
+tt_3240_high.priority:=opc.popa_0081_tt_3240_high_priority;
+tt_3240_high.delay_setpoint:=opc.popa_0081_tt_3240_high_setpoint;
+tt_3240_high.enable:=opc.popa_0081_tt_3240_high_enable;
+
+//Timer delay elapsed
+tt_3240_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3240.scaled_value > opc.popa_0081_tt_3240_high_setpoint THEN
+    tt_3240_high.trigger := TRUE;
+    ELSE
+        tt_3240_high.trigger := FALSE;
+END_IF
+	
+//tt_3240-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+tt_3240_high_high();
+tt_3240_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3240_high_high.reset:=opc.popa_0081_alarm_reset;
+tt_3240_high_high.priority:=opc.popa_0081_tt_3240_high_high_priority;
+tt_3240_high_high.delay_setpoint:=opc.popa_0081_tt_3240_high_high_setpoint;
+tt_3240_high_high.enable:=opc.popa_0081_tt_3240_high_high_enable;
+
+//Timer delay elapsed
+tt_3240_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3240.scaled_value >= opc.popa_0081_tt_3240_high_high_setpoint THEN
+    tt_3240_high_high.trigger := TRUE;
+    ELSE
+        tt_3240_high_high.trigger := FALSE;
+END_IF
+
+
 //tt_3340-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 tt_3340_low_low();
 tt_3340_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 tt_3340_low_low.reset:=opc.popa_0081_alarm_reset;
-tt_3340_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-tt_3340_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-tt_3340_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+tt_3340_low_low.priority:=opc.popa_0081_tt_3340_low_low_priority;
+tt_3340_low_low.delay_setpoint:=opc.popa_0081_tt_3340_low_low_setpoint;
+tt_3340_low_low.enable:=opc.popa_0081_tt_3340_low_low_enable;
 
 //Timer delay elapsed
 tt_3340_low_low.delay_ton_et;
@@ -1163,35 +2949,73 @@ IF io_mapping.tt_3340.scaled_value <= opc.popa_0081_tt_3340_low_low_setpoint THE
     ELSE
         tt_3340_low_low.trigger := FALSE;
 END_IF
-//tt_3601-----------------------------------------------------------------------------------------------------
+	
+//tt_3340-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
-tt_3601_low_low();
-tt_3601_low_low.alm_ack:=opc.popa_0081_alarm_ack;
-tt_3601_low_low.reset:=opc.popa_0081_alarm_reset;
-tt_3601_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-tt_3601_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-tt_3601_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+tt_3340_low();
+tt_3340_low.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3340_low.reset:=opc.popa_0081_alarm_reset;
+tt_3340_low.priority:=opc.popa_0081_tt_3340_low_priority;
+tt_3340_low.delay_setpoint:=opc.popa_0081_tt_3340_low_setpoint;
+tt_3340_low.enable:=opc.popa_0081_tt_3340_low_enable;
 
 //Timer delay elapsed
-tt_3601_low_low.delay_ton_et;
+tt_3340_low.delay_ton_et;
 
-(*//Place your alarm trigger logic here. 
-IF io_mapping.tt_3601.scaled_value <= opc.popa_0081_tt_3601_low_low_setpoint THEN
-    tt_3601_low_low.trigger := TRUE;
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3340.scaled_value < opc.popa_0081_tt_3340_low_setpoint THEN
+    tt_3340_low.trigger := TRUE;
     ELSE
-        tt_3601_low_low.trigger := FALSE;
+        tt_3340_low.trigger := FALSE;
+END_IF
+	
+//tt_3340-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+tt_3340_high();
+tt_3340_high.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3340_high.reset:=opc.popa_0081_alarm_reset;
+tt_3340_high.priority:=opc.popa_0081_tt_3340_high_priority;
+tt_3340_high.delay_setpoint:=opc.popa_0081_tt_3340_high_setpoint;
+tt_3340_high.enable:=opc.popa_0081_tt_3340_high_enable;
+
+//Timer delay elapsed
+tt_3340_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3340.scaled_value > opc.popa_0081_tt_3340_high_setpoint THEN
+    tt_3340_high.trigger := TRUE;
+    ELSE
+        tt_3340_high.trigger := FALSE;
+END_IF
+	
+//tt_3340-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+tt_3340_high_high();
+tt_3340_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3340_high_high.reset:=opc.popa_0081_alarm_reset;
+tt_3340_high_high.priority:=opc.popa_0081_tt_3340_high_high_priority;
+tt_3340_high_high.delay_setpoint:=opc.popa_0081_tt_3340_high_high_setpoint;
+tt_3340_high_high.enable:=opc.popa_0081_tt_3340_high_high_enable;
+
+//Timer delay elapsed
+tt_3340_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3340.scaled_value >= opc.popa_0081_tt_3340_high_high_setpoint THEN
+    tt_3340_high_high.trigger := TRUE;
+    ELSE
+        tt_3340_high_high.trigger := FALSE;
 END_IF
 
-*)
 
 //tt_3432-----------------------------------------------------------------------------------------------------
 //Instantiate the alarm block, and map the inputs from the OPC GVL
 tt_3432_low_low();
 tt_3432_low_low.alm_ack:=opc.popa_0081_alarm_ack;
 tt_3432_low_low.reset:=opc.popa_0081_alarm_reset;
-tt_3432_low_low.priority:=opc.popa_0081_u_3112_fail_to_start_priority;
-tt_3432_low_low.delay_setpoint:=opc.popa_0081_u_3112_fail_to_start_delay_setpoint;
-tt_3432_low_low.enable:=opc.popa_0081_u_3112_fail_to_start_enable;
+tt_3432_low_low.priority:=opc.popa_0091_tt_3432_low_low_priority;
+tt_3432_low_low.delay_setpoint:=opc.popa_0091_tt_3432_low_low_setpoint;
+tt_3432_low_low.enable:=opc.popa_0091_tt_3432_low_low_enable;
 
 //Timer delay elapsed
 tt_3432_low_low.delay_ton_et;
@@ -1201,7 +3025,67 @@ IF io_mapping.tt_3432.scaled_value <= opc.popa_0091_tt_3432_low_low_setpoint THE
     tt_3432_low_low.trigger := TRUE;
     ELSE
         tt_3432_low_low.trigger := FALSE;
-END_IF]]></ST>
+END_IF
+	
+//tt_3432-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+tt_3432_low();
+tt_3432_low.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3432_low.reset:=opc.popa_0081_alarm_reset;
+tt_3432_low.priority:=opc.popa_0091_tt_3432_low_priority;
+tt_3432_low.delay_setpoint:=opc.popa_0091_tt_3432_low_setpoint;
+tt_3432_low.enable:=opc.popa_0091_tt_3432_low_enable;
+
+//Timer delay elapsed
+tt_3432_low.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3432.scaled_value < opc.popa_0091_tt_3432_low_setpoint THEN
+    tt_3432_low.trigger := TRUE;
+    ELSE
+        tt_3432_low.trigger := FALSE;
+END_IF
+	
+//tt_3432-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+tt_3432_high();
+tt_3432_high.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3432_high.reset:=opc.popa_0081_alarm_reset;
+tt_3432_high.priority:=opc.popa_0091_tt_3432_high_priority;
+tt_3432_high.delay_setpoint:=opc.popa_0091_tt_3432_high_setpoint;
+tt_3432_high.enable:=opc.popa_0091_tt_3432_high_enable;
+
+//Timer delay elapsed
+tt_3432_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3432.scaled_value > opc.popa_0091_tt_3432_high_setpoint THEN
+    tt_3432_high.trigger := TRUE;
+    ELSE
+        tt_3432_high.trigger := FALSE;
+END_IF
+	
+//tt_3432-----------------------------------------------------------------------------------------------------
+//Instantiate the alarm block, and map the inputs from the OPC GVL
+tt_3432_high_high();
+tt_3432_high_high.alm_ack:=opc.popa_0081_alarm_ack;
+tt_3432_high_high.reset:=opc.popa_0081_alarm_reset;
+tt_3432_high_high.priority:=opc.popa_0091_tt_3432_high_high_priority;
+tt_3432_high_high.delay_setpoint:=opc.popa_0091_tt_3432_high_high_setpoint;
+tt_3432_high_high.enable:=opc.popa_0091_tt_3432_high_high_enable;
+
+//Timer delay elapsed
+tt_3432_high_high.delay_ton_et;
+
+//Place your alarm trigger logic here. 
+IF io_mapping.tt_3432.scaled_value >= opc.popa_0091_tt_3432_high_high_setpoint THEN
+    tt_3432_high_high.trigger := TRUE;
+    ELSE
+        tt_3432_high_high.trigger := FALSE;
+END_IF
+
+
+]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

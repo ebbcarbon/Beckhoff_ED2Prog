@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.50" ClassName="CNestedPlcProjDef">
 	<Project GUID="{A69D7AB4-53AC-40E7-8E11-A7DF25BBEC0A}" Name="ED_PROG" PrjFilePath="..\..\ED_PROG\ED_PROG.plcproj" TmcFilePath="..\..\ED_PROG\ED_PROG.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" CopyTmcToTarget="true" CopyTpyToTarget="false" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="ED_PROG\ED_PROG.tmc" TmcHash="{F913177E-E7AC-0BCA-E2E6-968433786076}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="ED_PROG\ED_PROG.tmc" TmcHash="{1FE42E3C-821D-96D8-23D0-927D53F5ED46}">
 			<Name>ED_PROG Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -29,30 +29,6 @@ Motor vfd run feedback, mapped to a physical input]]></Comment>
 				<Var>
 					<Name>io_mapping.cpt_3144_raw_input</Name>
 					<Comment><![CDATA[Analog input raw input, mapped to a physical input]]></Comment>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>io_mapping.cct_3120_raw_input</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>io_mapping.cct_3220_raw_input</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>io_mapping.cct_3320_raw_input</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>io_mapping.cct_3142_raw_input</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>io_mapping.cct_3242_raw_input</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>io_mapping.cct_3342_raw_input</Name>
 					<Type>INT</Type>
 				</Var>
 				<Var>
@@ -217,6 +193,22 @@ Motor vfd run feedback, mapped to a physical input]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>io_mapping.cct_3120_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.cct_3220_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.cct_3320_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.cct_3142_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>io_mapping.nv_3135_open_feedback</Name>
 					<Comment><![CDATA[Digital valve open feedback
 {attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
@@ -275,6 +267,14 @@ Analog valve position feedback raw input]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
+					<Name>io_mapping.cct_3242_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.cct_3342_raw_input</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>io_mapping.nv_3235_open_feedback</Name>
 					<Type>BOOL</Type>
 				</Var>
@@ -325,23 +325,6 @@ nv_3310_closed_feedback AT %I* : BOOL;]]></Comment>
 			<Vars VarGrpType="2" AreaNo="1">
 				<Name>PlcTask Outputs</Name>
 				<Var>
-					<Name>general.twinsafe_reset</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>general.twinsafe_ack</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>general.twinsafe_run</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>output_mapping.u_3112_run_command_io</Name>
-					<Comment><![CDATA[Motor vfd run command, mapped to a physical output]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>output_mapping.u_3112_speed_command_io</Name>
 					<Comment><![CDATA[Motor vfd speed command scaled output, mappped to a physical output]]></Comment>
 					<Type>INT</Type>
@@ -373,6 +356,11 @@ nv_3310_closed_feedback AT %I* : BOOL;]]></Comment>
 				<Var>
 					<Name>output_mapping.u_3405_speed_command_io</Name>
 					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>output_mapping.u_3112_run_command_io</Name>
+					<Comment><![CDATA[Motor vfd run command, mapped to a physical output]]></Comment>
+					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>output_mapping.u_3212_run_command_io</Name>
@@ -436,11 +424,6 @@ nv_3310_closed_feedback AT %I* : BOOL;]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>output_mapping.nv_3110_open_command_io</Name>
-					<Comment><![CDATA[Digital valve open command]]></Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>output_mapping.av_3148_position_command_io</Name>
 					<Comment><![CDATA[Analog valve position command output valve]]></Comment>
 					<Type>INT</Type>
@@ -448,6 +431,23 @@ nv_3310_closed_feedback AT %I* : BOOL;]]></Comment>
 				<Var>
 					<Name>output_mapping.av_3248_position_command_io</Name>
 					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>general.twinsafe_reset</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>general.twinsafe_ack</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>general.twinsafe_run</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>output_mapping.nv_3110_open_command_io</Name>
+					<Comment><![CDATA[Digital valve open command]]></Comment>
+					<Type>BOOL</Type>
 				</Var>
 				<Var>
 					<Name>output_mapping.av_3348_position_command_io</Name>
