@@ -202,11 +202,11 @@ VAR PERSISTENT
 	
 	//Digital valve open feedback
 	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
-	//nv_3110_open_feedback AT %I* : BOOL;
+	nv_3110_open_feedback AT %I* : BOOL;
 	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
-	//nv_3210_open_feedback AT %I* : BOOL;
+	nv_3210_open_feedback AT %I* : BOOL;
 	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
-	//nv_3310_open_feedback AT %I* : BOOL;
+	nv_3310_open_feedback AT %I* : BOOL;
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 28 (EL1859)^Channel 1^Input'}
 	nv_3135_open_feedback AT %I* : BOOL;
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 28 (EL1859)^Channel 2^Input'}
@@ -220,11 +220,11 @@ VAR PERSISTENT
 	
 	//Digital valve closed feedback
 	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
-	//nv_3110_closed_feedback AT %I* : BOOL;
+	nv_3110_closed_feedback AT %I* : BOOL;
 	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
-	//nv_3210_closed_feedback AT %I* : BOOL;
+	nv_3210_closed_feedback AT %I* : BOOL;
 	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
-	//nv_3310_closed_feedback AT %I* : BOOL;
+	nv_3310_closed_feedback AT %I* : BOOL;
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 29 (EL1859)^Channel 1^Input'}
 	nv_3135_closed_feedback AT %I* : BOOL;
 	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 29 (EL1859)^Channel 2^Input'}

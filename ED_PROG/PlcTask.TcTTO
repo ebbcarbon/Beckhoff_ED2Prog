@@ -41,9 +41,6 @@
       <Name>pump_manager</Name>
     </PouCall>
     <PouCall>
-      <Name>valve_digital_control_st</Name>
-    </PouCall>
-    <PouCall>
       <Name>idle</Name>
     </PouCall>
     <PouCall>

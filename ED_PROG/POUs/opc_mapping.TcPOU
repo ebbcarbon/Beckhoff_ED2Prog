@@ -142,21 +142,21 @@ opc.popa_0091_u_3405_status:=pump_manager.u_3405.status;
 
 opc.popa_0081_av_3148_position_feedback_scaled_value:=io_mapping.av_3148_position_feedback.scaled_value;
 opc.popa_0081_av_3148_position_command_scaled_value:=output_mapping.av_3148_position_command.scaled_value;
-opc.popa_0081_av_3148_position_feedback:=valve_digital_control_st.av_3148.position_feedback;
-opc.popa_0081_av_3148_position_request:=valve_digital_control_st.av_3148.position_request;
-opc.popa_0081_av_3148_status:=valve_digital_control_st.av_3148.status;
+opc.popa_0081_av_3148_position_feedback:=valve_manager.av_3148.position_feedback;
+opc.popa_0081_av_3148_position_request:=valve_manager.av_3148.position_request;
+opc.popa_0081_av_3148_status:=valve_manager.av_3148.status;
 
 opc.popa_0081_av_3248_position_feedback_scaled_value:=io_mapping.av_3248_position_feedback.scaled_value;
 opc.popa_0081_av_3248_position_command_scaled_value:=output_mapping.av_3248_position_command.scaled_value;
-opc.popa_0081_av_3248_position_feedback:=valve_digital_control_st.av_3248.position_feedback;
-opc.popa_0081_av_3248_position_request:=valve_digital_control_st.av_3248.position_request;
-opc.popa_0081_av_3248_status:=valve_digital_control_st.av_3248.status;
+opc.popa_0081_av_3248_position_feedback:=valve_manager.av_3248.position_feedback;
+opc.popa_0081_av_3248_position_request:=valve_manager.av_3248.position_request;
+opc.popa_0081_av_3248_status:=valve_manager.av_3248.status;
 
 opc.popa_0081_av_3348_position_feedback_scaled_value:=io_mapping.av_3348_position_feedback.scaled_value;
 opc.popa_0081_av_3348_position_command_scaled_value:=output_mapping.av_3348_position_command.scaled_value;
-opc.popa_0081_av_3348_position_feedback:=valve_digital_control_st.av_3348.position_feedback;
-opc.popa_0081_av_3348_position_request:=valve_digital_control_st.av_3348.position_request;
-opc.popa_0081_av_3348_status:=valve_digital_control_st.av_3348.status;
+opc.popa_0081_av_3348_position_feedback:=valve_manager.av_3348.position_feedback;
+opc.popa_0081_av_3348_position_request:=valve_manager.av_3348.position_request;
+opc.popa_0081_av_3348_status:=valve_manager.av_3348.status;
 (*
 opc.popa_0081_u_3160_run_request:=motor_starter_control.u_3160.run_request;
 opc.popa_0081_u_3160_runtime_today:=motor_starter_control.u_3160.runtime_today;
@@ -166,44 +166,44 @@ opc.popa_0081_u_3160_status:=motor_starter_control.u_3160.status;
 *)
 
 
-opc.popa_0081_nv_3110_open_request:=valve_digital_control_st.nv_3110.open_request;
-opc.popa_0081_nv_3110_status:=valve_digital_control_st.nv_3110.status;
+opc.popa_0081_nv_3110_open_request:=valve_manager.nv_3110.open_request;
+opc.popa_0081_nv_3110_status:=valve_manager.nv_3110.status;
 opc.popa_0081_nv_3110_fail_to_open_active :=faults.nv_3110_fail_to_open.active;
 opc.popa_0081_nv_3110_fail_to_close_active :=faults.nv_3110_fail_to_close.active;
 
-opc.popa_0081_nv_3210_open_request:=valve_digital_control_st.nv_3210.open_request;
-opc.popa_0081_nv_3210_status:=valve_digital_control_st.nv_3210.status;
+opc.popa_0081_nv_3210_open_request:=valve_manager.nv_3210.open_request;
+opc.popa_0081_nv_3210_status:=valve_manager.nv_3210.status;
 opc.popa_0081_nv_3210_fail_to_open_active :=faults.nv_3210_fail_to_open.active;
 opc.popa_0081_nv_3210_fail_to_close_active :=faults.nv_3210_fail_to_close.active;
 
-opc.popa_0081_nv_3310_open_request:=valve_digital_control_st.nv_3310.open_request;
-opc.popa_0081_nv_3310_status:=valve_digital_control_st.nv_3310.status;
+opc.popa_0081_nv_3310_open_request:=valve_manager.nv_3310.open_request;
+opc.popa_0081_nv_3310_status:=valve_manager.nv_3310.status;
 opc.popa_0081_nv_3310_fail_to_open_active :=faults.nv_3310_fail_to_open.active;
 opc.popa_0081_nv_3310_fail_to_close_active :=faults.nv_3310_fail_to_close.active;
 
-opc.popa_0081_nv_3135_open_request:=valve_digital_control_st.nv_3135.open_request;
-opc.popa_0081_nv_3135_status:=valve_digital_control_st.nv_3135.status;
+opc.popa_0081_nv_3135_open_request:=valve_manager.nv_3135.open_request;
+opc.popa_0081_nv_3135_status:=valve_manager.nv_3135.status;
 opc.popa_0081_nv_3135_fail_to_open_active :=faults.nv_3135_fail_to_open.active;
 opc.popa_0081_nv_3135_fail_to_close_active :=faults.nv_3135_fail_to_close.active;
 
-opc.popa_0081_nv_3235_open_request:=valve_digital_control_st.nv_3235.open_request;
-opc.popa_0081_nv_3235_status:=valve_digital_control_st.nv_3235.status;
+opc.popa_0081_nv_3235_open_request:=valve_manager.nv_3235.open_request;
+opc.popa_0081_nv_3235_status:=valve_manager.nv_3235.status;
 opc.popa_0081_nv_3235_fail_to_open_active :=faults.nv_3235_fail_to_open.active;
 opc.popa_0081_nv_3235_fail_to_close_active :=faults.nv_3235_fail_to_close.active;
 
-opc.popa_0081_nv_3335_open_request:=valve_digital_control_st.nv_3335.open_request;
-opc.popa_0081_nv_3335_status:=valve_digital_control_st.nv_3335.status;
+opc.popa_0081_nv_3335_open_request:=valve_manager.nv_3335.open_request;
+opc.popa_0081_nv_3335_status:=valve_manager.nv_3335.status;
 opc.popa_0081_nv_3335_fail_to_open_active :=faults.nv_3335_fail_to_open.active;
 opc.popa_0081_nv_3335_fail_to_close_active :=faults.nv_3335_fail_to_close.active;
 
-opc.popa_0081_nv_3372_open_request:=valve_digital_control_st.nv_3372.open_request;
-opc.popa_0081_nv_3372_status:=valve_digital_control_st.nv_3372.status;
+opc.popa_0081_nv_3372_open_request:=valve_manager.nv_3372.open_request;
+opc.popa_0081_nv_3372_status:=valve_manager.nv_3372.status;
 opc.popa_0081_nv_3372_fail_to_open_active :=faults.nv_3372_fail_to_open.active;
 opc.popa_0081_nv_3372_fail_to_close_active :=faults.nv_3372_fail_to_close.active;
 
-//opc.popa_0081_nv_3162_hmi_open_request:=valve_digital_control_st.nv_3162.open_request;
-opc.popa_0081_nv_3162_open_request:=valve_digital_control_st.nv_3162.open_request;
-opc.popa_0081_nv_3162_status:=valve_digital_control_st.nv_3162.status;
+//opc.popa_0081_nv_3162_hmi_open_request:=valve_manager.nv_3162.open_request;
+opc.popa_0081_nv_3162_open_request:=valve_manager.nv_3162.open_request;
+opc.popa_0081_nv_3162_status:=valve_manager.nv_3162.status;
 opc.popa_0081_nv_3162_fail_to_open_active :=faults.nv_3162_fail_to_open.active;
 opc.popa_0081_nv_3162_fail_to_close_active :=faults.nv_3162_fail_to_close.active;]]></ST>
     </Implementation>

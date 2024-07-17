@@ -104,9 +104,6 @@
     <Compile Include="POUs\valve_manager.TcPOU">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="POUs\valve_digital_control_st.TcPOU">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DUTs" />

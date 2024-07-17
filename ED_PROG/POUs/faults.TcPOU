@@ -544,7 +544,7 @@ av_3148_position_fail.delay_setpoint:=opc.popa_0081_av_3148_position_fail_delay_
 av_3148_position_fail.enable:=opc.popa_0081_av_3148_position_fail_enable;
 
 //Place your alarm trigger logic here.  
-IF io_mapping.av_3148_position_feedback.scaled_value>valve_digital_control_st.av_3148.position_deadband_high OR io_mapping.av_3148_position_feedback.scaled_value<valve_digital_control_st.av_3148.position_deadband_low THEN
+IF io_mapping.av_3148_position_feedback.scaled_value>valve_manager.av_3148.position_deadband_high OR io_mapping.av_3148_position_feedback.scaled_value<valve_manager.av_3148.position_deadband_low THEN
 	av_3148_position_fail.trigger:=TRUE;
 	ELSE
 		av_3148_position_fail.trigger:=FALSE;
@@ -559,7 +559,7 @@ nv_3372_fail_to_open.delay_setpoint:=opc.popa_0081_nv_3372_fail_to_open_delay_se
 nv_3372_fail_to_open.enable:=opc.popa_0081_nv_3372_fail_to_open_enable;
 
 //Place your alarm trigger logic here.  
-IF valve_digital_control_st.nv_3372.open_command=TRUE AND valve_digital_control_st.nv_3372.open_feedback=FALSE THEN
+IF valve_manager.nv_3372.open_command=TRUE AND valve_manager.nv_3372.open_feedback=FALSE THEN
 	nv_3372_fail_to_open.trigger:=TRUE;
 	ELSE
 		nv_3372_fail_to_open.trigger:=FALSE;
@@ -574,7 +574,7 @@ nv_3372_fail_to_close.delay_setpoint:=opc.popa_0081_nv_3372_fail_to_close_delay_
 nv_3372_fail_to_close.enable:=opc.popa_0081_nv_3372_fail_to_close_enable;
 
 //Place your alarm trigger logic here.  
-IF valve_digital_control_st.nv_3372.open_command=FALSE AND valve_digital_control_st.nv_3372.open_feedback=TRUE THEN
+IF valve_manager.nv_3372.open_command=FALSE AND valve_manager.nv_3372.open_feedback=TRUE THEN
 	nv_3372_fail_to_close.trigger:=TRUE;
 	ELSE
 		nv_3372_fail_to_close.trigger:=FALSE;

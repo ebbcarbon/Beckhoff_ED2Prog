@@ -247,7 +247,7 @@ av_3148_position_command.filter_factor:=opc.popa_0081_av_3148_position_command_f
 av_3148_position_command.raw_max:=100;
 av_3148_position_command.raw_min:=0;
 //Map output from valve control pou to scaling block
-av_3148_position_command.raw_input:=valve_digital_control_st.av_3148.Position_Command;
+av_3148_position_command.raw_input:=valve_manager.av_3148.Position_Command;
 //Map the analog scaling function block raw input to the physical raw output variable
 av_3148_position_command_io := REAL_TO_INT(av_3148_position_command.scaled_value);
 
@@ -260,7 +260,7 @@ av_3248_position_command.filter_factor:=opc.popa_0081_av_3248_position_command_f
 av_3248_position_command.raw_max:=100;
 av_3248_position_command.raw_min:=0;
 //Map output from valve control pou to scaling block
-av_3248_position_command.raw_input:=valve_digital_control_st.av_3248.Position_Command;
+av_3248_position_command.raw_input:=valve_manager.av_3248.Position_Command;
 //Map the analog scaling function block raw input to the physical raw output variable
 av_3248_position_command_io := REAL_TO_INT(av_3248_position_command.scaled_value);
 
@@ -273,20 +273,20 @@ av_3348_position_command.filter_factor:=opc.popa_0081_av_3348_position_command_f
 av_3348_position_command.raw_max:=100;
 av_3348_position_command.raw_min:=0;
 //Map output from valve control pou to scaling block
-av_3348_position_command.raw_input:=valve_digital_control_st.av_3348.Position_Command;
+av_3348_position_command.raw_input:=valve_manager.av_3348.Position_Command;
 //Map the analog scaling function block raw input to the physical raw output variable
 av_3348_position_command_io := REAL_TO_INT(av_3348_position_command.scaled_value);
 
 
 //Map the digital valve open command to the command output
-nv_3110_open_command_io:=valve_digital_control_st.nv_3110.open_command;
-nv_3210_open_command_io:=valve_digital_control_st.nv_3210.open_command;
-nv_3310_open_command_io:=valve_digital_control_st.nv_3310.open_command;
-nv_3135_open_command_io:=valve_digital_control_st.nv_3135.open_command;
-nv_3235_open_command_io:=valve_digital_control_st.nv_3235.open_command;
-nv_3335_open_command_io:=valve_digital_control_st.nv_3335.open_command;
-nv_3372_open_command_io:=valve_digital_control_st.nv_3372.open_command;
-nv_3162_open_command_io:=valve_digital_control_st.nv_3162.open_command;]]></ST>
+nv_3110_open_command_io:=valve_manager.nv_3110.open_command;
+nv_3210_open_command_io:=valve_manager.nv_3210.open_command;
+nv_3310_open_command_io:=valve_manager.nv_3310.open_command;
+nv_3135_open_command_io:=valve_manager.nv_3135.open_command;
+nv_3235_open_command_io:=valve_manager.nv_3235.open_command;
+nv_3335_open_command_io:=valve_manager.nv_3335.open_command;
+nv_3372_open_command_io:=valve_manager.nv_3372.open_command;
+nv_3162_open_command_io:=valve_manager.nv_3162.open_command;]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

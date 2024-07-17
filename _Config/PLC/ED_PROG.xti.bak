@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.50" ClassName="CNestedPlcProjDef">
 	<Project GUID="{A69D7AB4-53AC-40E7-8E11-A7DF25BBEC0A}" Name="ED_PROG" PrjFilePath="..\..\ED_PROG\ED_PROG.plcproj" TmcFilePath="..\..\ED_PROG\ED_PROG.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" CopyTmcToTarget="true" CopyTpyToTarget="false" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="ED_PROG\ED_PROG.tmc" TmcHash="{FD43F3C8-A7FB-95B3-33FB-CA84C40F7DB3}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="ED_PROG\ED_PROG.tmc" TmcHash="{2501CE4D-F815-F30C-6420-7B275AD102A6}">
 			<Name>ED_PROG Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -210,13 +210,6 @@ Motor vfd run feedback, mapped to a physical input]]></Comment>
 				</Var>
 				<Var>
 					<Name>io_mapping.nv_3135_open_feedback</Name>
-					<Comment><![CDATA[Digital valve open feedback
-{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
-nv_3110_open_feedback AT %I* : BOOL;
-{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
-nv_3210_open_feedback AT %I* : BOOL;
-{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
-nv_3310_open_feedback AT %I* : BOOL;]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -292,13 +285,6 @@ Analog valve position feedback raw input]]></Comment>
 				</Var>
 				<Var>
 					<Name>io_mapping.nv_3135_closed_feedback</Name>
-					<Comment><![CDATA[Digital valve closed feedback
-{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
-nv_3110_closed_feedback AT %I* : BOOL;
-{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
-nv_3210_closed_feedback AT %I* : BOOL;
-{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}
-nv_3310_closed_feedback AT %I* : BOOL;]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -315,6 +301,38 @@ nv_3310_closed_feedback AT %I* : BOOL;]]></Comment>
 				</Var>
 				<Var>
 					<Name>io_mapping.nv_3162_closed_feedback</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3110_open_feedback</Name>
+					<Comment><![CDATA[Digital valve open feedback
+{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3210_open_feedback</Name>
+					<Comment><![CDATA[{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3310_open_feedback</Name>
+					<Comment><![CDATA[{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3110_closed_feedback</Name>
+					<Comment><![CDATA[Digital valve closed feedback
+{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3210_closed_feedback</Name>
+					<Comment><![CDATA[{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}]]></Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>io_mapping.nv_3310_closed_feedback</Name>
+					<Comment><![CDATA[{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 31 (EK1914)^Term 32 (EL1859)^Channel 11^Output'}]]></Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
