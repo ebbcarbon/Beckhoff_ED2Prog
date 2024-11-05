@@ -38,11 +38,7 @@ VAR
 	av_3148_position_request: INT;
 	av_3248_position_request: INT;
 	ed_pumps_stopped: BOOL;
-	nv_3110_closed_feedback: BOOL;
-	nv_3210_closed_feedback: BOOL;
-	nv_3310_closed_feedback: BOOL;
-	nv_3135_closed_feedback: BOOL;
-	nv_3235_closed_feedback: BOOL;
+
 	nv_3335_position_feedback: INT;
 	nv_3335_recycle_position: BOOL;
 	av_3148_position_feedback: INT;
@@ -2349,7 +2345,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"nv_3110_closed_feedback"</v>
+                              <v n="Operand">"io_mapping.nv_3110_closed_feedback"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -2368,7 +2364,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"nv_3210_closed_feedback"</v>
+                              <v n="Operand">"io_mapping.nv_3210_closed_feedback"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -2387,7 +2383,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"nv_3310_closed_feedback"</v>
+                              <v n="Operand">"io_mapping.nv_3310_closed_feedback"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -2406,7 +2402,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"nv_3135_closed_feedback"</v>
+                              <v n="Operand">"io_mapping.nv_3135_closed_feedback"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -2425,7 +2421,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"nv_3235_closed_feedback"</v>
+                              <v n="Operand">"io_mapping.nv_3235_closed_feedback"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>

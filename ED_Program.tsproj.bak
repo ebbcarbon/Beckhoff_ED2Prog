@@ -150,7 +150,7 @@
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
 					<Name>PlcTask</Name>
 				</Task>
-				<Task Id="4" Priority="1" CycleTime="100000" AmsPort="301">
+				<Task Id="4" Priority="1" CycleTime="100000" AmsPort="301" AmsNetId="10.100.2.44.1.1">
 					<Name>twinsafe</Name>
 					<Vars VarGrpType="1" InsertType="1">
 						<Name>Inputs</Name>
