@@ -611,7 +611,8 @@ stack_redox_inlet_cross_pressure_alm.enable:=TRUE;//opc.popa_0081_nv_3372_fail_t
 
 //Place your alarm trigger logic here.  
 redox_cross_pressure_cmp :=ABS(((io_mapping.pt_3119.scaled_value + io_mapping.pt_3141.scaled_value)/2) - io_mapping.pt_3414.scaled_value);
-IF  redox_cross_pressure_cmp >= 0.2 THEN
+
+IF  (idle.idle_stable AND (redox_cross_pressure_cmp >= 0.2)) THEN
 	stack_redox_inlet_cross_pressure_alm.trigger := TRUE;
 	ELSE
 		stack_redox_inlet_cross_pressure_alm.trigger := FALSE;
@@ -3087,5 +3088,11 @@ END_IF
 
 ]]></ST>
     </Implementation>
+    <LineIds Name="faults">
+      <LineId Id="3" Count="358" />
+      <LineId Id="3085" Count="0" />
+      <LineId Id="362" Count="2473" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>
