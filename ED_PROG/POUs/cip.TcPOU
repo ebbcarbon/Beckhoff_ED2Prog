@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.8">
   <POU Name="cip" Id="{229a4917-364b-4aed-993d-1b6b88976092}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM cip
 VAR
@@ -70,7 +70,7 @@ VAR
 	tmr_cip_valve_delay_et: TIME;
 	tmr_cip_valve_delay_q: BOOL;
 	u_3112_cip_pressure_setpoint_request: REAL;
-	u_3370_cip_pressure_setpoint_request: LREAL;
+	u_3370_cip_pressure_setpoint_request: REAL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -493,7 +493,7 @@ END_VAR
                             <n />
                             <o>
                               <v n="Operand">"u_3370_cip_pressure_setpoint_request"</v>
-                              <v n="Type">"LREAL"</v>
+                              <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
                               <v n="Address">""</v>
@@ -602,7 +602,7 @@ END_VAR
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
                               <v n="Operand">"opc.popa_0081_cip_pressure_setpoint_request"</v>
-                              <v n="Type">"LREAL"</v>
+                              <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
                               <v n="Address">""</v>

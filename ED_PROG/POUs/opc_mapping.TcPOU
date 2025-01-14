@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.8">
   <POU Name="opc_mapping" Id="{b22e9f76-7f94-4083-919c-cee7ef2d7e82}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM opc_mapping
 VAR
@@ -207,5 +207,9 @@ opc.popa_0081_nv_3162_status:=valve_manager.nv_3162.status;
 opc.popa_0081_nv_3162_fail_to_open_active :=faults.nv_3162_fail_to_open.active;
 opc.popa_0081_nv_3162_fail_to_close_active :=faults.nv_3162_fail_to_close.active;]]></ST>
     </Implementation>
+    <LineIds Name="opc_mapping">
+      <LineId Id="3" Count="198" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

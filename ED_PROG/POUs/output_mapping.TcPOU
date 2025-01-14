@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.8">
   <POU Name="output_mapping" Id="{b2f9198d-d8e3-45c3-905c-93678f357beb}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM output_mapping
 VAR PERSISTENT
@@ -76,14 +76,11 @@ VAR PERSISTENT
 	
 		
 	//Analog valve position command output valve
-	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 26 (EL4124)^AO Output Channel 1^Analog output'}
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100)^Term 26 (EL4124)^AO Output Channel 1^Analog output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 26 (EL4124)^AO Output Channel 1^Analog output'}
 	av_3148_position_command_io AT %Q* : INT;
-	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 26 (EL4124)^AO Output Channel 2^Analog output'}
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100)^Term 26 (EL4124)^AO Output Channel 2^Analog output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 26 (EL4124)^AO Output Channel 2^Analog output'}
 	av_3248_position_command_io AT %Q* : INT;
-	//{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 26 (EL4124)^AO Output Channel 3^Analog output'}
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100)^Term 26 (EL4124)^AO Output Channel 3^Analog output'}
+	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 20 (EK1100-0018)^Term 26 (EL4124)^AO Output Channel 3^Analog output'}
 	av_3348_position_command_io AT %Q* : INT;
 	
 		//Digital valve open command
@@ -105,11 +102,6 @@ VAR PERSISTENT
 	nv_3162_open_command_io AT %Q* : BOOL;
 	
 	safety_reset AT %Q* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 9 (EL1859)^Channel 9^Output'}
-	Safeout_io AT %Q* : BOOL;
-	{attribute 'TcLinkTo' := 'TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 9 (EL1859)^Channel 10^Output'}
-	Safeout_io_2 AT %Q* : BOOL;
-	
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -294,18 +286,11 @@ nv_3135_open_command_io:=valve_manager.nv_3135.open_command;
 nv_3235_open_command_io:=valve_manager.nv_3235.open_command;
 nv_3335_open_command_io:=valve_manager.nv_3335.open_command;
 nv_3372_open_command_io:=valve_manager.nv_3372.open_command;
-nv_3162_open_command_io:=valve_manager.nv_3162.open_command;
-
-//temp
-safeout_io := general.Safety_out;
-safeout_io_2 := general.Safety_out;]]></ST>
+nv_3162_open_command_io:=valve_manager.nv_3162.open_command;]]></ST>
     </Implementation>
     <LineIds Name="output_mapping">
       <LineId Id="3" Count="180" />
       <LineId Id="2" Count="0" />
-      <LineId Id="296" Count="0" />
-      <LineId Id="295" Count="0" />
-      <LineId Id="297" Count="1" />
     </LineIds>
   </POU>
 </TcPlcObject>

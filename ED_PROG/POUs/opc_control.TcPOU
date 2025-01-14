@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.8">
   <POU Name="opc_control" Id="{edc08dc8-97c3-47b8-b1df-261bba604ea7}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM opc_control
 VAR PERSISTENT
@@ -62,5 +62,9 @@ opc_ua_server_command.tTimeout:=timeout_setpoint;
 //Set the first scan bit back to false after the first scan
 first_scan_bit:=FALSE;]]></ST>
     </Implementation>
+    <LineIds Name="opc_control">
+      <LineId Id="3" Count="35" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

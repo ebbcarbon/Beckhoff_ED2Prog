@@ -9,7 +9,7 @@
     <WriteProductVersion>true</WriteProductVersion>
     <GenerateTpy>false</GenerateTpy>
     <Name>ED_PROG</Name>
-    <ProgramVersion>3.1.4024.0</ProgramVersion>
+    <ProgramVersion>3.1.4026.12</ProgramVersion>
     <Application>{d7166911-d2a2-419f-b298-7bc8b4abf156}</Application>
     <TypeSystem>{261297f6-1d1b-4095-8bcd-298a1f807842}</TypeSystem>
     <Implicit_Task_Info>{5c887a50-fbbc-4934-8730-8999ea7f443c}</Implicit_Task_Info>
@@ -113,6 +113,10 @@
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
+    <PlaceholderReference Include="Tc2_OpcUa">
+      <DefaultResolution>Tc2_OpcUA, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_OpcUa</Namespace>
+    </PlaceholderReference>
     <PlaceholderReference Include="Tc2_Standard">
       <DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc2_Standard</Namespace>
@@ -129,11 +133,6 @@
       <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc3_Module</Namespace>
     </PlaceholderReference>
-  </ItemGroup>
-  <ItemGroup>
-    <LibraryReference Include="Tc2_OpcUa,3.3.2.0,Beckhoff Automation GmbH">
-      <Namespace>Tc2_OpcUa</Namespace>
-    </LibraryReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="ED_PROG.tmc">

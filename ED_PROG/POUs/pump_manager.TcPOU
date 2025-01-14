@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.8">
   <POU Name="pump_manager" Id="{3b5ad67c-a464-4c74-9317-fc4708b2e954}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM pump_manager
 VAR
@@ -11414,7 +11414,7 @@ END_VAR
                         <o>
                           <o n="Operand" t="Operand">
                             <v n="Operand">"cip.u_3370_cip_pressure_setpoint_request"</v>
-                            <v n="Type">"LREAL"</v>
+                            <v n="Type">"REAL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
                             <v n="Address">""</v>
