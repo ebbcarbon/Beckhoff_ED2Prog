@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.8">
+  <POU Name="redox_doser" Id="{082c543a-f01d-41c5-aa5e-c0d2d4a48dd0}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM redox_doser
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <LADDER>
+        <XmlArchive>
+          <Data>
+            <o xml:space="preserve" t="LadderImplementationObject">
+              <v n="ModelJson">"{
+  "$type": "LadderDataModel",
+  "Networks": [
+    {
+      "$type": "Network",
+      "Id": "jPY1rAHM",
+      "Sequence": {
+        "$type": "Sequence"
+      }
+    }
+  ]
+}"</v>
+            </o>
+          </Data>
+          <TypeList>
+            <Type n="LadderImplementationObject">{f0fda5b8-8c48-4377-bbd5-c49444e4d26e}</Type>
+            <Type n="String">System.String</Type>
+          </TypeList>
+        </XmlArchive>
+      </LADDER>
+    </Implementation>
+  </POU>
+</TcPlcObject>

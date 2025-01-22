@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.50">
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4026.12">
 	<DataTypes>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
+			<Name GUID="{18071995-0000-0000-0000-002000000001}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..0] OF BIT</Name>
 			<BitSize>1</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
 			<ArrayInfo>
@@ -11,7 +11,7 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-002000000006}" IecBaseType="true" BitType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..5] OF BIT</Name>
+			<Name GUID="{18071995-0000-0000-0000-002000000006}" IecBaseType="true" AutoDeleteType="true" HideSubItems="true">ARRAY [0..5] OF BIT</Name>
 			<BitSize>6</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000010}">BIT</BaseType>
 			<ArrayInfo>
@@ -150,7 +150,7 @@
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
 					<Name>PlcTask</Name>
 				</Task>
-				<Task Id="4" Priority="1" CycleTime="100000" AmsPort="301" AmsNetId="10.100.2.44.1.1">
+				<Task Id="4" Priority="1" CycleTime="100000" AmsPort="301">
 					<Name>twinsafe</Name>
 					<Vars VarGrpType="1" InsertType="1">
 						<Name>Inputs</Name>
@@ -1576,7 +1576,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 								<ModuleIdent>200</ModuleIdent>
 								<Module Id="#x03090007" Type="FSOUT" Class="FSOUT">
 									<Name>Module 2 (FSOUT)</Name>
-									<ImageId>408</ImageId>
+									<ImageId>520</ImageId>
 									<ModuleData>02000000c8000000000004000000000000000000000000000000000000000000</ModuleData>
 									<PdoIndex>6142</PdoIndex>
 								</Module>
@@ -1586,7 +1586,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 								<ModuleIdent>1950</ModuleIdent>
 								<Module Id="#x0309000f" Type="DEVICEIO" Class="DEVICEIO">
 									<Name>Module 3 (DEVICEIO)</Name>
-									<ImageId>408</ImageId>
+									<ImageId>520</ImageId>
 									<ModuleData>020000009e070000000004000000000000000000000000000000000000000000</ModuleData>
 									<PdoIndex>7166</PdoIndex>
 								</Module>
@@ -1596,7 +1596,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 								<ModuleIdent>691</ModuleIdent>
 								<Module Id="#x03090010" Type="FSLOGIC" Class="FSLOGIC">
 									<Name>Module 4 (FSLOGIC)</Name>
-									<ImageId>408</ImageId>
+									<ImageId>520</ImageId>
 									<ModuleData>02000000b3020000000004000000000000000000000000000000000000000000</ModuleData>
 									<PdoIndex>7167</PdoIndex>
 									<PdoIndex>6143</PdoIndex>
@@ -7608,7 +7608,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 								<ModuleIdent>2911</ModuleIdent>
 								<Module Id="#x0309000b" Type="FSOE" Class="2911">
 									<Name>Module 1 (FSOE)</Name>
-									<ImageId>408</ImageId>
+									<ImageId>520</ImageId>
 									<ModuleData>020000005f0b000000002c000000000000000000000000000000000000000000</ModuleData>
 									<PdoIndex>6656</PdoIndex>
 									<PdoIndex>5632</PdoIndex>
@@ -7620,7 +7620,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 								<ModuleIdent>200</ModuleIdent>
 								<Module Id="#x0309000c" Type="FSOUT" Class="FSOUT">
 									<Name>Module 2 (FSOUT)</Name>
-									<ImageId>408</ImageId>
+									<ImageId>520</ImageId>
 									<ModuleData>02000000c8000000000004000000000000000000000000000000000000000000</ModuleData>
 									<PdoIndex>6142</PdoIndex>
 								</Module>
@@ -7630,7 +7630,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 								<ModuleIdent>1950</ModuleIdent>
 								<Module Id="#x0309000d" Type="DEVICEIO" Class="DEVICEIO">
 									<Name>Module 3 (DEVICEIO)</Name>
-									<ImageId>408</ImageId>
+									<ImageId>520</ImageId>
 									<ModuleData>020000009e070000000004000000000000000000000000000000000000000000</ModuleData>
 									<PdoIndex>7166</PdoIndex>
 								</Module>
@@ -7640,7 +7640,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 								<ModuleIdent>691</ModuleIdent>
 								<Module Id="#x0309000e" Type="FSLOGIC" Class="FSLOGIC">
 									<Name>Module 4 (FSLOGIC)</Name>
-									<ImageId>408</ImageId>
+									<ImageId>520</ImageId>
 									<ModuleData>02000000b3020000000004000000000000000000000000000000000000000000</ModuleData>
 									<PdoIndex>7167</PdoIndex>
 									<PdoIndex>6143</PdoIndex>
@@ -7665,9 +7665,9 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 		<MappingInfo Identifier="{00000000-2001-0850-0020-500810000403}" Id="#x02030020"/>
 		<MappingInfo Identifier="{03040010-0010-0304-1000-040310000403}" Id="#x02030010" Watchdog="04000000040000000400000004000000"/>
 		<OwnerA Name="TIID^Device 1 (EtherCAT)">
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 11 (EL2911)">
-				<Link VarA="Term 31 (EK1914)^Module 1 (FSOE)^Inputs^FSOE" VarB="ConnectionOutputs^Message_18 RxPDO"/>
-				<Link VarA="Term 31 (EK1914)^Module 1 (FSOE)^Outputs^FSOE" VarB="ConnectionInputs^Message_18 TxPDO"/>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 31 (EK1914)">
+				<Link VarA="Term 1 (EK1200)^Term 11 (EL2911)^ConnectionInputs^Message_18 TxPDO" VarB="Module 1 (FSOE)^Outputs^FSOE"/>
+				<Link VarA="Term 1 (EK1200)^Term 11 (EL2911)^ConnectionOutputs^Message_18 RxPDO" VarB="Module 1 (FSOE)^Inputs^FSOE"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>
