@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.8">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
   <POU Name="opc_mapping" Id="{b22e9f76-7f94-4083-919c-cee7ef2d7e82}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM opc_mapping
 VAR
@@ -8,15 +8,15 @@ END_VAR
     <Implementation>
       <ST><![CDATA[//This program maps values from the local variable to the OPC readable tag.
 //Setpoints should NOT be mapped here.  The OPC tag should be used directly where needed
-opc.popa_0081_av_3148_position_fail_active :=faults.av_3148_position_fail.active;
-opc.popa_0081_u_3112_fail_to_start_active:=faults.u_3112_fail_to_start.active;
-opc.popa_0081_u_3112_fail_to_stop_active:=faults.u_3112_fail_to_stop.active;
-opc.popa_0081_u_3160_fail_to_start_active:=faults.u_3160_fail_to_start.active;
-opc.popa_0081_u_3160_fail_to_stop_active:=faults.u_3112_fail_to_stop.active;
-opc.popa_0081_cpt_3144_low_low_active:=faults.cpt_3144_low_low.active;
-opc.popa_0081_cpt_3144_low_active:=faults.cpt_3144_low.active;
-opc.popa_0081_cpt_3144_high_active:=faults.cpt_3144_high.active;
-opc.popa_0081_cpt_3144_high_high_active:=faults.cpt_3144_high_high.active;
+opc.popa_0081_av_3148_a_position_fail_active :=faults.av_3148_a_position_fail.active;
+opc.popa_0081_u_3112_a_fail_to_start_active:=faults.u_3112_a_fail_to_start.active;
+opc.popa_0081_u_3112_a_fail_to_stop_active:=faults.u_3112_a_fail_to_stop.active;
+opc.popa_0081_u_3160_a_fail_to_start_active:=faults.u_3160_a_fail_to_start.active;
+opc.popa_0081_u_3160_a_fail_to_stop_active:=faults.u_3112_a_fail_to_stop.active;
+opc.popa_0081_cpt_3144_a_low_low_active:=faults.cpt_3144_a_low_low.active;
+opc.popa_0081_cpt_3144_a_low_active:=faults.cpt_3144_a_low.active;
+opc.popa_0081_cpt_3144_a_high_active:=faults.cpt_3144_a_high.active;
+opc.popa_0081_cpt_3144_a_high_high_active:=faults.cpt_3144_a_high_high.active;
 
 opc.popa_0081_ed_routine_critical_stop := general.ed_critical_stop;
 opc.popa_0081_ed_routine_stop := general.ed_routine_stop;
@@ -32,183 +32,183 @@ opc.popa_0081_system_date_time_minute:=general.system_date_time.minute;
 opc.popa_0081_system_date_time_second:=general.system_date_time.second;
 
 //---Field Instrumentation---------------------------------------------------------------------------------------------------------------------------
-opc.popa_0081_cpt_3144_scaled_value:=io_mapping.cpt_3144.scaled_value;
+opc.popa_0081_cpt_3144_a_scaled_value:=io_mapping.cpt_3144_a.scaled_value;
 
-opc.popa_0081_ft_3122_scaled_value:=io_mapping.ft_3122.scaled_value;
-opc.popa_0081_ft_3222_scaled_value:=io_mapping.ft_3222.scaled_value;
-opc.popa_0081_ft_3322_scaled_value:=io_mapping.ft_3322.scaled_value;
+opc.popa_0081_ft_3122_a_scaled_value:=io_mapping.ft_3122_a.scaled_value;
+opc.popa_0081_ft_3222_a_scaled_value:=io_mapping.ft_3222_a.scaled_value;
+opc.popa_0081_ft_3322_a_scaled_value:=io_mapping.ft_3322_a.scaled_value;
 
-opc.popa_0081_lt_3102_scaled_value:=io_mapping.lt_3102.scaled_value;
-opc.popa_0081_lt_3202_scaled_value:=io_mapping.lt_3202.scaled_value;
-opc.popa_0081_lt_3302_scaled_value:=io_mapping.lt_3302.scaled_value;
-opc.popa_0081_lt_3153_scaled_value:=io_mapping.lt_3153.scaled_value;
-opc.popa_0081_lt_3253_scaled_value:=io_mapping.lt_3253.scaled_value;
-opc.popa_0081_lt_3353_scaled_value:=io_mapping.lt_3353.scaled_value;
-opc.popa_0091_lt_3402_scaled_value:=io_mapping.lt_3402.scaled_value;
+opc.popa_0081_lt_3102_a_scaled_value:=io_mapping.lt_3102_a.scaled_value;
+opc.popa_0081_lt_3202_a_scaled_value:=io_mapping.lt_3202_a.scaled_value;
+opc.popa_0081_lt_3302_a_scaled_value:=io_mapping.lt_3302_a.scaled_value;
+opc.popa_0081_lt_3153_a_scaled_value:=io_mapping.lt_3153_a.scaled_value;
+opc.popa_0081_lt_3253_a_scaled_value:=io_mapping.lt_3253_a.scaled_value;
+opc.popa_0081_lt_3353_a_scaled_value:=io_mapping.lt_3353_a.scaled_value;
+opc.popa_0091_lt_3402_a_scaled_value:=io_mapping.lt_3402_a.scaled_value;
 
-opc.popa_0081_pt_3119_scaled_value:=io_mapping.pt_3119.scaled_value;
-opc.popa_0081_pt_3219_scaled_value:=io_mapping.pt_3219.scaled_value;
-opc.popa_0081_pt_3319_scaled_value:=io_mapping.pt_3319.scaled_value;
-opc.popa_0081_pt_3141_scaled_value:=io_mapping.pt_3141.scaled_value;
-opc.popa_0081_pt_3241_scaled_value:=io_mapping.pt_3241.scaled_value;
-opc.popa_0081_pt_3341_scaled_value:=io_mapping.pt_3341.scaled_value;
-opc.popa_0091_pt_3428_scaled_value:=io_mapping.pt_3428.scaled_value;
-opc.popa_0091_pt_3414_scaled_value:=io_mapping.pt_3414.scaled_value;
+opc.popa_0081_pt_3119_a_scaled_value:=io_mapping.pt_3119_a.scaled_value;
+opc.popa_0081_pt_3219_a_scaled_value:=io_mapping.pt_3219_a.scaled_value;
+opc.popa_0081_pt_3319_a_scaled_value:=io_mapping.pt_3319_a.scaled_value;
+opc.popa_0081_pt_3141_a_scaled_value:=io_mapping.pt_3141_a.scaled_value;
+opc.popa_0081_pt_3241_a_scaled_value:=io_mapping.pt_3241_a.scaled_value;
+opc.popa_0081_pt_3341_a_scaled_value:=io_mapping.pt_3341_a.scaled_value;
+opc.popa_0091_pt_3428_a_scaled_value:=io_mapping.pt_3428_a.scaled_value;
+opc.popa_0091_pt_3414_a_scaled_value:=io_mapping.pt_3414_a.scaled_value;
 
-opc.popa_0081_tt_3118_scaled_value:=io_mapping.tt_3118.scaled_value;
-opc.popa_0081_tt_3218_scaled_value:=io_mapping.tt_3218.scaled_value;
-opc.popa_0081_tt_3318_scaled_value:=io_mapping.tt_3318.scaled_value;
-opc.popa_0081_tt_3140_scaled_value:=io_mapping.tt_3140.scaled_value;
-opc.popa_0081_tt_3240_scaled_value:=io_mapping.tt_3240.scaled_value;
-opc.popa_0081_tt_3340_scaled_value:=io_mapping.tt_3340.scaled_value;
-opc.popa_0091_tt_3432_scaled_value:=io_mapping.tt_3432.scaled_value;
+opc.popa_0081_tt_3118_a_scaled_value:=io_mapping.tt_3118_a.scaled_value;
+opc.popa_0081_tt_3218_a_scaled_value:=io_mapping.tt_3218_a.scaled_value;
+opc.popa_0081_tt_3318_a_scaled_value:=io_mapping.tt_3318_a.scaled_value;
+opc.popa_0081_tt_3140_a_scaled_value:=io_mapping.tt_3140_a.scaled_value;
+opc.popa_0081_tt_3240_a_scaled_value:=io_mapping.tt_3240_a.scaled_value;
+opc.popa_0081_tt_3340_a_scaled_value:=io_mapping.tt_3340_a.scaled_value;
+opc.popa_0091_tt_3432_a_scaled_value:=io_mapping.tt_3432_a.scaled_value;
 
 //---Pumps---------------------------------------------------------------------------------------------------------------
-opc.popa_0081_u_3112_speed_command_scaled_value:=output_mapping.u_3112_speed_command.scaled_value;
-opc.popa_0081_u_3112_speed_feedback_scaled_value:=io_mapping.u_3112_speed_feedback.scaled_value;
-opc.popa_0081_u_3112_run_request:=pump_manager.u_3112.run_request;
-opc.popa_0081_u_3112_speed_request:=pump_manager.u_3112.speed_request;
-opc.popa_0081_u_3112_runtime_today:=pump_manager.u_3112.runtime_today;
-opc.popa_0081_u_3112_runtime_total:=pump_manager.u_3112.runtime_total;
-opc.popa_0081_u_3112_runtime_maint:=pump_manager.u_3112.runtime_maint;
-opc.popa_0081_u_3112_status:=pump_manager.u_3112.status;
+opc.popa_0081_u_3112_a_speed_command_scaled_value:=output_mapping.u_3112_a_speed_command.scaled_value;
+opc.popa_0081_u_3112_a_speed_feedback_scaled_value:=io_mapping.u_3112_a_speed_feedback.scaled_value;
+opc.popa_0081_u_3112_a_run_request:=pump_manager.u_3112_a.run_request;
+opc.popa_0081_u_3112_a_speed_request:=pump_manager.u_3112_a.speed_request;
+opc.popa_0081_u_3112_a_runtime_today:=pump_manager.u_3112_a.runtime_today;
+opc.popa_0081_u_3112_a_runtime_total:=pump_manager.u_3112_a.runtime_total;
+opc.popa_0081_u_3112_a_runtime_maint:=pump_manager.u_3112_a.runtime_maint;
+opc.popa_0081_u_3112_a_status:=pump_manager.u_3112_a.status;
 
-opc.popa_0081_u_3212_speed_command_scaled_value:=output_mapping.u_3212_speed_command.scaled_value;
-opc.popa_0081_u_3212_speed_feedback_scaled_value:=io_mapping.u_3212_speed_feedback.scaled_value;
-opc.popa_0081_u_3212_run_request:=pump_manager.u_3212.run_request;
-opc.popa_0081_u_3212_speed_request:=pump_manager.u_3212.speed_request;
-opc.popa_0081_u_3212_runtime_today:=pump_manager.u_3212.runtime_today;
-opc.popa_0081_u_3212_runtime_total:=pump_manager.u_3212.runtime_total;
-opc.popa_0081_u_3212_runtime_maint:=pump_manager.u_3212.runtime_maint;
-opc.popa_0081_u_3212_status:=pump_manager.u_3212.status;
+opc.popa_0081_u_3212_a_speed_command_scaled_value:=output_mapping.u_3212_a_speed_command.scaled_value;
+opc.popa_0081_u_3212_a_speed_feedback_scaled_value:=io_mapping.u_3212_a_speed_feedback.scaled_value;
+opc.popa_0081_u_3212_a_run_request:=pump_manager.u_3212_a.run_request;
+opc.popa_0081_u_3212_a_speed_request:=pump_manager.u_3212_a.speed_request;
+opc.popa_0081_u_3212_a_runtime_today:=pump_manager.u_3212_a.runtime_today;
+opc.popa_0081_u_3212_a_runtime_total:=pump_manager.u_3212_a.runtime_total;
+opc.popa_0081_u_3212_a_runtime_maint:=pump_manager.u_3212_a.runtime_maint;
+opc.popa_0081_u_3212_a_status:=pump_manager.u_3212_a.status;
 
-opc.popa_0081_u_3312_speed_command_scaled_value:=output_mapping.u_3312_speed_command.scaled_value;
-opc.popa_0081_u_3312_speed_feedback_scaled_value:=io_mapping.u_3312_speed_feedback.scaled_value;
-opc.popa_0081_u_3312_run_request:=pump_manager.u_3312.run_request;
-opc.popa_0081_u_3312_speed_request:=pump_manager.u_3312.speed_request;
-opc.popa_0081_u_3312_runtime_today:=pump_manager.u_3312.runtime_today;
-opc.popa_0081_u_3312_runtime_total:=pump_manager.u_3312.runtime_total;
-opc.popa_0081_u_3312_runtime_maint:=pump_manager.u_3312.runtime_maint;
-opc.popa_0081_u_3312_status:=pump_manager.u_3312.status;
+opc.popa_0081_u_3312_a_speed_command_scaled_value:=output_mapping.u_3312_a_speed_command.scaled_value;
+opc.popa_0081_u_3312_a_speed_feedback_scaled_value:=io_mapping.u_3312_a_speed_feedback.scaled_value;
+opc.popa_0081_u_3312_a_run_request:=pump_manager.u_3312_a.run_request;
+opc.popa_0081_u_3312_a_speed_request:=pump_manager.u_3312_a.speed_request;
+opc.popa_0081_u_3312_a_runtime_today:=pump_manager.u_3312_a.runtime_today;
+opc.popa_0081_u_3312_a_runtime_total:=pump_manager.u_3312_a.runtime_total;
+opc.popa_0081_u_3312_a_runtime_maint:=pump_manager.u_3312_a.runtime_maint;
+opc.popa_0081_u_3312_a_status:=pump_manager.u_3312_a.status;
 
-opc.popa_0081_u_3160_speed_command_scaled_value:=output_mapping.u_3160_speed_command.scaled_value;
-opc.popa_0081_u_3160_speed_feedback_scaled_value:=io_mapping.u_3160_speed_feedback.scaled_value;
-opc.popa_0081_u_3160_run_request:=pump_manager.u_3160.run_request;
-opc.popa_0081_u_3160_speed_request:=pump_manager.u_3160.speed_request;
-opc.popa_0081_u_3160_runtime_today:=pump_manager.u_3160.runtime_today;
-opc.popa_0081_u_3160_runtime_total:=pump_manager.u_3160.runtime_total;
-opc.popa_0081_u_3160_runtime_maint:=pump_manager.u_3160.runtime_maint;
-opc.popa_0081_u_3160_status:=pump_manager.u_3160.status;
+opc.popa_0081_u_3160_a_speed_command_scaled_value:=output_mapping.u_3160_a_speed_command.scaled_value;
+opc.popa_0081_u_3160_a_speed_feedback_scaled_value:=io_mapping.u_3160_a_speed_feedback.scaled_value;
+opc.popa_0081_u_3160_a_run_request:=pump_manager.u_3160_a.run_request;
+opc.popa_0081_u_3160_a_speed_request:=pump_manager.u_3160_a.speed_request;
+opc.popa_0081_u_3160_a_runtime_today:=pump_manager.u_3160_a.runtime_today;
+opc.popa_0081_u_3160_a_runtime_total:=pump_manager.u_3160_a.runtime_total;
+opc.popa_0081_u_3160_a_runtime_maint:=pump_manager.u_3160_a.runtime_maint;
+opc.popa_0081_u_3160_a_status:=pump_manager.u_3160_a.status;
 
-opc.popa_0081_u_3260_speed_command_scaled_value:=output_mapping.u_3260_speed_command.scaled_value;
-opc.popa_0081_u_3260_speed_feedback_scaled_value:=io_mapping.u_3260_speed_feedback.scaled_value;
-opc.popa_0081_u_3260_run_request:=pump_manager.u_3260.run_request;
-opc.popa_0081_u_3260_speed_request:=pump_manager.u_3260.speed_request;
-opc.popa_0081_u_3260_runtime_today:=pump_manager.u_3260.runtime_today;
-opc.popa_0081_u_3260_runtime_total:=pump_manager.u_3260.runtime_total;
-opc.popa_0081_u_3260_runtime_maint:=pump_manager.u_3260.runtime_maint;
-opc.popa_0081_u_3260_status:=pump_manager.u_3260.status;
+opc.popa_0081_u_3260_a_speed_command_scaled_value:=output_mapping.u_3260_a_speed_command.scaled_value;
+opc.popa_0081_u_3260_a_speed_feedback_scaled_value:=io_mapping.u_3260_a_speed_feedback.scaled_value;
+opc.popa_0081_u_3260_a_run_request:=pump_manager.u_3260_a.run_request;
+opc.popa_0081_u_3260_a_speed_request:=pump_manager.u_3260_a.speed_request;
+opc.popa_0081_u_3260_a_runtime_today:=pump_manager.u_3260_a.runtime_today;
+opc.popa_0081_u_3260_a_runtime_total:=pump_manager.u_3260_a.runtime_total;
+opc.popa_0081_u_3260_a_runtime_maint:=pump_manager.u_3260_a.runtime_maint;
+opc.popa_0081_u_3260_a_status:=pump_manager.u_3260_a.status;
 
-opc.popa_0081_u_3360_speed_command_scaled_value:=output_mapping.u_3360_speed_command.scaled_value;
-opc.popa_0081_u_3360_speed_feedback_scaled_value:=io_mapping.u_3360_speed_feedback.scaled_value;
-opc.popa_0081_u_3360_run_request:=pump_manager.u_3360.run_request;
-opc.popa_0081_u_3360_speed_request:=pump_manager.u_3360.speed_request;
-opc.popa_0081_u_3360_runtime_today:=pump_manager.u_3360.runtime_today;
-opc.popa_0081_u_3360_runtime_total:=pump_manager.u_3360.runtime_total;
-opc.popa_0081_u_3360_runtime_maint:=pump_manager.u_3360.runtime_maint;
-opc.popa_0081_u_3360_status:=pump_manager.u_3360.status;
+opc.popa_0081_u_3360_a_speed_command_scaled_value:=output_mapping.u_3360_a_speed_command.scaled_value;
+opc.popa_0081_u_3360_a_speed_feedback_scaled_value:=io_mapping.u_3360_a_speed_feedback.scaled_value;
+opc.popa_0081_u_3360_a_run_request:=pump_manager.u_3360_a.run_request;
+opc.popa_0081_u_3360_a_speed_request:=pump_manager.u_3360_a.speed_request;
+opc.popa_0081_u_3360_a_runtime_today:=pump_manager.u_3360_a.runtime_today;
+opc.popa_0081_u_3360_a_runtime_total:=pump_manager.u_3360_a.runtime_total;
+opc.popa_0081_u_3360_a_runtime_maint:=pump_manager.u_3360_a.runtime_maint;
+opc.popa_0081_u_3360_a_status:=pump_manager.u_3360_a.status;
 
-opc.popa_0081_u_3370_speed_command_scaled_value:=output_mapping.u_3370_speed_command.scaled_value;
-opc.popa_0081_u_3370_speed_feedback_scaled_value:=io_mapping.u_3370_speed_feedback.scaled_value;
-opc.popa_0081_u_3370_run_request:=pump_manager.u_3370.run_request;
-opc.popa_0081_u_3370_speed_request:=pump_manager.u_3370.speed_request;
-opc.popa_0081_u_3370_runtime_today:=pump_manager.u_3370.runtime_today;
-opc.popa_0081_u_3370_runtime_total:=pump_manager.u_3370.runtime_total;
-opc.popa_0081_u_3370_runtime_maint:=pump_manager.u_3370.runtime_maint;
-opc.popa_0081_u_3370_status:=pump_manager.u_3370.status;
+opc.popa_0081_u_3370_a_speed_command_scaled_value:=output_mapping.u_3370_a_speed_command.scaled_value;
+opc.popa_0081_u_3370_a_speed_feedback_scaled_value:=io_mapping.u_3370_a_speed_feedback.scaled_value;
+opc.popa_0081_u_3370_a_run_request:=pump_manager.u_3370_a.run_request;
+opc.popa_0081_u_3370_a_speed_request:=pump_manager.u_3370_a.speed_request;
+opc.popa_0081_u_3370_a_runtime_today:=pump_manager.u_3370_a.runtime_today;
+opc.popa_0081_u_3370_a_runtime_total:=pump_manager.u_3370_a.runtime_total;
+opc.popa_0081_u_3370_a_runtime_maint:=pump_manager.u_3370_a.runtime_maint;
+opc.popa_0081_u_3370_a_status:=pump_manager.u_3370_a.status;
 
-opc.popa_0091_u_3405_speed_command_scaled_value:=output_mapping.u_3405_speed_command.scaled_value;
-opc.popa_0091_u_3405_speed_feedback_scaled_value:=io_mapping.u_3405_speed_feedback.scaled_value;
-opc.popa_0091_u_3405_run_request:=pump_manager.u_3405.run_request;
-opc.popa_0091_u_3405_speed_request:=pump_manager.u_3405.speed_request;
-opc.popa_0091_u_3405_runtime_today:=pump_manager.u_3405.runtime_today;
-opc.popa_0091_u_3405_runtime_total:=pump_manager.u_3405.runtime_total;
-opc.popa_0091_u_3405_runtime_maint:=pump_manager.u_3405.runtime_maint;
-opc.popa_0091_u_3405_status:=pump_manager.u_3405.status;
+opc.popa_0091_u_3405_a_speed_command_scaled_value:=output_mapping.u_3405_a_speed_command.scaled_value;
+opc.popa_0091_u_3405_a_speed_feedback_scaled_value:=io_mapping.u_3405_a_speed_feedback.scaled_value;
+opc.popa_0091_u_3405_a_run_request:=pump_manager.u_3405_a.run_request;
+opc.popa_0091_u_3405_a_speed_request:=pump_manager.u_3405_a.speed_request;
+opc.popa_0091_u_3405_a_runtime_today:=pump_manager.u_3405_a.runtime_today;
+opc.popa_0091_u_3405_a_runtime_total:=pump_manager.u_3405_a.runtime_total;
+opc.popa_0091_u_3405_a_runtime_maint:=pump_manager.u_3405_a.runtime_maint;
+opc.popa_0091_u_3405_a_status:=pump_manager.u_3405_a.status;
 
 
 
 //---Valves------------------------------------------------------------------------------------------------------------------
 
-opc.popa_0081_av_3148_position_feedback_scaled_value:=io_mapping.av_3148_position_feedback.scaled_value;
-opc.popa_0081_av_3148_position_command_scaled_value:=output_mapping.av_3148_position_command.scaled_value;
-opc.popa_0081_av_3148_position_feedback:=valve_manager.av_3148.position_feedback;
-opc.popa_0081_av_3148_position_request:=valve_manager.av_3148.position_request;
-opc.popa_0081_av_3148_status:=valve_manager.av_3148.status;
+opc.popa_0081_av_3148_a_position_feedback_scaled_value:=io_mapping.av_3148_a_position_feedback.scaled_value;
+opc.popa_0081_av_3148_a_position_command_scaled_value:=output_mapping.av_3148_a_position_command.scaled_value;
+opc.popa_0081_av_3148_a_position_feedback:=valve_manager.av_3148_a.position_feedback;
+opc.popa_0081_av_3148_a_position_request:=valve_manager.av_3148_a.position_request;
+opc.popa_0081_av_3148_a_status:=valve_manager.av_3148_a.status;
 
-opc.popa_0081_av_3248_position_feedback_scaled_value:=io_mapping.av_3248_position_feedback.scaled_value;
-opc.popa_0081_av_3248_position_command_scaled_value:=output_mapping.av_3248_position_command.scaled_value;
-opc.popa_0081_av_3248_position_feedback:=valve_manager.av_3248.position_feedback;
-opc.popa_0081_av_3248_position_request:=valve_manager.av_3248.position_request;
-opc.popa_0081_av_3248_status:=valve_manager.av_3248.status;
+opc.popa_0081_av_3248_a_position_feedback_scaled_value:=io_mapping.av_3248_a_position_feedback.scaled_value;
+opc.popa_0081_av_3248_a_position_command_scaled_value:=output_mapping.av_3248_a_position_command.scaled_value;
+opc.popa_0081_av_3248_a_position_feedback:=valve_manager.av_3248_a.position_feedback;
+opc.popa_0081_av_3248_a_position_request:=valve_manager.av_3248_a.position_request;
+opc.popa_0081_av_3248_a_status:=valve_manager.av_3248_a.status;
 
-opc.popa_0081_av_3348_position_feedback_scaled_value:=io_mapping.av_3348_position_feedback.scaled_value;
-opc.popa_0081_av_3348_position_command_scaled_value:=output_mapping.av_3348_position_command.scaled_value;
-opc.popa_0081_av_3348_position_feedback:=valve_manager.av_3348.position_feedback;
-opc.popa_0081_av_3348_position_request:=valve_manager.av_3348.position_request;
-opc.popa_0081_av_3348_status:=valve_manager.av_3348.status;
+opc.popa_0081_av_3348_a_position_feedback_scaled_value:=io_mapping.av_3348_a_position_feedback.scaled_value;
+opc.popa_0081_av_3348_a_position_command_scaled_value:=output_mapping.av_3348_a_position_command.scaled_value;
+opc.popa_0081_av_3348_a_position_feedback:=valve_manager.av_3348_a.position_feedback;
+opc.popa_0081_av_3348_a_position_request:=valve_manager.av_3348_a.position_request;
+opc.popa_0081_av_3348_a_status:=valve_manager.av_3348_a.status;
 (*
-opc.popa_0081_u_3160_run_request:=motor_starter_control.u_3160.run_request;
-opc.popa_0081_u_3160_runtime_today:=motor_starter_control.u_3160.runtime_today;
-opc.popa_0081_u_3160_runtime_total:=motor_starter_control.u_3160.runtime_total;
-opc.popa_0081_u_3160_runtime_maint:=motor_starter_control.u_3160.runtime_maint;
-opc.popa_0081_u_3160_status:=motor_starter_control.u_3160.status;
+opc.popa_0081_u_3160_a_run_request:=motor_starter_control.u_3160_a.run_request;
+opc.popa_0081_u_3160_a_runtime_today:=motor_starter_control.u_3160_a.runtime_today;
+opc.popa_0081_u_3160_a_runtime_total:=motor_starter_control.u_3160_a.runtime_total;
+opc.popa_0081_u_3160_a_runtime_maint:=motor_starter_control.u_3160_a.runtime_maint;
+opc.popa_0081_u_3160_a_status:=motor_starter_control.u_3160_a.status;
 *)
 
 
-opc.popa_0081_nv_3110_open_request:=valve_manager.nv_3110.open_request;
-opc.popa_0081_nv_3110_status:=valve_manager.nv_3110.status;
-opc.popa_0081_nv_3110_fail_to_open_active :=faults.nv_3110_fail_to_open.active;
-opc.popa_0081_nv_3110_fail_to_close_active :=faults.nv_3110_fail_to_close.active;
+opc.popa_0081_nv_3110_a_open_request:=valve_manager.nv_3110_a.open_request;
+opc.popa_0081_nv_3110_a_status:=valve_manager.nv_3110_a.status;
+opc.popa_0081_nv_3110_a_fail_to_open_active :=faults.nv_3110_a_fail_to_open.active;
+opc.popa_0081_nv_3110_a_fail_to_close_active :=faults.nv_3110_a_fail_to_close.active;
 
-opc.popa_0081_nv_3210_open_request:=valve_manager.nv_3210.open_request;
-opc.popa_0081_nv_3210_status:=valve_manager.nv_3210.status;
-opc.popa_0081_nv_3210_fail_to_open_active :=faults.nv_3210_fail_to_open.active;
-opc.popa_0081_nv_3210_fail_to_close_active :=faults.nv_3210_fail_to_close.active;
+opc.popa_0081_nv_3210_a_open_request:=valve_manager.nv_3210_a.open_request;
+opc.popa_0081_nv_3210_a_status:=valve_manager.nv_3210_a.status;
+opc.popa_0081_nv_3210_a_fail_to_open_active :=faults.nv_3210_a_fail_to_open.active;
+opc.popa_0081_nv_3210_a_fail_to_close_active :=faults.nv_3210_a_fail_to_close.active;
 
-opc.popa_0081_nv_3310_open_request:=valve_manager.nv_3310.open_request;
-opc.popa_0081_nv_3310_status:=valve_manager.nv_3310.status;
-opc.popa_0081_nv_3310_fail_to_open_active :=faults.nv_3310_fail_to_open.active;
-opc.popa_0081_nv_3310_fail_to_close_active :=faults.nv_3310_fail_to_close.active;
+opc.popa_0081_nv_3310_a_open_request:=valve_manager.nv_3310_a.open_request;
+opc.popa_0081_nv_3310_a_status:=valve_manager.nv_3310_a.status;
+opc.popa_0081_nv_3310_a_fail_to_open_active :=faults.nv_3310_a_fail_to_open.active;
+opc.popa_0081_nv_3310_a_fail_to_close_active :=faults.nv_3310_a_fail_to_close.active;
 
-opc.popa_0081_nv_3135_open_request:=valve_manager.nv_3135.open_request;
-opc.popa_0081_nv_3135_status:=valve_manager.nv_3135.status;
-opc.popa_0081_nv_3135_fail_to_open_active :=faults.nv_3135_fail_to_open.active;
-opc.popa_0081_nv_3135_fail_to_close_active :=faults.nv_3135_fail_to_close.active;
+opc.popa_0081_nv_3135_a_open_request:=valve_manager.nv_3135_a.open_request;
+opc.popa_0081_nv_3135_a_status:=valve_manager.nv_3135_a.status;
+opc.popa_0081_nv_3135_a_fail_to_open_active :=faults.nv_3135_a_fail_to_open.active;
+opc.popa_0081_nv_3135_a_fail_to_close_active :=faults.nv_3135_a_fail_to_close.active;
 
-opc.popa_0081_nv_3235_open_request:=valve_manager.nv_3235.open_request;
-opc.popa_0081_nv_3235_status:=valve_manager.nv_3235.status;
-opc.popa_0081_nv_3235_fail_to_open_active :=faults.nv_3235_fail_to_open.active;
-opc.popa_0081_nv_3235_fail_to_close_active :=faults.nv_3235_fail_to_close.active;
+opc.popa_0081_nv_3235_a_open_request:=valve_manager.nv_3235_a.open_request;
+opc.popa_0081_nv_3235_a_status:=valve_manager.nv_3235_a.status;
+opc.popa_0081_nv_3235_a_fail_to_open_active :=faults.nv_3235_a_fail_to_open.active;
+opc.popa_0081_nv_3235_a_fail_to_close_active :=faults.nv_3235_a_fail_to_close.active;
 
-opc.popa_0081_nv_3335_open_request:=valve_manager.nv_3335.open_request;
-opc.popa_0081_nv_3335_status:=valve_manager.nv_3335.status;
-opc.popa_0081_nv_3335_fail_to_open_active :=faults.nv_3335_fail_to_open.active;
-opc.popa_0081_nv_3335_fail_to_close_active :=faults.nv_3335_fail_to_close.active;
+opc.popa_0081_nv_3335_a_open_request:=valve_manager.nv_3335_a.open_request;
+opc.popa_0081_nv_3335_a_status:=valve_manager.nv_3335_a.status;
+opc.popa_0081_nv_3335_a_fail_to_open_active :=faults.nv_3335_a_fail_to_open.active;
+opc.popa_0081_nv_3335_a_fail_to_close_active :=faults.nv_3335_a_fail_to_close.active;
 
-opc.popa_0081_nv_3372_open_request:=valve_manager.nv_3372.open_request;
-opc.popa_0081_nv_3372_status:=valve_manager.nv_3372.status;
-opc.popa_0081_nv_3372_fail_to_open_active :=faults.nv_3372_fail_to_open.active;
-opc.popa_0081_nv_3372_fail_to_close_active :=faults.nv_3372_fail_to_close.active;
+opc.popa_0081_nv_3372_a_open_request:=valve_manager.nv_3372_a.open_request;
+opc.popa_0081_nv_3372_a_status:=valve_manager.nv_3372_a.status;
+opc.popa_0081_nv_3372_a_fail_to_open_active :=faults.nv_3372_a_fail_to_open.active;
+opc.popa_0081_nv_3372_a_fail_to_close_active :=faults.nv_3372_a_fail_to_close.active;
 
-//opc.popa_0081_nv_3162_hmi_open_request:=valve_manager.nv_3162.open_request;
-opc.popa_0081_nv_3162_open_request:=valve_manager.nv_3162.open_request;
-opc.popa_0081_nv_3162_status:=valve_manager.nv_3162.status;
-opc.popa_0081_nv_3162_fail_to_open_active :=faults.nv_3162_fail_to_open.active;
-opc.popa_0081_nv_3162_fail_to_close_active :=faults.nv_3162_fail_to_close.active;]]></ST>
+//opc.popa_0081_nv_3162_a_hmi_open_request:=valve_manager.nv_3162_a.open_request;
+opc.popa_0081_nv_3162_a_open_request:=valve_manager.nv_3162_a.open_request;
+opc.popa_0081_nv_3162_a_status:=valve_manager.nv_3162_a.status;
+opc.popa_0081_nv_3162_a_fail_to_open_active :=faults.nv_3162_a_fail_to_open.active;
+opc.popa_0081_nv_3162_a_fail_to_close_active :=faults.nv_3162_a_fail_to_close.active;]]></ST>
     </Implementation>
     <LineIds Name="opc_mapping">
-      <LineId Id="3" Count="198" />
+      <LineId Id="404" Count="198" />
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>

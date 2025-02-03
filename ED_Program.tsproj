@@ -7687,7 +7687,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 					<Name>Image</Name>
 				</Image>
 				<Box Id="1" BoxType="9051">
-					<Name>ED1_SUP_PUB (Publisher)</Name>
+					<Name>ED1_a_SUP_PUB (Publisher)</Name>
 					<ImageId>99</ImageId>
 					<Vars VarGrpType="1">
 						<Name>Inputs</Name>
@@ -7772,7 +7772,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 					</Eap>
 				</Box>
 				<Box Id="2" BoxType="9052">
-					<Name>ED1_SUP_SUB (Subscriber)</Name>
+					<Name>ED1_a_SUP_SUB (Subscriber)</Name>
 					<ImageId>100</ImageId>
 					<Vars VarGrpType="1">
 						<Name>Inputs</Name>

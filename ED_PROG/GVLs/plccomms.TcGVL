@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.8">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
   <GVL Name="plccomms" Id="{7e35b770-5d87-4da1-8237-83839a5cb004}">
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL PERSISTENT
-	popa_0081_publish_real AT %Q* : ARRAY[0..99] OF REAL;
-	popa_0081_publish_bool AT %Q* : ARRAY[0..99] OF BOOL;
+	aaaaaaaa_publish_real AT %Q* : ARRAY[0..99] OF REAL;
+	aaaaaaaa_publish_bool AT %Q* : ARRAY[0..99] OF BOOL;
 	popa_supervisor_subscribe_real AT %I* : ARRAY[0..99] OF REAL;
 	popa_supervisor_subscribe_bool AT %I* : ARRAY[0..99] OF BOOL;
 END_VAR]]></Declaration>

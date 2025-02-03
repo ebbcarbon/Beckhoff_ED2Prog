@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
   <POU Name="general" Id="{afd5554c-a122-45cd-a612-91df6056dfdf}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM general
 VAR PERSISTENT
@@ -41,7 +41,7 @@ VAR
 	
 	
 	test_valve: analog_scaling;
-	test_nv_3110_open: BOOL;
+	test_nv_3110_a_open: BOOL;
 	safety_reset_ton: TON;
 END_VAR]]></Declaration>
     <Implementation>
@@ -2934,7 +2934,7 @@ END_VAR]]></Declaration>
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"test_nv_3110_open"</v>
+                            <v n="Operand">"test_nv_3110_a_open"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>

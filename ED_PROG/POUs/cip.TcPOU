@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4026.8">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.15">
   <POU Name="cip" Id="{229a4917-364b-4aed-993d-1b6b88976092}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM cip
 VAR
@@ -7,70 +7,70 @@ VAR
 	idle_redox_doser_enable: BOOL;
 	
 	tmr_idle_pumps: TON;
-	idle_u_3112_request: BOOL;
-	idle_u_3312_request: BOOL;
-	idle_u_3405_request: BOOL;
-	idle_u_3212_request: BOOL;
+	idle_u_3112_a_request: BOOL;
+	idle_u_3312_a_request: BOOL;
+	idle_u_3405_a_request: BOOL;
+	idle_u_3212_a_request: BOOL;
 	tmr_idle_pump_delay: TON;
-	u_3112_running: BOOL;
-	u_3112_speed_ref: INT;
-	u_3112_sp: REAL;
+	u_3112_a_running: BOOL;
+	u_3112_a_speed_ref: INT;
+	u_3112_a_sp: REAL;
 	salt_pressure_actual: REAL;
-	idle_u_3112_ready: BOOL;
-	u_3212_running: BOOL;
-	idle_u_3212_ready: BOOL;
-	idle_u_3312_ready: BOOL;
-	u_3312_running: BOOL;
-	u_3405_running: BOOL;
-	idle_u_3405_ready: BOOL;
+	idle_u_3112_a_ready: BOOL;
+	u_3212_a_running: BOOL;
+	idle_u_3212_a_ready: BOOL;
+	idle_u_3312_a_ready: BOOL;
+	u_3312_a_running: BOOL;
+	u_3405_a_running: BOOL;
+	idle_u_3405_a_ready: BOOL;
 	idle_stack_power_enable: BOOL;
 	ed_routine_cip: BOOL;
 	
-		nv_3110_open_request: BOOL;
-	nv_3210_open_request: BOOL;
-	nv_3310_open_request: BOOL;
-	nv_3110_open_feedback: BOOL;
-	nv_3210_open_feedback: BOOL;
-	nv_3310_open_feedback: BOOL;
+		nv_3110_a_open_request: BOOL;
+	nv_3210_a_open_request: BOOL;
+	nv_3310_a_open_request: BOOL;
+	nv_3110_a_open_feedback: BOOL;
+	nv_3210_a_open_feedback: BOOL;
+	nv_3310_a_open_feedback: BOOL;
 	cip_redox_doser_enable: BOOL;
-	nv_3372_open_request: BOOL;
-	nv_3135_open_request: BOOL;
-	nv_3235_open_request: BOOL;
-	nv_3335_open_request: BOOL;
-	nv_3372_open_feedback: BOOL;
-	nv_3135_open_feedback: BOOL;
-	nv_3235_open_feedback: BOOL;
-	nv_3335_open_feedback: BOOL;
+	nv_3372_a_open_request: BOOL;
+	nv_3135_a_open_request: BOOL;
+	nv_3235_a_open_request: BOOL;
+	nv_3335_a_open_request: BOOL;
+	nv_3372_a_open_feedback: BOOL;
+	nv_3135_a_open_feedback: BOOL;
+	nv_3235_a_open_feedback: BOOL;
+	nv_3335_a_open_feedback: BOOL;
 	tmr_cip_pump_delay: TON;
-	idle_u_3370_request: BOOL;
-	u_3370_running: BOOL;
-	u_3370_sp: REAL;
+	idle_u_3370_a_request: BOOL;
+	u_3370_a_running: BOOL;
+	u_3370_a_sp: REAL;
 	tmr_cip_pump_start_delay: TON;
 	tmr_cip_run: TON;
 	cip_tmr_preset: TIME;
 	
-	u_3370_actual: INT; // What would this be???
-	ft_3122_tot: INT;
-	ft_3222_tot: INT;
-	ft_3322_tot: INT;
+	u_3370_a_actual: INT; // What would this be???
+	ft_3122_a_tot: INT;
+	ft_3222_a_tot: INT;
+	ft_3322_a_tot: INT;
 	cip_flush_tot: INT;
 	cip_flush_sp: INT;
-	cip_u_3370_request: BOOL;
+	cip_u_3370_a_request: BOOL;
 	cip_complete: BOOL;
 	cip_stop_request: BOOL;
-	nv_3372_cip_request: BOOL;
-	nv_3135_cip_request: BOOL;
-	nv_3235_cip_request: BOOL;
-	nv_3335_cip_request: BOOL;
+	nv_3372_a_cip_request: BOOL;
+	nv_3135_a_cip_request: BOOL;
+	nv_3235_a_cip_request: BOOL;
+	nv_3335_a_cip_request: BOOL;
 	redox_doser_cip_enable: BOOL;
-	u_3370_cip_request: BOOL;
+	u_3370_a_cip_request: BOOL;
 	CIP_TEMP_BIT: BOOL;
 	tmr_cip_valve_delay: TON;
 	tmr_cip_valve_delay_pt: TIME:= T#30S;
 	tmr_cip_valve_delay_et: TIME;
 	tmr_cip_valve_delay_q: BOOL;
-	u_3112_cip_pressure_setpoint_request: REAL;
-	u_3370_cip_pressure_setpoint_request: REAL;
+	u_3112_a_cip_pressure_setpoint_request: REAL;
+	u_3370_a_cip_pressure_setpoint_request: REAL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -95,7 +95,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"nv_3372_cip_request"</v>
+                            <v n="Operand">"nv_3372_a_cip_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -289,7 +289,7 @@ END_VAR
                               </o>
                               <o>
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"io_mapping.nv_3372_open_feedback"</v>
+                                  <v n="Operand">"io_mapping.nv_3372_a_open_feedback"</v>
                                   <v n="Type">"BOOL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -308,7 +308,7 @@ END_VAR
                               </o>
                               <o>
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"io_mapping.nv_3135_closed_feedback"</v>
+                                  <v n="Operand">"io_mapping.nv_3135_a_closed_feedback"</v>
                                   <v n="Type">"BOOL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -327,7 +327,7 @@ END_VAR
                               </o>
                               <o>
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"io_mapping.nv_3235_closed_feedback"</v>
+                                  <v n="Operand">"io_mapping.nv_3235_a_closed_feedback"</v>
                                   <v n="Type">"BOOL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -346,7 +346,7 @@ END_VAR
                               </o>
                               <o>
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"io_mapping.nv_3335_closed_feedback"</v>
+                                  <v n="Operand">"io_mapping.nv_3335_a_closed_feedback"</v>
                                   <v n="Type">"BOOL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -448,7 +448,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"u_3370_cip_request"</v>
+                            <v n="Operand">"u_3370_a_cip_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -492,7 +492,7 @@ END_VAR
                           <l2 n="OutputItems" cet="Operand">
                             <n />
                             <o>
-                              <v n="Operand">"u_3370_cip_pressure_setpoint_request"</v>
+                              <v n="Operand">"u_3370_a_cip_pressure_setpoint_request"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -841,7 +841,7 @@ END_VAR
                                   </o>
                                   <o>
                                     <o n="Operand" t="Operand">
-                                      <v n="Operand">"u_3370_running"</v>
+                                      <v n="Operand">"u_3370_a_running"</v>
                                       <v n="Type">"BOOL"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
@@ -877,7 +877,7 @@ END_VAR
                               </o>
                               <o t="BoxTreeOperand">
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"ft_3122_tot"</v>
+                                  <v n="Operand">"ft_3122_a_tot"</v>
                                   <v n="Type">"INT"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -896,7 +896,7 @@ END_VAR
                               </o>
                               <o t="BoxTreeOperand">
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"ft_3222_tot"</v>
+                                  <v n="Operand">"ft_3222_a_tot"</v>
                                   <v n="Type">"INT"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -915,7 +915,7 @@ END_VAR
                               </o>
                               <o t="BoxTreeOperand">
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"ft_3322_tot"</v>
+                                  <v n="Operand">"ft_3322_a_tot"</v>
                                   <v n="Type">"INT"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
