@@ -168,7 +168,7 @@
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
 					<Name>PlcTask</Name>
 				</Task>
-				<Task Id="4" Priority="1" CycleTime="100000" AmsPort="301" AmsNetId="10.50.1.27.1.1">
+				<Task Id="4" Priority="1" CycleTime="100000" AmsPort="301">
 					<Name>twinsafe</Name>
 					<Vars VarGrpType="1" InsertType="1">
 						<Name>Inputs</Name>
@@ -205,7 +205,7 @@
 			</Tasks>
 		</System>
 		<Plc>
-			<Project File="ED_PROG.xti"/>
+			<Project File="ED2_PROG.xti"/>
 		</Plc>
 		<Safety>
 			<Project File="ED_SAFE.xti"/>

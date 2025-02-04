@@ -8,7 +8,7 @@
     <DownloadApplicationInfo>true</DownloadApplicationInfo>
     <WriteProductVersion>true</WriteProductVersion>
     <GenerateTpy>false</GenerateTpy>
-    <Name>ED_PROG</Name>
+    <Name>ED2_PROG</Name>
     <ProgramVersion>3.1.4026.12</ProgramVersion>
     <Application>{d7166911-d2a2-419f-b298-7bc8b4abf156}</Application>
     <TypeSystem>{261297f6-1d1b-4095-8bcd-298a1f807842}</TypeSystem>
@@ -139,7 +139,7 @@
     </PlaceholderReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ED_PROG.tmc">
+    <None Include="ED2_PROG.tmc">
       <SubType>Content</SubType>
     </None>
   </ItemGroup>
