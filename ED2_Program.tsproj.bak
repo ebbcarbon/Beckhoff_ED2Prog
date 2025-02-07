@@ -168,7 +168,7 @@
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
 					<Name>PlcTask</Name>
 				</Task>
-				<Task Id="4" Priority="1" CycleTime="100000" AmsPort="301" AmsNetId="10.60.1.102.1.1">
+				<Task Id="4" Priority="1" CycleTime="100000" AmsPort="301">
 					<Name>twinsafe</Name>
 					<Vars VarGrpType="1" InsertType="1">
 						<Name>Inputs</Name>
@@ -4298,7 +4298,7 @@ Bit1: Value bigger/equal Limit2]]></Comment>
 					<Pnp>
 						<DeviceDesc>FEC1</DeviceDesc>
 						<DeviceName>FEC1</DeviceName>
-						<DeviceData>000105614673</DeviceData>
+						<DeviceData>00010545cc98</DeviceData>
 					</Pnp>
 				</AddressInfo>
 				<Image Id="3" AddrType="9" ImageType="3">

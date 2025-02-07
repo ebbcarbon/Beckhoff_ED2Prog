@@ -41,7 +41,7 @@ VAR
 	
 	
 	test_valve: analog_scaling;
-	test_nv_3110_a_open: BOOL;
+	test_nv_3110_b_open: BOOL;
 	safety_reset_ton: TON;
 END_VAR]]></Declaration>
     <Implementation>
@@ -395,7 +395,7 @@ END_VAR]]></Declaration>
                                   </o>
                                   <o t="BoxTreeOperand">
                                     <o n="Operand" t="Operand">
-                                      <v n="Operand">"opc.popa_0081_daily_reset_hour_setpoint"</v>
+                                      <v n="Operand">"opc.popa_0082_daily_reset_hour_setpoint"</v>
                                       <v n="Type">"INT"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
@@ -458,7 +458,7 @@ END_VAR]]></Declaration>
                               </o>
                               <o t="BoxTreeOperand">
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"opc.popa_0081_daily_reset_minute_setpoint"</v>
+                                  <v n="Operand">"opc.popa_0082_daily_reset_minute_setpoint"</v>
                                   <v n="Type">"INT"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -627,7 +627,7 @@ END_VAR]]></Declaration>
                       <l2 n="InputItems" cet="BoxTreeOperand">
                         <o>
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"opc.popa_0081_alarm_ack"</v>
+                            <v n="Operand">"opc.popa_0082_alarm_ack"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -710,7 +710,7 @@ END_VAR]]></Declaration>
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"opc.popa_0081_alarm_ack"</v>
+                            <v n="Operand">"opc.popa_0082_alarm_ack"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -815,7 +815,7 @@ END_VAR]]></Declaration>
                       <l2 n="InputItems" cet="BoxTreeOperand">
                         <o>
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"opc.popa_0081_alarm_reset"</v>
+                            <v n="Operand">"opc.popa_0082_alarm_reset"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -898,7 +898,7 @@ END_VAR]]></Declaration>
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"opc.popa_0081_alarm_reset"</v>
+                            <v n="Operand">"opc.popa_0082_alarm_reset"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1003,7 +1003,7 @@ END_VAR]]></Declaration>
                       <l2 n="InputItems" cet="BoxTreeOperand">
                         <o>
                           <o n="Operand" t="Operand">
-                            <v n="Operand">"opc.popa_0081_ed_safety_reset"</v>
+                            <v n="Operand">"opc.popa_0082_ed_safety_reset"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1086,7 +1086,7 @@ END_VAR]]></Declaration>
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"opc.popa_0081_ed_safety_reset"</v>
+                            <v n="Operand">"opc.popa_0082_ed_safety_reset"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1187,7 +1187,7 @@ END_VAR]]></Declaration>
                       </o>
                       <o n="RValue" t="BoxTreeOperand">
                         <o n="Operand" t="Operand">
-                          <v n="Operand">"opc.popa_0081_ed_safety_reset"</v>
+                          <v n="Operand">"opc.popa_0082_ed_safety_reset"</v>
                           <v n="Type">"BOOL"</v>
                           <v n="Comment">""</v>
                           <v n="SymbolComment">""</v>
@@ -1248,7 +1248,7 @@ END_VAR]]></Declaration>
                       </o>
                       <o n="RValue" t="BoxTreeOperand">
                         <o n="Operand" t="Operand">
-                          <v n="Operand">"opc.popa_0081_ed_routine_maint"</v>
+                          <v n="Operand">"opc.popa_0082_ed_routine_maint"</v>
                           <v n="Type">"BOOL"</v>
                           <v n="Comment">""</v>
                           <v n="SymbolComment">""</v>
@@ -1309,7 +1309,7 @@ END_VAR]]></Declaration>
                       </o>
                       <o n="RValue" t="BoxTreeOperand">
                         <o n="Operand" t="Operand">
-                          <v n="Operand">"opc.popa_0081_ed_routine_idle"</v>
+                          <v n="Operand">"opc.popa_0082_ed_routine_idle"</v>
                           <v n="Type">"BOOL"</v>
                           <v n="Comment">""</v>
                           <v n="SymbolComment">""</v>
@@ -1370,7 +1370,7 @@ END_VAR]]></Declaration>
                       </o>
                       <o n="RValue" t="BoxTreeOperand">
                         <o n="Operand" t="Operand">
-                          <v n="Operand">"opc.popa_0081_ed_routine_cip"</v>
+                          <v n="Operand">"opc.popa_0082_ed_routine_cip"</v>
                           <v n="Type">"BOOL"</v>
                           <v n="Comment">""</v>
                           <v n="SymbolComment">""</v>
@@ -1431,7 +1431,7 @@ END_VAR]]></Declaration>
                       </o>
                       <o n="RValue" t="BoxTreeOperand">
                         <o n="Operand" t="Operand">
-                          <v n="Operand">"opc.popa_0081_ed_routine_stop"</v>
+                          <v n="Operand">"opc.popa_0082_ed_routine_stop"</v>
                           <v n="Type">"BOOL"</v>
                           <v n="Comment">""</v>
                           <v n="SymbolComment">""</v>
@@ -1520,7 +1520,7 @@ END_VAR]]></Declaration>
                         <l2 n="InputItems">
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"opc.popa_0081_ed_routine_critical_stop"</v>
+                              <v n="Operand">"opc.popa_0082_ed_routine_critical_stop"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -2934,7 +2934,7 @@ END_VAR]]></Declaration>
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"test_nv_3110_a_open"</v>
+                            <v n="Operand">"test_nv_3110_b_open"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>

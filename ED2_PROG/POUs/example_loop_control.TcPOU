@@ -4,18 +4,18 @@
     <Declaration><![CDATA[PROGRAM example_loop_control
 VAR
 	//Example run request for a starter motor.  This would be triggered by control loop logic
-	u_3160_a_run_request : BOOL;
+	u_3160_b_run_request : BOOL;
 	
 	//Example run request for a vfd motor.  This would be triggered by control loop logic
-	u_3112_a_run_request : BOOL;
+	u_3112_b_run_request : BOOL;
 	//Example Speed Request for a vfd motor.  This would be set by control loop logic, normally a PID
-	u_3112_a_speed_request : REAL;
+	u_3112_b_speed_request : REAL;
 	
 	//Example position request for an analog valve.  This would be set by control loop logic, normally a PID
-	av_3148_a_position_request : REAL;
+	av_3148_b_position_request : REAL;
 	
 	//Example open request for a digital valve.  This would be triggered by control loop logic
-	nv_3372_a_open_request : BOOL;
+	nv_3372_b_open_request : BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>

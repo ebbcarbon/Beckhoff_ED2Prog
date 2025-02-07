@@ -5,83 +5,83 @@
 VAR
 	maint_mode: BOOL;
 	
-	u_3112_a_hmi_start_request: BOOL;
-	u_3112_a_maint_request: BOOL;
-	u_3112_a_hmi_speed_request: REAL;
-	u_3112_a_maint_speed_request: REAL;
-	u_3112_a_hmi_stop_request: BOOL;
+	u_3112_b_hmi_start_request: BOOL;
+	u_3112_b_maint_request: BOOL;
+	u_3112_b_hmi_speed_request: REAL;
+	u_3112_b_maint_speed_request: REAL;
+	u_3112_b_hmi_stop_request: BOOL;
 	
-	u_3212_a_hmi_start_request: BOOL;
-	u_3212_a_maint_request: BOOL;
-	u_3212_a_hmi_speed_request: REAL;
-	u_3212_a_maint_speed_request: REAL;
-	u_3212_a_hmi_stop_request: BOOL;
+	u_3212_b_hmi_start_request: BOOL;
+	u_3212_b_maint_request: BOOL;
+	u_3212_b_hmi_speed_request: REAL;
+	u_3212_b_maint_speed_request: REAL;
+	u_3212_b_hmi_stop_request: BOOL;
 
-	u_3312_a_hmi_start_request: BOOL;
-	u_3312_a_maint_request: BOOL;
-	u_3312_a_hmi_speed_request: REAL;
-	u_3312_a_maint_speed_request: REAL;
-	u_3312_a_hmi_stop_request: BOOL;
+	u_3312_b_hmi_start_request: BOOL;
+	u_3312_b_maint_request: BOOL;
+	u_3312_b_hmi_speed_request: REAL;
+	u_3312_b_maint_speed_request: REAL;
+	u_3312_b_hmi_stop_request: BOOL;
 	
-	u_3405_a_hmi_start_request: BOOL;
-	u_3405_a_maint_request: BOOL;
-	u_3405_a_hmi_speed_request: REAL;
-	u_3405_a_maint_speed_request: REAL;
-	u_3405_a_hmi_stop_request: BOOL;
+	u_3405_b_hmi_start_request: BOOL;
+	u_3405_b_maint_request: BOOL;
+	u_3405_b_hmi_speed_request: REAL;
+	u_3405_b_maint_speed_request: REAL;
+	u_3405_b_hmi_stop_request: BOOL;
 	
-	u_3160_a_hmi_start_request: BOOL;
-	u_3160_a_maint_request: BOOL;
-	u_3160_a_hmi_speed_request: REAL;
-	u_3160_a_maint_speed_request: REAL;
-	u_3160_a_hmi_stop_request: BOOL;
+	u_3160_b_hmi_start_request: BOOL;
+	u_3160_b_maint_request: BOOL;
+	u_3160_b_hmi_speed_request: REAL;
+	u_3160_b_maint_speed_request: REAL;
+	u_3160_b_hmi_stop_request: BOOL;
 	
-	u_3260_a_hmi_start_request: BOOL;
-	u_3260_a_maint_request: BOOL;
-	u_3260_a_hmi_speed_request: REAL;
-	u_3260_a_maint_speed_request: REAL;
-	u_3260_a_hmi_stop_request: BOOL;
+	u_3260_b_hmi_start_request: BOOL;
+	u_3260_b_maint_request: BOOL;
+	u_3260_b_hmi_speed_request: REAL;
+	u_3260_b_maint_speed_request: REAL;
+	u_3260_b_hmi_stop_request: BOOL;
 	
-	u_3360_a_hmi_start_request: BOOL;
-	u_3360_a_maint_request: BOOL;
-	u_3360_a_hmi_speed_request: REAL;
-	u_3360_a_maint_speed_request: REAL;
-	u_3360_a_hmi_stop_request: BOOL;
+	u_3360_b_hmi_start_request: BOOL;
+	u_3360_b_maint_request: BOOL;
+	u_3360_b_hmi_speed_request: REAL;
+	u_3360_b_maint_speed_request: REAL;
+	u_3360_b_hmi_stop_request: BOOL;
 	
-	nv_3110_a_hmi_open_request: BOOL;
-	nv_3110_a_hmi_close_request: BOOL;
-	nv_3110_a_maint_request: BOOL;
+	nv_3110_b_hmi_open_request: BOOL;
+	nv_3110_b_hmi_close_request: BOOL;
+	nv_3110_b_maint_request: BOOL;
 	
-	nv_3210_a_hmi_open_request: BOOL;
-	nv_3210_a_hmi_close_request: BOOL;
-	nv_3210_a_maint_request: BOOL;
+	nv_3210_b_hmi_open_request: BOOL;
+	nv_3210_b_hmi_close_request: BOOL;
+	nv_3210_b_maint_request: BOOL;
 	
-	nv_3310_a_hmi_open_request: BOOL;
-	nv_3310_a_hmi_close_request: BOOL;
-	nv_3310_a_maint_request: BOOL;
+	nv_3310_b_hmi_open_request: BOOL;
+	nv_3310_b_hmi_close_request: BOOL;
+	nv_3310_b_maint_request: BOOL;
 	
-	nv_3135_a_hmi_open_request: BOOL;
-	nv_3135_a_hmi_close_request: BOOL;
-	nv_3135_a_maint_request: BOOL;
+	nv_3135_b_hmi_open_request: BOOL;
+	nv_3135_b_hmi_close_request: BOOL;
+	nv_3135_b_maint_request: BOOL;
 	
-	nv_3235_a_hmi_open_request: BOOL;
-	nv_3235_a_hmi_close_request: BOOL;
-	nv_3235_a_maint_request: BOOL;
+	nv_3235_b_hmi_open_request: BOOL;
+	nv_3235_b_hmi_close_request: BOOL;
+	nv_3235_b_maint_request: BOOL;
 	
-	nv_3335_a_hmi_open_request: BOOL;
-	nv_3335_a_hmi_close_request: BOOL;
-	nv_3335_a_maint_request: BOOL;
+	nv_3335_b_hmi_open_request: BOOL;
+	nv_3335_b_hmi_close_request: BOOL;
+	nv_3335_b_maint_request: BOOL;
 	
-	nv_3372_a_hmi_open_request: BOOL;
-	nv_3372_a_hmi_close_request: BOOL;
-	nv_3372_a_maint_request: BOOL;
-	u_3370_a_hmi_start_request: BOOL;
-	u_3370_a_maint_request: BOOL;
-	u_3370_a_hmi_stop_request: BOOL;
-	u_3370_a_hmi_speed_request: REAL;
-	u_3370_a_maint_speed_request: REAL;
-	nv_3162_a_hmi_open_request: BOOL;
-	nv_3162_a_maint_request: BOOL;
-	nv_3162_a_hmi_close_request: BOOL;
+	nv_3372_b_hmi_open_request: BOOL;
+	nv_3372_b_hmi_close_request: BOOL;
+	nv_3372_b_maint_request: BOOL;
+	u_3370_b_hmi_start_request: BOOL;
+	u_3370_b_maint_request: BOOL;
+	u_3370_b_hmi_stop_request: BOOL;
+	u_3370_b_hmi_speed_request: REAL;
+	u_3370_b_maint_speed_request: REAL;
+	nv_3162_b_hmi_open_request: BOOL;
+	nv_3162_b_maint_request: BOOL;
+	nv_3162_b_hmi_close_request: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -106,7 +106,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"u_3112_a_maint_request"</v>
+                            <v n="Operand">"u_3112_b_maint_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -177,7 +177,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"opc.popa_0081_u_3112_a_hmi_start_request"</v>
+                              <v n="Operand">"opc.popa_0082_u_3112_b_hmi_start_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -231,7 +231,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"u_3212_a_maint_request"</v>
+                            <v n="Operand">"u_3212_b_maint_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -302,7 +302,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"opc.popa_0081_u_3212_a_hmi_start_request"</v>
+                              <v n="Operand">"opc.popa_0082_u_3212_b_hmi_start_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -356,7 +356,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"u_3312_a_maint_request"</v>
+                            <v n="Operand">"u_3312_b_maint_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -427,7 +427,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"opc.popa_0081_u_3312_a_hmi_start_request"</v>
+                              <v n="Operand">"opc.popa_0082_u_3312_b_hmi_start_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -481,7 +481,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"u_3405_a_maint_request"</v>
+                            <v n="Operand">"u_3405_b_maint_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -552,7 +552,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"opc.popa_0091_u_3405_a_hmi_start_request"</v>
+                              <v n="Operand">"opc.popa_0092_u_3405_b_hmi_start_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -606,7 +606,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"u_3160_a_maint_request"</v>
+                            <v n="Operand">"u_3160_b_maint_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -677,7 +677,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"opc.popa_0081_u_3160_a_hmi_start_request"</v>
+                              <v n="Operand">"opc.popa_0082_u_3160_b_hmi_start_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -731,7 +731,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"u_3260_a_maint_request"</v>
+                            <v n="Operand">"u_3260_b_maint_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -802,7 +802,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"opc.popa_0081_u_3260_a_hmi_start_request"</v>
+                              <v n="Operand">"opc.popa_0082_u_3260_b_hmi_start_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -856,7 +856,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"u_3360_a_a_maint_request"</v>
+                            <v n="Operand">"u_3360_b_a_maint_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -927,7 +927,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"opc.popa_0081_u_3360_a_hmi_start_request"</v>
+                              <v n="Operand">"opc.popa_0082_u_3360_b_hmi_start_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -981,7 +981,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"u_3370_a_maint_request"</v>
+                            <v n="Operand">"u_3370_b_maint_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1052,7 +1052,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"opc.popa_0081_u_3370_a_hmi_start_request"</v>
+                              <v n="Operand">"opc.popa_0082_u_3370_b_hmi_start_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1119,7 +1119,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"nv_3110_a_maint_request"</v>
+                            <v n="Operand">"nv_3110_b_maint_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1190,7 +1190,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"opc.popa_0081_nv_3110_a_hmi_open_request"</v>
+                              <v n="Operand">"opc.popa_0082_nv_3110_b_hmi_open_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1244,7 +1244,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"nv_3210_a_maint_request"</v>
+                            <v n="Operand">"nv_3210_b_maint_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1315,7 +1315,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"opc.popa_0081_nv_3210_a_hmi_open_request"</v>
+                              <v n="Operand">"opc.popa_0082_nv_3210_b_hmi_open_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1369,7 +1369,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"nv_3310_a_maint_request"</v>
+                            <v n="Operand">"nv_3310_b_maint_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1440,7 +1440,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"opc.popa_0081_nv_3310_a_hmi_open_request"</v>
+                              <v n="Operand">"opc.popa_0082_nv_3310_b_hmi_open_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1494,7 +1494,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"nv_3135_a_maint_request"</v>
+                            <v n="Operand">"nv_3135_b_maint_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1565,7 +1565,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"opc.popa_0081_nv_3135_a_hmi_open_request"</v>
+                              <v n="Operand">"opc.popa_0082_nv_3135_b_hmi_open_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1619,7 +1619,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"nv_3235_a_maint_request"</v>
+                            <v n="Operand">"nv_3235_b_maint_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1690,7 +1690,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"opc.popa_0081_nv_3235_a_hmi_open_request"</v>
+                              <v n="Operand">"opc.popa_0082_nv_3235_b_hmi_open_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1744,7 +1744,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"nv_3335_a_maint_request"</v>
+                            <v n="Operand">"nv_3335_b_maint_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1815,7 +1815,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"opc.popa_0081_nv_3335_a_hmi_open_request"</v>
+                              <v n="Operand">"opc.popa_0082_nv_3335_b_hmi_open_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1869,7 +1869,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"nv_3372_a_maint_request"</v>
+                            <v n="Operand">"nv_3372_b_maint_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1940,7 +1940,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"opc.popa_0081_nv_3372_a_hmi_open_request"</v>
+                              <v n="Operand">"opc.popa_0082_nv_3372_b_hmi_open_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1994,7 +1994,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"nv_3162_a_maint_request"</v>
+                            <v n="Operand">"nv_3162_b_maint_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -2065,7 +2065,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"opc.popa_0081_nv_3162_a_hmi_open_request"</v>
+                              <v n="Operand">"opc.popa_0082_nv_3162_b_hmi_open_request"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>

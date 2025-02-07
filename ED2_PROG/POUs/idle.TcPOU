@@ -7,37 +7,37 @@ VAR
 	redox_doser_idle_enable: BOOL;
 	
 	tmr_idle_pumps: TON;
-	u_3112_a_idle_request: BOOL;
-	u_3312_a_idle_request: BOOL;
-	u_3405_a_idle_request: BOOL;
-	u_3212_a_idle_request: BOOL;
+	u_3112_b_idle_request: BOOL;
+	u_3312_b_idle_request: BOOL;
+	u_3405_b_idle_request: BOOL;
+	u_3212_b_idle_request: BOOL;
 	tmr_idle_pump_delay: TON;
-	u_3112_a_running: BOOL;
-	u_3112_a_speed_ref: INT;
-	u_3112_a_sp: REAL;
+	u_3112_b_running: BOOL;
+	u_3112_b_speed_ref: INT;
+	u_3112_b_sp: REAL;
 	salt_pressure_actual: REAL;
-	u_3112_a_ready: BOOL;
-	u_3212_a_running: BOOL;
-	u_3212_a_ready: BOOL;
-	u_3312_a_ready: BOOL;
-	u_3312_a_running: BOOL;
-	u_3405_a_running: BOOL;
-	u_3405_a_ready: BOOL;
+	u_3112_b_ready: BOOL;
+	u_3212_b_running: BOOL;
+	u_3212_b_ready: BOOL;
+	u_3312_b_ready: BOOL;
+	u_3312_b_running: BOOL;
+	u_3405_b_running: BOOL;
+	u_3405_b_ready: BOOL;
 	stack_power_enable: BOOL;
-	nv_3110_a_open_request: BOOL;
-	nv_3210_a_open_request: BOOL;
-	nv_3310_a_open_request: BOOL;
-	nv_3110_a_open_feedback: BOOL;
-	nv_3210_a_open_feedback: BOOL;
-	nv_3310_a_open_feedback: BOOL;
-	nv_3110_a_idle_request: BOOL;
-	nv_3210_a_idle_request: BOOL;
-	nv_3310_a_idle_request: BOOL;
-	nv_3135_a_idle_request: BOOL;
-	nv_3235_a_idle_request: BOOL;
-	nv_3335_a_idle_request: BOOL;
-	nv_3372_a_idle_request: BOOL;
-	nv_3162_a_idle_request: BOOL;
+	nv_3110_b_open_request: BOOL;
+	nv_3210_b_open_request: BOOL;
+	nv_3310_b_open_request: BOOL;
+	nv_3110_b_open_feedback: BOOL;
+	nv_3210_b_open_feedback: BOOL;
+	nv_3310_b_open_feedback: BOOL;
+	nv_3110_b_idle_request: BOOL;
+	nv_3210_b_idle_request: BOOL;
+	nv_3310_b_idle_request: BOOL;
+	nv_3135_b_idle_request: BOOL;
+	nv_3235_b_idle_request: BOOL;
+	nv_3335_b_idle_request: BOOL;
+	nv_3372_b_idle_request: BOOL;
+	nv_3162_b_idle_request: BOOL;
 
 	idle_stack_power_enable: BOOL;
 	idle_TEMP_BIT: BOOL;
@@ -46,14 +46,14 @@ VAR
 	tmr_idle_valve_delay_et: TIME;
 	tmr_idle_valve_delay_pt: TIME := T#20S;
 	tmr_idle_valve_delay_q: BOOL;
-	u_3112_a_idle_pressure_setpoint_request: REAL;
-	u_3212_a_idle_pressure_setpoint_request: REAL;
-	u_3312_a_idle_pressure_setpoint_request: REAL;
-	u_3405_a_idle_pressure_setpoint_request: REAL;
+	u_3112_b_idle_pressure_setpoint_request: REAL;
+	u_3212_b_idle_pressure_setpoint_request: REAL;
+	u_3312_b_idle_pressure_setpoint_request: REAL;
+	u_3405_b_idle_pressure_setpoint_request: REAL;
 	idle_stable: BOOL;
-	av_3148_a_idle_position_request: REAL;
-	av_3248_a_idle_position_request: REAL;
-	av_3348_a_idle_position_request: REAL;
+	av_3148_b_idle_position_request: REAL;
+	av_3248_b_idle_position_request: REAL;
+	av_3348_b_idle_position_request: REAL;
 	redox_pressure_calculation: REAL;
 	redox_idle_pressure_sp_request: REAL;
 	idle_startup_ons: R_TRIG;
@@ -177,7 +177,7 @@ END_VAR
                         <l2 n="OutputItems" cet="Operand">
                           <n />
                           <o>
-                            <v n="Operand">"opc.popa_0081_av_3148_a_hmi_position_request"</v>
+                            <v n="Operand">"opc.popa_0082_av_3148_b_hmi_position_request"</v>
                             <v n="Type">"REAL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -274,7 +274,7 @@ END_VAR
                         <l2 n="OutputItems" cet="Operand">
                           <n />
                           <o>
-                            <v n="Operand">"opc.popa_0081_av_3248_a_hmi_position_request"</v>
+                            <v n="Operand">"opc.popa_0082_av_3248_b_hmi_position_request"</v>
                             <v n="Type">"REAL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -371,7 +371,7 @@ END_VAR
                         <l2 n="OutputItems" cet="Operand">
                           <n />
                           <o>
-                            <v n="Operand">"opc.popa_0081_av_3348_a_hmi_position_request"</v>
+                            <v n="Operand">"opc.popa_0082_av_3348_b_hmi_position_request"</v>
                             <v n="Type">"REAL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -477,7 +477,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"nv_3110_a_idle_request"</v>
+                            <v n="Operand">"nv_3110_b_idle_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -493,7 +493,7 @@ END_VAR
                             <v n="Id">443L</v>
                           </o>
                           <o>
-                            <v n="Operand">"nv_3210_a_idle_request"</v>
+                            <v n="Operand">"nv_3210_b_idle_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -509,7 +509,7 @@ END_VAR
                             <v n="Id">444L</v>
                           </o>
                           <o>
-                            <v n="Operand">"nv_3310_a_idle_request"</v>
+                            <v n="Operand">"nv_3310_b_idle_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -525,7 +525,7 @@ END_VAR
                             <v n="Id">622L</v>
                           </o>
                           <o>
-                            <v n="Operand">"nv_3135_a_idle_request"</v>
+                            <v n="Operand">"nv_3135_b_idle_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -541,7 +541,7 @@ END_VAR
                             <v n="Id">621L</v>
                           </o>
                           <o>
-                            <v n="Operand">"nv_3235_a_idle_request"</v>
+                            <v n="Operand">"nv_3235_b_idle_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -557,7 +557,7 @@ END_VAR
                             <v n="Id">620L</v>
                           </o>
                           <o>
-                            <v n="Operand">"nv_3335_a_idle_request"</v>
+                            <v n="Operand">"nv_3335_b_idle_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -619,7 +619,7 @@ END_VAR
                               <l2 n="OutputItems" cet="Operand">
                                 <n />
                                 <o>
-                                  <v n="Operand">"av_3148_a_idle_position_request"</v>
+                                  <v n="Operand">"av_3148_b_idle_position_request"</v>
                                   <v n="Type">"REAL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -654,7 +654,7 @@ END_VAR
                               </o>
                               <o t="BoxTreeOperand">
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"opc.popa_0081_av_3148_a_hmi_position_request"</v>
+                                  <v n="Operand">"opc.popa_0082_av_3148_b_hmi_position_request"</v>
                                   <v n="Type">"REAL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -722,7 +722,7 @@ END_VAR
                                   <l2 n="OutputItems" cet="Operand">
                                     <n />
                                     <o>
-                                      <v n="Operand">"av_3248_a_idle_position_request"</v>
+                                      <v n="Operand">"av_3248_b_idle_position_request"</v>
                                       <v n="Type">"REAL"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
@@ -757,7 +757,7 @@ END_VAR
                                   </o>
                                   <o t="BoxTreeOperand">
                                     <o n="Operand" t="Operand">
-                                      <v n="Operand">"opc.popa_0081_av_3248_a_hmi_position_request"</v>
+                                      <v n="Operand">"opc.popa_0082_av_3248_b_hmi_position_request"</v>
                                       <v n="Type">"REAL"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
@@ -823,7 +823,7 @@ END_VAR
                                   <l2 n="OutputItems" cet="Operand">
                                     <n />
                                     <o>
-                                      <v n="Operand">"av_3348_a_idle_position_request"</v>
+                                      <v n="Operand">"av_3348_b_idle_position_request"</v>
                                       <v n="Type">"REAL"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
@@ -858,7 +858,7 @@ END_VAR
                                   </o>
                                   <o t="BoxTreeOperand">
                                     <o n="Operand" t="Operand">
-                                      <v n="Operand">"opc.popa_0081_av_3348_a_hmi_position_request"</v>
+                                      <v n="Operand">"opc.popa_0082_av_3348_b_hmi_position_request"</v>
                                       <v n="Type">"REAL"</v>
                                       <v n="Comment">""</v>
                                       <v n="SymbolComment">""</v>
@@ -938,7 +938,7 @@ END_VAR
                             <l2 n="OutputItems" cet="Operand">
                               <n />
                               <o>
-                                <v n="Operand">"u_3112_a_idle_pressure_setpoint_request"</v>
+                                <v n="Operand">"u_3112_b_idle_pressure_setpoint_request"</v>
                                 <v n="Type">"REAL"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -983,7 +983,7 @@ END_VAR
                             </o>
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"opc.popa_0081_idle_pressure_setpoint_request"</v>
+                                <v n="Operand">"opc.popa_0082_idle_pressure_setpoint_request"</v>
                                 <v n="Type">"REAL"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -1167,7 +1167,7 @@ END_VAR
                               </o>
                               <o>
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"faults.nv_3110_a_fail_to_open.trigger"</v>
+                                  <v n="Operand">"faults.nv_3110_b_fail_to_open.trigger"</v>
                                   <v n="Type">"BOOL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -1186,7 +1186,7 @@ END_VAR
                               </o>
                               <o>
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"faults.nv_3210_a_fail_to_open.trigger"</v>
+                                  <v n="Operand">"faults.nv_3210_b_fail_to_open.trigger"</v>
                                   <v n="Type">"BOOL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -1205,7 +1205,7 @@ END_VAR
                               </o>
                               <o>
                                 <o n="Operand" t="Operand">
-                                  <v n="Operand">"faults.nv_3310_a_fail_to_open.trigger"</v>
+                                  <v n="Operand">"faults.nv_3310_b_fail_to_open.trigger"</v>
                                   <v n="Type">"BOOL"</v>
                                   <v n="Comment">""</v>
                                   <v n="SymbolComment">""</v>
@@ -1429,7 +1429,7 @@ END_VAR
                             </o>
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"io_mapping.pt_3119_a.scaled_value"</v>
+                                <v n="Operand">"io_mapping.pt_3119_b.scaled_value"</v>
                                 <v n="Type">"REAL"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -1448,7 +1448,7 @@ END_VAR
                             </o>
                             <o>
                               <o n="Operand" t="Operand">
-                                <v n="Operand">"io_mapping.pt_3141_a.scaled_value"</v>
+                                <v n="Operand">"io_mapping.pt_3141_b.scaled_value"</v>
                                 <v n="Type">"REAL"</v>
                                 <v n="Comment">""</v>
                                 <v n="SymbolComment">""</v>
@@ -1662,7 +1662,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"u_3112_a_idle_request"</v>
+                            <v n="Operand">"u_3112_b_idle_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1706,7 +1706,7 @@ END_VAR
                           <l2 n="OutputItems" cet="Operand">
                             <n />
                             <o>
-                              <v n="Operand">"u_3112_a_idle_pressure_setpoint_request"</v>
+                              <v n="Operand">"u_3112_b_idle_pressure_setpoint_request"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1737,7 +1737,7 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"opc.popa_0081_idle_pressure_setpoint_request"</v>
+                              <v n="Operand">"opc.popa_0082_idle_pressure_setpoint_request"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1787,7 +1787,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"u_3212_a_idle_request"</v>
+                            <v n="Operand">"u_3212_b_idle_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1831,7 +1831,7 @@ END_VAR
                           <l2 n="OutputItems" cet="Operand">
                             <n />
                             <o>
-                              <v n="Operand">"u_3212_a_idle_pressure_setpoint_request"</v>
+                              <v n="Operand">"u_3212_b_idle_pressure_setpoint_request"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1862,7 +1862,7 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"opc.popa_0081_idle_pressure_setpoint_request"</v>
+                              <v n="Operand">"opc.popa_0082_idle_pressure_setpoint_request"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1912,7 +1912,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"u_3312_a_idle_request"</v>
+                            <v n="Operand">"u_3312_b_idle_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -1956,7 +1956,7 @@ END_VAR
                           <l2 n="OutputItems" cet="Operand">
                             <n />
                             <o>
-                              <v n="Operand">"u_3312_a_idle_pressure_setpoint_request"</v>
+                              <v n="Operand">"u_3312_b_idle_pressure_setpoint_request"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -1987,7 +1987,7 @@ END_VAR
                           </o>
                           <o t="BoxTreeOperand">
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"opc.popa_0081_idle_pressure_setpoint_request"</v>
+                              <v n="Operand">"opc.popa_0082_idle_pressure_setpoint_request"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -2037,7 +2037,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"u_3405_a_idle_request"</v>
+                            <v n="Operand">"u_3405_b_idle_request"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -2081,7 +2081,7 @@ END_VAR
                           <l2 n="OutputItems" cet="Operand">
                             <n />
                             <o>
-                              <v n="Operand">"u_3405_a_idle_pressure_setpoint_request"</v>
+                              <v n="Operand">"u_3405_b_idle_pressure_setpoint_request"</v>
                               <v n="Type">"REAL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -2189,7 +2189,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"u_3112_a_ready"</v>
+                            <v n="Operand">"u_3112_b_ready"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -2213,7 +2213,7 @@ END_VAR
                       </o>
                       <o n="RValue" t="BoxTreeOperand">
                         <o n="Operand" t="Operand">
-                          <v n="Operand">"io_mapping.u_3112_a_run_feedback"</v>
+                          <v n="Operand">"io_mapping.u_3112_b_run_feedback"</v>
                           <v n="Type">"BOOL"</v>
                           <v n="Comment">""</v>
                           <v n="SymbolComment">""</v>
@@ -2250,7 +2250,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"u_3212_a_ready"</v>
+                            <v n="Operand">"u_3212_b_ready"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -2274,7 +2274,7 @@ END_VAR
                       </o>
                       <o n="RValue" t="BoxTreeOperand">
                         <o n="Operand" t="Operand">
-                          <v n="Operand">"io_mapping.u_3212_a_run_feedback"</v>
+                          <v n="Operand">"io_mapping.u_3212_b_run_feedback"</v>
                           <v n="Type">"BOOL"</v>
                           <v n="Comment">""</v>
                           <v n="SymbolComment">""</v>
@@ -2311,7 +2311,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"u_3312_a_ready"</v>
+                            <v n="Operand">"u_3312_b_ready"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -2335,7 +2335,7 @@ END_VAR
                       </o>
                       <o n="RValue" t="BoxTreeOperand">
                         <o n="Operand" t="Operand">
-                          <v n="Operand">"io_mapping.u_3312_a_run_feedback"</v>
+                          <v n="Operand">"io_mapping.u_3312_b_run_feedback"</v>
                           <v n="Type">"BOOL"</v>
                           <v n="Comment">""</v>
                           <v n="SymbolComment">""</v>
@@ -2372,7 +2372,7 @@ END_VAR
                       <o n="OutputItems" t="OutputItemList">
                         <l2 n="OutputItems" cet="Operand">
                           <o>
-                            <v n="Operand">"u_3405_a_ready"</v>
+                            <v n="Operand">"u_3405_b_ready"</v>
                             <v n="Type">"BOOL"</v>
                             <v n="Comment">""</v>
                             <v n="SymbolComment">""</v>
@@ -2396,7 +2396,7 @@ END_VAR
                       </o>
                       <o n="RValue" t="BoxTreeOperand">
                         <o n="Operand" t="Operand">
-                          <v n="Operand">"io_mapping.u_3405_a_run_feedback"</v>
+                          <v n="Operand">"io_mapping.u_3405_b_run_feedback"</v>
                           <v n="Type">"BOOL"</v>
                           <v n="Comment">""</v>
                           <v n="SymbolComment">""</v>
@@ -2504,7 +2504,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"faults.u_3112_a_fail_to_start.trigger"</v>
+                              <v n="Operand">"faults.u_3112_b_fail_to_start.trigger"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -2523,7 +2523,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"faults.u_3212_a_fail_to_start.trigger"</v>
+                              <v n="Operand">"faults.u_3212_b_fail_to_start.trigger"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -2542,7 +2542,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"faults.u_3312_a_fail_to_start.trigger"</v>
+                              <v n="Operand">"faults.u_3312_b_fail_to_start.trigger"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
@@ -2561,7 +2561,7 @@ END_VAR
                           </o>
                           <o>
                             <o n="Operand" t="Operand">
-                              <v n="Operand">"faults.u_3405_a_fail_to_start.trigger"</v>
+                              <v n="Operand">"faults.u_3405_b_fail_to_start.trigger"</v>
                               <v n="Type">"BOOL"</v>
                               <v n="Comment">""</v>
                               <v n="SymbolComment">""</v>
