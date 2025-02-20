@@ -34,7 +34,8 @@ opc.popa_0082_system_date_time_second:=general.system_date_time.second;
 //---Field Instrumentation---------------------------------------------------------------------------------------------------------------------------
 opc.popa_0082_cpt_3144_b_scaled_value:=io_mapping.cpt_3144_b.scaled_value;
 
-opc.popa_0082_ft_3122_b_scaled_value:=io_mapping.ft_3122_b.scaled_value;
+//opc.popa_0082_ft_3122_b_scaled_value:=io_mapping.ft_3122_b.scaled_value;
+opc.popa_0082_ft_3122_b_scaled_value:=1000*SIN(general.system_date_time.second);
 opc.popa_0082_ft_3222_b_scaled_value:=io_mapping.ft_3222_b.scaled_value;
 opc.popa_0082_ft_3322_b_scaled_value:=io_mapping.ft_3322_b.scaled_value;
 
@@ -208,7 +209,9 @@ opc.popa_0082_nv_3162_b_fail_to_open_active :=faults.nv_3162_b_fail_to_open.acti
 opc.popa_0082_nv_3162_b_fail_to_close_active :=faults.nv_3162_b_fail_to_close.active;]]></ST>
     </Implementation>
     <LineIds Name="opc_mapping">
-      <LineId Id="404" Count="198" />
+      <LineId Id="404" Count="28" />
+      <LineId Id="606" Count="0" />
+      <LineId Id="433" Count="169" />
       <LineId Id="2" Count="0" />
     </LineIds>
   </POU>
